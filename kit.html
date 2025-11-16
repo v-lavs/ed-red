@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!--зaкрыть индексацию -->
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="robots" content="noindex">
+<meta name="yandex" content="none">
+<!------------------------------>
+<title>Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="./fonts/fonts.css">
+<link rel="stylesheet" href="./dist/main.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <header class="header">
+
+        <div class="container">
+          <a href="/" class="header__logo">
+              <img src="assets/img/edem_logo.svg" alt="лого Едем" width="86" height="56">
+          </a>
+            <div class="header__nav">
+                <button type="button" class="btn_close" aria-label="Закрити меню">X</button>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="index.html" class="menu__link active">Едем
+                        <ul class="sub-menu">
+                            <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едем таблетки</a></li>
+                            <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едем сироп</a></li>
+                            <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едермік</a></li>
+                            <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едермік гель</a></li>
+                            <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едем ріно спрей</a></li>
+                        </ul>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="about-allergy.html" class="menu__link">Все про алергію
+                            <ul class="sub-menu">
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Види алергії</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Прояви алергії</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Лікування алергії</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Профілактика алергії</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Алергія у дітей</a></li>
+                            </ul></a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="useful.html" class="menu__link">Корисно для людей з алергією
+                            <ul class="sub-menu">
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Рослини - алергени</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Продукти - алергени</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Календар алергії</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">При різних видах алергії</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Пам’ятки для алергіка</a></li>
+                            </ul></a></a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="questions.html" class="menu__link">Питання-відповіді</a>
+                    </li>
+                </ul>
+            </div>
+            <button type="button" class="search_open" aria-label="Відкрити пошук">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.5832 21.4688L18.9697 16.8783C20.3679 15.0571 21.1348 12.8481 21.1351 10.517C21.1351 7.7079 20.0355 5.06672 18.0389 3.0804C16.0425 1.09407 13.3884 0 10.5648 0C7.7416 0 5.08715 1.09407 3.09084 3.0804C-1.03028 7.18125 -1.03028 13.8535 3.09084 17.9537C5.08715 19.9403 7.7416 21.0344 10.5648 21.0344C12.9076 21.0341 15.1277 20.2711 16.9581 18.8799L21.5716 23.4703C21.8491 23.7468 22.2135 23.885 22.5774 23.885C22.9414 23.885 23.3057 23.7468 23.5832 23.4703C24.1389 22.9177 24.1389 22.0213 23.5832 21.4688ZM5.10243 15.9521C2.0906 12.9554 2.09095 8.07904 5.10243 5.08193C6.56146 3.63054 8.50151 2.8309 10.5648 2.8309C12.6285 2.8309 14.5682 3.63054 16.0273 5.08193C17.4863 6.53366 18.29 8.464 18.29 10.517C18.29 12.5704 17.4863 14.5004 16.0273 15.9521C14.5682 17.4039 12.6285 18.2035 10.5648 18.2035C8.50151 18.2035 6.56146 17.4039 5.10243 15.9521Z" fill="#383838"/>
+                </svg>
+            </button>
+            <div class="header__search">
+                <form role="search" method="get" id="searchform" class="searchform" action="#">
+                    <div class="search-wrap">
+                        <input type="hidden" name="post_type" value="" >
+                        <label class="screen-reader-text" for="s">Шукати:</label>
+                        <input type="text" placeholder="" value="" name="s" id="s" />
+                        <button type="submit" id="searchsubmit" class="btn_search">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.5832 21.4688L18.9697 16.8783C20.3679 15.0571 21.1348 12.8481 21.1351 10.517C21.1351 7.7079 20.0355 5.06672 18.0389 3.0804C16.0425 1.09407 13.3884 0 10.5648 0C7.7416 0 5.08715 1.09407 3.09084 3.0804C-1.03028 7.18125 -1.03028 13.8535 3.09084 17.9537C5.08715 19.9403 7.7416 21.0344 10.5648 21.0344C12.9076 21.0341 15.1277 20.2711 16.9581 18.8799L21.5716 23.4703C21.8491 23.7468 22.2135 23.885 22.5774 23.885C22.9414 23.885 23.3057 23.7468 23.5832 23.4703C24.1389 22.9177 24.1389 22.0213 23.5832 21.4688ZM5.10243 15.9521C2.0906 12.9554 2.09095 8.07904 5.10243 5.08193C6.56146 3.63054 8.50151 2.8309 10.5648 2.8309C12.6285 2.8309 14.5682 3.63054 16.0273 5.08193C17.4863 6.53366 18.29 8.464 18.29 10.517C18.29 12.5704 17.4863 14.5004 16.0273 15.9521C14.5682 17.4039 12.6285 18.2035 10.5648 18.2035C8.50151 18.2035 6.56146 17.4039 5.10243 15.9521Z" fill="#383838"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <button type="button" class="btn_burger" aria-label="Відкрити меню">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </div>
+
+    </header>
+    <div class="backdrop"></div>
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------
+
+    <div class="container">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+
+                <div class="swiper-slide"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------
+    <div class="container">
+
+        <a href="#" class="btn btn_outline"><img src="assets/img/logo-tabletki@2x%203.png" alt="Посилання на Таблетки.юа"></a>
+        <a href="#" class="btn btn_main">Ціни в Аптеках</a>
+    </div>
+    
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    ---------------------------------------------------------------------------------------
+
+
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------
+
+    <div class="container">
+        <div class="popup">
+            <div class="popup__content">
+                <h5 class="popup__title"></h5>
+                <div class="popup__text">
+
+                </div>
+                <div class="popup__footer">
+                    <a href="#" class="btn btn_main">Підтвердити</a>
+                    <button class="close-popup btn btn_outline">Закрити</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+
+    </div>
+
+
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------
+
+
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------
+
+
+
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------
+
+
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------
+    btn
+
+    <button class="btn btn_main">Детальніше</button>
+    <button class="btn btn_outline">Детальніше</button>
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------
+    pagination
+    <br>
+
+    <div class="pagination">
+        <a href="#" class="pagination__prev">Попередня</a>
+        <a href="#" class="pagination__btn">1</a>
+        <a href="#" class="pagination__btn pagination__placeholder">...</a>
+        <a href="#" class="pagination__btn">10</a>
+        <a href="#" class="pagination__btn">11</a>
+        <a href="#" class="pagination__btn pagination__btn_active">12</a>
+        <a href="#" class="pagination__btn">13</a>
+        <a href="#" class="pagination__btn">14</a>
+        <a href="#" class="pagination__btn">15</a>
+        <a href="#" class="pagination__btn">16</a>
+        <a href="#" class="pagination__btn pagination__placeholder">...</a>
+        <a href="#" class="pagination__btn">26</a>
+        <a href="#" class="pagination__next">Наступна</a>
+    </div>
+
+    <br>
+    --------------------------------------------------------------------------------------------------------------------
+
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    -----------------------------------------------------------------------------------------
+
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    -----------------------------------------------------------------------------------------------
+
+
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------
+
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------
+
+
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------
+
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_top">
+
+            </div>
+            <div class="footer_bottom">
+                <div class="design">Design by <strong>Profi Creative</strong></div>
+                <div class="copyright">© 2021. Всі права захищені</div>
+            </div>
+        </div>
+
+    </footer>
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------
+
+
+    -----------------------------------------------------------------------------------------------
+    <br><br><br><br>
+    --------------------------------------------------------------------------------------------
+    <div class="container">
+        <ul class="symptoms-list">
+            <li class="symptoms-list__item">
+                <div class="symptoms-list__bg-icon"
+                     style="background-image: url(assets/img/svg/kidneys1.svg);"></div>
+                <div class="symptoms-list__text">Ниркова колька - різкий біль</div>
+            </li>
+            <li class="symptoms-list__item">
+                <div class="symptoms-list__bg-icon"
+                     style="background-image: url(assets/img/svg/nausea1.svg);"></div>
+                <div class="symptoms-list__text">Прояви нудоти та блювотиння</div>
+            </li>
+            <li class="symptoms-list__item">
+                <div class="symptoms-list__bg-icon"
+                     style="background-image: url(assets/img/svg/bladder1.svg);"></div>
+                <div class="symptoms-list__text">Відсутність сечовиділення</div>
+            </li>
+
+            <li class="symptoms-list__item">
+                <div class="symptoms-list__bg-icon" style="background-image: url(assets/img/svg/urine1.svg);"></div>
+                <div class="symptoms-list__text">Кров’яні частинки в сечі</div>
+            </li>
+            <li class="symptoms-list__item">
+                <div class="symptoms-list__bg-icon"
+                     style="background-image: url(assets/img/svg/weakness1.svg);"></div>
+                <div class="symptoms-list__text">Підвищена слабкість</div>
+            </li>
+            <li class="symptoms-list__item">
+                <div class="symptoms-list__bg-icon"
+                     style="background-image: url(assets/img/svg/low-temperature1.svg);"></div>
+                <div class="symptoms-list__text">Підвищена температура</div>
+            </li>
+
+        </ul>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="dist/main.js"></script>
+</div>
+</div>
+</body>
+</html>

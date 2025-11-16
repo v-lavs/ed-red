@@ -1,0 +1,70 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.menu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0;
+  align-items: flex-end;
+
+  &__item {
+    padding: 5px 31px 5px 0;
+    margin-left: 31px;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '/';
+      display: block;
+      color: variables.$main-color;
+      bottom: 0;
+      right: 0;
+      transform: translateX(50%);
+    }
+
+    &:last-child:after {
+      display: none;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    color: inherit;
+    transition: .35s;
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      background-color: variables.$green-100;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+    }
+
+    &.active:after,
+    &:hover:after,
+    &:focus:after {
+      width: 100%;
+    }
+  }
+}
+
+.sub-menu {
+  display: none;
+}
+
+@include mixins.respond-to(variables.$md) {
+  //.menu{
+  //  color: #1e1e1e;
+  //}
+  //  .menu__item {
+  //    padding-left: 16px;
+  //    padding-right: 16px;
+  //}
+}

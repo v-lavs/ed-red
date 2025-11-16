@@ -1,0 +1,84 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.card-product {
+  border: 1px solid variables.$main-color;
+  background-color: variables.$light-gay;
+  border-radius: 12px;
+  box-shadow: 0 2px 7.6px 0 rgba(0, 0, 0, .25);
+  padding: 19px 23px 24px;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  margin-bottom: 40px;
+
+  &__thumb {
+    padding-top: 89%;
+    position: relative;
+    margin-bottom: 17px;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+  }
+
+  &__body {
+    position: relative;
+    padding: 35px 7px 0;
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      height: 1px;
+      width: 89%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: variables.$main-color;
+      z-index: 1;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: .83;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    margin-bottom: 52px;
+
+    span {
+      display: inline-block;
+    }
+  }
+}
+.products{
+  display: flex;
+  justify-content: space-between;
+}
+.product{
+  max-width: 420px;
+  .btn{
+    display: block;
+    max-width: 313px;
+    width: 100%;
+    font-weight: 400;
+    &:first-child{
+      margin-bottom: 10px;
+    }
+  }
+  &__footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 23px;
+  }
+}

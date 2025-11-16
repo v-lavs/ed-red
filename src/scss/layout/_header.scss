@@ -1,0 +1,107 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.header {
+  padding: 29px 0;
+  position: fixed;
+  background-color: variables.$mint;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: 16px;
+  color: variables.$jet-black;
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__logo{
+    display: block;
+    max-width: 86px;
+    width: 100px;
+    img{
+      width: 100%;
+    }
+  }
+
+  @media all and (max-width: 1340px) {
+
+  }
+  @include mixins.respond-to(variables.$lg) {
+
+  }
+  @include mixins.respond-to(variables.$md) {
+
+  }
+}
+.btn_burger {
+  border: none;
+  background-color: transparent;
+  display: none;
+  height: 27px;
+
+  .line {
+    display: block;
+    width: 37px;
+    height: 4px;
+    margin-bottom: 5px;
+    background-color: variables.$green;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.btn_close {
+  position: absolute;
+  display: none;
+  //width: 54px;
+  //height: 54px;
+  //left: -27px;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+.btn_buy {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  //color: #fff;
+  //box-shadow: 0 4px 13px 0 #3fa535;
+  //padding: 12px 24px;
+  position: relative;
+  z-index: 1;
+  //background-image: linear-gradient(135deg, #3fa535 0%, #c8e514 100%),
+  //linear-gradient(to right, #ffffff, #c8e514);
+  //background-origin: border-box;
+  //background-clip: padding-box, border-box;
+  //border: 1px solid transparent;
+
+  img {
+    //width: 32px;
+    display: block;
+    //margin-right: 16px;
+  }
+
+  &:hover,
+  &:focus {
+
+  }
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: .3;
+  z-index: 500;
+}
+

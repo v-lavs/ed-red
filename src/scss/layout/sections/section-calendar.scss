@@ -1,0 +1,7 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
+.section-calendar{
+  background-color: variables.$light-gay-100;
+  padding: 67px 0 92px;
+}

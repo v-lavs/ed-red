@@ -1,0 +1,28 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+.section-counter{
+  padding: 37px 0 21px;
+  background-color: variables.$mint-100;
+}
+.counter{
+  display: flex;
+  color: variables.$green;
+  margin: 0 -12px;
+  &__item{
+    width: 33.33%;
+    padding: 0 12px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-align: center;
+  }
+  &__number{
+    font-weight: 700;
+    font-size: 96px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+  }
+  &__text{
+    font-weight: 600;
+    font-size: 20px;
+  }
+}

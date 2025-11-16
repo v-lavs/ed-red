@@ -1,0 +1,85 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+//.block-more-info {
+//  position: relative;
+//  display: none;
+//  margin: 0 auto;
+//  max-width: 1043px;
+//  width: 100%;
+//  padding-top: 55px;
+//  padding-bottom: 73px;
+//  line-height: 1.2;
+//  color: #000000;
+//  font-weight: 400;
+//
+//  &:before {
+//    position: absolute;
+//    content: '';
+//    display: block;
+//    background-color: rgba(0, 136, 236, 0.1);
+//    height: 1px;
+//    left: 0;
+//    right: 0;
+//    top: 0;
+//  }
+//
+//  p {
+//    margin-bottom: 23px;
+//  }
+//
+//  ul {
+//    padding-left: 14px;
+//
+//    li {
+//      position: relative;
+//      padding-left: 20px;
+//      line-height: 1.13;
+//      margin-bottom: 5px;
+//
+//      &:before {
+//        position: absolute;
+//        content: '';
+//        width: 8px;
+//        height: 8px;
+//        border-radius: 50%;
+//        background-color: #000000;
+//        left: 0;
+//        top: 14px;
+//      }
+//    }
+//  }
+//
+//  &_white {
+//    color: #ffffff;
+//    font-weight: 700;
+//
+//    &:before {
+//      background-color: #ffffff;
+//    }
+//
+//    ul li:before {
+//      background-color: #ffffff;
+//    }
+//  }
+//}
+//
+//.toggle-content {
+//  .show-more {
+//    position: relative;
+//    display: block;
+//    margin: 0 auto;
+//  }
+//
+//  &_light-bg {
+//    font-weight: 400;
+//
+//    .show-more {
+//      border-color: variables.$blue;
+//      color: variables.$blue;
+//    }
+//  }
+//}
+
+
+

@@ -1,0 +1,27 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+//swiper pagination-bullets
+
+
+.swiper-container-horizontal>.swiper-pagination-bullets {
+  bottom: 0;
+  z-index: 10;
+}
+.swiper-pagination-bullets .swiper-pagination-bullet{
+  position: relative;
+  width: 18px;
+  height: 18px;
+  //border: 2px solid #3fa535;
+  //background-color: #ffffff;
+  opacity: 1;
+  margin: 0 10px!important;
+  transform-style: preserve-3d;
+  &.swiper-pagination-bullet-active{
+    opacity: 1;
+    //background-color: variables.$green-200;
+  }
+}
+.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0;
+}

@@ -1,0 +1,113 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+//.popup {
+//  position: fixed;
+//  display: none;
+//  background: #ffffff;
+//  border-radius: 20px;
+//  padding: 54px 90px;
+//  max-width: 793px;
+//  width: 90%;
+//  height: 549px;
+//
+//  z-index: 1000;
+//  top: 50%;
+//  left: 50%;
+//  transform: translate(-50%, -50%);
+//
+//  .modal-close {
+//    position: absolute;
+//    width: 30px;
+//    height: 30px;
+//    background-image: url(../assets/img/svg/close.svg);
+//    background-repeat: no-repeat;
+//    background-position: center;
+//    background-size: contain;
+//    right: 30px;
+//    top: 30px;
+//    border: none;
+//    background-color: transparent;
+//  }
+//
+//  &__title {
+//    max-width: 330px;
+//    margin-bottom: 28px;
+//    font-size: 36px;
+//  }
+//
+//  &__content {
+//    max-width: 576px;
+//    width: 100%;
+//
+//    overflow-y: auto;
+//  }
+//
+//  &__text {
+//    font-size: 20px;
+//    line-height: 1.2;
+//    color: #000000;
+//    margin-bottom: 40px;
+//
+//    p {
+//      margin-bottom: 8px;
+//
+//      &:last-child {
+//        margin-bottom: 0;
+//      }
+//    }
+//  }
+//
+//  &__footer {
+//    display: flex;
+//
+//    .btn {
+//      margin-right: 10px;
+//      min-width: 245px;
+//
+//      &:last-child {
+//        margin-right: 0;
+//      }
+//
+//      &_outline {
+//        background-color: #fff;
+//        //border: 1px solid variables.$green;
+//        //color: variables.$green;
+//
+//        &:hover,
+//        &:focus {
+//          //background-color: variables.$green-100;
+//          //color: #ffffff;
+//        }
+//      }
+//    }
+//  }
+//
+//  @include mixins.respond-to(variables.$sm) {
+//    padding-left: 30px;
+//    padding-right: 30px;
+//    height: auto;
+//    &__content {
+//      height: 350px;
+//    }
+//    &__footer {
+//      flex-direction: column;
+//      align-items: flex-start;
+//      width: max-content;
+//      margin: 0 auto;
+//
+//      .btn {
+//        margin: 0 0 20px;
+//        padding: 20px 20px 21px;
+//      }
+//    }
+//    &__text {
+//      font-size: 16px;
+//      min-height: 165px;
+//    }
+//  }
+//  @include mixins.respond-to(variables.$xxs) {
+//    padding-left: 15px;
+//    padding-right: 15px;
+//  }
+//}

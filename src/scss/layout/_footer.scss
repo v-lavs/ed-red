@@ -1,0 +1,16 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.footer {
+
+  @include mixins.respond-to(variables.$md) {
+
+  }
+  @include mixins.respond-to(variables.$sm) {
+
+  }
+  @include mixins.respond-to(variables.$xs) {
+
+  }
+}
+

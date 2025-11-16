@@ -1,0 +1,97 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+//.pagination {
+//  padding: 10px;
+//  display: flex;
+//  flex-wrap: wrap;
+//  font-weight: 700;
+//  font-size: 12px;
+//  line-height: 16px;
+//  align-items: center;
+//  justify-content: center;
+//
+//  &__btn {
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//    min-width: 32px;
+//    height: 32px;
+//    border-radius: 8px;
+//    color: #999CA0;
+//    margin: 0 6px;
+//
+//    &:hover {
+//      color: variables.$blue-100;
+//    }
+//
+//    &_active {
+//      background-color: variables.$blue-100;
+//      color: #fff;
+//      pointer-events: none;
+//    }
+//  }
+//
+//  &__placeholder {
+//    pointer-events: none;
+//  }
+//
+//  &__next {
+//    margin-left: 24px;
+//  }
+//
+//  &__prev {
+//    margin-right: 24px;
+//  }
+//
+//  &__next,
+//  &__prev {
+//    color: variables.$blue-100;
+//  }
+//
+//  @include mixins.respond-to(variables.$sm) {
+//    &__prev {
+//      margin-right: 16px;
+//    }
+//
+//    &__next {
+//      margin-left: 16px;
+//    }
+//
+//    &__prev + .pagination__btn {
+//      display: flex;
+//    }
+//
+//    &__btn {
+//      display: none;
+//      height: 30px;
+//      min-height: 30px;
+//      margin: 0 4px;
+//
+//      &_active {
+//        display: flex;
+//      }
+//
+//      &:first-child {
+//        display: flex;
+//      }
+//
+//      &:nth-last-child(2) {
+//        display: flex;
+//      }
+//    }
+//    &__btn + .pagination__btn + .pagination__placeholder {
+//      display: none !important;
+//    }
+//  }
+//
+//  .pagination__placeholder {
+//    display: flex;
+//    min-width: 18px;
+//  }
+//  @include mixins.respond-to(variables.$xxs) {
+//    padding-left: 0;
+//    padding-right: 0;
+//  }
+//}
+

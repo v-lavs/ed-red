@@ -1,0 +1,22 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
+.section-products {
+  padding-top: 100px;
+  padding-bottom: 83px;
+
+
+
+  @include mixins.respond-to(variables.$lg) {
+
+  }
+  @include mixins.respond-to(variables.$md) {
+
+  }
+  @include mixins.respond-to(variables.$sm) {
+
+  }
+  @include mixins.respond-to(variables.$xxs) {
+
+  }
+}

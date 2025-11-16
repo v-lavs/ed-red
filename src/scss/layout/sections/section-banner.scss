@@ -1,0 +1,46 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
+.section-banner {
+  padding-top: 140px;
+  padding-bottom: 90px;
+  background-color: variables.$mint;
+
+  &__text,
+  .heading_xxl {
+    margin-bottom: 30px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .part_left {
+    width: 54%;
+  }
+
+  .part_right {
+    width: 46%;
+  }
+
+
+  @include mixins.respond-to(variables.$lg) {
+
+  }
+  @include mixins.respond-to(variables.$md) {
+
+  }
+  @include mixins.respond-to(variables.$sm) {
+
+  }
+  @include mixins.respond-to(variables.$xxs) {
+
+  }
+}

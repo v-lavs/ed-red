@@ -1,0 +1,25 @@
+.header__search{
+  display: none;
+}
+.btn_search,
+.search_open{
+  border: none;
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.screen-reader-text{
+  display: inline-block;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  overflow-wrap: normal;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

@@ -1,0 +1,161 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+html{
+  //font: 400 16px variables.$main-font;
+}
+body {
+  font: 400 24px variables.$main-font;
+  height: 100%;
+  color: variables.$main-color;
+  //letter-spacing: 2%;
+  background-color: #ffffff;
+}
+
+
+
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+  padding-top: 114px;
+}
+
+.section {
+  &__heading {
+
+  }
+
+  &__title {
+
+  }
+}
+
+
+
+.block-buy {
+  //position: fixed;
+  //right: 52px;
+  //top: 343px;
+  //z-index: 600;
+  //
+  //.hexagon {
+  //  position: relative;
+  //  box-shadow: 0 4px 14px 0 #3fa535;
+  //  background: linear-gradient(135deg, #fff 0%, rgba(63, 165, 53, 0.25) 100%);
+  //  border: 1px solid #fff;
+  //  border-radius: 0 56px;
+  //  width: 100px;
+  //  height: 100px;
+  //
+  //  &:before {
+  //    position: absolute;
+  //    content: '';
+  //    display: block;
+  //    width: 46px;
+  //    height: 46px;
+  //    background-image: url(../assets/img/svg/icon-cart.svg);
+  //    background-position: center top;
+  //    background-repeat: no-repeat;
+  //    background-size: contain;
+  //    overflow: hidden;
+  //    z-index: 1;
+  //    left: 50%;
+  //    top: 50%;
+  //    transform: translate(-50%, -50%);
+  //  }
+  }
+
+  .buy {
+    //width: 100%;
+    //font-weight: 700;
+    //font-size: 20px;
+    //line-height: 1.6;
+    //color: variables.$white;
+    //text-align: center;
+    //text-shadow: 0 0 10px rgba(63,165,53,1), 2px 2px 2px rgba(63,165,53,0.5);
+  }
+
+
+  @include mixins.respond-to(variables.$xs) {
+
+}
+
+.dynamic-content {
+  //p {
+  //  font-size: 18px;
+  //  margin-bottom: 30px;
+  //}
+  //
+  //h1 {
+  //  font-size: 36px;
+  //}
+  //
+  //h2 {
+  //  font-size: 32px;
+  //}
+  //
+  //h3 {
+  //  font-size: 24px;
+  //}
+  //
+  //h4 {
+  //  font-size: 22px;
+  //}
+  //
+  //h5 {
+  //  font-size: 18px;
+  //  margin-bottom: 26px;
+  //}
+  //
+  //h6 {
+  //  font-size: 14px;
+  //}
+  //
+  //ul {
+  //  padding-left: 14px;
+  //  margin-bottom: 38px;
+  //
+  //  li {
+  //    position: relative;
+  //    padding-left: 14px;
+  //    line-height: 1.13;
+  //    margin-bottom: 5px;
+  //
+  //    &:before {
+  //      position: absolute;
+  //      content: '';
+  //      width: 5px;
+  //      height: 5px;
+  //      border-radius: 50%;
+  //      background-color: variables.$black-blue;
+  //      left: 0;
+  //      top: 10px;
+  //      transform: translateY(-50%);
+  //    }
+  //  }
+  //}
+  //
+  //@include mixins.respond-to(variables.$xs) {
+  //  ul {
+  //    margin-bottom: 25px;
+  //  }
+  //}
+}
+
+@include mixins.respond-to(variables.$lg) {
+
+}
+
+@include mixins.respond-to(variables.$sm) {
+
+}
+
+@include mixins.respond-to(variables.$xs) {
+
+}
+
