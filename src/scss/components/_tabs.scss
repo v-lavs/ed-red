@@ -2,5 +2,31 @@
 @use "../utils/variables";
 
 .tabs{
+  padding: 40px 0;
 
+  &__nav{
+    display: flex;
+    padding-bottom: 40px;
+  }
+  &__nav-link{
+    display: inline-block;
+    width: 50%;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 30px;
+    text-align: center;
+    color: variables.$green-100;
+    &.active{
+      text-decoration: underline;
+    }
+  }
+  &__content-wrapper{
+    transition: height .3s ease;
+  }
+}
+.tab-pane{
+  display: none;
+  &.active{
+    display: block;
+  }
 }

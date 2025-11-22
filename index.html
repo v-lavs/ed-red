@@ -18,6 +18,7 @@
           rel="stylesheet">
 
     <!--    <link rel="stylesheet" href="./fonts/fonts.css">-->
+    <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./dist/main.css">
 
 </head>
@@ -220,138 +221,421 @@
 
         <section class="section-calendar">
             <div class="container">
-                <h2 class="sectio__title">Календар цвітіння дерев та рослин</h2>
+                <h2 class="section__title heading_lg">Календар цвітіння дерев та рослин</h2>
                 <div class="sub-title">Інформація є актуальною на Квітень 2024 року</div>
+                <div class="tabs">
+                    <div class="tabs__nav">
+                        <a href="#tab1" class="tabs__nav-link active">Зараз цвіте</a>
+                        <a href="#tab2" class="tabs__nav-link">Скоро буде цвісти</a>
+                    </div>
+                    <div class="tabs__content-wrapper">
+                        <div id="tab1" class="tab-pane active">
+                            <div class="category">
+                                <div class="category__heading">
+                                    <h3 class="category__title">Дерева</h3>
+                                    <div class="category__icon">
+                                        <img src="assets/img/calendar-home/tree.svg" alt="">
+                                    </div>
+                                </div>
+                                <ul class="allergen-list">
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/1-1.png" class="allergen-item__image"
+                                             alt="Береза">
+                                        <span class="allergen-item__name">Береза</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/1-2.png" class="allergen-item__image"
+                                             alt="Тополя">
+                                        <span class="allergen-item__name">Тополя</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/1-3.png" class="allergen-item__image"
+                                             alt="Верба">
+                                        <span class="allergen-item__name">Верба</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/1-4.png" class="allergen-item__image"
+                                             alt="В’яз">
+                                        <span class="allergen-item__name">В’яз</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/1-5.png" class="allergen-item__image"
+                                             alt="Бузок">
+                                        <span class="allergen-item__name">Бузок</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/1-6.png" class="allergen-item__image"
+                                             alt="Клен">
+                                        <span class="allergen-item__name">Клен</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/1-7.png" class="allergen-item__image"
+                                             alt="Ясен">
+                                        <span class="allergen-item__name">Ясен</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/1-8.png" class="allergen-item__image"
+                                             alt="Кипарисові">
+                                        <span class="allergen-item__name">Кипарисові</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/1-9.png" class="allergen-item__image"
+                                             alt="Вільха">
+                                        <span class="allergen-item__name">Вільха</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/1-10.png" class="allergen-item__image"
+                                             alt="Грецький">
+                                        <span class="allergen-item__name">горіх</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/1-11.png" class="allergen-item__image"
+                                             alt="Сосна">
+                                        <span class="allergen-item__name">Сосна</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/1-12.png" class="allergen-item__image"
+                                             alt="Дуб">
+                                        <span class="allergen-item__name">Дуб</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="category">
+                                <div class="category__heading">
+                                    <h3 class="category__title">Рослини</h3>
+                                    <div class="category__icon">
+                                        <img src="assets/img/calendar-home/leaf.svg" alt="">
+                                    </div>
+                                </div>
+                                <ul class="allergen-list">
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/2-1.png" class="allergen-item__image"
+                                             alt="Пирій">
+                                        <span class="allergen-item__name">Пирій</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/2-2.png" class="allergen-item__image"
+                                             alt="Пажатниця">
+                                        <span class="allergen-item__name">Пажатниця</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/2-3.png" class="allergen-item__image"
+                                             alt="Ковила">
+                                        <span class="allergen-item__name">Ковила</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/2-4.png" class="allergen-item__image"
+                                             alt="Черемха">
+                                        <span class="allergen-item__name">Черемха</span>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="category">
+                                <div class="category__heading">
+                                    <h3 class="category__title">Інші алергени</h3>
+                                    <div class="category__icon">
+                                        <img src="assets/img/calendar-home/cat.svg" alt="">
+                                    </div>
+                                </div>
+                                <ul class="allergen-list">
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/3-1.png" class="allergen-item__image"
+                                             alt="Пил">
+                                        <span class="allergen-item__name">Пил</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/3-2.png" class="allergen-item__image"
+                                             alt="Смог">
+                                        <span class="allergen-item__name">Смог</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/3-3.png" class="allergen-item__image"
+                                             alt="Тварини">
+                                        <span class="allergen-item__name">Тварини</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/3-4.png" class="allergen-item__image"
+                                             alt="Кліщі">
+                                        <span class="allergen-item__name">Кліщі</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/3-5.png" class="allergen-item__image"
+                                             alt="Цвіль">
+                                        <span class="allergen-item__name">Цвіль</span>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="tab2" class="tab-pane">
+                            <div class="category">
+                                <div class="category__heading">
+                                    <h3 class="category__title">Дерева</h3>
+                                    <div class="category__icon">
+                                        <img src="assets/img/calendar-home/tree.svg" alt="">
+                                    </div>
+                                </div>
+                                <ul class="allergen-list">
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/1-1.png" class="allergen-item__image"
+                                             alt="Береза">
+                                        <span class="allergen-item__name">Береза</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/1-2.png" class="allergen-item__image"
+                                             alt="Тополя">
+                                        <span class="allergen-item__name">Тополя</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/1-3.png" class="allergen-item__image"
+                                             alt="Верба">
+                                        <span class="allergen-item__name">Верба</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/1-4.png" class="allergen-item__image"
+                                             alt="В’яз">
+                                        <span class="allergen-item__name">В’яз</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/1-5.png" class="allergen-item__image"
+                                             alt="Бузок">
+                                        <span class="allergen-item__name">Бузок</span>
+                                    </li>
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/1-6.png" class="allergen-item__image"
+                                             alt="Клен">
+                                        <span class="allergen-item__name">Клен</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="category">
+                                <div class="category__heading">
+                                    <h3 class="category__title">Рослини</h3>
+                                    <div class="category__icon">
+                                        <img src="assets/img/calendar-home/leaf.svg" alt="">
+                                    </div>
+                                </div>
+                                <ul class="allergen-list">
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/2-1.png" class="allergen-item__image"
+                                             alt="Пирій">
+                                        <span class="allergen-item__name">Пирій</span>
+                                    </li>
+
+                                    <li class="allergen-item">
+                                        <img src="assets/img/calendar-home/2-3.png" class="allergen-item__image"
+                                             alt="Ковила">
+                                        <span class="allergen-item__name">Ковила</span>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-info">
+            <div class="container">
+                <div class="swiper swiper-info">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-with-tabs">
+            <div class="container">
+                <h2 class="section__title heading_lg">все про алергію</h2>
+                <div class="tabs">
+                    <div class="tabs__nav">
+                        <a href="#tab3" class="tabs__nav-link active">Види алергії</a>
+                        <a href="#tab4" class="tabs__nav-link">Прояви алергії</a>
+                    </div>
+                    <div class="tabs__content-wrapper">
+                        <div id="tab3" class="tab-pane active">
+                            <div class="swiper slider-posts" id="sliderPosts1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <article class="card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/human-facial.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Як відрізнити алергію від
+                                                    псевдоалергії?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/cinamon.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на агар-агар: як проявляється та як
+                                                    лікувати</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/pills.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на харчові добавки: симптоми,
+                                                    лікування
+                                                    та профілактика</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab4" class="tab-pane">
+                            <div class="swiper slider-posts" id="sliderPosts2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <article class="card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/mother.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Які можна приймати ліки від алергії
+                                                    годуючій
+                                                    мамі?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/cat-tab.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Як позбутися алергії на кішок?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/peoples.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Як здоровий спосіб життя допомагає при
+                                                    алергії?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap-btn">
+                    <a href="#" class="btn btn_main">Читати більше</a>
+                </div>
+                <div class="tabs">
+                    <div class="tabs__nav">
+                        <a href="#tab5" class="tabs__nav-link active">Лікування алергії</a>
+                        <a href="#tab6" class="tabs__nav-link">Профілактика алергії</a>
+                    </div>
+                    <div class="tabs__content-wrapper">
+                        <div id="tab5" class="tab-pane active">
+                            <div class="swiper slider-posts" id="sliderPosts3">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <article class="card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/mother.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Які можна приймати ліки від алергії
+                                                    годуючій
+                                                    мамі?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/cat-tab.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Як позбутися алергії на кішок?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/peoples.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Як здоровий спосіб життя допомагає при
+                                                    алергії?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab6" class="tab-pane">
+                            <div class="swiper slider-posts" id="sliderPosts4">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <article class="card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/human-facial.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Як відрізнити алергію від
+                                                    псевдоалергії?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/cinamon.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на агар-агар: як проявляється та як
+                                                    лікувати</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/pills.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на харчові добавки: симптоми,
+                                                    лікування
+                                                    та профілактика</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap-btn">
+                    <a href="#" class="btn btn_main">Читати більше</a>
+                </div>
             </div>
         </section>
 
 
-<!--        <a href="#" class="block-buy">-->
-<!--            <div class="hexagon"></div>-->
-<!--            <div class="buy">Купити</div>-->
-<!--        </a>-->
-
-<!--        <section class="section-help">-->
-<!--            <div class="container">-->
-<!--                <div class="section__heading color_white">-->
-<!--                    <h2 class="section__title">Коли може допомогти</h2>-->
-<!--                    <span class="big">Уролесан <sup>&#174;</sup></span>-->
-<!--                </div>-->
-<!--                <ul class="diagnoses-list">-->
-<!--                    <li class="diagnoses-list__wrap">-->
-<!--                        <div class="diagnoses-list__item">-->
-<!--                            <div class="diagnoses-list__thumb">-->
-<!--                                <img src="assets/img/bladder.png" alt="" class="diagnoses-list__img">-->
-<!--                                <span class="pulse"></span>-->
-<!--                            </div>-->
-<!--                            <div class="dl-footer">-->
-<!--                                <h3 class="diagnoses-list__title"><span class="text">Цистит</span></h3>-->
-<!--                                <a href="cystitis.html" class="btn btn_secondary">Детальніше<img-->
-<!--                                        src="assets/img/svg/arrow-down.svg" alt=""></a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li class="diagnoses-list__wrap">-->
-<!--                        <div class="diagnoses-list__item">-->
-<!--                            <div class="diagnoses-list__thumb">-->
-<!--                                <img src="assets/img/cup-stone.png" alt="" class="diagnoses-list__img">-->
-<!--                                <span class="pulse"></span>-->
-<!--                            </div>-->
-<!--                            <div class="dl-footer">-->
-<!--                                <h3 class="diagnoses-list__title">-->
-<!--                                    <span class="text">Пісок <br> у нирках</span></h3>-->
-<!--                                <a href="sand-kidney.html" class="btn btn_secondary">Детальніше<img-->
-<!--                                        src="assets/img/svg/arrow-down.svg" alt=""></a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li class="diagnoses-list__wrap">-->
-<!--                        <div class="diagnoses-list__item">-->
-<!--                            <div class="diagnoses-list__thumb">-->
-<!--                                <img src="assets/img/cup-stone.png" alt="" class="diagnoses-list__img">-->
-<!--                                <span class="pulse"></span>-->
-<!--                            </div>-->
-<!--                            <div class="dl-footer">-->
-<!--                                <h3 class="diagnoses-list__title">-->
-<!--                                    <span class="text">Сечокам’яна хвороба</span>-->
-<!--                                </h3>-->
-<!--                                <a href="urolithiasis.html" class="btn btn_secondary">Детальніше<img-->
-<!--                                        src="assets/img/svg/arrow-down.svg" alt=""></a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li class="diagnoses-list__wrap">-->
-<!--                        <div class="diagnoses-list__item">-->
-<!--                            <div class="diagnoses-list__thumb">-->
-<!--                                <img src="assets/img/pielonefrit.png" alt="" class="diagnoses-list__img">-->
-<!--                                <span class="pulse"></span>-->
-<!--                            </div>-->
-<!--                            <div class="dl-footer">-->
-<!--                                <h3 class="diagnoses-list__title"><span class="text">Пієлонефрит</span></h3>-->
-<!--                                <a href="pyelonephritis.html" class="btn btn_secondary">Детальніше<img-->
-<!--                                        src="assets/img/svg/arrow-down.svg" alt=""></a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                </ul>-->
-
-<!--                <div class="promo-video">-->
-<!--                    <div class="aspect-box">-->
-<!--                        <div class="promo-video__poster" style="background-image: url('assets/img/video-poster.png');">-->
-<!--                            <button class="custom-play-btn"-->
-<!--                                    data-iframe="https://www.youtube.com/embed/znQdZaC1VeE?si=6lJ0dCFCgTzEQxtG&autoplay=1">-->
-<!--                                ▶-->
-<!--                            </button>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </section>-->
-
-<!--        <section id="history" class="section-slider">-->
-<!--            <div class="container">-->
-
-<!--                <div class="swiper-container about-urolesan">-->
-<!--                    <div class="swiper-wrapper">-->
-<!--                        <div class="swiper-slide slide-about">-->
-<!--                            <div class="slide-about__content">-->
-<!--                                <h4 class="slide-about__heading heading">ІСТОРІЯ <br>-->
-<!--                                    ВИНИКНЕННЯ </h4>-->
-<!--                                <div class="counter-slide">01</div>-->
-<!--                                <a href="#" class="btn btn_main">Детальніше про препарат</a>-->
-<!--                            </div>-->
-<!--                            <div class="slide-about__img">-->
-<!--                                <img src="assets/img/1.gif" alt="">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="swiper-slide slide-about">-->
-<!--                            <div class="slide-about__content">-->
-<!--                                <h4 class="slide-about__heading heading">ЕФЕКТИВНІСТЬ-->
-<!--                                    ПРЕПАРАТУ </h4>-->
-<!--                                <div class="counter-slide">02</div>-->
-<!--                                <a href="page-effectiveness.html" class="btn btn_main">Детальніше про препарат</a>-->
-<!--                            </div>-->
-<!--                            <div class="slide-about__img">-->
-<!--                                <img src="assets/img/2.gif" alt="">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="swiper-slide slide-about">-->
-<!--                            <div class="slide-about__content">-->
-<!--                                <h4 class="slide-about__heading heading">СКЛАДОВІ <br>-->
-<!--                                    ПРЕПАРАТУ </h4>-->
-<!--                                <div class="counter-slide">03</div>-->
-<!--                                <a href="page-composition.html" class="btn btn_main">Детальніше про препарат</a>-->
-<!--                            </div>-->
-<!--                            <div class="slide-about__img">-->
-<!--                                <img src="assets/img/3.gif" alt="">-->
-<!--                            </div>-->
-<!--                        </div>-->
-
-<!--                    </div>-->
-<!--                    &lt;!&ndash;                    <div class="swiper-pagination"></div>&ndash;&gt;-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </section>-->
     </main>
     <div class="popup">
         <h5 class="popup__title heading_h1">Підтвердити перехід
@@ -385,38 +669,6 @@
         <div class="container">
             <div class="footer_top">
 
-                <div class="footer_text">
-                    <div class="text-small">
-                        До складу Корпорації "Артеріум" входять АТ "Київмедпрепарат" та АТ "Галичфарм
-                    </div>
-                    <div class="name-corporation">
-                        "Артерїум" Фармацевтична Корпорація
-                    </div>
-                    <a href="#" class="link-site">www.arterium.ua</a>
-                </div>
-
-                <a href="#" class="footer-logo">
-                    <span>Ближче до людей</span>
-                    <img src="assets/img/svg/logo-arterium.svg" alt="" class="">
-                </a>
-
-                <div class="social-bar">
-                    <a href="#" class="social-bar__item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"
-                                  fill="#25A3E5"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-bar__item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M21.8387 5.15941C22.1794 5.51057 22.4213 5.94541 22.5401 6.42C22.8573 8.1787 23.0113 9.96295 23.0001 11.75C23.0064 13.5103 22.8524 15.2676 22.5401 17C22.4213 17.4746 22.1794 17.9094 21.8387 18.2606C21.4981 18.6118 21.0708 18.8668 20.6001 19C18.8801 19.46 12.0001 19.46 12.0001 19.46C12.0001 19.46 5.12008 19.46 3.40008 19C2.9389 18.8738 2.51806 18.6308 2.17823 18.2945C1.83839 17.9581 1.59104 17.5398 1.46008 17.08C1.14285 15.3213 0.988863 13.537 1.00008 11.75C0.991319 9.97631 1.1453 8.20556 1.46008 6.46C1.57887 5.98541 1.8208 5.55057 2.16143 5.19941C2.50206 4.84824 2.92933 4.59318 3.40008 4.46C5.12008 4 12.0001 4 12.0001 4C12.0001 4 18.8801 4 20.6001 4.42C21.0708 4.55318 21.4981 4.80824 21.8387 5.15941ZM15.5 11.75L9.75 15.02V8.47998L15.5 11.75Z"
-                                  fill="#25A3E5"/>
-                        </svg>
-                    </a>
-                </div>
 
             </div>
             <div class="footer_bottom">
@@ -424,18 +676,10 @@
                 <div class="copyright">© 2021. Всі права захищені</div>
             </div>
         </div>
-        <div class="disclaimer frosted">
-            <picture>
-                <source srcset="assets/img/svg/disclaimer-mob.svg" media="(max-width: 580px)">
-                <img class="footer__text-img" src="assets/img/svg/disclaimer-desk-large.svg"
-                     alt="Самолікування може бути шкідливим для вашого здоров'я">
-            </picture>
-
-        </div>
     </footer>
 </div>
 
-<script src="lib/countUp.min.js"></script>
+<script src="./lib/swiper/swiper-bundle.min.js"></script>
 <script src="dist/main.js"></script>
 </body>
 </html>

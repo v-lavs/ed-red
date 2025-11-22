@@ -18,6 +18,7 @@
 @use 'components/video';
 @use 'components/card-product';
 @use 'components/tabs';
+@use 'components/card-post';
 
 @use 'layout/layout';
 @use 'layout/grid';
@@ -25,6 +26,8 @@
 @use 'layout/footer';
 @use 'layout/sections/section-banner';
 @use 'layout/sections/section-products';
+@use 'layout/sections/section-calendar';
+@use 'layout/sections/section-with-tabs';
 
 
 @use 'pages/blog';

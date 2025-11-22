@@ -1,0 +1,33 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
+.section-with-tabs {
+  background-color: variables.$light-gay-100;
+
+  .section__title {
+    margin-bottom: 50px;
+  }
+
+  .slider-posts .swiper-slide {
+    width: auto;
+    height: auto;
+  }
+
+  .swiper-wrapper {
+    gap: 24px;
+  }
+
+  .slider-posts {
+    overflow: visible;
+  }
+
+  .tabs {
+    padding-top: 0;
+    padding-bottom: 75px;
+  }
+
+  .wrap-btn {
+    text-align: center;
+    padding-bottom: 100px;
+  }
+}

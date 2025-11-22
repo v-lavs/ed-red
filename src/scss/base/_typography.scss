@@ -11,7 +11,11 @@
   }
 
   &_lg {
-
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: variables.$green-100;
   }
 
   &_h1 {
@@ -48,7 +52,6 @@
   &_lg {
     font-size: 28px;
     line-height: 1.43;
-    letter-spacing: 0.02em;
   }
 
   &_md {

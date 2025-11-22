@@ -45,6 +45,7 @@
       width: 0;
       height: 2px;
       bottom: -5px;
+      transition: width .35s;
     }
 
     &.active:after,

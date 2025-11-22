@@ -3,5 +3,72 @@
 
 .section-calendar{
   background-color: variables.$light-gay-100;
-  padding: 67px 0 92px;
+  padding: 67px 0 0;
+  overflow: hidden;
+  .section__title{
+    margin-bottom: 10px;
+  }
+  .sub-title{
+    line-height: .67;
+  }
 }
+.category{
+  &__heading{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 110px;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 100vw;
+      height: 1px;
+      background: #959595;
+      transform: translateX(-50%);
+    }
+  }
+  &__title{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1;
+    margin-right: 76px;
+    margin-bottom: 23px;
+  }
+  &__icon{
+    width: 82px;
+    height: 82px;
+    display: flex;
+    align-items: flex-end;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+.allergen-list{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px 0 10px;
+}
+.allergen-item{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 216px;
+  padding: 0 15px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-align: center;
+  color: #000;
+
+  &__image{
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    margin-bottom: 14px;
+  }
+}
+
