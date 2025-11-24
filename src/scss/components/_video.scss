@@ -10,23 +10,27 @@
 
 .promo-video iframe {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   border: 0;
   border-radius: 16px;
 }
+
 .aspect-box {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 */
+  padding-top: 56.56%; /* 16:9 */
   height: 0;
 }
 
 .promo-video__poster {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -37,15 +41,22 @@
   z-index: 1;
 }
 
-.btn-play{
-  background: transparent;
+.btn-play {
+  position: absolute;
+  background-color: rgba(255, 255, 255, .8);
   border: none;
-  width: 64px;
-  height: 64px;
-  //background-image: url('play-icon.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 131px;
+  height: 131px;
+  border-radius: 50%;
   cursor: pointer;
   z-index: 2;
+
+  &:before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% 50%);
+    z-index: 1;
+  }
 }

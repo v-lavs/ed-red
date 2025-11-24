@@ -6,6 +6,12 @@
   padding-bottom: 90px;
   background-color: variables.$mint;
 
+  .heading_xxl {
+    font-weight: 900;
+    line-height: 1.18;
+    letter-spacing: 0.01em;
+  }
+
   &__text,
   .heading_xxl {
     margin-bottom: 30px;

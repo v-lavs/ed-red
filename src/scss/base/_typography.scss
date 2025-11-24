@@ -2,24 +2,20 @@
 @use "../utils/variables";
 
 .heading {
-
+  font-weight: 400;
+  line-height: 110%;
+  text-transform: uppercase;
   &_xxl{
-    font-weight: 900;
     font-size: 86px;
-    line-height: 1.18;
-    letter-spacing: 0.01em;
   }
 
   &_lg {
-    font-weight: 400;
     font-size: 52px;
-    line-height: 110%;
-    text-transform: uppercase;
     color: variables.$green-100;
   }
 
-  &_h1 {
-
+  &_md {
+    font-size: 36px;
   }
 
   &_h2 {

@@ -11,9 +11,6 @@ body {
   background-color: #ffffff;
 }
 
-
-
-
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -34,8 +31,24 @@ body {
 
   }
 }
-
-
+.d-flex{
+  display: flex;
+}
+.main-banner{
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 592px;
+  img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
 
 .block-buy {
   //position: fixed;

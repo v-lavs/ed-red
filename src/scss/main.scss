@@ -19,6 +19,7 @@
 @use 'components/card-product';
 @use 'components/tabs';
 @use 'components/card-post';
+@use 'components/accordion';
 
 @use 'layout/layout';
 @use 'layout/grid';
@@ -28,6 +29,9 @@
 @use 'layout/sections/section-products';
 @use 'layout/sections/section-calendar';
 @use 'layout/sections/section-with-tabs';
+@use 'layout/sections/section-info';
+@use 'layout/sections/section-question';
+@use 'layout/sections/section-video';
 
 
 @use 'pages/blog';

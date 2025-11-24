@@ -6,7 +6,7 @@
 
   &__nav{
     display: flex;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
   }
   &__nav-link{
     display: inline-block;
@@ -21,12 +21,15 @@
     }
   }
   &__content-wrapper{
-    transition: height .3s ease;
+    transition: height .35s ease;
   }
 }
 .tab-pane{
   display: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
   &.active{
     display: block;
+    opacity: 1;
   }
 }

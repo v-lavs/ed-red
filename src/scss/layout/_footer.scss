@@ -2,6 +2,93 @@
 @use "../utils/variables";
 
 .footer {
+  background-color: variables.$mint-100;
+  padding: 57px 0 40px;
+
+  .heading_md {
+    text-align: center;
+    color: variables.$green-100;
+    margin-bottom: 50px;
+  }
+
+  &_top {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__nav {
+    display: flex;
+    width: 100%;
+    margin-bottom: 115px;
+  }
+
+  &__nav-item {
+    width: 25%;
+  }
+
+  &__menu {
+    padding-right: 15px;
+  }
+  &__title{
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  &__menu-general a,
+  &__title {
+    display: inline-block;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      background-color: variables.$main-color;
+      height: 1px;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      transition: width 0.35s;
+    }
+  }
+
+  &__menu-general li  a:hover:after,
+  &__menu-general li  a:focus:after,
+  &__nav a:hover:after,
+  &__nav a:focus:after {
+    width: 0;
+  }
+
+  &__sub-menu {
+    font-size: 22px;
+
+    li {
+      margin-bottom: 13px;
+    }
+
+    a {
+      display: inline-block;
+      padding-top: 12px;
+      &:hover,
+      &:focus{
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+  &__menu-general {
+    li {
+      margin-bottom: 13px;
+    }
+
+    a {
+      display: inline-block;
+      padding-top: 12px;
+    }
+  }
 
   @include mixins.respond-to(variables.$md) {
 
@@ -12,5 +99,10 @@
   @include mixins.respond-to(variables.$xs) {
 
   }
+}
+
+.block-subscribe {
+  padding-bottom: 50px;
+  border-bottom: 1px solid variables.$green-100;
 }
 
