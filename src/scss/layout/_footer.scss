@@ -15,6 +15,7 @@
     padding-top: 50px;
     padding-bottom: 40px;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
 
@@ -31,7 +32,8 @@
   &__menu {
     padding-right: 15px;
   }
-  &__title{
+
+  &__title {
     font-weight: 700;
     font-size: 22px;
     margin-bottom: 15px;
@@ -41,6 +43,7 @@
   &__title {
     display: inline-block;
     position: relative;
+
     &:after {
       position: absolute;
       content: "";
@@ -54,8 +57,8 @@
     }
   }
 
-  &__menu-general li  a:hover:after,
-  &__menu-general li  a:focus:after,
+  &__menu-general li a:hover:after,
+  &__menu-general li a:focus:after,
   &__nav a:hover:after,
   &__nav a:focus:after {
     width: 0;
@@ -71,8 +74,9 @@
     a {
       display: inline-block;
       padding-top: 12px;
+
       &:hover,
-      &:focus{
+      &:focus {
         text-decoration: underline;
       }
     }
@@ -80,6 +84,9 @@
   }
 
   &__menu-general {
+    padding-top: 48px;
+    text-align: right;
+
     li {
       margin-bottom: 13px;
     }
@@ -88,6 +95,35 @@
       display: inline-block;
       padding-top: 12px;
     }
+  }
+
+  &__logo-farm {
+    display: inline-block;
+    max-width: 195px;
+    margin-left: 40px;
+
+    img {
+      display: inline-block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__contacts {
+    max-width: 755px;
+    font-size: 22px;
+  }
+
+  &_bottom {
+    font-size: 16px;
+    line-height: 2;
+    text-align: center;
+  }
+
+  &__note {
+    max-width: 1090px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   @include mixins.respond-to(variables.$md) {
@@ -99,6 +135,11 @@
   @include mixins.respond-to(variables.$xs) {
 
   }
+}
+
+.copyright {
+  width: 100%;
+  text-align: right;
 }
 
 .block-subscribe {

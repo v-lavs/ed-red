@@ -6,7 +6,7 @@
 @use 'base/reset';
 @use 'base/base';
 @use 'base/typography';
-//
+
 @use 'components/button';
 @use 'components/nav';
 @use 'components/slider';
@@ -20,6 +20,8 @@
 @use 'components/tabs';
 @use 'components/card-post';
 @use 'components/accordion';
+@use 'components/form';
+@use 'components/breadscrumb';
 
 @use 'layout/layout';
 @use 'layout/grid';
@@ -32,11 +34,14 @@
 @use 'layout/sections/section-info';
 @use 'layout/sections/section-question';
 @use 'layout/sections/section-video';
+@use 'layout/sections/section-intro';
 
 
 @use 'pages/blog';
 @use 'pages/single-article';
 @use 'pages/page';
+
+@use 'pages/page-allergens';
 
 
 

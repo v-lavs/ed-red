@@ -1,8 +1,10 @@
 @use "../utils/mixins";
 @use "../utils/variables";
-html{
+
+html {
   //font: 400 16px variables.$main-font;
 }
+
 body {
   font: 400 24px variables.$main-font;
   height: 100%;
@@ -27,20 +29,28 @@ body {
 
   }
 
-  &__title {
+  &__content p {
+    margin-bottom: 2em;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
+
 }
-.d-flex{
+
+.d-flex {
   display: flex;
 }
-.main-banner{
+
+.main-banner {
   position: relative;
   max-width: 1440px;
   margin: 0 auto;
   width: 100%;
   min-height: 592px;
-  img{
+
+  img {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -81,20 +91,20 @@ body {
   //    top: 50%;
   //    transform: translate(-50%, -50%);
   //  }
-  }
+}
 
-  .buy {
-    //width: 100%;
-    //font-weight: 700;
-    //font-size: 20px;
-    //line-height: 1.6;
-    //color: variables.$white;
-    //text-align: center;
-    //text-shadow: 0 0 10px rgba(63,165,53,1), 2px 2px 2px rgba(63,165,53,0.5);
-  }
+.buy {
+  //width: 100%;
+  //font-weight: 700;
+  //font-size: 20px;
+  //line-height: 1.6;
+  //color: variables.$white;
+  //text-align: center;
+  //text-shadow: 0 0 10px rgba(63,165,53,1), 2px 2px 2px rgba(63,165,53,0.5);
+}
 
 
-  @include mixins.respond-to(variables.$xs) {
+@include mixins.respond-to(variables.$xs) {
 
 }
 

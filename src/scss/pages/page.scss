@@ -2,72 +2,9 @@
 @use "../utils/variables";
 
 .page {
-
-  &__heading {
-
-
-    //.toggle-content {
-    //  position: relative;
-    //  width: 100%;
-    //  margin-top: 60px;
-    //  padding-top: 38px;
-    //  margin-bottom: 0;
-    //
-    //  &:before {
-    //    position: absolute;
-    //    content: '';
-    //    display: block;
-    //    background-color: #ffffff;
-    //    height: 1px;
-    //    width: 150vw;
-    //    left: 50%;
-    //    transform: translateX(-50%);
-    //    top: 0;
-    //  }
-    //
-    //  .btn {
-    //    border: none;
-    //    padding: 10px 10px 21px;
-    //  }
-    //
-    //  .block-more-info {
-    //    padding-top: 7px;
-    //    padding-bottom: 50px;
-    //
-    //    &:before {
-    //      display: none;
-    //    }
-    //  }
-    //}
+  .section-question {
+    padding-top: 100px;
   }
-
-  &__title {
-
-  }
-
-  &__sub-title {
-
-  }
-
-  .link-back {
-    display: none;
-    position: relative;
-    z-index: 2;
-    //margin-bottom: 14px;
-    //color: variables.$blue-100;
-
-    svg {
-      display: inline-block;
-      vertical-align: middle;
-      //width: 24px;
-      //height: 24px;
-
-      path {
-        //stroke: variables.$blue-100;
-      }
-    }
-  }
-
 
   @include mixins.respond-to(variables.$lg) {
 
@@ -84,9 +21,3 @@
 
 }
 
-.blog {
-
-  @include mixins.respond-to(variables.$xs) {
-
-  }
-}

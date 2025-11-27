@@ -1,0 +1,39 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
+.section-intro {
+  padding-bottom: 100px;
+  font-size: 32px;
+  line-height: 1.625;
+  color: variables.$black;
+
+  .container {
+    overflow: visible !important;
+  }
+
+  img {
+    display: block;
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+    top: 0;
+    width: 60vw;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .section__title {
+    text-align: center;
+    width: 100%;
+  }
+
+  .section__content{
+    position: relative;
+    padding: 9px 60% 9px 0;
+  }
+  .section__text{
+    padding-right: 16px;
+  }
+}

@@ -23,6 +23,27 @@ $(document).ready(function () {
         jQuery('.backdrop').fadeOut();
     });
 
+    // VIDEO PLAY
+
+    const promotionVideo = $('#promotion-video').get(0);
+
+    if (promotionVideo) {
+        const playBtn = $('#playButton');
+
+        playBtn.click(function () {
+            promotionVideo.play();
+        });
+
+        promotionVideo.addEventListener('play', function () {
+            playBtn.hide();
+            promotionVideo.controls = true
+        });
+
+        promotionVideo.addEventListener('pause', function () {
+            playBtn.show();
+            promotionVideo.controls = false
+        });
+    }
 
     //MODAL
     $('.open-modal').on('click', function (e) {
@@ -92,7 +113,7 @@ $(document).ready(function () {
         resizeTimer = setTimeout(checkSwipers, 200);
     });
 
-       // TABS
+    // TABS
 
     $(".tabs").each(function () {
         const tabs = $(this);
