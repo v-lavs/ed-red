@@ -2,8 +2,9 @@
 @use "../utils/variables";
 
 .page {
+
   .section-question {
-    padding-top: 100px;
+    padding-top: 100%;
   }
 
   @include mixins.respond-to(variables.$lg) {
@@ -21,3 +22,9 @@
 
 }
 
+.blog {
+
+  @include mixins.respond-to(variables.$xs) {
+
+  }
+}
