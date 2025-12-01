@@ -1,0 +1,59 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.filter {
+  display: flex;
+
+  &__item {
+    max-width: 308px;
+    width: 100%;
+    margin-right: 25px;
+    border: 1px solid variables.$green-100;
+
+    //padding: 18px 33px;
+  }
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: variables.$green-100;
+  color: white;
+}
+
+.select2-container--default .select2-selection--single {
+  width: 100%;
+  background-color: variables.$light-gay-100;
+
+  font-family: variables.$main-font;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: .02em;
+  color: #666666;
+  border: none;
+  height: 60px;
+  padding: 18px 30px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  padding: 0;
+  color: #666666;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.select2-container .select2-selection__arrow b {
+  border-color: #666666 transparent transparent transparent !important;
+  border-width:10px 6px 0 6px!important;
+  transition: transform 0.2s;
+}
+.select2-container--open .select2-selection__arrow b {
+  transform: rotate(180deg);
+}
+
+.select2-container--open .select2-dropdown {
+  margin-top: 2px;
+}

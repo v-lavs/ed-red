@@ -129,21 +129,23 @@
 
                 <div class="filter">
                     <div class="filter__item">
-                        <select name="Пора року" id="season">
-                            <option value="Всі">Всі</option>
+                        <select name="Пора року" id="season" class="filter__select">
+                            <option value="">Пора року</option>
                             <option value="Весна">Весна</option>
                             <option value="Літо">Літо</option>
                             <option value="Осінь">Осінь</option>
                             <option value="">Зима</option>
+                            <option value="Всі">Всі</option>
                         </select>
                     </div>
                     <div class="filter__item">
-                        <select name="Тип алергії" id="typeAllergy">
-                            <option value="Всі">Всі</option>
+                        <select name="Тип алергії" id="typeAllergy" class="filter__select">
+                            <option value="">Тип алергії</option>
                             <option value="Алергія на ліки">Алергія на ліки</option>
                             <option value="Алергія у вагітних">Алергія у вагітних</option>
                             <option value="Алергія на медикаменти">Алергія на медикаменти</option>
                             <option value="Алергія на пилок">Алергія на пилок</option>
+                            <option value="Всі">Всі</option>
                         </select>
                     </div>
                 </div>
@@ -394,8 +396,10 @@
     </footer>
 </div>
 
+
+<script src="./lib/jquery-3.7.1.min.js"></script>
+<script src="./lib/select2/select2.min.js"></script>
 <script src="./lib/swiper/swiper-bundle.min.js"></script>
-<script src="lib/select2/select2.min.js"></script>
 <script src="dist/main.js"></script>
 </body>
 </html>

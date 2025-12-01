@@ -2,8 +2,6 @@
 * to include js file write: `//= include ./path-to-file`
 * */
 
-//= include ../../node_modules/jquery/dist/jquery.js ;
-
 // CUSTOM SCRIPTS
 
 
@@ -182,6 +180,12 @@ $(document).ready(function () {
                 .siblings('.panel-collapse')
                 .slideDown(500)
         }
+    });
+
+//    CUSTOM SELECT
+    $('.filter__select').select2({
+        width:'100%',
+        minimumResultsForSearch: -1,
     });
 
 });
