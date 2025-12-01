@@ -2,9 +2,9 @@
 @use "../utils/variables";
 
 .page {
-
+  background-color: #FFFFFF;
   .section-question {
-    padding-top: 100%;
+    padding-top: 100px;
   }
 
   @include mixins.respond-to(variables.$lg) {

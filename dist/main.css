@@ -1175,10 +1175,8 @@ body {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.8);
   border: none;
-  padding-top: 10%;
-  min-width: 70px;
-  min-height: 70px;
-  width: 10%;
+  width: 131px;
+  height: 131px;
   border-radius: 50%;
   cursor: pointer;
   left: 50%;
@@ -1613,6 +1611,61 @@ form input {
   right: 0;
   bottom: -6px;
   z-index: 1;
+}
+
+.filter {
+  display: flex;
+}
+
+.filter__item {
+  max-width: 308px;
+  width: 100%;
+  margin-right: 25px;
+  border: 1px solid #7EA68C;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: #7EA68C;
+  color: white;
+}
+
+.select2-container--default .select2-selection--single {
+  width: 100%;
+  background-color: #FAFAFA;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #666666;
+  border: none;
+  height: 60px;
+  padding: 18px 30px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  padding: 0;
+  color: #666666;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.select2-container .select2-selection__arrow b {
+  border-color: #666666 transparent transparent transparent !important;
+  border-width: 10px 6px 0 6px !important;
+  transition: transform 0.2s;
+}
+
+.select2-container--open .select2-selection__arrow b {
+  transform: rotate(180deg);
+}
+
+.select2-container--open .select2-dropdown {
+  margin-top: 2px;
 }
 
 .container {
@@ -2174,8 +2227,60 @@ form input {
   padding-bottom: 50px;
 }
 
+.menu-of-allergies {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 50px 0;
+  font-size: 22px;
+  line-height: 1.81;
+  color: #ffffff;
+}
+
+.menu-of-allergies .section-calendar {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1;
+  color: #FFFFFF;
+  margin-bottom: 22px;
+}
+
+.menu-of-allergies .section__content {
+  max-width: 830px;
+  width: 100%;
+}
+
+.menu-of-allergies .section__text {
+  margin-bottom: 28px;
+}
+
+.section-promo {
+  background-color: #F9F9F9;
+  padding: 50px 0;
+}
+
+.section-promo .heading {
+  margin-bottom: 25px;
+}
+
+.section-promo .part {
+  width: 50%;
+}
+
+.section-promo .part_left {
+  padding-right: 30px;
+}
+
+.section-promo .part_right {
+  padding-left: 12px;
+}
+
+.page {
+  background-color: #FFFFFF;
+}
+
 .page .section-question {
-  padding-top: 100%;
+  padding-top: 100px;
 }
 
 .page-allergens {

@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "bootstrap-4-grid": "^2.4.1",
-    "jquery": "^3.5.1",
+    "jquery": "^3.7.1",
     "jquery-scrollify": "^1.0.21",
     "swiper": "^7.0.3"
   }

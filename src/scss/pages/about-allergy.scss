@@ -1,0 +1,53 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.about-allergy {
+
+}
+
+.menu-of-allergies {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 50px 0;
+  font-size: 22px;
+  line-height: 1.81;
+  color: variables.$white;
+
+  .section-calendar {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1;
+    color: #FFFFFF;
+    margin-bottom: 22px;
+  }
+
+  .section__content {
+    max-width: 830px;
+    width: 100%;
+  }
+
+  .section__text {
+    margin-bottom: 28px;
+
+  }
+}
+
+.section-promo {
+  background-color: variables.$light-gay-200;
+  padding: 50px 0;
+  .heading{
+    margin-bottom: 25px;
+  }
+  .part {
+    width: 50%;
+
+    &_left {
+      padding-right: 30px;
+    }
+
+    &_right {
+      padding-left: 12px;
+    }
+  }
+}

@@ -1,10 +1,530 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!--зaкрыть индексацию -->
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="robots" content="noindex">
+    <meta name="yandex" content="none">
+
+    <title>Все про алергію</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+
+    <!--    <link rel="stylesheet" href="./fonts/fonts.css">-->
+    <link href="lib/select2/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./dist/main.css">
+
+</head>
+
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="header__logo">
+                <img src="assets/img/edem_logo.svg" alt="лого Едем" width="86" height="56">
+            </a>
+            <div class="header__nav">
+                <button type="button" class="btn_close" aria-label="Закрити меню">X</button>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="index.html" class="menu__link active">Едем
+                            <ul class="sub-menu">
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едем таблетки</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едем сироп</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едермік</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едермік гель</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едем ріно спрей</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="about-allergy.html" class="menu__link">Все про алергію
+                            <ul class="sub-menu">
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Види алергії</a></li>
+                                <li class="sub-menu__item"><a href="page-symptoms.html" class="sub-menu__link">Прояви
+                                    алергії</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Лікування алергії</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Профілактика алергії</a>
+                                </li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Алергія у дітей</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="page-useful.html" class="menu__link">Корисно для людей з алергією
+                            <ul class="sub-menu">
+                                <li class="sub-menu__item"><a href="page-allergens-plants.html" class="sub-menu__link">Рослини
+                                    - алергени</a>
+                                </li>
+                                <li class="sub-menu__item"><a href="page-allergens-food.html" class="sub-menu__link">Продукти
+                                    - алергени</a>
+                                </li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Календар алергії</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">При різних видах
+                                    алергії</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Пам’ятки для алергіка</a>
+                                </li>
+                            </ul>
+                        </a></a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="questions.html" class="menu__link">Питання-відповіді</a>
+                    </li>
+                </ul>
+            </div>
+            <button type="button" class="search_open" aria-label="Відкрити пошук">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.5832 21.4688L18.9697 16.8783C20.3679 15.0571 21.1348 12.8481 21.1351 10.517C21.1351 7.7079 20.0355 5.06672 18.0389 3.0804C16.0425 1.09407 13.3884 0 10.5648 0C7.7416 0 5.08715 1.09407 3.09084 3.0804C-1.03028 7.18125 -1.03028 13.8535 3.09084 17.9537C5.08715 19.9403 7.7416 21.0344 10.5648 21.0344C12.9076 21.0341 15.1277 20.2711 16.9581 18.8799L21.5716 23.4703C21.8491 23.7468 22.2135 23.885 22.5774 23.885C22.9414 23.885 23.3057 23.7468 23.5832 23.4703C24.1389 22.9177 24.1389 22.0213 23.5832 21.4688ZM5.10243 15.9521C2.0906 12.9554 2.09095 8.07904 5.10243 5.08193C6.56146 3.63054 8.50151 2.8309 10.5648 2.8309C12.6285 2.8309 14.5682 3.63054 16.0273 5.08193C17.4863 6.53366 18.29 8.464 18.29 10.517C18.29 12.5704 17.4863 14.5004 16.0273 15.9521C14.5682 17.4039 12.6285 18.2035 10.5648 18.2035C8.50151 18.2035 6.56146 17.4039 5.10243 15.9521Z"
+                          fill="#383838"/>
+                </svg>
+            </button>
+            <div class="header__search">
+                <form role="search" method="get" id="searchform" class="searchform" action="#">
+                    <div class="search-wrap">
+                        <input type="hidden" name="post_type" value="">
+                        <label class="screen-reader-text" for="s">Шукати:</label>
+                        <input type="text" placeholder="" value="" name="s" id="s"/>
+                        <button type="submit" id="searchsubmit" class="btn_search">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.5832 21.4688L18.9697 16.8783C20.3679 15.0571 21.1348 12.8481 21.1351 10.517C21.1351 7.7079 20.0355 5.06672 18.0389 3.0804C16.0425 1.09407 13.3884 0 10.5648 0C7.7416 0 5.08715 1.09407 3.09084 3.0804C-1.03028 7.18125 -1.03028 13.8535 3.09084 17.9537C5.08715 19.9403 7.7416 21.0344 10.5648 21.0344C12.9076 21.0341 15.1277 20.2711 16.9581 18.8799L21.5716 23.4703C21.8491 23.7468 22.2135 23.885 22.5774 23.885C22.9414 23.885 23.3057 23.7468 23.5832 23.4703C24.1389 22.9177 24.1389 22.0213 23.5832 21.4688ZM5.10243 15.9521C2.0906 12.9554 2.09095 8.07904 5.10243 5.08193C6.56146 3.63054 8.50151 2.8309 10.5648 2.8309C12.6285 2.8309 14.5682 3.63054 16.0273 5.08193C17.4863 6.53366 18.29 8.464 18.29 10.517C18.29 12.5704 17.4863 14.5004 16.0273 15.9521C14.5682 17.4039 12.6285 18.2035 10.5648 18.2035C8.50151 18.2035 6.56146 17.4039 5.10243 15.9521Z"
+                                      fill="#383838"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <button type="button" class="btn_burger" aria-label="Відкрити меню">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </div>
+
+    </header>
+    <div class="backdrop"></div>
+
+    <main class="main  page">
+        <div class="container">
+            <nav aria-label="Хлібні крихти" class="breadcrumb">
+                <ul>
+                    <li class="breadcrumb__item"><a href="#">Едем</a></li>
+                    <li class="breadcrumb__item"><span class="current-page" aria-current="page">Все про алергію</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <section class="section-banner">
+            <div class="container">
+                <div class="part part_left">
+                    <h2 class="heading_xxl">Все про алергію</h2>
+                    <div class="section-banner__text text_lg">
+                        Сучасний антигістамінний лікарський препарат тривалої дії
+                        з потрійним ефектом
+                    </div>
+                    <a href="#" class="btn btn_main">Дізнатись більше</a>
+                </div>
+
+                <div class="part part_right">
+                    <img src="assets/img/2_edem_sirop_right_3d%201.png" alt="Упаковка протиалергічного засобу Едем"
+                         width="437" height="458">
+                </div>
+            </div>
+        </section>
+
+        <div class="section-counter">
+            <div class="container">
+                <div class="counter">
+                    <div class="counter__item">
+                        <div class="counter__number" data-target="17" data-prefix="" data-suffix="+">17+</div>
+                        <div class="counter__text">Років на ринку</div>
+                    </div>
+                    <div class="counter__item">
+                        <div class="counter__number" data-target="30" data-prefix="" data-suffix="">30</div>
+                        <div class="counter__text">Початок дії через <br>
+                            30 хвилин
+                        </div>
+                    </div>
+                    <div class="counter__item">
+                        <div class="counter__number" data-target="6" data-prefix="" data-suffix="">6</div>
+                        <div class="counter__text">Едем сироп <br>
+                            з 6 місяців
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section-with-tabs">
+            <div class="container">
+                <div class="tabs">
+                    <div class="tabs__nav">
+                        <a href="#tab3" class="tabs__nav-link active">Види алергії</a>
+                        <a href="#tab4" class="tabs__nav-link">Прояви алергії</a>
+                    </div>
+                    <div class="tabs__content-wrapper">
+                        <div id="tab3" class="tab-pane active">
+                            <div class="swiper slider-posts" id="sliderPosts1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <article class="card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/alergiya-na-pit.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на піт: причини, симптоми алергії,
+                                                    лікування.
+                                                </h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/tabak.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на нікотинову кислоту: що потрібно
+                                                    знати?
+                                                </h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/el-sigarety.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на електронні сигарети: правда чи
+                                                    вигадка?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab4" class="tab-pane">
+                            <div class="swiper slider-posts" id="sliderPosts2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <article class="card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/mother.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Які можна приймати ліки від алергії
+                                                    годуючій
+                                                    мамі?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/cat-tab.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Як позбутися алергії на кішок?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/peoples.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Як здоровий спосіб життя допомагає при
+                                                    алергії?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--                <div class="wrap-btn">-->
+                <!--                    <a href="#" class="btn btn_main">Читати більше</a>-->
+                <!--                </div>-->
+            </div>
+        </section>
+
+        <section class="menu-of-allergies" style="background-image:url(assets/img/main-banner2.png);">
+            <div class="container">
+                <div class="section__content">
+                    <h2 class="section__title">Меню при різних видах алергії</h2>
+                    <div class="section__text">В залежності від того, на що у вас алергія, ваш лікар може запропонувати
+                        вам спеціальну дієту, основне завдання якої - очистити організм від чужорідного білка.
+                    </div>
+                </div>
+                <a href="#" class="btn btn_main">Детальніше</a>
+            </div>
+        </section>
+
+        <section class="section-info">
+            <div class="container">
+                <div class="swiper slider-info">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="part_left">
+                                <img src="assets/img/slider/malyuk-z-vynogradom.jpg" alt="">
+                            </div>
+                            <div class="part_right">
+                                <div class="heading heading_lg">Алергія у дітей</div>
+                                <h3 class="slider-info__title">Алергія на виноград у дітей: як визначити та що
+                                    робити?</h3>
+                                <button class="btn btn_main">Дізнатись більше</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="part_left">
+                                <img src="assets/img/slider/orange-slices.png" alt="">
+                            </div>
+                            <div class="part_right">
+                                <div class="heading heading_lg">Варто знати</div>
+                                <h3 class="slider-info__title">Алергія на мандарини: симптоми та рекомендації щодо
+                                    лікування</h3>
+                                <button class="btn btn_main">Дізнатись більше</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="part_left">
+                                <img src="assets/img/slider/boy-posing-with-flowers.jpg" alt="">
+                            </div>
+                            <div class="part_right">
+                                <div class="heading heading_lg">Алергія у дітей</div>
+                                <h3 class="slider-info__title">Алергія на дитячу суміш: як її визначити і що
+                                    робити?</h3>
+                                <button class="btn btn_main">Дізнатись більше</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-nav">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-promo">
+            <div class="container d-flex">
+                <div class="part part_left">
+                    <div class="heading heading_lg">ЕДЕМ - ЗУСТРІНЬ ЛІТО БЕЗ АЛЕРГІЇ!</div>
+                    <div class="section-promo__text">
+                        Едем - це препарат для усунення симптомів, пов'язаних з алергічним ринітом, таких як чхання,
+                        виділення із носа, свербіж, набряк та закладеність носа, а також свербіж та почервоніння очей,
+                        сльозотеча, свербіж піднебіння та кашель.
+                    </div>
+                </div>
+                <div class="part part_right">
+                    <div class="video-wrap">
+                        <button id="playButton" class="btn_play" aria-label="button-play"></button>
+                        <video id="promotion-video" poster="assets/img/hq720-1.png" width="1306" height="739"
+                               preload="none">
+                            <source src="assets/video/107518__Edem_06_2017_15.mp4" type="video/mp4">
+                            Ваш браузер не підтримує тег video.
+                        </video>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-question">
+            <div class="container d-flex">
+                <div class="section__heading">
+                    <h2 class="section__title heading_xxl">Питання та відповіді</h2>
+                </div>
+                <div class="section__content">
+                    <div class="accordion" id="accordion">
+                        <div class="panel">
+                            <div class="panel__heading">
+                                <div class="open-panel"></div>
+                                <h3 class="panel__title title_middle">Lorem ipsum dolor sit amet.</h3>
+                            </div>
+                            <div class="panel-collapse">
+                                <div class="panel-collapse__body dynamic-content">
+                                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, totam.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel__heading">
+                                <div class="open-panel"></div>
+                                <h3 class="panel__title title_middle">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Ex, ullam!</h3>
+                            </div>
+                            <div class="panel-collapse">
+                                <div class="panel-collapse__body dynamic-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, dolor ex maxime
+                                        non rerum totam.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores in
+                                        ipsa nam, officia quisquam.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel__heading">
+                                <div class="open-panel"></div>
+                                <h3 class="panel__title title_middle">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Minus, totam.</h3>
+                            </div>
+                            <div class="panel-collapse">
+                                <div class="panel-collapse__body dynamic-content">
+                                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci
+                                        architecto at excepturi harum hic minima, minus perspiciatis repellat!
+                                        Voluptates?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel__heading">
+                                <div class="open-panel"></div>
+                                <h3 class="panel__title title_middle">Lorem ipsum dolor sit amet, consectetur. Ex,
+                                    ullam!</h3>
+                            </div>
+                            <div class="panel-collapse">
+                                <div class="panel-collapse__body dynamic-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, dolor ex maxime
+                                        non rerum totam.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores in
+                                        ipsa nam, officia quisquam.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel__heading">
+                                <div class="open-panel"></div>
+                                <h3 class="panel__title title_middle">Lorem ipsum dolor sit amet.</h3>
+                            </div>
+                            <div class="panel-collapse">
+                                <div class="panel-collapse__body dynamic-content">
+                                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, totam.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores distinctio
+                                        est maxime repudiandae veniam. Animi iusto nemo quaerat.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="block-subscribe">
+                <h3 class="heading heading_md">Підпишіться на нові статті про алергію та її лікування!</h3>
+                <form action="#" method="post" class="form-subscribe">
+                    <div class="form__group">
+                        <input type="text" placeholder="Введіть Ваш e-mail">
+                        <button class="btn btn_submit">Відправити</button>
+                    </div>
+                    <label class="checkbox-wrap">
+                        <input type="checkbox" name="subscribe"/>
+                        <span class="checkmark"></span>
+                        Надаю АТ «Фармак» згоду на обробку моїх персональних даних (з повним текстом згоди
+                        ознайомлена(-ий) та погоджуюсь)
+                    </label>
+                </form>
+            </div>
+
+            <div class="footer_top">
+                <div class="footer__nav">
+                    <div class="footer__nav-item">
+                        <ul class="footer__menu">
+                            <li>
+                                <a class="footer__title" href="index.html">Едем</a>
+                                <ul class="footer__sub-menu">
+                                    <li><a href="#">Едем таблетки</a></li>
+                                    <li><a href="#">Едем сироп</a></li>
+                                    <li><a href="#">Едермік</a></li>
+                                    <li><a href="#">Едермік гель</a></li>
+                                    <li><a href="#">Едем ріно спрей</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-item">
+                        <ul class="footer__menu">
+                            <li>
+                                <a class="footer__title" href="#">Все про алергію</a>
+                                <ul class="footer__sub-menu">
+                                    <li><a href="#">Види алергії</a></li>
+                                    <li><a href="page-symptoms.html">Прояви алергії</a></li>
+                                    <li><a href="#">Лікування алергії</a></li>
+                                    <li><a href="#">Профілактика алергії</a></li>
+                                    <li><a href="#">Алергія у дітей</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-item">
+                        <ul class="footer__menu">
+                            <li>
+                                <a class="footer__title" href="#">Корисно для алергіка</a>
+                                <ul class="footer__sub-menu">
+                                    <li><a href="page-allergens-plants.html">Рослини - алергени</a></li>
+                                    <li><a href="page-allergens-food.html">Продукти - алергени</a></li>
+                                    <li><a href="#">Календар алергії</a></li>
+                                    <li><a href="#">При різних видах алергії</a></li>
+                                    <li><a href="#">Пам’ятки для алергіка</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-item">
+                        <ul class="footer__menu-general">
+                            <li><a class="" href="#">Питання та Відповіді</a></li>
+                            <li><a class="" href="#">Інформація для фахівців</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    <h4 class="footer__title">Контакти АТ Фармак</h4>
+                    <div>
+                        <span class="address"> вул. Кирилівська, 63, м. Київ  </span>
+                        <a class="" href="tel:+380444968787">Телефон: +38 (044) 496-87-87</a>
+                        <a class="" href="mailto:info@farmak.ua">E-mail: info@farmak.ua</a>
+                    </div>
+                </div>
+                <a href="#" class="footer__logo-farm">
+                    <img src="assets/img/Logo_Farmak_Main.svg" alt="Лого Фармак">
+                </a>
+
+                <div class="copyright">&copy; Едем, 2024</div>
+
+            </div>
+            <div class="footer_bottom">
+                <div class="footer__note">
+                    <p>Реклама лікарського засобу. Перед застосуванням лікарського засобу обов'язково
+                        проконсультуйтесь з лікарем та ознайомтесь з інструкцією для застосування лікарського
+                        засобу.</p>
+                    <p>*Дані з сайту <a href="https://tsinanaliky.com.ua/">tsinanaliky.com.ua</a></p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="./lib/jquery-3.7.1.min.js"></script>
+<script src="./lib/select2/select2.min.js"></script>
+<script src="./lib/swiper/swiper-bundle.min.js"></script>
+<script src="dist/main.js"></script>
 </body>
 </html>

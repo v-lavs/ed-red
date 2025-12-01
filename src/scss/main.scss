@@ -39,11 +39,15 @@
 @use 'layout/sections/section-blog';
 
 
+
 @use 'pages/blog';
 @use 'pages/single-article';
-@use 'pages/page';
 
+@use 'pages/page';
+@use 'pages/about-allergy';
 @use 'pages/page-allergens';
+@use 'pages/page-useful';
+
 
 
 
