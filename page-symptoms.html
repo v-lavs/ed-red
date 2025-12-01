@@ -49,7 +49,8 @@
                         <a href="about-allergy.html" class="menu__link">Все про алергію
                             <ul class="sub-menu">
                                 <li class="sub-menu__item"><a href="#" class="sub-menu__link">Види алергії</a></li>
-                                <li class="sub-menu__item"><a href="page-symptoms.html" class="sub-menu__link">Прояви алергії</a></li>
+                                <li class="sub-menu__item"><a href="page-symptoms.html" class="sub-menu__link">Прояви
+                                    алергії</a></li>
                                 <li class="sub-menu__item"><a href="#" class="sub-menu__link">Лікування алергії</a></li>
                                 <li class="sub-menu__item"><a href="#" class="sub-menu__link">Профілактика алергії</a>
                                 </li>
@@ -60,9 +61,9 @@
                     <li class="menu__item">
                         <a href="useful.html" class="menu__link">Корисно для людей з алергією
                             <ul class="sub-menu">
-                                <li class="sub-menu__item"><a href="page-allergens-plants.html" class="sub-menu__link">Рослини - алергени</a>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Рослини - алергени</a>
                                 </li>
-                                <li class="sub-menu__item"><a href="page-allergens-food.html" class="sub-menu__link">Продукти - алергени</a>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Продукти - алергени</a>
                                 </li>
                                 <li class="sub-menu__item"><a href="#" class="sub-menu__link">Календар алергії</a></li>
                                 <li class="sub-menu__item"><a href="#" class="sub-menu__link">При різних видах
@@ -115,124 +116,106 @@
             <nav aria-label="Хлібні крихти" class="breadcrumb">
                 <ul>
                     <li class="breadcrumb__item"><a href="#">Едем</a></li>
-                    <li class="breadcrumb__item"><a href="#">Корисно для людей з алергією</a></li>
-                    <li class="breadcrumb__item"><span class="current-page" aria-current="page">Продукти-Алергени</span></li>
+                    <li class="breadcrumb__item"><a href="#">Все про Алергію</a></li>
+                    <li class="breadcrumb__item"><span class="current-page" aria-current="page">Прояви алергії</span>
+                    </li>
                 </ul>
             </nav>
         </div>
 
-        <section class="section-intro">
+        <section class="section-blog">
             <div class="container">
-                <h2 class="section__title heading heading_lg">продукти-АЛЕРГЕНИ</h2>
-                <div class="section__content">
-                    <div class="section__text">
-                        <p>
-                            Викликати алергію можуть різні продукти та їх складники, тому важливо визначити за допомогою
-                            алергопроб, що саме провокує у вас алергію
-                        </p>
-                        <p>
-                            Дізнайтесь більше про рослину, яка викликає у вас алергію, з довідника рослин-алергенів, що
-                            знаходиться нижче
-                        </p>
+                <h2 class="section__title heading heading_lg">Прояви алергії</h2>
+
+                <div class="filter">
+                    <div class="filter__item">
+                        <select name="Пора року" id="season">
+                            <option value="Всі">Всі</option>
+                            <option value="Весна">Весна</option>
+                            <option value="Літо">Літо</option>
+                            <option value="Осінь">Осінь</option>
+                            <option value="">Зима</option>
+                        </select>
                     </div>
-                    <img src="assets/img/food-allerg/producty-alergeny.jpg" alt="">
+                    <div class="filter__item">
+                        <select name="Тип алергії" id="typeAllergy">
+                            <option value="Всі">Всі</option>
+                            <option value="Алергія на ліки">Алергія на ліки</option>
+                            <option value="Алергія у вагітних">Алергія у вагітних</option>
+                            <option value="Алергія на медикаменти">Алергія на медикаменти</option>
+                            <option value="Алергія на пилок">Алергія на пилок</option>
+                        </select>
+                    </div>
+                </div>
+                <ul class="blog-list">
+                    <li class="post-item">
+                        <article class="card-post">
+                            <div class="card-post__thumb"
+                                 style="background-image: url(assets/img/blog/blog-thumb1.jpg);"></div>
+                            <div class="card-post__body">
+                                <h3 class="card-post__title">Ангіоневротичний набряк (АН): причини, симптоми та як
+                                    лікувати набряк Квінке</h3>
+                                <a href="#" class="card-post__link">Більше</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="post-item">
+                        <article class="card-post">
+                            <div class="card-post__thumb"
+                                 style="background-image: url(assets/img/blog/blog-thumb2.jpg);"></div>
+                            <div class="card-post__body">
+                                <h3 class="card-post__title">Алергія на обличчі: як лікувати та позбутись висипань на
+                                    обличчі</h3>
+                                <a href="#" class="card-post__link">Більше</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="post-item">
+                        <article class="card-post">
+                            <div class="card-post__thumb"
+                                 style="background-image: url(assets/img/blog/blog-thumb3.jpg);"></div>
+                            <div class="card-post__body">
+                                <h3 class="card-post__title">Чи буває алергія на опале листя?</h3>
+                                <a href="#" class="card-post__link">Більше</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="post-item">
+                        <article class="card-post">
+                            <div class="card-post__thumb"
+                                 style="background-image: url(assets/img/blog/blog-thumb4.jpg);"></div>
+                            <div class="card-post__body">
+                                <h3 class="card-post__title">Алергени та гаптени: в чому різниця та де зв'язок?</h3>
+                                <a href="#" class="card-post__link">Більше</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="post-item">
+                        <article class="card-post">
+                            <div class="card-post__thumb"
+                                 style="background-image: url(assets/img/blog/blog-thumb5.jpg);"></div>
+                            <div class="card-post__body">
+                                <h3 class="card-post__title">Чому свербить місце укусу комара?</h3>
+                                <a href="#" class="card-post__link">Більше</a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="post-item">
+                        <article class="card-post">
+                            <div class="card-post__thumb"
+                                 style="background-image: url(assets/img/blog/blog-thumb6.jpg);"></div>
+                            <div class="card-post__body">
+                                <h3 class="card-post__title">Чим може бути небезпечним робоче місце</h3>
+                                <a href="#" class="card-post__link">Більше</a>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+                <div class="wrap-btn">
+                    <a href="#" id="loadMorePosts" class="load_more"></a>
                 </div>
             </div>
         </section>
-        <div class="allergens">
-            <div class="container">
-                <ul class="allergens__list">
-                    <li class="allergens__item">
-                        <a href="#">
-                            <div class="allergens__thumb"
-                                 style="background-image: url(assets/img/food-allerg/producty-alergen-1.png);"></div>
-                            <div class="allergens__name">абрикос</div>
-                        </a>
-                    </li>
-                    <li class="allergens__item">
-                        <a href="#">
-                            <div class="allergens__thumb"
-                                 style="background-image: url(assets/img/food-allerg/producty-alergen-2.png);"></div>
-                            <div class="allergens__name">арахіс</div>
-                        </a>
-                    </li>
-                    <li class="allergens__item">
-                        <a href="#">
-                            <div class="allergens__thumb"
-                                 style="background-image: url(assets/img/food-allerg/producty-alergen-3.png);"></div>
-                            <div class="allergens__name">банани</div>
-                        </a>
-                    </li>
-                    <li class="allergens__item">
-                        <a href="#">
-                            <div class="allergens__thumb"
-                                 style="background-image: url(assets/img/food-allerg/producty-alergen-4.png);"></div>
-                            <div class="allergens__name">бобові</div>
-                        </a>
-                    </li>
-                    <li class="allergens__item">
-                        <a href="#">
-                            <div class="allergens__thumb"
-                                 style="background-image: url(assets/img/food-allerg/producty-alergen-5.png);"></div>
-                            <div class="allergens__name">бульйон</div>
-                        </a>
-                    </li>
-
-                    <li class="allergens__item">
-                        <a href="#">
-                            <div class="allergens__thumb"
-                                 style="background-image: url(assets/img/food-allerg/producty-alergen-6.png);"></div>
-                            <div class="allergens__name">болгарський перець</div>
-                        </a>
-                    </li>
-
-
-                    <li class="allergens__item">
-                        <a href="#">
-                            <div class="allergens__thumb"
-                                 style="background-image: url(assets/img/food-allerg/producty-alergen-7.png);"></div>
-                            <div class="allergens__name">вівсяні пластівці</div>
-                        </a>
-                    </li>
-                    <li class="allergens__item">
-                        <a href="#">
-                            <div class="allergens__thumb"
-                                 style="background-image: url(assets/img/food-allerg/producty-alergen-8.png);"></div>
-                            <div class="allergens__name">вишні</div>
-                        </a>
-                    </li>
-                    <li class="allergens__item">
-                        <a href="#">
-                            <div class="allergens__thumb"
-                                 style="background-image: url(assets/img/food-allerg/producty-alergen-9.png);"></div>
-                            <div class="allergens__name">горох</div>
-                        </a>
-                    </li>
-                    <li class="allergens__item">
-                        <a href="#">
-                            <div class="allergens__thumb"
-                                 style="background-image: url(assets/img/food-allerg/producty-alergen-10.png);"></div>
-                            <div class="allergens__name">горіхи</div>
-                        </a>
-                    </li>
-                    <li class="allergens__item">
-                        <a href="#">
-                            <div class="allergens__thumb"
-                                 style="background-image: url(assets/img/food-allerg/producty-alergen-11.png);"></div>
-                            <div class="allergens__name">гриби</div>
-                        </a>
-                    </li>
-                    <li class="allergens__item">
-                        <a href="#">
-                            <div class="allergens__thumb"
-                                 style="background-image: url(assets/img/food-allerg/producty-alergen-12.png);"></div>
-                            <div class="allergens__name">гречка</div>
-                        </a>
-                    </li>
-                </ul>
-                <a href="#" id="loadMore" class="load_more"></a>
-            </div>
-        </div>
         <section class="section-question">
             <div class="container d-flex">
                 <div class="section__heading">
@@ -354,7 +337,7 @@
                                 <a class="footer__title" href="#">Все про алергію</a>
                                 <ul class="footer__sub-menu">
                                     <li><a href="#">Види алергії</a></li>
-                                    <li><a href="page-symptoms.html">Прояви алергії</a></li>
+                                    <li><a href="#">Прояви алергії</a></li>
                                     <li><a href="#">Лікування алергії</a></li>
                                     <li><a href="#">Профілактика алергії</a></li>
                                     <li><a href="#">Алергія у дітей</a></li>
@@ -367,8 +350,8 @@
                             <li>
                                 <a class="footer__title" href="#">Корисно для алергіка</a>
                                 <ul class="footer__sub-menu">
-                                    <li><a href="page-allergens-plants.html">Рослини - алергени</a></li>
-                                    <li><a href="page-allergens-food.html">Продукти - алергени</a></li>
+                                    <li><a href="#">Рослини - алергени</a></li>
+                                    <li><a href="#">Продукти - алергени</a></li>
                                     <li><a href="#">Календар алергії</a></li>
                                     <li><a href="#">При різних видах алергії</a></li>
                                     <li><a href="#">Пам’ятки для алергіка</a></li>
