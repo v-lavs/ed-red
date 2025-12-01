@@ -1,0 +1,166 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.calendar-wrapper {
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.plant-calendar {
+  overflow: visible;
+}
+
+.season-scrollbar {
+  position: relative;
+}
+
+.season {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #6E8396;
+
+  pointer-events: none;
+}
+
+.season-label {
+  width: 25%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.scrollbar-track {
+  position: relative;
+  height: 60px;
+  border-radius: 0;
+  background-color: #EFF2F5;
+}
+
+.month-ticks {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 31px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  align-items: flex-end;
+}
+
+.month-ticks span {
+  width: 1px;
+  height: 19px;
+  background-color: #6E8396;
+
+  &:nth-child(3n + 1) {
+    height: 31px;
+  }
+}
+
+.scrollbar-thumb {
+  position: absolute;
+  top: -6px;
+  width: 50px;
+  height: 20px;
+  border-radius: 10px;
+  background: #333;
+  cursor: grab;
+}
+
+.month-block {
+  position: relative;
+  width: 352px;
+  //width: 340px;
+  &:first-child:before,
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    background-color: #B5B5B5;
+    width: 1px;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &:first-child:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+    top: 0;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: variables.$green;
+    padding-left: 15px;
+    margin-bottom: 27px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    padding-left: 22px;
+    margin-bottom: 35px;
+  }
+
+  a {
+    display: inline-block;
+
+  }
+
+  .more-plants {
+    display: flex;
+    align-items: center;
+  }
+
+  .more-plants,
+  &__item-name {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 24.56px;
+    color: variables.$black;
+  }
+
+  &__item-name {
+    display: inline-block;
+    padding-left: 15px;
+  }
+
+  &__item-image {
+    display: block;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+  }
+
+  .load_more {
+    flex-shrink: 0;
+    width: 65px;
+    height: 65px;
+    background-size: 32px 32px;
+    background-color: #E9EEF2;
+    box-shadow: none;
+    margin-right: 15px;
+  }
+}

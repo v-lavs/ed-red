@@ -188,6 +188,86 @@ $(document).ready(function () {
         minimumResultsForSearch: -1,
     });
 
+// FLOWERING CALENDAR
+    const swiper = new Swiper('.plant-calendar', {
+        slidesPerView: 'auto',
+        freeMode: true
+    });
+
+    const track = document.querySelector('.scrollbar-track');
+    const thumb = document.querySelector('.scrollbar-thumb');
+    const monthTicks = document.querySelectorAll('.month-ticks span');
+    const seasonLabels = document.querySelectorAll('.season-label');
+
+    let dragging = false;
+    let maxX;
+    let totalTranslate;
+
+    function updateSizes() {
+        maxX = track.offsetWidth - thumb.offsetWidth;
+
+        const slides = swiper.slides;
+        const slideWidth = slides[0].offsetWidth + swiper.params.spaceBetween;
+        totalTranslate = slideWidth * slides.length - swiper.width;
+    }
+    updateSizes();
+    window.addEventListener("resize", updateSizes);
+
+   function updateThumb() {
+        const progress = swiper.progress;
+        thumb.style.left = progress * maxX + "px";
+    }
+    swiper.on('setTranslate', updateThumb);
+    swiper.on('slideChange', updateThumb);
+
+    /* --- THUMB → SWIPER --- */
+    thumb.addEventListener("mousedown", () => dragging = true);
+    document.addEventListener("mouseup", () => dragging = false);
+
+    document.addEventListener("mousemove", (e) => {
+        if (!dragging) return;
+
+        const rect = track.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+
+        x = Math.max(0, Math.min(x, maxX));
+        thumb.style.left = x + "px";
+
+        const progress = x / maxX;
+        const translate = -progress * totalTranslate;
+
+        swiper.setTranslate(translate);
+        swiper.updateProgress();
+    });
+
+    const clickCounters = Array(monthTicks.length).fill(0);
+
+    monthTicks.forEach((tick, idx) => {
+        tick.style.cursor = 'pointer';
+
+        tick.addEventListener('click', () => {
+            clickCounters[idx]++;
+            const monthIndex = clickCounters[idx] % swiper.slides.length;
+            swiper.slideTo(monthIndex, 300);
+        });
+    });
+
+    seasonLabels.forEach(label => {
+        label.style.cursor = 'pointer';
+
+        label.addEventListener('click', () => {
+            let targetSlide = 0;
+
+            if (label.classList.contains('season-spring')) targetSlide = 1;
+            if (label.classList.contains('season-summer')) targetSlide = 5;
+            if (label.classList.contains('season-autumn')) targetSlide = 8;
+            if (label.classList.contains('season-winter')) targetSlide = 11;
+
+            swiper.slideTo(targetSlide, 300);
+        });
+    });
+
+
 });
 
 

@@ -23,6 +23,7 @@
 @use 'components/form';
 @use 'components/breadscrumb';
 @use 'components/custom-select';
+@use 'components/plant-calendar';
 
 @use 'layout/layout';
 @use 'layout/grid';
@@ -37,6 +38,7 @@
 @use 'layout/sections/section-video';
 @use 'layout/sections/section-intro';
 @use 'layout/sections/section-blog';
+@use 'layout/sections/section-flowering';
 
 
 

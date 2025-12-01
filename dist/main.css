@@ -888,6 +888,10 @@ body {
   padding-top: 114px;
 }
 
+.color_green {
+  color: #7EA68C;
+}
+
 .section__title {
   margin-bottom: 50px;
 }
@@ -940,6 +944,7 @@ body {
 
 .heading_md {
   font-size: 36px;
+  font-weight: 700;
 }
 
 .text_lg {
@@ -1668,6 +1673,167 @@ form input {
   margin-top: 2px;
 }
 
+.calendar-wrapper {
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.plant-calendar {
+  overflow: visible;
+}
+
+.season-scrollbar {
+  position: relative;
+}
+
+.season {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #6E8396;
+  pointer-events: none;
+}
+
+.season-label {
+  width: 25%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.scrollbar-track {
+  position: relative;
+  height: 60px;
+  border-radius: 0;
+  background-color: #EFF2F5;
+}
+
+.month-ticks {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 31px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  align-items: flex-end;
+}
+
+.month-ticks span {
+  width: 1px;
+  height: 19px;
+  background-color: #6E8396;
+}
+
+.month-ticks span:nth-child(3n+1) {
+  height: 31px;
+}
+
+.scrollbar-thumb {
+  position: absolute;
+  top: -6px;
+  width: 50px;
+  height: 20px;
+  border-radius: 10px;
+  background: #333;
+  cursor: grab;
+}
+
+.month-block {
+  position: relative;
+  width: 352px;
+}
+
+.month-block:first-child:before,
+.month-block:after {
+  position: absolute;
+  content: "";
+  display: block;
+  background-color: #B5B5B5;
+  width: 1px;
+  height: 100%;
+  z-index: 1;
+}
+
+.month-block:first-child:before {
+  left: 0;
+}
+
+.month-block:after {
+  right: 0;
+  top: 0;
+}
+
+.month-block__title {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #007934;
+  padding-left: 15px;
+  margin-bottom: 27px;
+}
+
+.month-block__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.month-block__item {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding-left: 22px;
+  margin-bottom: 35px;
+}
+
+.month-block a {
+  display: inline-block;
+}
+
+.month-block .more-plants {
+  display: flex;
+  align-items: center;
+}
+
+.month-block .more-plants,
+.month-block__item-name {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 24.56px;
+  color: #000000;
+}
+
+.month-block__item-name {
+  display: inline-block;
+  padding-left: 15px;
+}
+
+.month-block__item-image {
+  display: block;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+
+.month-block .load_more {
+  flex-shrink: 0;
+  width: 65px;
+  height: 65px;
+  background-size: 32px 32px;
+  background-color: #E9EEF2;
+  box-shadow: none;
+  margin-right: 15px;
+}
+
 .container {
   width: 100%;
   max-width: 1440px;
@@ -2190,6 +2356,7 @@ form input {
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
+  background-color: #D9D9D9;
 }
 
 .section-intro .section__title {
@@ -2227,7 +2394,33 @@ form input {
   padding-bottom: 50px;
 }
 
-.menu-of-allergies {
+.section-flowering {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.section-flowering .heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-flowering .btn_main {
+  font-weight: 400;
+}
+
+.section-flowering .wrap-btn {
+  text-align: center;
+}
+
+.page {
+  background-color: #FFFFFF;
+}
+
+.page .section-question {
+  padding-top: 100px;
+}
+
+.section-img-bg {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -2237,7 +2430,7 @@ form input {
   color: #ffffff;
 }
 
-.menu-of-allergies .section-calendar {
+.section-img-bg .section-calendar {
   font-weight: 600;
   font-size: 48px;
   line-height: 1;
@@ -2245,12 +2438,12 @@ form input {
   margin-bottom: 22px;
 }
 
-.menu-of-allergies .section__content {
+.section-img-bg .section__content {
   max-width: 830px;
   width: 100%;
 }
 
-.menu-of-allergies .section__text {
+.section-img-bg .section__text {
   margin-bottom: 28px;
 }
 
@@ -2273,14 +2466,6 @@ form input {
 
 .section-promo .part_right {
   padding-left: 12px;
-}
-
-.page {
-  background-color: #FFFFFF;
-}
-
-.page .section-question {
-  padding-top: 100px;
 }
 
 .page-allergens {
@@ -2339,6 +2524,24 @@ form input {
 
 .allergens .load_more {
   margin-bottom: 68px;
+}
+
+.page-useful .section-intro .section__content {
+  padding-right: 50%;
+}
+
+.page-useful .section-intro img {
+  left: 50%;
+  width: 50vw;
+}
+
+.page-useful .section__slogan {
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #383838;
+  margin-bottom: 25px;
 }
 
 @media only screen and (max-width: 1439px) {

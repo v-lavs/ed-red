@@ -23,7 +23,9 @@ body {
   flex: 1 1 auto;
   padding-top: 114px;
 }
-
+.color_green{
+  color: variables.$green-100;
+}
 .section {
   &__title {
     margin-bottom: 50px;

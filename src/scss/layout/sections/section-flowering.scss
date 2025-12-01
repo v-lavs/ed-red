@@ -1,0 +1,20 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
+.section-flowering {
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  .heading {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .btn_main {
+    font-weight: 400;
+  }
+
+  .wrap-btn {
+    text-align: center;
+  }
+}

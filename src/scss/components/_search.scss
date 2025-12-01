@@ -1,3 +1,6 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .header__search{
   display: none;
 }

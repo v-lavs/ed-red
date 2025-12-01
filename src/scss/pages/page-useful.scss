@@ -2,5 +2,19 @@
 @use "../utils/variables";
 
 .page-useful{
-
+  .section-intro .section__content{
+    padding-right: 50%;
+  }
+  .section-intro img {
+    left: 50%;
+    width: 50vw;
+  }
+  .section__slogan{
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color:  variables.$main-color;
+    margin-bottom: 25px;
+  }
 }
