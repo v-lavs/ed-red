@@ -2,7 +2,6 @@
 @use "../utils/variables";
 
 .card-product {
-  border: 1px solid variables.$main-color;
   background-color: variables.$light-gay;
   border-radius: 12px;
   box-shadow: 0 2px 7.6px 0 rgba(0, 0, 0, .25);

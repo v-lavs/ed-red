@@ -3,6 +3,7 @@
 
 .page {
   background-color: #FFFFFF;
+
   .section-question {
     padding-top: 100px;
   }
@@ -22,7 +23,19 @@
 
 }
 
-.blog {
+.page-blog {
+  background-color: variables.$light-gay-100;
+}
+
+.page-useful {
+  .section {
+    padding-top: 100px;
+
+    .heading {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+  }
 
   @include mixins.respond-to(variables.$xs) {
 

@@ -4,6 +4,12 @@
 
 // CUSTOM SCRIPTS
 
+function destroySwiper(sliderInstance) {
+    if (sliderInstance instanceof Swiper && sliderInstance.initialized) {
+        sliderInstance.destroy(true, true);
+        console.log('destroy')
+    }
+}
 
 $(document).ready(function () {
     //MOBILE MENU
@@ -65,17 +71,45 @@ $(document).ready(function () {
             prevEl: '.swiper-nav .swiper-button-prev',
         },
     });
+    const sliderBlog = new Swiper('.blog-slider', {
+        spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.swiper-nav .swiper-button-next',
+            prevEl: '.swiper-nav .swiper-button-prev',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            }
+        }
+    });
 
     let swiperRegistry = {}; // {id: swiperInstance}
 
     function activateSwiper(id, element) {
         swiperRegistry[id] = new Swiper(element, {
-            slidesPerView: 1.2,
-            spaceBetween: 16,
+            spaceBetween: 20,
             pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
+                el: '.swiper-pagination',
             },
+            navigation: {
+                nextEl: '.swiper-nav .swiper-button-next',
+                prevEl: '.swiper-nav .swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
+            }
         });
     }
 
@@ -91,15 +125,18 @@ $(document).ready(function () {
             const id = $(this).attr('id');
             if (!id) return;
 
-            const shouldBeActive = window.innerWidth <= 991;
+            // const shouldBeActive = window.innerWidth <= 991;
 
-            if (shouldBeActive && !swiperRegistry[id]) {
+            // if (shouldBeActive && !swiperRegistry[id]) {
+            if ( !swiperRegistry[id]) {
                 activateSwiper(id, `#${id}`);
-            }
-
-            if (!shouldBeActive && swiperRegistry[id]) {
+            } else{
                 deactivateSwiper(id);
             }
+
+            // if (!shouldBeActive && swiperRegistry[id]) {
+            //     deactivateSwiper(id);
+            // }
         });
     }
 
@@ -184,88 +221,92 @@ $(document).ready(function () {
 
 //    CUSTOM SELECT
     $('.filter__select').select2({
-        width:'100%',
+        width: '100%',
         minimumResultsForSearch: -1,
     });
 
 // FLOWERING CALENDAR
-    const swiper = new Swiper('.plant-calendar', {
-        slidesPerView: 'auto',
-        freeMode: true
-    });
+    let calendarSlider;
+    const calendarSelector = $('.plant-calendar').get(0);
 
-    const track = document.querySelector('.scrollbar-track');
-    const thumb = document.querySelector('.scrollbar-thumb');
-    const monthTicks = document.querySelectorAll('.month-ticks span');
-    const seasonLabels = document.querySelectorAll('.season-label');
+    function handleResponsive() {
 
-    let dragging = false;
-    let maxX;
-    let totalTranslate;
-
-    function updateSizes() {
-        maxX = track.offsetWidth - thumb.offsetWidth;
-
-        const slides = swiper.slides;
-        const slideWidth = slides[0].offsetWidth + swiper.params.spaceBetween;
-        totalTranslate = slideWidth * slides.length - swiper.width;
+        // DESTROY SLIDER INSTANCES
+        if ($(window).outerWidth() > 768) {
+            if (!calendarSlider && calendarSelector) {
+                calendarSlider = new Swiper(".plant-calendar", {
+                    freeMode: true,
+                    slidesPerView: 'auto',
+                    observer: true,
+                    observeParents: true,
+                    scrollbar: {
+                        el: ".swiper-scrollbar",
+                        draggable: true,
+                        hide: false,
+                        snapOnRelease: true,
+                    },
+                });
+            }
+        } else {
+            destroySwiper(calendarSlider);
+            calendarSlider = null;
+        }
     }
-    updateSizes();
-    window.addEventListener("resize", updateSizes);
 
-   function updateThumb() {
-        const progress = swiper.progress;
-        thumb.style.left = progress * maxX + "px";
-    }
-    swiper.on('setTranslate', updateThumb);
-    swiper.on('slideChange', updateThumb);
+    let resizeId;
 
-    /* --- THUMB → SWIPER --- */
-    thumb.addEventListener("mousedown", () => dragging = true);
-    document.addEventListener("mouseup", () => dragging = false);
+    handleResponsive();
 
-    document.addEventListener("mousemove", (e) => {
-        if (!dragging) return;
-
-        const rect = track.getBoundingClientRect();
-        let x = e.clientX - rect.left;
-
-        x = Math.max(0, Math.min(x, maxX));
-        thumb.style.left = x + "px";
-
-        const progress = x / maxX;
-        const translate = -progress * totalTranslate;
-
-        swiper.setTranslate(translate);
-        swiper.updateProgress();
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeId);
+        resizeId = setTimeout(handleResponsive, 500);
     });
-
-    const clickCounters = Array(monthTicks.length).fill(0);
-
-    monthTicks.forEach((tick, idx) => {
-        tick.style.cursor = 'pointer';
-
-        tick.addEventListener('click', () => {
-            clickCounters[idx]++;
-            const monthIndex = clickCounters[idx] % swiper.slides.length;
-            swiper.slideTo(monthIndex, 300);
-        });
-    });
-
-    seasonLabels.forEach(label => {
-        label.style.cursor = 'pointer';
-
-        label.addEventListener('click', () => {
-            let targetSlide = 0;
-
-            if (label.classList.contains('season-spring')) targetSlide = 1;
-            if (label.classList.contains('season-summer')) targetSlide = 5;
-            if (label.classList.contains('season-autumn')) targetSlide = 8;
-            if (label.classList.contains('season-winter')) targetSlide = 11;
-
-            swiper.slideTo(targetSlide, 300);
-        });
-    });
+    // const calendarWrapper = document.querySelector('.calendar-wrapper');
+    // const wrapper = document.querySelector('.swiper-scrollbar');
+    // (function syncDragWithSpan() {
+    //     const month = document.querySelector('.month-block');
+    //     const drag = document.querySelector('.swiper-scrollbar-drag');
+    //     const track = drag ? drag.parentElement : null;
+    //     const sliderEl = document.querySelector('.plant-calendar').swiper || window.calendarSlider || null; // try common refs
+    //
+    //     if (!month || !drag || !track) {
+    //         console.warn('syncDragWithSpan: missing elements', {month, drag, track});
+    //         return;
+    //     }
+    //
+    //     function update() {
+    //         const span = month.offsetWidth;
+    //         // set drag width visually — fallback; keep small padding for design if needed
+    //         drag.style.width = span + 'px';
+    //         // ensure track has expected layout
+    //         track.style.overflow = 'visible';
+    //         // update left to match active slide if swiper present
+    //         const trackMax = (track.offsetWidth - drag.offsetWidth) || 1;
+    //         if (sliderEl && sliderEl.activeIndex != null) {
+    //             const idx = sliderEl.activeIndex;
+    //             const left = Math.max(0, Math.min(trackMax, Math.round((idx / (sliderEl.slides.length - 1 || 1)) * trackMax)));
+    //             drag.style.transform = 'translate3d(' + left + 'px, 0, 0)';
+    //         }
+    //     }
+    //
+    //     window.addEventListener('load', update);
+    //     window.addEventListener('resize', () => setTimeout(update, 60));
+    //     // run now
+    //     update();
+    //
+    //     // ensure drag moves slides when user drags native drag (Swiper scroll)
+    //     // listen to Swiper scroll event if exists
+    //     if (sliderEl && sliderEl.on) {
+    //         sliderEl.on('scroll', () => {
+    //             const left = drag.offsetLeft;
+    //             const prog = left / (track.offsetWidth - drag.offsetWidth);
+    //             const index = Math.round(prog * (sliderEl.slides.length - 1));
+    //             if (sliderEl.activeIndex !== index) {
+    //                 sliderEl.slideTo(index, 0);
+    //             }
+    //         });
+    //     }
+    // })();
 
 
 });

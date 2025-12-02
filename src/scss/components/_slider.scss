@@ -32,3 +32,15 @@
 .swiper-button-next:after, .swiper-button-prev:after{
   color: #5B8869;
 }
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.swiper-nav.swiper-nav_right {
+  width: 118px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 30px;
+}
