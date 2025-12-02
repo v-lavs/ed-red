@@ -3,13 +3,13 @@
 
 .section-info {
   padding: 120px 0 108px;
-  .container{
-    padding-left: 0;
-  }
+  //.container{
+  //  padding-left: 0;
+  //}
 }
 
 .slider-info {
-  max-width: 1440px;
+  //max-width: 1440px;
   .swiper-slide {
     display: flex;
   }
@@ -40,7 +40,8 @@
     position: relative;
     padding: 47px 27px 47px 47px;
     width: 42%;
-    min-height: 650px;
+    //min-height: 650px;
+    min-height: 584px;
     z-index: 1;
 
     &:before {

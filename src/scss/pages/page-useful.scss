@@ -7,7 +7,7 @@
   }
   .section-intro img {
     left: 50%;
-    width: 50vw;
+    width: 50%;
   }
   .section__slogan{
     font-weight: 700;
@@ -16,5 +16,8 @@
     text-transform: uppercase;
     color:  variables.$main-color;
     margin-bottom: 25px;
+  }
+  .blog-slider{
+    padding-bottom: 15px;
   }
 }

@@ -927,6 +927,10 @@ body {
   object-position: center center;
 }
 
+.dynamic-content p {
+  margin-bottom: 0.75em;
+}
+
 .heading {
   font-weight: 400;
   line-height: 110%;
@@ -1461,7 +1465,7 @@ body {
 .accordion .panel__heading {
   position: relative;
   transition: 0.7s;
-  padding: 30px 30px 30px 0;
+  padding: 30px 45px 30px 0;
 }
 
 .accordion .panel__title {
@@ -2276,14 +2280,6 @@ form input {
   padding: 120px 0 108px;
 }
 
-.section-info .container {
-  padding-left: 0;
-}
-
-.slider-info {
-  max-width: 1440px;
-}
-
 .slider-info .swiper-slide {
   display: flex;
 }
@@ -2315,7 +2311,7 @@ form input {
   position: relative;
   padding: 47px 27px 47px 47px;
   width: 42%;
-  min-height: 650px;
+  min-height: 584px;
   z-index: 1;
 }
 
@@ -2406,7 +2402,7 @@ form input {
   left: 40%;
   bottom: 0;
   top: 0;
-  width: 60vw;
+  width: 60%;
   height: 100%;
   z-index: 1;
   -o-object-fit: cover;
@@ -2603,7 +2599,7 @@ form input {
 
 .page-useful .section-intro img {
   left: 50%;
-  width: 50vw;
+  width: 50%;
 }
 
 .page-useful .section__slogan {
@@ -2613,6 +2609,10 @@ form input {
   text-transform: uppercase;
   color: #383838;
   margin-bottom: 25px;
+}
+
+.page-useful .blog-slider {
+  padding-bottom: 15px;
 }
 
 @media only screen and (max-width: 1439px) {
