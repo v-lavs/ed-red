@@ -77,8 +77,8 @@ $(document).ready(function () {
             el: '.swiper-pagination',
         },
         navigation: {
-            nextEl: '.swiper-nav .swiper-button-next',
-            prevEl: '.swiper-nav .swiper-button-prev',
+            nextEl: '.wrap-blog-slider .swiper-button-next',
+            prevEl: '.wrap-blog-slider .swiper-button-prev',
         },
         breakpoints: {
             768: {
@@ -226,41 +226,41 @@ $(document).ready(function () {
     });
 
 // FLOWERING CALENDAR
-    let calendarSlider;
-    const calendarSelector = $('.plant-calendar').get(0);
-
-    function handleResponsive() {
-
-        // DESTROY SLIDER INSTANCES
-        if ($(window).outerWidth() > 768) {
-            if (!calendarSlider && calendarSelector) {
-                calendarSlider = new Swiper(".plant-calendar", {
-                    freeMode: true,
-                    slidesPerView: 'auto',
-                    observer: true,
-                    observeParents: true,
-                    scrollbar: {
-                        el: ".swiper-scrollbar",
-                        draggable: true,
-                        hide: false,
-                        snapOnRelease: true,
-                    },
-                });
-            }
-        } else {
-            destroySwiper(calendarSlider);
-            calendarSlider = null;
-        }
-    }
-
-    let resizeId;
-
-    handleResponsive();
-
-    window.addEventListener('resize', function () {
-        clearTimeout(resizeId);
-        resizeId = setTimeout(handleResponsive, 500);
-    });
+//     let calendarSlider;
+//     const calendarSelector = $('.plant-calendar').get(0);
+//
+//     function handleResponsive() {
+//
+//         // DESTROY SLIDER INSTANCES
+//         if ($(window).outerWidth() > 768) {
+//             if (!calendarSlider && calendarSelector) {
+//                 calendarSlider = new Swiper(".plant-calendar", {
+//                     freeMode: true,
+//                     slidesPerView: 'auto',
+//                     observer: true,
+//                     observeParents: true,
+//                     scrollbar: {
+//                         el: ".swiper-scrollbar",
+//                         draggable: true,
+//                         hide: false,
+//                         snapOnRelease: true,
+//                     },
+//                 });
+//             }
+//         } else {
+//             destroySwiper(calendarSlider);
+//             calendarSlider = null;
+//         }
+//     }
+//
+//     let resizeId;
+//
+//     handleResponsive();
+//
+//     window.addEventListener('resize', function () {
+//         clearTimeout(resizeId);
+//         resizeId = setTimeout(handleResponsive, 500);
+//     });
     // const calendarWrapper = document.querySelector('.calendar-wrapper');
     // const wrapper = document.querySelector('.swiper-scrollbar');
     // (function syncDragWithSpan() {

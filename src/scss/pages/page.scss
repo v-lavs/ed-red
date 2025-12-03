@@ -41,3 +41,22 @@
 
   }
 }
+
+.wrap-blog-slider {
+  width: 100%;
+  position: relative;
+}
+
+.blog-slider {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding-top: 100px;
+
+  .heading {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+}

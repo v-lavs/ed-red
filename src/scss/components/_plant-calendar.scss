@@ -93,6 +93,7 @@
 //.scrollbar-thumb {
 .swiper-scrollbar-drag {
   position: relative;
+  width: 8.33% !important;
   height: 60px;
   //width: 44px!important;
   //height: 44px;
@@ -239,7 +240,33 @@
   }
 }
 
-.swiper-scrollbar.swiper-scrollbar-horizontal {
-  height: 60px;
+.plant-calendar {
+
+.swiper-scrollbar {
+  height: 60px!important;
   width: 100%;
+  pointer-events: none;
+
+}
+
+
+.swiper-scrollbar-drag {
+  pointer-events: all;
+
+}
+
+  .swiper-pagination-bullet {
+    width: 8.33% !important;
+    cursor: pointer;
+    pointer-events: all;
+    border: none;
+    background-color: transparent;
+  }
+
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0;
+    height: 60px;
+    position: absolute;
+    z-index: 2;
+  }
 }

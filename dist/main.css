@@ -1784,6 +1784,7 @@ form input {
 
 .swiper-scrollbar-drag {
   position: relative;
+  width: 8.33% !important;
   height: 60px;
   border: 1px solid;
   background: transparent;
@@ -1908,9 +1909,29 @@ form input {
   margin-right: 15px;
 }
 
-.swiper-scrollbar.swiper-scrollbar-horizontal {
-  height: 60px;
+.plant-calendar .swiper-scrollbar {
+  height: 60px !important;
   width: 100%;
+  pointer-events: none;
+}
+
+.plant-calendar .swiper-scrollbar-drag {
+  pointer-events: all;
+}
+
+.plant-calendar .swiper-pagination-bullet {
+  width: 8.33% !important;
+  cursor: pointer;
+  pointer-events: all;
+  border: none;
+  background-color: transparent;
+}
+
+.plant-calendar .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0;
+  height: 60px;
+  position: absolute;
+  z-index: 2;
 }
 
 .container {
@@ -2268,7 +2289,7 @@ form input {
 }
 
 .slider-posts {
-  padding: 15px 15px 75px;
+  padding: 15px 10px 75px;
 }
 
 .slider-posts .swiper-slide {
@@ -2483,6 +2504,25 @@ form input {
 }
 
 .page-useful .section .heading {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.wrap-blog-slider {
+  width: 100%;
+  position: relative;
+}
+
+.blog-slider {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding-top: 100px;
+}
+
+.section .heading {
   margin-bottom: 50px;
   text-align: center;
 }
