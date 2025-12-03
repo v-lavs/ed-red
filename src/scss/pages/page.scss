@@ -60,3 +60,35 @@
     text-align: center;
   }
 }
+
+.page-article {
+  background-color: #fff;
+}
+.section .blog-slider{
+  padding-bottom: 15px;
+}
+.article {
+  padding-bottom: 50px;
+  line-height: 1.1;
+
+  &__title {
+    margin-bottom: 50px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  &__thumb {
+    width: 50%;
+    margin-bottom: 50px;
+    margin-right: 25px;
+    float: left;
+  }
+
+  &__block-intro {
+    margin-bottom: 50px;
+  }
+
+  .dynamic-content {
+    clear: both;
+  }
+}

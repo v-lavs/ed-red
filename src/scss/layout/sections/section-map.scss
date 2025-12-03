@@ -1,0 +1,30 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
+.section-map {
+  background-color: variables.$light-gay-100;
+  padding: 50px 0;
+
+  .heading {
+    font-weight: 400;
+    color: variables.$green-100;
+    text-align: center;
+  }
+
+  .distribution-map {
+    position: relative;
+    overflow: hidden;
+    min-height: 686px;
+    margin-bottom: 50px;
+    .map-img, frame{
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+  }
+
+  .text_xl{
+    line-height: 1.1;
+    color: variables.$green-100;
+  }
+}

@@ -928,7 +928,103 @@ body {
 }
 
 .dynamic-content p {
-  margin-bottom: 0.75em;
+  margin-bottom: 15px;
+}
+
+.dynamic-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.dynamic-content img.alignleft {
+  float: left;
+  margin: 4px 25px 25px 0;
+}
+
+.dynamic-content img.alignright {
+  float: right;
+  margin: 4px 0 25px 25px;
+}
+
+.dynamic-content img.aligncenter {
+  display: block;
+  margin: 50px auto;
+  clear: both;
+}
+
+.dynamic-content h1,
+.dynamic-content h2,
+.dynamic-content h3,
+.dynamic-content h4,
+.dynamic-content h5,
+.dynamic-content h6 {
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #7EA68C;
+  text-align: center;
+}
+
+.dynamic-content h3,
+.dynamic-content h4,
+.dynamic-content h5,
+.dynamic-content h6 {
+  font-weight: 700;
+}
+
+.dynamic-content h1,
+.dynamic-content h2 {
+  font-size: 52px;
+  font-weight: 400;
+}
+
+.dynamic-content h3 {
+  font-size: 36px;
+  margin: 50px 0;
+}
+
+.dynamic-content ul,
+.dynamic-content ol {
+  margin-bottom: 20px;
+}
+
+.dynamic-content ol {
+  counter-reset: list;
+}
+
+.dynamic-content ol li {
+  position: relative;
+  list-style: inherit;
+  padding-left: 35px;
+}
+
+.dynamic-content ol li:before {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  counter-increment: list;
+  content: counter(list) ".";
+}
+
+.dynamic-content ul li:before {
+  content: ".";
+  display: block;
+  position: absolute;
+  left: 17px;
+  top: -8px;
+}
+
+.dynamic-content li {
+  position: relative;
+  padding-left: 34px;
+}
+
+.dynamic-content a {
+  text-decoration: underline;
+}
+
+.dynamic-content a:hover,
+.dynamic-content a:focus {
+  text-decoration: none;
 }
 
 .heading {
@@ -949,6 +1045,10 @@ body {
 .heading_md {
   font-size: 36px;
   font-weight: 700;
+}
+
+.text_xl {
+  font-size: 36px;
 }
 
 .text_lg {
@@ -2487,6 +2587,36 @@ form input {
   text-align: center;
 }
 
+.section-map {
+  background-color: #FAFAFA;
+  padding: 50px 0;
+}
+
+.section-map .heading {
+  font-weight: 400;
+  color: #7EA68C;
+  text-align: center;
+}
+
+.section-map .distribution-map {
+  position: relative;
+  overflow: hidden;
+  min-height: 686px;
+  margin-bottom: 50px;
+}
+
+.section-map .distribution-map .map-img,
+.section-map .distribution-map frame {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.section-map .text_xl {
+  line-height: 1.1;
+  color: #7EA68C;
+}
+
 .page {
   background-color: #FFFFFF;
 }
@@ -2525,6 +2655,40 @@ form input {
 .section .heading {
   margin-bottom: 50px;
   text-align: center;
+}
+
+.page-article {
+  background-color: #fff;
+}
+
+.section .blog-slider {
+  padding-bottom: 15px;
+}
+
+.article {
+  padding-bottom: 50px;
+  line-height: 1.1;
+}
+
+.article__title {
+  margin-bottom: 50px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.article__thumb {
+  width: 50%;
+  margin-bottom: 50px;
+  margin-right: 25px;
+  float: left;
+}
+
+.article__block-intro {
+  margin-bottom: 50px;
+}
+
+.article .dynamic-content {
+  clear: both;
 }
 
 .section-img-bg {
