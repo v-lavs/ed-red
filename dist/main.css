@@ -894,6 +894,8 @@ body {
 
 .section__title {
   margin-bottom: 50px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .section__content p {
@@ -911,7 +913,7 @@ body {
 .main-banner {
   position: relative;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 50px auto;
   width: 100%;
   min-height: 592px;
 }
@@ -950,6 +952,13 @@ body {
   display: block;
   margin: 50px auto;
   clear: both;
+}
+
+.dynamic-content img.alignfull {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 50px 0;
 }
 
 .dynamic-content h1,
@@ -992,6 +1001,7 @@ body {
 }
 
 .dynamic-content ol li {
+  overflow-wrap: anywhere;
   position: relative;
   list-style: inherit;
   padding-left: 35px;
@@ -1020,6 +1030,7 @@ body {
 
 .dynamic-content a {
   text-decoration: underline;
+  overflow-wrap: anywhere;
 }
 
 .dynamic-content a:hover,
@@ -2318,6 +2329,7 @@ form input {
 
 .section-calendar .section__title {
   margin-bottom: 10px;
+  text-align: left;
 }
 
 .section-calendar .sub-title {
@@ -2390,11 +2402,11 @@ form input {
 
 .section-with-tabs {
   background-color: #FAFAFA;
-  padding-top: 70px;
+  padding-top: 100px;
 }
 
 .section-with-tabs .section__title {
-  margin-bottom: 50px;
+  text-align: left;
 }
 
 .section-with-tabs .tabs {
@@ -2409,6 +2421,10 @@ form input {
 .slider-posts .swiper-slide {
   width: auto;
   height: auto;
+}
+
+.blog-slider {
+  padding-bottom: 15px;
 }
 
 .section-info {
@@ -2503,6 +2519,7 @@ form input {
   line-height: 1.1;
   text-transform: uppercase;
   color: #7EA68C;
+  text-align: left;
 }
 
 .section-question .section__heading {
@@ -2548,7 +2565,6 @@ form input {
 }
 
 .section-intro .section__title {
-  text-align: center;
   width: 100%;
 }
 
@@ -2588,11 +2604,6 @@ form input {
   overflow: hidden;
 }
 
-.section-flowering .heading {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
 .section-flowering .btn_main {
   font-weight: 400;
 }
@@ -2609,7 +2620,6 @@ form input {
 .section-map .heading {
   font-weight: 400;
   color: #7EA68C;
-  text-align: center;
 }
 
 .section-map .distribution-map {
@@ -2629,6 +2639,75 @@ form input {
 .section-map .text_xl {
   line-height: 1.1;
   color: #7EA68C;
+}
+
+.page {
+  background-color: #FFFFFF;
+}
+
+.page .section-question {
+  padding-top: 100px;
+}
+
+.page-blog {
+  background-color: #FAFAFA;
+}
+
+.page-useful .section {
+  padding-top: 100px;
+}
+
+.page-useful .section .heading {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.wrap-blog-slider {
+  width: 100%;
+  position: relative;
+}
+
+.blog-slider {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-blog-slider {
+  padding-top: 100px;
+}
+
+.page.page-article {
+  background-color: #fff;
+}
+
+.page.page-article .section-products {
+  padding: 50px 0;
+}
+
+.page.page-article .section-blog-slider {
+  padding-top: 50px;
+}
+
+.article {
+  padding-bottom: 50px;
+  line-height: 1.1;
+}
+
+.article__title {
+  margin-bottom: 50px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.article__thumb {
+  width: 50%;
+  margin-bottom: 50px;
+  margin-right: 25px;
+  float: left;
+}
+
+.article__block-intro {
+  margin-bottom: 50px;
 }
 
 .article__nav .heading_md {
@@ -2684,82 +2763,44 @@ form input {
   text-decoration: none;
 }
 
-.page {
-  background-color: #FFFFFF;
+.page-calendar .section-flowering {
+  padding-top: 0;
 }
 
-.page .section-question {
-  padding-top: 100px;
-}
-
-.page-blog {
-  background-color: #FAFAFA;
-}
-
-.page-useful .section {
-  padding-top: 100px;
-}
-
-.page-useful .section .heading {
+.page-calendar .tabs__nav {
+  padding: 0;
   margin-bottom: 50px;
-  text-align: center;
+  border-bottom: 2px solid #6A6A6A;
 }
 
-.wrap-blog-slider {
-  width: 100%;
+.page-calendar .tabs__nav-link {
   position: relative;
+  display: block;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #6A6A6A;
+  padding-bottom: 25px;
 }
 
-.blog-slider {
-  max-width: 1200px;
-  margin: 0 auto;
+.page-calendar .tabs__nav-link:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  background-color: transparent;
+  height: 4px;
+  z-index: 2;
 }
 
-.section {
-  padding-top: 100px;
+.page-calendar .tabs__nav-link.active {
+  color: #007934;
+  text-decoration: none;
 }
 
-.section .heading {
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-.page.page-article {
-  background-color: #fff;
-}
-
-.page.page-article .section-products {
-  padding: 50px 0;
-}
-
-.page.page-article .section {
-  padding-top: 50px;
-}
-
-.page.page-article .section .blog-slider {
-  padding-bottom: 15px;
-}
-
-.article {
-  padding-bottom: 50px;
-  line-height: 1.1;
-}
-
-.article__title {
-  margin-bottom: 50px;
-  font-weight: 400;
-  text-align: center;
-}
-
-.article__thumb {
-  width: 50%;
-  margin-bottom: 50px;
-  margin-right: 25px;
-  float: left;
-}
-
-.article__block-intro {
-  margin-bottom: 50px;
+.page-calendar .tabs__nav-link.active:before {
+  background-color: #007934;
 }
 
 .section-img-bg {
@@ -2783,6 +2824,14 @@ form input {
 .section-img-bg .section__content {
   max-width: 830px;
   width: 100%;
+}
+
+.section-img-bg .section__title {
+  font-size: 48px;
+  text-transform: none;
+  line-height: 1;
+  margin-bottom: 25px;
+  text-align: left;
 }
 
 .section-img-bg .section__text {
@@ -2884,10 +2933,6 @@ form input {
   text-transform: uppercase;
   color: #383838;
   margin-bottom: 25px;
-}
-
-.page-useful .blog-slider {
-  padding-bottom: 15px;
 }
 
 @media only screen and (max-width: 1439px) {

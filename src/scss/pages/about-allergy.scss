@@ -26,10 +26,15 @@
     max-width: 830px;
     width: 100%;
   }
-
+.section__title{
+  font-size: 48px;
+  text-transform: none;
+  line-height: 1;
+  margin-bottom: 25px;
+  text-align: left;
+}
   .section__text {
     margin-bottom: 28px;
-
   }
 }
 

@@ -3,32 +3,14 @@
 
 .section-with-tabs {
   background-color: variables.$light-gay-100;
-  padding-top: 70px;
-
-  .section__title {
-    margin-bottom: 50px;
-  }
-
-  //.swiper-wrapper {
-  //  gap: 24px;
-  //}
-
-  //.slider-posts {
-  //  overflow: visible;
-  //}
-
+  padding-top: 100px;
+.section__title{
+  text-align: left;
+}
   .tabs {
     padding-top: 0;
     padding-bottom: 100px;
   }
-
-  //.wrap-btn {
-  //  text-align: center;
-  //  padding-bottom: 100px;
-  //}
-  //.slider-posts .swiper-slide{
-  //  width: 31%;
-  //}
 }
 
 .slider-posts {
@@ -38,4 +20,8 @@
     width: auto;
     height: auto;
   }
+}
+
+.blog-slider {
+  padding-bottom: 15px;
 }

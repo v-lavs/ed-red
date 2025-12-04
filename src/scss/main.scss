@@ -42,11 +42,10 @@
 @use 'layout/sections/section-map';
 
 
-
+@use 'pages/page';
 @use 'pages/blog';
 @use 'pages/article-with-nav';
-
-@use 'pages/page';
+@use 'pages/page-calendar';
 @use 'pages/about-allergy';
 @use 'pages/page-allergens';
 @use 'pages/page-useful';

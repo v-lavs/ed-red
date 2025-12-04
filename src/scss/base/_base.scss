@@ -29,8 +29,11 @@ body {
 }
 
 .section {
+
   &__title {
     margin-bottom: 50px;
+    text-transform: uppercase;
+    text-align: center;
   }
 
   &__content p {
@@ -50,7 +53,7 @@ body {
 .main-banner {
   position: relative;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 50px auto;
   width: 100%;
   min-height: 592px;
 
@@ -64,9 +67,6 @@ body {
   }
 }
 
-@include mixins.respond-to(variables.$xs) {
-
-}
 
 .dynamic-content {
   p {
@@ -91,6 +91,12 @@ body {
       display: block;
       margin: 50px auto;
       clear: both;
+    }
+    &.alignfull{
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 50px 0;
     }
   }
 
@@ -151,6 +157,7 @@ body {
   ol{
     counter-reset: list;
     li {
+      overflow-wrap: anywhere;
       position: relative;
       list-style: inherit;
       padding-left: 35px;
@@ -181,6 +188,7 @@ body {
 
   a {
     text-decoration: underline;
+    overflow-wrap: anywhere;
     &:hover,
     &:focus {
       text-decoration: none;
@@ -201,6 +209,8 @@ body {
     }
   }
 }
+
+
 @include mixins.respond-to(variables.$lg) {
 
 }
