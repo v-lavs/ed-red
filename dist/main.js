@@ -27,6 +27,34 @@ $(document).ready(function () {
         jQuery('.backdrop').fadeOut();
     });
 
+// SMOOTH SCROLL TO ANCHOR
+    function smoothScrollToAnchor(selector) {
+        $(selector).on('click', function (event) {
+            let anchor = $.attr(this, 'href');
+            let offsetSize = $("header").innerHeight();
+
+            if (anchor.match(/^#/) && anchor !== '#') {
+                event.preventDefault()
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top - offsetSize
+                }, 2000);
+                nav.removeClass('open');
+                jQuery('.backdrop').fadeOut();
+                $('body').removeClass('modal_open');
+            }
+        })
+        let myHash = location.hash;
+        location.hash = '';
+        let offsetSize = $("header").innerHeight();
+        if (myHash[1] != undefined) {
+            $('html, body').animate({scrollTop: $(myHash).offset().top - offsetSize}, 1500);
+        }
+
+    }
+
+    smoothScrollToAnchor('.article__nav .nav-list__item a');
+    smoothScrollToAnchor('.menu__link');
+
     // VIDEO PLAY
 
     const promotionVideo = $('#promotion-video').get(0);
@@ -128,9 +156,9 @@ $(document).ready(function () {
             // const shouldBeActive = window.innerWidth <= 991;
 
             // if (shouldBeActive && !swiperRegistry[id]) {
-            if ( !swiperRegistry[id]) {
+            if (!swiperRegistry[id]) {
                 activateSwiper(id, `#${id}`);
-            } else{
+            } else {
                 deactivateSwiper(id);
             }
 
