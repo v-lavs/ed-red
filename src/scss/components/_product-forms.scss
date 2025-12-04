@@ -1,0 +1,22 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.product-forms {
+  &__card {
+    margin-bottom: 25px;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    &__thumb {
+      width: 181px;
+      height: 183px;
+      background-color: #F5F5F5;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .25);
+      overflow: hidden;
+    }
+  }
+}

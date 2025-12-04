@@ -24,6 +24,7 @@
 @use 'components/breadscrumb';
 @use 'components/custom-select';
 @use 'components/plant-calendar';
+@use 'components/product-forms';
 
 @use 'layout/layout';
 @use 'layout/grid';
@@ -44,6 +45,7 @@
 
 @use 'pages/page';
 @use 'pages/blog';
+@use 'pages/product-page';
 @use 'pages/article-with-nav';
 @use 'pages/page-calendar';
 @use 'pages/about-allergy';

@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--зaкрыть индексацию -->
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="robots" content="noindex">
+    <meta name="yandex" content="none">
+
+    <title>Eдем сироп</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+
+    <!--    <link rel="stylesheet" href="./fonts/fonts.css">-->
+    <link href="lib/select2/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./dist/main.css">
+
+</head>
+
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="header__logo">
+                <img src="assets/img/edem_logo.svg" alt="лого Едем" width="86" height="56">
+            </a>
+            <div class="header__nav">
+                <button type="button" class="btn_close" aria-label="Закрити меню">X</button>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="index.html" class="menu__link active">Едем
+                            <ul class="sub-menu">
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едем таблетки</a></li>
+                                <li class="sub-menu__item"><a href="product-page.html" class="sub-menu__link">Едем
+                                    сироп</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едермік</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едермік гель</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едем ріно спрей</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="about-allergy.html" class="menu__link">Все про алергію
+                            <ul class="sub-menu">
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Види алергії</a></li>
+                                <li class="sub-menu__item"><a href="page-symptoms.html" class="sub-menu__link">Прояви
+                                    алергії</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Лікування алергії</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Профілактика алергії</a>
+                                </li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Алергія у дітей</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="page-useful.html" class="menu__link">Корисно для людей з алергією
+                            <ul class="sub-menu">
+                                <li class="sub-menu__item"><a href="page-allergens-plants.html" class="sub-menu__link">Рослини
+                                    - алергени</a>
+                                </li>
+                                <li class="sub-menu__item"><a href="page-allergens-food.html" class="sub-menu__link">Продукти
+                                    - алергени</a>
+                                </li>
+                                <li class="sub-menu__item"><a href="page-calendar.html" class="sub-menu__link">Календар
+                                    алергії</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">При різних видах
+                                    алергії</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Пам’ятки для алергіка</a>
+                                </li>
+                            </ul>
+                        </a></a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#questions" class="menu__link">Питання-відповіді</a>
+                    </li>
+                </ul>
+            </div>
+            <button type="button" class="search_open" aria-label="Відкрити пошук">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.5832 21.4688L18.9697 16.8783C20.3679 15.0571 21.1348 12.8481 21.1351 10.517C21.1351 7.7079 20.0355 5.06672 18.0389 3.0804C16.0425 1.09407 13.3884 0 10.5648 0C7.7416 0 5.08715 1.09407 3.09084 3.0804C-1.03028 7.18125 -1.03028 13.8535 3.09084 17.9537C5.08715 19.9403 7.7416 21.0344 10.5648 21.0344C12.9076 21.0341 15.1277 20.2711 16.9581 18.8799L21.5716 23.4703C21.8491 23.7468 22.2135 23.885 22.5774 23.885C22.9414 23.885 23.3057 23.7468 23.5832 23.4703C24.1389 22.9177 24.1389 22.0213 23.5832 21.4688ZM5.10243 15.9521C2.0906 12.9554 2.09095 8.07904 5.10243 5.08193C6.56146 3.63054 8.50151 2.8309 10.5648 2.8309C12.6285 2.8309 14.5682 3.63054 16.0273 5.08193C17.4863 6.53366 18.29 8.464 18.29 10.517C18.29 12.5704 17.4863 14.5004 16.0273 15.9521C14.5682 17.4039 12.6285 18.2035 10.5648 18.2035C8.50151 18.2035 6.56146 17.4039 5.10243 15.9521Z"
+                          fill="#383838"/>
+                </svg>
+            </button>
+            <div class="header__search">
+                <form role="search" method="get" id="searchform" class="searchform" action="#">
+                    <div class="search-wrap">
+                        <input type="hidden" name="post_type" value="">
+                        <label class="screen-reader-text" for="s">Шукати:</label>
+                        <input type="text" placeholder="" value="" name="s" id="s"/>
+                        <button type="submit" id="searchsubmit" class="btn_search">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.5832 21.4688L18.9697 16.8783C20.3679 15.0571 21.1348 12.8481 21.1351 10.517C21.1351 7.7079 20.0355 5.06672 18.0389 3.0804C16.0425 1.09407 13.3884 0 10.5648 0C7.7416 0 5.08715 1.09407 3.09084 3.0804C-1.03028 7.18125 -1.03028 13.8535 3.09084 17.9537C5.08715 19.9403 7.7416 21.0344 10.5648 21.0344C12.9076 21.0341 15.1277 20.2711 16.9581 18.8799L21.5716 23.4703C21.8491 23.7468 22.2135 23.885 22.5774 23.885C22.9414 23.885 23.3057 23.7468 23.5832 23.4703C24.1389 22.9177 24.1389 22.0213 23.5832 21.4688ZM5.10243 15.9521C2.0906 12.9554 2.09095 8.07904 5.10243 5.08193C6.56146 3.63054 8.50151 2.8309 10.5648 2.8309C12.6285 2.8309 14.5682 3.63054 16.0273 5.08193C17.4863 6.53366 18.29 8.464 18.29 10.517C18.29 12.5704 17.4863 14.5004 16.0273 15.9521C14.5682 17.4039 12.6285 18.2035 10.5648 18.2035C8.50151 18.2035 6.56146 17.4039 5.10243 15.9521Z"
+                                      fill="#383838"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <button type="button" class="btn_burger" aria-label="Відкрити меню">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </div>
+
+    </header>
+    <div class="backdrop"></div>
+
+    <main class="main page  product-page">
+
+        <div class="container">
+            <nav aria-label="Хлібні крихти" class="breadcrumb">
+                <ul>
+                    <li class="breadcrumb__item"><a href="#">Едем</a></li>
+                    <li class="breadcrumb__item"><a href="#">Корисно для людей з алергією</a></li>
+                    <li class="breadcrumb__item"><span class="current-page" aria-current="page">Продукти-Алергени</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container layout-with-sidebar">
+
+            <div class="sidebar">
+                <ul class="product-forms">
+                    <li class="product-forms__card">
+                        <a href="#">
+                            <div class="product-forms__thumb">
+                                <img src="assets/img/links/edem_sirop_left_small.png" alt="едем сироп">
+                            </div>
+                            <div class="product-forms__content">
+                                <h4 class="product-forms__title">едем сироп</h4>
+                                <div class="available-packaging price">
+                                    <span class="text">Едем сироп 60 мл</span>
+                                    <span class="price__heading">Орієнтовна ціна в аптеках:</span>
+                                    <span class="price__wrapper">
+                                        <span class="first-num">70</span>,<span class="first-num-rest">30</span> —
+                                        <span class="second-num">210</span>,<span class="second-num-rest">60</span> грн.
+                                    </span>
+                                </div>
+
+                                <div class="available-packaging price">
+                                    <span class="text">Едем сироп 100 мл</span>
+                                    <span class="price__heading">Орієнтовна ціна в аптеках:</span>
+                                    <span class="price__wrapper">
+                                        <span class="first-num">90</span>,<span class="first-num-rest">30</span> —
+                                        <span class="second-num">106</span>,<span class="second-num-rest">50</span> грн.
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="product-forms__card">
+                        <a href="#">
+                            <div class="product-forms__thumb">
+                                <img src="assets/img/links/edem_krapli_left_small.png" alt="Едем ріно спрей">
+                            </div>
+                            <div class="product-forms__content">
+                                <h4 class="product-forms__title">Едем ріно спрей</h4>
+                                <div class="available-packaging price">
+                                    <span class="text">Едем сироп 60 мл</span>
+                                    <span class="price__heading">Орієнтовна ціна в аптеках:</span>
+                                    <span class="price__wrapper">
+                                        <span class="first-num">109</span>,<span class="first-num-rest">30</span> —
+                                        <span class="second-num">330</span>,<span class="second-num-rest">50</span> грн.
+                                    </span>
+                                </div>
+
+                                <div class="available-packaging price">
+                                    <span class="text">Едем сироп 60 мл</span>
+                                    <span class="price__heading">Орієнтовна ціна в аптеках:</span>
+                                    <span class="price__wrapper">
+                                        <span class="first-num">109</span>,<span class="first-num-rest">30</span> —
+                                        <span class="second-num">330</span>,<span class="second-num-rest">50</span> грн.
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="product-forms__card">
+                        <a href="#">
+                            <div class="product-forms__thumb">
+                                <img src="assets/img/links/edem_tab_small.png" alt="Едем таблетки">
+                            </div>
+                            <div class="product-forms__content">
+                                <h4 class="product-forms__title">Едем таблетки</h4>
+                                <div class="available-packaging price">
+                                    <span class="text">Едем таблетки №10</span>
+                                    <span class="price__heading">Орієнтовна ціна в аптеках:</span>
+                                    <span class="price__wrapper">
+                                        <span class="first-num">109</span>,<span class="first-num-rest">30</span> —
+                                        <span class="second-num">330</span>,<span class="second-num-rest">50</span> грн.
+                                    </span>
+                                </div>
+
+                                <div class="available-packaging price">
+                                    <span class="text">Едем таблетки №5</span>
+                                    <span class="price__heading">Орієнтовна ціна в аптеках:</span>
+                                    <span class="price__wrapper">
+                                        <span class="first-num">109</span>,<span class="first-num-rest">30</span> —
+                                        <span class="second-num">330</span>,<span class="second-num-rest">50</span> грн.
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="product-forms__card">
+                        <a href="#">
+                            <div class="product-forms__thumb">
+                                <img src="assets/img/links/edermyk_small.png" alt="Едермік">
+                            </div>
+                            <div class="product-forms__content">
+                                <h4 class="product-forms__title">Едермік</h4>
+                                <div class="available-packaging price">
+                                    <span class="text">Едермік 60 мл</span>
+                                    <span class="price__heading">Орієнтовна ціна в аптеках:</span>
+                                    <span class="price__wrapper">
+                                        <span class="first-num">109</span>,<span class="first-num-rest">30</span> —
+                                        <span class="second-num">330</span>,<span class="second-num-rest">50</span> грн.
+                                    </span>
+                                </div>
+
+                                <div class="available-packaging price">
+                                    <span class="text">Едермік 100 мл</span>
+                                    <span class="price__heading">Орієнтовна ціна в аптеках:</span>
+                                    <span class="price__wrapper">
+                                        <span class="first-num">109</span>,<span class="first-num-rest">30</span> —
+                                        <span class="second-num">330</span>,<span class="second-num-rest">50</span> грн.
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="product-forms__card">
+                        <a href="#">
+                            <div class="product-forms__thumb">
+                                <img src="assets/img/links/edermik_gel_small.png" alt="Едермік гель">
+                            </div>
+                            <div class="product-forms__content">
+                                <h4 class="product-forms__title">Едермік гель</h4>
+                                <div class="available-packaging price">
+                                    <span class="text">Едермік гель 30 г</span>
+                                    <span class="price__heading">Орієнтовна ціна в аптеках:</span>
+                                    <span class="price__wrapper">
+                                        <span class="first-num">109</span>,<span class="first-num-rest">30</span> —
+                                        <span class="second-num">330</span>,<span class="second-num-rest">50</span> грн.
+                                    </span>
+                                </div>
+
+                                <div class="available-packaging price">
+                                    <span class="text">Едем сироп 60 мл</span>
+                                    <span class="price__heading">Орієнтовна ціна в аптеках:</span>
+                                    <span class="price__wrapper">
+                                        <span class="first-num">109</span>,<span class="first-num-rest">30</span> —
+                                        <span class="second-num">330</span>,<span class="second-num-rest">50</span> грн.
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <article class="single-product">
+                <div class="single-product__thumb">
+                    <img src="assets/img/links/edem_sirop_left_small.png" alt="едем сироп">
+                </div>
+                <div class="single-product__content">
+                    <div class="single-product__heading">
+                        <h2 class="single-product__title">едем сироп</h2>
+                        <div class="single-product__sub-title">
+                            Дієвий антигістамінний засіб для усунення симптомів алергії у дітей з 6 місяців
+                        </div>
+                        <div class="dynamic-content">
+                            Усунення симптомів, пов’язаних з алергічним ринітом та кропив’янкою (свербіж, висипання).
+                        </div>
+                        <div class="single-product__video">Відео про препарат <a href="#"
+                                                                                 class="trigger-popup-video"></a></div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="part_left">
+                        <div class="price__heading">Орієнтовна ціна в аптеках:</div>
+                        <a href="https://tsinanaliky.com.ua/catalog/23-edem-sirop-60-ml" class="price__wrapper">
+                            <span class="first-num">109</span>,<span class="first-num-rest">30</span> —
+                            <span class="second-num">330</span>,<span class="second-num-rest">50</span> грн.
+                        </a>
+                    </div>
+                    <div class="part_right">
+                        <a href="#" class="btn btn_main">Інструкція</a>
+                        Дані з сайту <a
+                            href="https://tsinanaliky.com.ua/catalog/23-edem-sirop-60-ml">tsinanaliky.com.ua</a>
+                    </div>
+                </div>
+                <div class="block-order">
+                    <strong>Замовити на:</strong>
+                    <a href="#" class="btn btn_outline"><img src="assets/img/logo-tabletki@2x%203.png"
+                                                             alt="Перехід на Tabletki.ua"></a>
+                    <a href="#" class="btn btn_outline"><img src="assets/img/liki24-icon.svg"
+                                                             alt="Перехід на Liki24"></a>
+                </div>
+                <section class="section-use">
+                    <div class="section-use__content">
+                        <h3 class="section__title">Показання до застосування</h3>
+                        <div class="part">
+                            <h4 class="heading">Усуває симптоми</h4>
+                            <div class="dynamic-content">
+                                <p><strong>Алергічного риніту</strong></p>
+                                <ul>
+                                    <li>Виділення з носа</li>
+                                    <li>Набряк та закладеність носа</li>
+                                    <li>Свербіж та почервоніння очей</li>
+                                    <li>Свербіж у ділянці піднебіння</li>
+                                </ul>
+                                <p><strong>Кропив’янки</strong></p>
+                                <ul>
+                                    <li>Висипання</li>
+                                    <li>Свербіж</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="part">
+                            <h4 class="heading">дія препарату</h4>
+                            <div class="dynamic-content">
+                                <p>Починає діяти через 30хв</p>
+                                <p>Тривала дія - 24 години</p>
+                                <p>Дозволений дітям з 6 місяців</p>
+                                <p>Пацієнтів слід проінформувати, що дуже рідко можливе виникнення сонливості, що може
+                                    вплинути
+                                    на здатність керувати автомобілем та складною технікою.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-use__content">
+                        <h3 class="section__title">Спосіб застосування та дози</h3>
+                        <div class="part">
+                            <h4 class="heading">Спосіб застосування</h4>
+                            <div class="dynamic-content">
+                                <ul>
+                                    <li>Дітям віком до 2 років препарат можна застосовувати лише за призначенням лікаря.
+                                    </li>
+                                    <li>Немовлятам і дітям молодшого віку не слід застосовувати препарат на великих
+                                        ділянках
+                                        шкіри, особливо на пошкодженій або запаленій шкірі.
+                                    </li>
+                                    <li>Дорослим та дітям віком від 2 років гель слід наносити на уражені ділянки шкіри
+                                        2-4
+                                        рази
+                                        на добу. Якщо стан пацієнта не покращується після 7 діб застосування препарату,
+                                        необхідно звернутися до лікаря.
+                                    </li>
+                                    <li>У разі дуже сильного свербежу або ураження обширної ділянки крім місцевого
+                                        застосування
+                                        препарату слід застосовувати також пероральні форми препарату (Едермік, краплі
+                                        оральні).
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="part">
+                            <h4 class="heading">дозування</h4>
+                            <div class="dynamic-content">
+                                <ul>
+                                    <li>наносити на уражені ділянки шкіри</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </div>
+
+
+        <section id="questions" class="section-question">
+            <div class="container d-flex">
+                <div class="section__heading">
+                    <h2 class="section__title heading_xxl">Питання та відповіді</h2>
+                </div>
+                <div class="section__content">
+                    <div class="accordion" id="accordion">
+                        <div class="panel">
+                            <div class="panel__heading">
+                                <div class="open-panel"></div>
+                                <h3 class="panel__title title_middle">Що таке синдром харчової алергії?</h3>
+                            </div>
+                            <div class="panel-collapse">
+                                <div class="panel-collapse__body dynamic-content">
+                                    <p> Синдромом харчової алергії називають свербіж, подразнення і легкий відсік
+                                        слизової
+                                        рота і губ як прояв алергічної реакції негайного типу на свіжі фрукти та овочі.
+                                        З
+                                        визначення ясно, що сам по собі він для життя не є небезпечним. Однак з нього
+                                        може
+                                        початися загальна алергічна реакція негайного типу.</p>
+
+                                    <p> Для синдрому харчової алергії характерно те, що його причиною бувають тільки
+                                        свіжі,
+                                        не піддані термічній обробці фрукти і овочі, так як синдром викликається
+                                        термолабільними алергенами. Наприклад, хворий без шкоди для себе їсть суп з
+                                        селерою,
+                                        але не виносить селери в свіжому вигляді. Крім того, цей синдром виявляє тісний
+                                        зв'язок зі специфічними пилковими алергенами. Встановлено, що алергени деяких
+                                        фруктів і овочів і поширених видів пилку викликають перехресні реакції. При
+                                        цьому
+                                        визначення специфічних IgE in vitro і скарифікаційні шкірні проби з наявними у
+                                        продажу алергенами овочів і фруктів дають негативні результати. Якщо ж
+                                        скарифікаційну пробу виконати голкою, якою попередньо вкололи стиглий овоч чи
+                                        фрукт,
+                                        розвинеться негайна позитивна реакція. Таку скарифікаційну пробу називають
+                                        «подвійний укол». Описано поліпшення у хворого з синдромом харчової алергії
+                                        після
+                                        десенсибілізації з приводу супутнього полінозу.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel__heading">
+                                <div class="open-panel"></div>
+                                <h3 class="panel__title title_middle">Чи можна попередити харчові алергічні
+                                    реакції?</h3>
+                            </div>
+                            <div class="panel-collapse">
+                                <div class="panel-collapse__body dynamic-content">
+                                    <p>Неясно, чи можна попередити такі реакції в осіб з обтяженим сімейним анамнезом
+                                        (при
+                                        наявності атопії в обох батьків, важкого атопічного дерматиту та харчової
+                                        алергії у
+                                        братів і сестер), але доведено, що, дотримуючись певних обмежень в харчуванні,
+                                        можна
+                                        уповільнити розвиток алергічних захворювань і зменшити їх тяжкість.</p>
+
+                                    <p>А) вважають, що вагітним в останньому триместрі не слід вживати в їжу арахіс,
+                                        фундук,
+                                        креветки і рибу, а годуючим матерям - коров'яче молоко, арахіс, фундук, креветки
+                                        і
+                                        рибу.</p>
+
+                                    <p>Б) бажано грудне вигодовування протягом першого року життя.</p>
+
+                                    <p>В) для змішаного і штучного вигодовування кращі гіпоалергенні суміші на основі
+                                        гідролізатів білка.</p>
+
+                                    <p>Г) густу їжу (прикорм) не дають до 6 місяців.</p>
+
+                                    <p>Д) коров'яче молоко і яйця не дають до 1 року.</p>
+
+                                    <p>Е) такі продукти, як арахіс, фундук, ракоподібні і рибу слід вводити в раціон
+                                        після 2
+                                        років, а краще пізніше</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel__heading">
+                                <div class="open-panel"></div>
+                                <h3 class="panel__title title_middle">Чи треба при алергії до арахісу виключати з
+                                    раціону
+                                    всі бобові?</h3>
+                            </div>
+                            <div class="panel-collapse">
+                                <div class="panel-collapse__body dynamic-content">
+                                    <p> Ні. Алергія до інших бобовим у осіб, що мали алергічні реакції на арахіс, навіть
+                                        важкі,
+                                        зустрічаються рідко. Тільки у 5% хворих одночасно спостерігається клінічно
+                                        виражена
+                                        алергія різної тяжкості ще до 1 - 2 видам бобів. Однак особи з алергією до
+                                        арахісу
+                                        дуже часто дають позитивні шкірні проби або радіоаллергосорбентний тест з іншими
+                                        бобовими, навіть якщо в якості продукту харчування вони переносяться добре.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel__heading">
+                                <div class="open-panel"></div>
+                                <h3 class="panel__title title_middle">Наскільки поширені харчова алергія і
+                                    непереносимість
+                                    їжі?</h3>
+                            </div>
+                            <div class="panel-collapse">
+                                <div class="panel-collapse__body dynamic-content">
+                                    <p>А) алергія до тих чи інших видів їжі спостерігається у 5-8% дітей,
+                                        непереносимість
+                                        молока - приблизно у 2,5% немовлят.</p>
+
+                                    <p>Б) 1-2% дорослих страждають харчовою алергією, підтвердженої провокаційними
+                                        харчовими
+                                        пробами. Легка форма харчової алергії, так званий харчової алергічний синдром,
+                                        можливо, поширена ще більше, але в частині випадків залишається
+                                        незареєстрованою.</p>
+
+                                    <p>В) при телефонному опитуванні алергія до земляного горіха (арахісу) і горіхів
+                                        інших
+                                        видів виявлена в 1% сімей.</p>
+
+                                    <p>Г) 25% опитаних сімей змушені були внести зміни в харчування через непідтверджену
+                                        «харчову алергію» або непереносимості їжі.</p>
+
+                                    <p>Д) лактазна недостатність спостерігається у 25% населення США, а в цілому нею
+                                        страждають до 75% населення земної кулі.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel__heading">
+                                <div class="open-panel"></div>
+                                <h3 class="panel__title title_middle">Які засоби частіше викликають алергічну
+                                    реакцію?</h3>
+                            </div>
+                            <div class="panel-collapse">
+                                <div class="panel-collapse__body dynamic-content">
+                                    <p> Туш на водній основі, що містить емульгатори, часто викликає роздратування шкіри
+                                        повік. Однак іноді спостерігається непереносимість самої по собі неемульгованої
+                                        в
+                                        воді туші. У таких випадках рекомендують користуватися пресованої тушшю або
+                                        олівцем
+                                        для підведення очей.</p>
+
+                                    <p>Косметичні засоби для очей і шкіри навколо них містять антибактеріальні
+                                        речовини-консерванти, що попереджають їх обсіменіння бактеріями. Найчастіше з
+                                        цією
+                                        метою додають ефіри парагідробензойної кислоти. При попаданні на кон'юнктиву
+                                        вони
+                                        можуть викликати роздратування, але нанесення містячих їх засобів на повіки
+                                        зазвичай
+                                        переноситься добре. Консерванти квартемум-15 і імідазоліднілмочевіна виділяють
+                                        формальдегід. Ці консерванти можуть викликати алергічну реакцію самі по собі або
+                                        роздратування внаслідок утворення формальдегіду. Крім того, в якості
+                                        консервантів
+                                        використовують сорбітат калію, діізопропаноламін в третинний
+                                        дібутілгідрохінон.</p>
+
+                                    <p>Деякі лаки для нігтів містять смолу толуолсульфонамідформальдегід, яка після
+                                        висихання може викликати алергічну реакцію. При потирання очей вона заноситься з
+                                        пальців на повіки. «Дублюючий» ектопічний дерматит спостерігається при попаданні
+                                        на
+                                        повіки косметичних засобів для волосся. Гіпоалергенні лаки для нігтів
+                                        поліефірної
+                                        смоли не містять.</p>
+
+                                    <p>Джерелами алергічних реакцій з боку кон'юнктиви і шкіри повік бувають також
+                                        олівці
+                                        для підведення очей, тіні для очей і штучні вії. Олівці для вій і щипчики можуть
+                                        містити нікель, який теж викликає алергічну реакцію.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="block-subscribe">
+                <h3 class="heading heading_md">Підпишіться на нові статті про алергію та її лікування!</h3>
+                <form action="#" method="post" class="form-subscribe">
+                    <div class="form__group">
+                        <input type="text" placeholder="Введіть Ваш e-mail">
+                        <button class="btn btn_submit">Відправити</button>
+                    </div>
+                    <label class="checkbox-wrap">
+                        <input type="checkbox" name="subscribe"/>
+                        <span class="checkmark"></span>
+                        Надаю АТ «Фармак» згоду на обробку моїх персональних даних (з повним текстом згоди
+                        ознайомлена(-ий) та погоджуюсь)
+                    </label>
+                </form>
+            </div>
+
+            <div class="footer_top">
+                <div class="footer__nav">
+                    <div class="footer__nav-item">
+                        <ul class="footer__menu">
+                            <li>
+                                <a class="footer__title" href="#">Едем</a>
+                                <ul class="footer__sub-menu">
+                                    <li><a href="#">Едем таблетки</a></li>
+                                    <li><a href="#">Едем сироп</a></li>
+                                    <li><a href="#">Едермік</a></li>
+                                    <li><a href="#">Едермік гель</a></li>
+                                    <li><a href="#">Едем ріно спрей</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-item">
+                        <ul class="footer__menu">
+                            <li>
+                                <a class="footer__title" href="about-allergy.html">Все про алергію</a>
+                                <ul class="footer__sub-menu">
+                                    <li><a href="#">Види алергії</a></li>
+                                    <li><a href="page-symptoms.html">Прояви алергії</a></li>
+                                    <li><a href="#">Лікування алергії</a></li>
+                                    <li><a href="#">Профілактика алергії</a></li>
+                                    <li><a href="#">Алергія у дітей</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-item">
+                        <ul class="footer__menu">
+                            <li>
+                                <a class="footer__title" href="#">Корисно для алергіка</a>
+                                <ul class="footer__sub-menu">
+                                    <li><a href="page-allergens-plants.html">Рослини - алергени</a></li>
+                                    <li><a href="page-allergens-food.html">Продукти - алергени</a></li>
+                                    <li><a href="page-calendar.html">Календар алергії</a></li>
+                                    <li><a href="#">При різних видах алергії</a></li>
+                                    <li><a href="#">Пам’ятки для алергіка</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-item">
+                        <ul class="footer__menu-general">
+                            <li><a class="" href="#questions">Питання та Відповіді</a></li>
+                            <li><a class="" href="#">Інформація для фахівців</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    <h4 class="footer__title">Контакти АТ Фармак</h4>
+                    <div>
+                        <span class="address"> вул. Кирилівська, 63, м. Київ  </span>
+                        <a class="" href="tel:+380444968787">Телефон: +38 (044) 496-87-87</a>
+                        <a class="" href="mailto:info@farmak.ua">E-mail: info@farmak.ua</a>
+                    </div>
+                </div>
+                <a href="#" class="footer__logo-farm">
+                    <img src="assets/img/Logo_Farmak_Main.svg" alt="Лого Фармак">
+                </a>
+
+                <div class="copyright">&copy; Едем, 2024</div>
+
+            </div>
+            <div class="footer_bottom">
+                <div class="footer__note">
+                    <p>Реклама лікарського засобу. Перед застосуванням лікарського засобу обов'язково
+                        проконсультуйтесь з лікарем та ознайомтесь з інструкцією для застосування лікарського
+                        засобу.</p>
+                    <p>*Дані з сайту <a href="https://tsinanaliky.com.ua/">tsinanaliky.com.ua</a></p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="./lib/jquery-3.7.1.min.js"></script>
+<script src="./lib/select2/select2.min.js"></script>
+<script src="./lib/swiper/swiper-bundle.min.js"></script>
+<script src="dist/main.js"></script>
+</body>
+</html>
