@@ -71,6 +71,7 @@ body {
 .dynamic-content {
   p {
     margin-bottom: 15px;
+    line-height: 1.1;
   }
 
   img {
@@ -122,24 +123,9 @@ body {
     font-size: 36px;
     margin: 50px 0;
   }
-
-
-  //
-  //h1 {
-  //  font-size: 36px;
-  //}
-  //
-  //h2 {
-  //  font-size: 32px;
-  //}
-  //
-  //h3 {
-  //  font-size: 24px;
-  //}
-  //
-  //h4 {
-  //  font-size: 22px;
-  //}
+  h4 {
+    font-size: 26px;
+  }
   //
   //h5 {
   //  font-size: 18px;
@@ -184,6 +170,7 @@ body {
   li {
     position: relative;
     padding-left: 34px;
+    margin-bottom: 5px;
   }
 
   a {

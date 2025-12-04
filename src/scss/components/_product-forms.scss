@@ -4,19 +4,88 @@
 .product-forms {
   &__card {
     margin-bottom: 25px;
+    font-size: 12px;
+    line-height: 1.1;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+    &:after,
+    &:before {
+      position: absolute;
+      content: '';
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: transparent;
+      z-index: -1;
+      transition: background .35s;
+    }
+
+    &:after {
+      left: auto;
+      width: 10px;
+    }
+
+    &:before {
+      left: -10px;
+    }
+
+    &.active:after,
+    &:hover:after {
+      background-color: variables.$green;
+    }
+
+    &.active:before,
+    &:hover:before {
+      background-color: #F2F8F4;
+    }
 
     a {
       display: flex;
       align-items: center;
+      width: 100%;
     }
+  }
 
-    &__thumb {
-      width: 181px;
-      height: 183px;
-      background-color: #F5F5F5;
-      border-radius: 12px;
-      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .25);
-      overflow: hidden;
+  &__thumb {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 181px;
+    height: 183px;
+    background-color: #F5F5F5;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .25);
+    overflow: hidden;
+    padding: 22px 16px;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
     }
+  }
+
+
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__content {
+    padding-left: 15px;
+  }
+
+  .price__wrapper {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .available-packaging {
+    margin-bottom: 10px;
+    margin-right: 10px;
   }
 }
