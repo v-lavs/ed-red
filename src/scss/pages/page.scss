@@ -61,12 +61,20 @@
   }
 }
 
-.page-article {
+.page.page-article {
   background-color: #fff;
+.section-products{
+  padding: 50px 0;
 }
-.section .blog-slider{
-  padding-bottom: 15px;
+  .section {
+    padding-top: 50px;
+
+    .blog-slider {
+      padding-bottom: 15px;
+    }
+  }
 }
+
 .article {
   padding-bottom: 50px;
   line-height: 1.1;
@@ -86,9 +94,5 @@
 
   &__block-intro {
     margin-bottom: 50px;
-  }
-
-  .dynamic-content {
-    clear: both;
   }
 }

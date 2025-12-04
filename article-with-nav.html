@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--зaкрыть индексацию -->
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="robots" content="noindex">
+    <meta name="yandex" content="none">
+
+    <title>Алергія на електронні сигарети:
+        правда чи вигадка?</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+
+    <!--    <link rel="stylesheet" href="./fonts/fonts.css">-->
+    <link href="lib/select2/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./dist/main.css">
+
+</head>
+
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="header__logo">
+                <img src="assets/img/edem_logo.svg" alt="лого Едем" width="86" height="56">
+            </a>
+            <div class="header__nav">
+                <button type="button" class="btn_close" aria-label="Закрити меню">X</button>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="index.html" class="menu__link active">Едем
+                            <ul class="sub-menu">
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едем таблетки</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едем сироп</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едермік</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едермік гель</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Едем ріно спрей</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="about-allergy.html" class="menu__link">Все про алергію
+                            <ul class="sub-menu">
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Види алергії</a></li>
+                                <li class="sub-menu__item"><a href="page-symptoms.html" class="sub-menu__link">Прояви
+                                    алергії</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Лікування алергії</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Профілактика алергії</a>
+                                </li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Алергія у дітей</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="page-useful.html" class="menu__link">Корисно для людей з алергією
+                            <ul class="sub-menu">
+                                <li class="sub-menu__item"><a href="page-allergens-plants.html" class="sub-menu__link">Рослини
+                                    - алергени</a>
+                                </li>
+                                <li class="sub-menu__item"><a href="page-allergens-food.html" class="sub-menu__link">Продукти
+                                    - алергени</a>
+                                </li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Календар алергії</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">При різних видах
+                                    алергії</a></li>
+                                <li class="sub-menu__item"><a href="#" class="sub-menu__link">Пам’ятки для алергіка</a>
+                                </li>
+                            </ul>
+                        </a></a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#questions" class="menu__link">Питання-відповіді</a>
+                    </li>
+                </ul>
+            </div>
+            <button type="button" class="search_open" aria-label="Відкрити пошук">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.5832 21.4688L18.9697 16.8783C20.3679 15.0571 21.1348 12.8481 21.1351 10.517C21.1351 7.7079 20.0355 5.06672 18.0389 3.0804C16.0425 1.09407 13.3884 0 10.5648 0C7.7416 0 5.08715 1.09407 3.09084 3.0804C-1.03028 7.18125 -1.03028 13.8535 3.09084 17.9537C5.08715 19.9403 7.7416 21.0344 10.5648 21.0344C12.9076 21.0341 15.1277 20.2711 16.9581 18.8799L21.5716 23.4703C21.8491 23.7468 22.2135 23.885 22.5774 23.885C22.9414 23.885 23.3057 23.7468 23.5832 23.4703C24.1389 22.9177 24.1389 22.0213 23.5832 21.4688ZM5.10243 15.9521C2.0906 12.9554 2.09095 8.07904 5.10243 5.08193C6.56146 3.63054 8.50151 2.8309 10.5648 2.8309C12.6285 2.8309 14.5682 3.63054 16.0273 5.08193C17.4863 6.53366 18.29 8.464 18.29 10.517C18.29 12.5704 17.4863 14.5004 16.0273 15.9521C14.5682 17.4039 12.6285 18.2035 10.5648 18.2035C8.50151 18.2035 6.56146 17.4039 5.10243 15.9521Z"
+                          fill="#383838"/>
+                </svg>
+            </button>
+            <div class="header__search">
+                <form role="search" method="get" id="searchform" class="searchform" action="#">
+                    <div class="search-wrap">
+                        <input type="hidden" name="post_type" value="">
+                        <label class="screen-reader-text" for="s">Шукати:</label>
+                        <input type="text" placeholder="" value="" name="s" id="s"/>
+                        <button type="submit" id="searchsubmit" class="btn_search">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.5832 21.4688L18.9697 16.8783C20.3679 15.0571 21.1348 12.8481 21.1351 10.517C21.1351 7.7079 20.0355 5.06672 18.0389 3.0804C16.0425 1.09407 13.3884 0 10.5648 0C7.7416 0 5.08715 1.09407 3.09084 3.0804C-1.03028 7.18125 -1.03028 13.8535 3.09084 17.9537C5.08715 19.9403 7.7416 21.0344 10.5648 21.0344C12.9076 21.0341 15.1277 20.2711 16.9581 18.8799L21.5716 23.4703C21.8491 23.7468 22.2135 23.885 22.5774 23.885C22.9414 23.885 23.3057 23.7468 23.5832 23.4703C24.1389 22.9177 24.1389 22.0213 23.5832 21.4688ZM5.10243 15.9521C2.0906 12.9554 2.09095 8.07904 5.10243 5.08193C6.56146 3.63054 8.50151 2.8309 10.5648 2.8309C12.6285 2.8309 14.5682 3.63054 16.0273 5.08193C17.4863 6.53366 18.29 8.464 18.29 10.517C18.29 12.5704 17.4863 14.5004 16.0273 15.9521C14.5682 17.4039 12.6285 18.2035 10.5648 18.2035C8.50151 18.2035 6.56146 17.4039 5.10243 15.9521Z"
+                                      fill="#383838"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <button type="button" class="btn_burger" aria-label="Відкрити меню">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </div>
+
+    </header>
+    <div class="backdrop"></div>
+
+    <main class="main page  page-article">
+
+        <div class="container">
+            <nav aria-label="Хлібні крихти" class="breadcrumb">
+                <ul>
+                    <li class="breadcrumb__item"><a href="#">Едем</a></li>
+                    <li class="breadcrumb__item"><a href="#">Корисно для людей з алергією</a></li>
+                    <li class="breadcrumb__item"><a href="#">Рослини-Алергени</a></li>
+                    <li class="breadcrumb__item">
+                        <span class="current-page" aria-current="page">Алергія на електронні сигарети: правда чи вигадка?</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <article class="article article_allergen">
+            <div class="container">
+
+                <h2 class="article__title heading_lg">Алергія на електронні сигарети: <br>
+                    правда чи вигадка?</h2>
+                <div class="article__nav">
+                    <h3 class="heading_md">зміст</h3>
+                    <ol class="nav-list">
+                        <li class="nav-list__item"><a href="#block1">Електронні сигарети — що це?</a></li>
+                        <li class="nav-list__item"><a href="#block2">Причини алергії</a></li>
+                        <li class="nav-list__item"><a href="#block3">Які компоненти можуть викликати алергію</a></li>
+                        <li class="nav-list__item"><a href="#block4">Які симптоми алергії на електронні сигарети</a></li>
+                        <li class="nav-list__item"><a href="#">Чи шкідливі електронні сигарети без нікотину?</a></li>
+                    </ol>
+                </div>
+                <div class="dynamic-content">
+                    <h3 id="block1">Електронні сигарети — що це?</h3>
+
+                    <p>Електронні сигарети – це пристрої, які розпилюють рідкий розчин для його подальшого вдихання.
+                        Спочатку такі пристрої позиціонувалися як більш безпечна альтернатива звичайним сигаретам і
+                        спосіб кинути палити. Але сьогодні популярність електронних сигарет різних видів, вейпів, а
+                        також таких пристроїв, як iqos, які, по суті, є гібридом між традиційними та електронними
+                        сигаретами, зростає з кожним днем не тільки серед курців, але і серед тих, хто ніколи раніше не
+                        курив.</p>
+                    <p> А за даними Управління з санітарного нагляду за якістю харчових продуктів і медикаментів США, в
+                        2018 році понад 3,6 мільйона учнів середніх і старших класів в цій країні курили електронні
+                        сигарети як мінімум протягом останніх 30 днів. Вживанню електронних сигарет сприяє мода, реклама
+                        і різноманіття – різні їх смаки. Виробники додають смакові добавки до свого продукту, тим самим
+                        змушуючи користувачів купувати електронні сигарети з різними присмаками знову і знову – щоб
+                        засмакувати їх всі.</p>
+                    <p>Спочатку вважалося, що аерозольні рідини лише створюють пару, звідси і слово
+                        «вейпінг», від англійського «vapour» – «пара». Однак зараз відомо, що разом з
+                        паром утворюється ціла суміш хімічних речовин. Крім того, більшість електронних
+                        сигарет містять нікотин. За деякими даними, в електронній сигареті сучасного
+                        покоління доза нікотину може становити до 80 мг/мл, що вдвічі більше, ніж у
+                        ранніх версіях і набагато вище, ніж у звичайних горючих сигаретах.</p>
+
+                    <h3 id="block2">Причини алергії</h3>
+
+                    <p>Нікотин в будь-якому вигляді є досить поширеною причиною алергії. Тому алергія на
+                        електронні пристрої для куріння також не є рідкістю. Реакція на нікотин виникає,
+                        коли імунна система помилково сприймає його як загрозу і атакує цю речовину. А
+                        згодом антитіла, які виділяються при цьому, діють на весь організм, провокуючи
+                        симптоми алергії.</p>
+                    <p>Згідно з невеликим дослідженням 2018 року, 7 % курців і до 20 % некурящих
+                        страждають від цієї проблеми. До останніх відносяться ті, хто пасивно контактує
+                        з нікотином, вдихаючи пари сигарет людей, які курять навколо.</p>
+                    <p>Наприклад, якщо людина з алергією на нікотин носить нікотиновий пластир, це може
+                        спровокувати контактний дерматит. Так званий «атопічний марш» також є поширеним
+                        наслідком впливу різних вейпів на організм</p>
+
+                    <h3 id="block3">Які компоненти можуть викликати алергію</h3>
+
+                    <p>Крім нікотину, негативну реакцію від викуреної електронної сигарети можуть
+                        викликати і інші компоненти. Зокрема, це можуть бути:</p>
+                    <ul class="big-marker-ul">
+                        <li><strong>Нікель, який є однією з найпоширеніших причин алергічного контактного
+                            дерматиту, викликаного курінням електронних пристроїв;</strong>
+                        </li>
+
+                        <li><strong>Ментол, що входить до складу рідини в вейпах, його випадкове проливання –
+                            часта причина алергічного дерматиту;</strong>
+                        </li>
+
+                        <li><strong>Ароматизатори. Кориця та інші ароматизатори, які роблять вейпи популярними
+                            серед молоді, можуть містити такі речовини, як евгенол та альдегід. Це –
+                            часті сенсибілізатори шкіри, які провокують розвиток дерматиту. Альдегід
+                            пригнічує вроджений імунітет і порушує місцевий бар'єр шкіри.</strong>
+                        </li>
+
+                        <li><strong>Гідроксицитронел, йодопропінілбутилкарбамат і поліетиленгліколь також є
+                            можливими причинами алергічних проблем.</strong>
+                        </li>
+                    </ul>
+
+                    <p>Крім того, сигарети можуть містити й інші інгредієнти, які негативно впливають на
+                        загальний стан організму. При вдиханні вони можуть викликати рак і погіршити
+                        симптоми астми. Це:</p>
+                    <ul class="big-marker-ul">
+                        <li><strong>Формальдегід – токсин, який утворюється при нагріванні пропіленгліколю та
+                            гліцерину в електронній сигареті;</strong>
+                        </li>
+
+                        <li><strong>Акролеїн – речовина, що подразнює дихальні шляхи; утворюється при нагріванні
+                            гліцерину шляхом проходження через спіралі електронної сигарети;</strong>
+                        </li>
+
+                        <li><strong>Ароматизатори. Кориця та інші ароматизатори, які роблять вейпи популярними
+                            серед молоді, можуть містити такі речовини, як евгенол та альдегід. Це –
+                            часті сенсибілізатори шкіри, які провокують розвиток дерматиту. Альдегід
+                            пригнічує вроджений імунітет і порушує місцевий бар'єр шкіри.</strong>
+                        </li>
+
+                        <li><strong>Гідроксицитронел, йодопропінілбутилкарбамат і поліетиленгліколь також є
+                            можливими причинами алергічних проблем.</strong>
+                        </li>
+                    </ul>
+
+                    <h3 id="block4">Чи шкідливі електронні сигарети без нікотину?</h3>
+
+                    <p>Вейпінг, навіть без нікотину, може бути шкідливим для здоров'я. Він подразнює
+                        легені та горло та доставляє токсини в організм. Побічні ефекти, які людина
+                        відчуває під час вейпінгу, частково залежать від типу рідини, яку вона
+                        використовує.</p>
+                    <p>Рідини для електронних сигарет мають цитотоксичну дію, тобто пошкоджують
+                        структуру клітин. Вейпінг спричиняє пошкодження ДНК та хромосом, підвищення
+                        рівня токсинів у сечі та пошкодження легенів. Останні побічні ефекти виникають,
+                        коли в рідині міститься вітамін Е ацетат.</p>
+                    <p>Якщо у вас астма або алергія, вейпінг може загострити симптоми та викликати
+                        запалення дихальних шляхів. Крім того, при вдиханні пропіленгліколю і гліцерину
+                        подразнюються дихальні шляхи і підвищується ризик легеневих інфекцій.</p>
+                    <p>Вже за нетривалого використання рідина для електронних сигарет може викликати
+                        подразнення легенів і горла. Люди, які використовують вейп, часто називають це
+                        «ударом по горлу». Цей термін описує такі відчуття як біль, поколювання і
+                        печіння в горлі, які відчуває людина при вдиханні пари.</p>
+                    <p>При виникненні будь-якого з перерахованих вище симптомів при курінні електронних
+                        сигарет припиніть їх використання і проконсультуйтеся з лікарем.</p>
+
+                    <p>Джерела:</p>
+                    <ol>
+                        <li>
+                            https://www.medicalnewstoday.com/articles/326489#vaping-without-nicotine-vs-smoking-cigarettes
+                        </li>
+                        <li>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6881368/</li>
+                        <li>
+                            https://www.aaaai.org/tools-for-the-public/conditions-library/allergies/electronic-cigarettes-allergies-and-asthma
+                        </li>
+                        <li>https://www.jacionline.org/article/S0091-6749(17)31990-5/повний текст</li>
+                        <li>https://openres.ersjournals.com/content/10/2/00805-2023</li>
+                        <li>
+                            https://neaai.com/the-negative-effects-of-vaping-and-e-cigarettes-on-asthma-and-overall-health/
+                        </li>
+                        <li>
+                            https://www.medicalnewstoday.com/articles/can-you-be-allergic-to-nicotine#complications
+                        </li>
+                        <li>
+                            https://www.jintegrativederm.org/article/90982-a-review-of-the-dermatological-manifestations-associated-with-e-cigarettes-and-vaping
+                        </li>
+                        <li>https://allergyasthmanetwork.org/news/ask-allergist-secondhand-smoking/</li>
+                        <li> https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8232370/</li>
+                    </ol>
+
+                </div>
+            </div>
+        </article>
+
+        <div class="section-products">
+            <div class="container">
+                <ul class="products">
+                    <li class="product">
+                        <div class="card-product">
+                            <div class="card-product__thumb">
+                                <img src="assets/img/1_edem_tab_30_left_3d.png" alt="Упаковка таблеток Едем" width="375"
+                                     height="331">
+                            </div>
+                            <div class="card-product__body">
+                                <h3 class="card-product__title">Едем</h3>
+                                <div class="card-product__text">Орієнтовна ціна в аптеках:
+                                    <span class="card-product__cost"><strong>113,10 — 166,75 грн.</strong></span>
+                                </div>
+                                <div class="card-product__info">Забронювати на:</div>
+                            </div>
+                        </div>
+                        <div class="product__footer">
+                            <a href="#" class="btn btn_outline"><img src="assets/img/logo-tabletki@2x%203.png"
+                                                                     alt="Посилання на Таблетки.юа"></a>
+                            <a href="#" class="btn btn_main">Ціни в Аптеках</a>
+                        </div>
+                    </li>
+                    <li class="product">
+                        <div class="card-product">
+                            <div class="card-product__thumb">
+                                <img src="assets/img/1_edem_syrop_30_left_3d.png" alt="Упаковка Едем Сироп" width="375"
+                                     height="331">
+                            </div>
+                            <div class="card-product__body">
+                                <h3 class="card-product__title">Едем Сироп</h3>
+                                <div class="card-product__text">Орієнтовна ціна в аптеках:
+                                    <span class="card-product__cost"><strong>113,10 — 166,75 грн.</strong></span>
+                                </div>
+                                <div class="card-product__info">Забронювати на:</div>
+                            </div>
+                        </div>
+                        <div class="product__footer">
+                            <a href="#" class="btn btn_outline"><img src="assets/img/logo-tabletki@2x%203.png"
+                                                                     alt="Посилання на Таблетки.юа"></a>
+                            <a href="#" class="btn btn_main">Ціни в Аптеках</a>
+                        </div>
+                    </li>
+                    <li class="product">
+                        <div class="card-product">
+                            <div class="card-product__thumb">
+                                <img src="assets/img/1_edem_krapli_30_left_3d.png" alt="Упаковка Едем Ріно">
+                            </div>
+                            <div class="card-product__body">
+                                <h3 class="card-product__title">Едем Ріно</h3>
+                                <div class="card-product__text">Орієнтовна ціна в аптеках:
+                                    <span class="card-product__cost"><strong>113,10 — 166,75 грн.</strong></span>
+                                </div>
+                                <div class="card-product__info">Забронювати на:</div>
+                            </div>
+                        </div>
+                        <div class="product__footer">
+                            <a href="#" class="btn btn_outline"><img src="assets/img/logo-tabletki@2x%203.png"
+                                                                     alt="Посилання на Таблетки.юа"></a>
+                            <a href="#" class="btn btn_main">Ціни в Аптеках</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="heading heading_md color_green">статті про алергію</h2>
+                <div class="wrap-blog-slider">
+                    <div class="swiper slider-posts blog-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <article class="card-post">
+                                    <div class="card-post__thumb"
+                                         style="background-image: url(assets/img/slider/slide-img1.png);"></div>
+                                    <div class="card-post__body">
+                                        <h3 class="card-post__title">Алергія на дитячу суміш: як її визначити і що
+                                            робити?</h3>
+                                        <a href="#" class="card-post__link">Більше</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="card-post">
+                                    <div class="card-post__thumb"
+                                         style="background-image: url(assets/img/slider/slide-img2.png);"></div>
+                                    <div class="card-post__body">
+                                        <h3 class="card-post__title">Алергія на виноград у дітей: як її визначити та що
+                                            робити?</h3>
+                                        <a href="#" class="card-post__link">Більше</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="card-post">
+                                    <div class="card-post__thumb"
+                                         style="background-image: url(assets/img/slider/slide-img3.png);"></div>
+                                    <div class="card-post__body">
+                                        <h3 class="card-post__title">Аденоїди при алергії: чи є зв’язок?</h3>
+                                        <a href="#" class="card-post__link">Більше</a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <article class="card-post">
+                                    <div class="card-post__thumb"
+                                         style="background-image: url(assets/img/tabs/mother.jpg);"></div>
+                                    <div class="card-post__body">
+                                        <h3 class="card-post__title">Які можна приймати ліки від алергії
+                                            годуючій
+                                            мамі?</h3>
+                                        <a href="#" class="card-post__link">Більше</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="card-post">
+                                    <div class="card-post__thumb"
+                                         style="background-image: url(assets/img/tabs/cat-tab.jpg);"></div>
+                                    <div class="card-post__body">
+                                        <h3 class="card-post__title">Як позбутися алергії на кішок?</h3>
+                                        <a href="#" class="card-post__link">Більше</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="card-post">
+                                    <div class="card-post__thumb"
+                                         style="background-image: url(assets/img/tabs/peoples.jpg);"></div>
+                                    <div class="card-post__body">
+                                        <h3 class="card-post__title">Як здоровий спосіб життя допомагає при
+                                            алергії?</h3>
+                                        <a href="#" class="card-post__link">Більше</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="questions" class="section-question">
+            <div class="container d-flex">
+                <div class="section__heading">
+                    <h2 class="section__title heading_xxl">Питання та відповіді</h2>
+                </div>
+                <div class="section__content">
+                    <div class="accordion" id="accordion">
+                        <div class="panel">
+                            <div class="panel__heading">
+                                <div class="open-panel"></div>
+                                <h3 class="panel__title title_middle">Що таке синдром харчової алергії?</h3>
+                            </div>
+                            <div class="panel-collapse">
+                                <div class="panel-collapse__body dynamic-content">
+                                    <p> Синдромом харчової алергії називають свербіж, подразнення і легкий відсік
+                                        слизової
+                                        рота і губ як прояв алергічної реакції негайного типу на свіжі фрукти та овочі.
+                                        З
+                                        визначення ясно, що сам по собі він для життя не є небезпечним. Однак з нього
+                                        може
+                                        початися загальна алергічна реакція негайного типу.</p>
+
+                                    <p> Для синдрому харчової алергії характерно те, що його причиною бувають тільки
+                                        свіжі,
+                                        не піддані термічній обробці фрукти і овочі, так як синдром викликається
+                                        термолабільними алергенами. Наприклад, хворий без шкоди для себе їсть суп з
+                                        селерою,
+                                        але не виносить селери в свіжому вигляді. Крім того, цей синдром виявляє тісний
+                                        зв'язок зі специфічними пилковими алергенами. Встановлено, що алергени деяких
+                                        фруктів і овочів і поширених видів пилку викликають перехресні реакції. При
+                                        цьому
+                                        визначення специфічних IgE in vitro і скарифікаційні шкірні проби з наявними у
+                                        продажу алергенами овочів і фруктів дають негативні результати. Якщо ж
+                                        скарифікаційну пробу виконати голкою, якою попередньо вкололи стиглий овоч чи
+                                        фрукт,
+                                        розвинеться негайна позитивна реакція. Таку скарифікаційну пробу називають
+                                        «подвійний укол». Описано поліпшення у хворого з синдромом харчової алергії
+                                        після
+                                        десенсибілізації з приводу супутнього полінозу.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel__heading">
+                                <div class="open-panel"></div>
+                                <h3 class="panel__title title_middle">Чи можна попередити харчові алергічні
+                                    реакції?</h3>
+                            </div>
+                            <div class="panel-collapse">
+                                <div class="panel-collapse__body dynamic-content">
+                                    <p>Неясно, чи можна попередити такі реакції в осіб з обтяженим сімейним анамнезом
+                                        (при
+                                        наявності атопії в обох батьків, важкого атопічного дерматиту та харчової
+                                        алергії у
+                                        братів і сестер), але доведено, що, дотримуючись певних обмежень в харчуванні,
+                                        можна
+                                        уповільнити розвиток алергічних захворювань і зменшити їх тяжкість.</p>
+
+                                    <p>А) вважають, що вагітним в останньому триместрі не слід вживати в їжу арахіс,
+                                        фундук,
+                                        креветки і рибу, а годуючим матерям - коров'яче молоко, арахіс, фундук, креветки
+                                        і
+                                        рибу.</p>
+
+                                    <p>Б) бажано грудне вигодовування протягом першого року життя.</p>
+
+                                    <p>В) для змішаного і штучного вигодовування кращі гіпоалергенні суміші на основі
+                                        гідролізатів білка.</p>
+
+                                    <p>Г) густу їжу (прикорм) не дають до 6 місяців.</p>
+
+                                    <p>Д) коров'яче молоко і яйця не дають до 1 року.</p>
+
+                                    <p>Е) такі продукти, як арахіс, фундук, ракоподібні і рибу слід вводити в раціон
+                                        після 2
+                                        років, а краще пізніше</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel__heading">
+                                <div class="open-panel"></div>
+                                <h3 class="panel__title title_middle">Чи треба при алергії до арахісу виключати з
+                                    раціону
+                                    всі бобові?</h3>
+                            </div>
+                            <div class="panel-collapse">
+                                <div class="panel-collapse__body dynamic-content">
+                                    <p> Ні. Алергія до інших бобовим у осіб, що мали алергічні реакції на арахіс, навіть
+                                        важкі,
+                                        зустрічаються рідко. Тільки у 5% хворих одночасно спостерігається клінічно
+                                        виражена
+                                        алергія різної тяжкості ще до 1 - 2 видам бобів. Однак особи з алергією до
+                                        арахісу
+                                        дуже часто дають позитивні шкірні проби або радіоаллергосорбентний тест з іншими
+                                        бобовими, навіть якщо в якості продукту харчування вони переносяться добре.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel__heading">
+                                <div class="open-panel"></div>
+                                <h3 class="panel__title title_middle">Наскільки поширені харчова алергія і
+                                    непереносимість
+                                    їжі?</h3>
+                            </div>
+                            <div class="panel-collapse">
+                                <div class="panel-collapse__body dynamic-content">
+                                    <p>А) алергія до тих чи інших видів їжі спостерігається у 5-8% дітей,
+                                        непереносимість
+                                        молока - приблизно у 2,5% немовлят.</p>
+
+                                    <p>Б) 1-2% дорослих страждають харчовою алергією, підтвердженої провокаційними
+                                        харчовими
+                                        пробами. Легка форма харчової алергії, так званий харчової алергічний синдром,
+                                        можливо, поширена ще більше, але в частині випадків залишається
+                                        незареєстрованою.</p>
+
+                                    <p>В) при телефонному опитуванні алергія до земляного горіха (арахісу) і горіхів
+                                        інших
+                                        видів виявлена в 1% сімей.</p>
+
+                                    <p>Г) 25% опитаних сімей змушені були внести зміни в харчування через непідтверджену
+                                        «харчову алергію» або непереносимості їжі.</p>
+
+                                    <p>Д) лактазна недостатність спостерігається у 25% населення США, а в цілому нею
+                                        страждають до 75% населення земної кулі.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel__heading">
+                                <div class="open-panel"></div>
+                                <h3 class="panel__title title_middle">Які засоби частіше викликають алергічну
+                                    реакцію?</h3>
+                            </div>
+                            <div class="panel-collapse">
+                                <div class="panel-collapse__body dynamic-content">
+                                    <p> Туш на водній основі, що містить емульгатори, часто викликає роздратування шкіри
+                                        повік. Однак іноді спостерігається непереносимість самої по собі неемульгованої
+                                        в
+                                        воді туші. У таких випадках рекомендують користуватися пресованої тушшю або
+                                        олівцем
+                                        для підведення очей.</p>
+
+                                    <p>Косметичні засоби для очей і шкіри навколо них містять антибактеріальні
+                                        речовини-консерванти, що попереджають їх обсіменіння бактеріями. Найчастіше з
+                                        цією
+                                        метою додають ефіри парагідробензойної кислоти. При попаданні на кон'юнктиву
+                                        вони
+                                        можуть викликати роздратування, але нанесення містячих їх засобів на повіки
+                                        зазвичай
+                                        переноситься добре. Консерванти квартемум-15 і імідазоліднілмочевіна виділяють
+                                        формальдегід. Ці консерванти можуть викликати алергічну реакцію самі по собі або
+                                        роздратування внаслідок утворення формальдегіду. Крім того, в якості
+                                        консервантів
+                                        використовують сорбітат калію, діізопропаноламін в третинний
+                                        дібутілгідрохінон.</p>
+
+                                    <p>Деякі лаки для нігтів містять смолу толуолсульфонамідформальдегід, яка після
+                                        висихання може викликати алергічну реакцію. При потирання очей вона заноситься з
+                                        пальців на повіки. «Дублюючий» ектопічний дерматит спостерігається при попаданні
+                                        на
+                                        повіки косметичних засобів для волосся. Гіпоалергенні лаки для нігтів
+                                        поліефірної
+                                        смоли не містять.</p>
+
+                                    <p>Джерелами алергічних реакцій з боку кон'юнктиви і шкіри повік бувають також
+                                        олівці
+                                        для підведення очей, тіні для очей і штучні вії. Олівці для вій і щипчики можуть
+                                        містити нікель, який теж викликає алергічну реакцію.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="block-subscribe">
+                <h3 class="heading heading_md">Підпишіться на нові статті про алергію та її лікування!</h3>
+                <form action="#" method="post" class="form-subscribe">
+                    <div class="form__group">
+                        <input type="text" placeholder="Введіть Ваш e-mail">
+                        <button class="btn btn_submit">Відправити</button>
+                    </div>
+                    <label class="checkbox-wrap">
+                        <input type="checkbox" name="subscribe"/>
+                        <span class="checkmark"></span>
+                        Надаю АТ «Фармак» згоду на обробку моїх персональних даних (з повним текстом згоди
+                        ознайомлена(-ий) та погоджуюсь)
+                    </label>
+                </form>
+            </div>
+
+            <div class="footer_top">
+                <div class="footer__nav">
+                    <div class="footer__nav-item">
+                        <ul class="footer__menu">
+                            <li>
+                                <a class="footer__title" href="#">Едем</a>
+                                <ul class="footer__sub-menu">
+                                    <li><a href="#">Едем таблетки</a></li>
+                                    <li><a href="#">Едем сироп</a></li>
+                                    <li><a href="#">Едермік</a></li>
+                                    <li><a href="#">Едермік гель</a></li>
+                                    <li><a href="#">Едем ріно спрей</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-item">
+                        <ul class="footer__menu">
+                            <li>
+                                <a class="footer__title" href="about-allergy.html">Все про алергію</a>
+                                <ul class="footer__sub-menu">
+                                    <li><a href="#">Види алергії</a></li>
+                                    <li><a href="page-symptoms.html">Прояви алергії</a></li>
+                                    <li><a href="#">Лікування алергії</a></li>
+                                    <li><a href="#">Профілактика алергії</a></li>
+                                    <li><a href="#">Алергія у дітей</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-item">
+                        <ul class="footer__menu">
+                            <li>
+                                <a class="footer__title" href="#">Корисно для алергіка</a>
+                                <ul class="footer__sub-menu">
+                                    <li><a href="page-allergens-plants.html">Рослини - алергени</a></li>
+                                    <li><a href="page-allergens-food.html">Продукти - алергени</a></li>
+                                    <li><a href="#">Календар алергії</a></li>
+                                    <li><a href="#">При різних видах алергії</a></li>
+                                    <li><a href="#">Пам’ятки для алергіка</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-item">
+                        <ul class="footer__menu-general">
+                            <li><a class="" href="#questions">Питання та Відповіді</a></li>
+                            <li><a class="" href="#">Інформація для фахівців</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    <h4 class="footer__title">Контакти АТ Фармак</h4>
+                    <div>
+                        <span class="address"> вул. Кирилівська, 63, м. Київ  </span>
+                        <a class="" href="tel:+380444968787">Телефон: +38 (044) 496-87-87</a>
+                        <a class="" href="mailto:info@farmak.ua">E-mail: info@farmak.ua</a>
+                    </div>
+                </div>
+                <a href="#" class="footer__logo-farm">
+                    <img src="assets/img/Logo_Farmak_Main.svg" alt="Лого Фармак">
+                </a>
+
+                <div class="copyright">&copy; Едем, 2024</div>
+
+            </div>
+            <div class="footer_bottom">
+                <div class="footer__note">
+                    <p>Реклама лікарського засобу. Перед застосуванням лікарського засобу обов'язково
+                        проконсультуйтесь з лікарем та ознайомтесь з інструкцією для застосування лікарського
+                        засобу.</p>
+                    <p>*Дані з сайту <a href="https://tsinanaliky.com.ua/">tsinanaliky.com.ua</a></p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="./lib/jquery-3.7.1.min.js"></script>
+<script src="./lib/select2/select2.min.js"></script>
+<script src="./lib/swiper/swiper-bundle.min.js"></script>
+<script src="dist/main.js"></script>
+</body>
+</html>
