@@ -37,7 +37,7 @@
   }
 
 
-  @include mixins.respond-to(variables.$lg) {
+  @include mixins.respond-to(variables.$xl) {
 
   }
   @include mixins.respond-to(variables.$md) {

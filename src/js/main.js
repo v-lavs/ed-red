@@ -54,6 +54,7 @@ $(document).ready(function () {
 
     smoothScrollToAnchor('.article__nav .nav-list__item a');
     smoothScrollToAnchor('.menu__link');
+    smoothScrollToAnchor('.single-product .scroll-to');
 
     // VIDEO PLAY
 

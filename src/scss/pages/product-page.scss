@@ -2,7 +2,10 @@
 @use "../utils/variables";
 
 .product-page {
-
+  .section-video {
+    padding-bottom: 0;
+    padding-top: 100px;
+  }
 }
 
 .layout-with-sidebar {

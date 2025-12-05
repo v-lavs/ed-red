@@ -16,26 +16,25 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    position: relative;
   }
-  &__logo{
+
+  &__logo {
     display: block;
     max-width: 86px;
     width: 100px;
-    img{
+
+    img {
       width: 100%;
     }
   }
 
-  @media all and (max-width: 1340px) {
 
-  }
-  @include mixins.respond-to(variables.$lg) {
-
-  }
   @include mixins.respond-to(variables.$md) {
 
   }
 }
+
 .btn_burger {
   border: none;
   background-color: transparent;
@@ -58,40 +57,11 @@
 .btn_close {
   position: absolute;
   display: none;
-  //width: 54px;
-  //height: 54px;
-  //left: -27px;
   top: 50%;
   transform: translateY(-50%);
 
 }
 
-.btn_buy {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  //color: #fff;
-  //box-shadow: 0 4px 13px 0 #3fa535;
-  //padding: 12px 24px;
-  position: relative;
-  z-index: 1;
-  //background-image: linear-gradient(135deg, #3fa535 0%, #c8e514 100%),
-  //linear-gradient(to right, #ffffff, #c8e514);
-  //background-origin: border-box;
-  //background-clip: padding-box, border-box;
-  //border: 1px solid transparent;
-
-  img {
-    //width: 32px;
-    display: block;
-    //margin-right: 16px;
-  }
-
-  &:hover,
-  &:focus {
-
-  }
-}
 
 .backdrop {
   display: none;
@@ -105,3 +75,10 @@
   z-index: 500;
 }
 
+@include mixins.respond-to(variables.$xl) {
+  .header {
+    .container {
+      max-width: 100%;
+    }
+  }
+}
