@@ -75,6 +75,7 @@
     left: 0;
     right: 0;
     opacity: 0;
+    background-color: #fff;
     -webkit-transform: translateY(25px);
     transform: translateY(25px);
     pointer-events: none;
@@ -122,7 +123,6 @@
 
 
 .nav-row {
-  background-color: #fff;
   display: flex;
   height: auto;
   width: 100%;
