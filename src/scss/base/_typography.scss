@@ -5,7 +5,8 @@
   font-weight: 400;
   line-height: 110%;
   text-transform: uppercase;
-  &_xxl{
+
+  &_xxl {
     font-size: 86px;
   }
 
@@ -33,16 +34,46 @@
 
 }
 
+@include mixins.respond-to(variables.$xl) {
+  .heading {
+    &_xxl {
+      font-size: 76px;
+    }
+
+    &_lg {
+      font-size: 48px;
+    }
+
+    &_md {
+      font-size: 34px;
+    }
+  }
+  .text {
+    &_xl {
+      font-size: 30px;
+    }
+
+    &_lg {
+      font-size: 24px;
+      line-height: 1.43;
+    }
+
+  }
+}
+
 @include mixins.respond-to(variables.$lg) {
 
 
 }
+
 @include mixins.respond-to(variables.$md) {
 
 }
+
 @include mixins.respond-to(variables.$sm) {
 
 }
+
 @include mixins.respond-to(variables.$xs) {
 
 }

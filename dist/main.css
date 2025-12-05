@@ -1222,7 +1222,7 @@ body {
   pointer-events: none;
   transition: opacity 0.35s ease;
   width: 100vw;
-  top: 90px;
+  top: 87px;
   z-index: 99;
 }
 
@@ -1271,7 +1271,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   z-index: 300;
-  padding: 50px 0 25px;
+  padding: 50px 64px 25px;
 }
 
 .nav-col {
@@ -3295,6 +3295,27 @@ form input {
 }
 
 @media only screen and (max-width: 1439px) {
+  .heading_xxl {
+    font-size: 76px;
+  }
+
+  .heading_lg {
+    font-size: 48px;
+  }
+
+  .heading_md {
+    font-size: 34px;
+  }
+
+  .text_xl {
+    font-size: 30px;
+  }
+
+  .text_lg {
+    font-size: 24px;
+    line-height: 1.43;
+  }
+
   .container {
     max-width: 1200px;
     padding: 0 32px;
@@ -3307,6 +3328,10 @@ form input {
 }
 
 @media only screen and (max-width: 1180px) {
+  body {
+    font-size: 20px;
+  }
+
   .container {
     max-width: 980px;
     background-color: greenyellow;
