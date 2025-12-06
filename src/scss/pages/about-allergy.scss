@@ -56,3 +56,12 @@
     }
   }
 }
+
+@include mixins.respond-to(variables.$xl) {
+  .section-img-bg {
+    font-size: 20px;
+    .section__title {
+      font-size: 44px;
+    }
+  }
+}

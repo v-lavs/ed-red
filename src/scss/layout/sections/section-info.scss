@@ -87,3 +87,8 @@
     }
   }
 }
+@include mixins.respond-to(variables.$xl) {
+  .slider-info__title{
+    font-size: 36px;
+  }
+}

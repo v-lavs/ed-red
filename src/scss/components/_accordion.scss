@@ -64,3 +64,9 @@
     }
   }
 }
+
+@include mixins.respond-to(variables.$xl) {
+  .accordion .panel__title{
+    font-size: 20px;
+  }
+}

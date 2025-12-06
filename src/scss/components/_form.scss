@@ -42,7 +42,7 @@ form {
 }
 
 //CUSTOM CHECKBOX
-.checkbox-wrap{
+.checkbox-wrap {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -53,20 +53,23 @@ form {
   line-height: 1.1;
   max-width: 836px;
   width: 100%;
-  input{
+
+  input {
     position: absolute;
     opacity: 0;
     pointer-events: none;
   }
+
   input:checked + .checkmark {
     background: variables.$green-100;
   }
+
   input:checked + .checkmark::after {
     opacity: 1;
   }
 }
 
-.checkmark{
+.checkmark {
   width: 33px;
   height: 33px;
   border: 1px solid variables.$green-100;
@@ -74,7 +77,8 @@ form {
   position: absolute;
   left: 0;
   top: 0;
-  &:after{
+
+  &:after {
     content: '';
     position: absolute;
     left: 50%;
@@ -86,5 +90,12 @@ form {
     transform: translate(-50%, -50%) rotate(45deg);
     opacity: 0;
     transition: opacity 0.2s ease;
+  }
+}
+
+@include mixins.respond-to(variables.$xl) {
+  form,
+  .checkbox-wrap {
+    font-size: 18px;
   }
 }

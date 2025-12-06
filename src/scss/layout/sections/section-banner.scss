@@ -35,18 +35,19 @@
   .part_right {
     width: 46%;
   }
+}
 
-
-  @include mixins.respond-to(variables.$xl) {
-
+@include mixins.respond-to(variables.$xl) {
+  .section-banner {
+    padding-top: 50px;
   }
-  @include mixins.respond-to(variables.$md) {
+}
+@include mixins.respond-to(variables.$md) {
 
-  }
-  @include mixins.respond-to(variables.$sm) {
+}
+@include mixins.respond-to(variables.$sm) {
 
-  }
-  @include mixins.respond-to(variables.$xxs) {
+}
+@include mixins.respond-to(variables.$xxs) {
 
-  }
 }

@@ -1,14 +1,15 @@
 @use "../utils/mixins";
 @use "../utils/variables";
 
-.tabs{
+.tabs {
   padding: 40px 0;
 
-  &__nav{
+  &__nav {
     display: flex;
     padding-bottom: 50px;
   }
-  &__nav-link{
+
+  &__nav-link {
     display: inline-block;
     width: 50%;
     font-weight: 600;
@@ -16,20 +17,34 @@
     line-height: 30px;
     text-align: center;
     color: variables.$green-100;
-    &.active{
+
+    &.active {
       text-decoration: underline;
     }
   }
-  &__content-wrapper{
+
+  &__content-wrapper {
     transition: height .35s ease;
   }
 }
-.tab-pane{
+
+.tab-pane {
   display: none;
   opacity: 0;
   transition: opacity 0.35s ease;
-  &.active{
+
+  &.active {
     display: block;
     opacity: 1;
   }
+}
+
+@include mixins.respond-to(variables.$xl) {
+  .tabs__nav-link {
+    font-size: 36px;
+  }
+  .category__title {
+    font-size: 26px;
+  }
+
 }

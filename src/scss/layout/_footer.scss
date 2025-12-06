@@ -126,15 +126,6 @@
     margin: 0 auto;
   }
 
-  @include mixins.respond-to(variables.$md) {
-
-  }
-  @include mixins.respond-to(variables.$sm) {
-
-  }
-  @include mixins.respond-to(variables.$xs) {
-
-  }
 }
 
 .copyright {
@@ -146,4 +137,26 @@
   padding-bottom: 50px;
   border-bottom: 1px solid variables.$green-100;
 }
+@include mixins.respond-to(variables.$xl) {
+  .footer__contacts,
+  .footer__title,
+  .footer__sub-menu {
+    font-size: 20px;
+  }
+}
 
+//@include mixins.respond-to(variables.$sm) {
+//
+//}
+//@include mixins.respond-to(variables.$xs) {
+
+//}
+@include mixins.respond-to(variables.$md) {
+
+}
+@include mixins.respond-to(variables.$sm) {
+
+}
+@include mixins.respond-to(variables.$xs) {
+
+}

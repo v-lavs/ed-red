@@ -1218,6 +1218,7 @@ body {
   left: 0;
   right: 0;
   opacity: 0;
+  background-color: #fff;
   transform: translateY(25px);
   pointer-events: none;
   transition: opacity 0.35s ease;
@@ -1264,7 +1265,6 @@ body {
 }
 
 .nav-row {
-  background-color: #fff;
   display: flex;
   height: auto;
   width: 100%;
@@ -3295,6 +3295,19 @@ form input {
 }
 
 @media only screen and (max-width: 1439px) {
+  body {
+    font-size: 20px;
+  }
+
+  .dynamic-content h1,
+  .dynamic-content h2 {
+    font-size: 48px;
+  }
+
+  .dynamic-content h3 {
+    font-size: 34px;
+  }
+
   .heading_xxl {
     font-size: 76px;
   }
@@ -3316,6 +3329,35 @@ form input {
     line-height: 1.43;
   }
 
+  .card-product__title {
+    font-size: 34px;
+  }
+
+  .product {
+    max-width: 366px;
+  }
+
+  .tabs__nav-link {
+    font-size: 36px;
+  }
+
+  .category__title {
+    font-size: 26px;
+  }
+
+  .card-post__title {
+    font-size: 20px;
+  }
+
+  .accordion .panel__title {
+    font-size: 20px;
+  }
+
+  form,
+  .checkbox-wrap {
+    font-size: 18px;
+  }
+
   .container {
     max-width: 1200px;
     padding: 0 32px;
@@ -3325,13 +3367,76 @@ form input {
   .header .container {
     max-width: 100%;
   }
-}
 
-@media only screen and (max-width: 1180px) {
-  body {
+  .footer__contacts,
+  .footer__title,
+  .footer__sub-menu {
     font-size: 20px;
   }
 
+  .section-banner {
+    padding-top: 50px;
+  }
+
+  .slider-info__title {
+    font-size: 36px;
+  }
+
+  .section-intro {
+    font-size: 28px;
+  }
+
+  .article__nav li {
+    font-size: 24px;
+  }
+
+  .product-info .price__heading {
+    font-size: 28px;
+  }
+
+  .product-info .price__wrapper {
+    font-size: 24px;
+  }
+
+  .section-use .section__title {
+    font-size: 34px;
+  }
+
+  .section-use .heading {
+    font-size: 22px;
+  }
+
+  .product-forms__thumb {
+    width: 160px;
+    height: 160px;
+  }
+
+  .product-forms__title {
+    font-size: 16px;
+  }
+
+  .page-calendar .tabs__nav-link {
+    font-size: 32px;
+  }
+
+  .section-img-bg {
+    font-size: 20px;
+  }
+
+  .section-img-bg .section__title {
+    font-size: 44px;
+  }
+
+  .allergens__name {
+    font-size: 18px;
+  }
+
+  .page-useful .section__slogan {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
   .container {
     max-width: 980px;
     background-color: greenyellow;

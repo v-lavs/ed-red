@@ -28,14 +28,16 @@
     margin-bottom: 60px;
     color: variables.$black;
   }
-  &__body{
+
+  &__body {
     position: relative;
     padding: 34px 30px 30px;
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    &:before{
+
+    &:before {
       position: absolute;
       content: '';
       background-color: variables.$main-color;
@@ -58,7 +60,8 @@
     color: variables.$green-100;
     padding-bottom: 2px;
     width: max-content;
-    &:before{
+
+    &:before {
       position: absolute;
       content: '';
       background-color: variables.$green-100;
@@ -69,8 +72,15 @@
       z-index: 1;
       transition: width .35s;
     }
-    &:hover:before{
+
+    &:hover:before {
       width: 0;
     }
+  }
+}
+
+@include mixins.respond-to(variables.$xl) {
+  .card-post__title {
+    font-size: 20px;
   }
 }

@@ -207,3 +207,25 @@
     padding: 0 10px;
   }
 }
+
+@include mixins.respond-to(variables.$xl) {
+  .product-info .price__heading {
+    font-size: 28px;
+  }
+  .product-info .price__wrapper{
+    font-size: 24px;
+  }
+  .section-use .section__title{
+    font-size: 34px;
+  }
+  .section-use .heading {
+    font-size: 22px;
+  }
+  .product-forms__thumb{
+    width: 160px;
+    height: 160px;
+  }
+  .product-forms__title {
+    font-size: 16px;
+  }
+}

@@ -1,20 +1,28 @@
 @use "../utils/mixins";
 @use "../utils/variables";
 
-.page-useful{
-  .section-intro .section__content{
+.page-useful {
+  .section-intro .section__content {
     padding-right: 50%;
   }
+
   .section-intro img {
     left: 50%;
     width: 50%;
   }
-  .section__slogan{
+
+  .section__slogan {
     font-weight: 700;
     font-size: 54px;
     line-height: 1.1;
     text-transform: uppercase;
-    color:  variables.$main-color;
+    color: variables.$main-color;
     margin-bottom: 25px;
+  }
+}
+
+@include mixins.respond-to(variables.$xl) {
+  .page-useful .section__slogan {
+    font-size: 50px;
   }
 }

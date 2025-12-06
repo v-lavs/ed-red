@@ -5,7 +5,9 @@
   padding-top: 100px;
   padding-bottom: 83px;
 
+  @include mixins.respond-to(variables.$lg) {
 
+  }
 
   @include mixins.respond-to(variables.$lg) {
 

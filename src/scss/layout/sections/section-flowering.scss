@@ -14,3 +14,7 @@
     text-align: center;
   }
 }
+
+@include mixins.respond-to(variables.$xl) {
+
+}

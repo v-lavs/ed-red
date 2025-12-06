@@ -93,7 +93,8 @@ body {
       margin: 50px auto;
       clear: both;
     }
-    &.alignfull{
+
+    &.alignfull {
       width: 100%;
       height: auto;
       display: block;
@@ -123,6 +124,7 @@ body {
     font-size: 36px;
     margin: 50px 0;
   }
+
   h4 {
     font-size: 26px;
   }
@@ -130,22 +132,26 @@ body {
   ul, ol {
     margin-bottom: 20px;
   }
-  ol{
+
+  ol {
     counter-reset: list;
+
     li {
       overflow-wrap: anywhere;
       position: relative;
       list-style: inherit;
       padding-left: 35px;
+
       &:before {
         position: absolute;
         top: 0;
         left: 8px;
         counter-increment: list;
-        content: counter(list)'.';
+        content: counter(list) '.';
       }
     }
   }
+
   ul {
     li {
       &:before {
@@ -157,6 +163,7 @@ body {
       }
     }
   }
+
   li {
     position: relative;
     padding-left: 34px;
@@ -166,15 +173,18 @@ body {
   a {
     text-decoration: underline;
     overflow-wrap: anywhere;
+
     &:hover,
     &:focus {
       text-decoration: none;
     }
   }
 }
-.article .big-marker-ul{
+
+.article .big-marker-ul {
   li {
     margin-bottom: 25px;
+
     &:before {
       content: "";
       width: 12px;
@@ -186,10 +196,20 @@ body {
     }
   }
 }
-@include mixins.respond-to(variables.$lg) {
-body{
-  font-size: 20px;
-}
+
+@include mixins.respond-to(variables.$xl) {
+  body {
+    font-size: 20px;
+  }
+  .dynamic-content {
+   h1, h2 {
+      font-size: 48px;
+    }
+
+    h3 {
+      font-size: 34px;
+    }
+  }
 }
 
 @include mixins.respond-to(variables.$lg) {

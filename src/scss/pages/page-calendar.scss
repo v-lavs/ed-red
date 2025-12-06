@@ -41,3 +41,9 @@
     }
   }
 }
+
+@include mixins.respond-to(variables.$xl) {
+  .page-calendar .tabs__nav-link {
+    font-size: 32px;
+  }
+}

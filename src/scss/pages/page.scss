@@ -83,3 +83,10 @@
     margin-bottom: 50px;
   }
 }
+
+@include mixins.respond-to(variables.$xl) {
+  .article__nav li {
+    font-size: 24px;
+  }
+
+}
