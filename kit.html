@@ -35,14 +35,14 @@
 <div class="wrapper">
     <header class="header">
         <div class="container">
-            <a href="/" class="header__logo">
+            <a href="index.html" class="header__logo">
                 <img src="assets/img/edem_logo.svg" alt="лого Едем" width="86" height="56">
             </a>
             <div class="header__nav">
                 <button type="button" class="btn_close" aria-label="Закрити меню">X</button>
                 <ul class="menu">
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Едем</a>
+                        <a href="index.html" class="menu__link">Едем</a>
                         <button class="menu__toggler"></button>
                         <div class="menu__sub-menu">
                             <div class="nav-row">
@@ -84,7 +84,7 @@
                                             <a href="#">Алергія на нікотинову кислоту: що потрібно знати?</a>
                                         </li>
                                         <li class="sub-menu__item">
-                                            <a href="#">Алергія на електронні сигарети: правда чи вигадка?</a>
+                                            <a href="article-with-nav.html">Алергія на електронні сигарети: правда чи вигадка?</a>
                                         </li>
                                         <li class="sub-menu__item">
                                             <a href="#"></a>
@@ -214,23 +214,21 @@
                     </li>
                 </ul>
             </div>
-            <button type="button" class="search_open" aria-label="Відкрити пошук">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button type="button" class="search_open" id="openSearch" aria-label="Відкрити пошук">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M23.5832 21.4688L18.9697 16.8783C20.3679 15.0571 21.1348 12.8481 21.1351 10.517C21.1351 7.7079 20.0355 5.06672 18.0389 3.0804C16.0425 1.09407 13.3884 0 10.5648 0C7.7416 0 5.08715 1.09407 3.09084 3.0804C-1.03028 7.18125 -1.03028 13.8535 3.09084 17.9537C5.08715 19.9403 7.7416 21.0344 10.5648 21.0344C12.9076 21.0341 15.1277 20.2711 16.9581 18.8799L21.5716 23.4703C21.8491 23.7468 22.2135 23.885 22.5774 23.885C22.9414 23.885 23.3057 23.7468 23.5832 23.4703C24.1389 22.9177 24.1389 22.0213 23.5832 21.4688ZM5.10243 15.9521C2.0906 12.9554 2.09095 8.07904 5.10243 5.08193C6.56146 3.63054 8.50151 2.8309 10.5648 2.8309C12.6285 2.8309 14.5682 3.63054 16.0273 5.08193C17.4863 6.53366 18.29 8.464 18.29 10.517C18.29 12.5704 17.4863 14.5004 16.0273 15.9521C14.5682 17.4039 12.6285 18.2035 10.5648 18.2035C8.50151 18.2035 6.56146 17.4039 5.10243 15.9521Z"
-                          fill="#383838"/>
+                          fill="currentColor"/>
                 </svg>
             </button>
             <div class="header__search">
-                <form role="search" method="get" id="searchform" class="searchform" action="#">
-                    <div class="search-wrap">
-                        <input type="hidden" name="post_type" value="">
-                        <label class="screen-reader-text" for="s">Шукати:</label>
-                        <input type="text" placeholder="" value="" name="s" id="s"/>
-                        <button type="submit" id="searchsubmit" class="btn_search">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
+                <button type="button" class="search-close" id="closeSearch">x</button>
+                <form action="#" method="get" class="search-form">
+                    <div class="input-group">
+                        <input type="text" name="s" class="form-control" placeholder="Пошук...">
+                        <button type="submit" id="searchSubmit" class="btn_search btn btn_main">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M23.5832 21.4688L18.9697 16.8783C20.3679 15.0571 21.1348 12.8481 21.1351 10.517C21.1351 7.7079 20.0355 5.06672 18.0389 3.0804C16.0425 1.09407 13.3884 0 10.5648 0C7.7416 0 5.08715 1.09407 3.09084 3.0804C-1.03028 7.18125 -1.03028 13.8535 3.09084 17.9537C5.08715 19.9403 7.7416 21.0344 10.5648 21.0344C12.9076 21.0341 15.1277 20.2711 16.9581 18.8799L21.5716 23.4703C21.8491 23.7468 22.2135 23.885 22.5774 23.885C22.9414 23.885 23.3057 23.7468 23.5832 23.4703C24.1389 22.9177 24.1389 22.0213 23.5832 21.4688ZM5.10243 15.9521C2.0906 12.9554 2.09095 8.07904 5.10243 5.08193C6.56146 3.63054 8.50151 2.8309 10.5648 2.8309C12.6285 2.8309 14.5682 3.63054 16.0273 5.08193C17.4863 6.53366 18.29 8.464 18.29 10.517C18.29 12.5704 17.4863 14.5004 16.0273 15.9521C14.5682 17.4039 12.6285 18.2035 10.5648 18.2035C8.50151 18.2035 6.56146 17.4039 5.10243 15.9521Z"
-                                      fill="#383838"/>
+                                      fill="currentColor"/>
                             </svg>
                         </button>
                     </div>
@@ -242,7 +240,7 @@
                 <span class="line"></span>
             </button>
         </div>
-        <div class="header__wide"></div>
+
     </header>
     <div class="backdrop"></div>
     -----------------------------------------------------------------------------------------------
@@ -839,7 +837,7 @@
     ---------------------------------------------------------------------------------------
     <section class="section-with-tabs">
         <div class="container">
-            <h2 class="section__title heading_lg">все про алергію</h2>
+            <h2 class="section__title heading heading_lg">все про алергію</h2>
             <div class="tabs">
                 <div class="tabs__nav">
                     <a href="#tab3" class="tabs__nav-link active">Види алергії</a>
@@ -847,162 +845,332 @@
                 </div>
                 <div class="tabs__content-wrapper">
                     <div id="tab3" class="tab-pane active">
-                        <div class="swiper slider-posts" id="sliderPosts1">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <article class="card-post">
-                                        <div class="card-post__thumb"
-                                             style="background-image: url(assets/img/tabs/human-facial.jpg);"></div>
-                                        <div class="card-post__body">
-                                            <h3 class="card-post__title">Як відрізнити алергію від
-                                                псевдоалергії?</h3>
-                                            <a href="#" class="card-post__link">Більше</a>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="swiper-slide">
-                                    <article class="card-post">
-                                        <div class="card-post__thumb"
-                                             style="background-image: url(assets/img/tabs/cinamon.jpg);"></div>
-                                        <div class="card-post__body">
-                                            <h3 class="card-post__title">Алергія на агар-агар: як проявляється та як
-                                                лікувати</h3>
-                                            <a href="#" class="card-post__link">Більше</a>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="swiper-slide">
-                                    <article class="card-post">
-                                        <div class="card-post__thumb"
-                                             style="background-image: url(assets/img/tabs/pills.jpg);"></div>
-                                        <div class="card-post__body">
-                                            <h3 class="card-post__title">Алергія на харчові добавки: симптоми,
-                                                лікування
-                                                та профілактика</h3>
-                                            <a href="#" class="card-post__link">Більше</a>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="swiper-slide">
-                                    <article class="card-post">
-                                        <div class="card-post__thumb"
-                                             style="background-image: url(assets/img/tabs/mother.jpg);"></div>
-                                        <div class="card-post__body">
-                                            <h3 class="card-post__title">Які можна приймати ліки від алергії
-                                                годуючій
-                                                мамі?</h3>
-                                            <a href="#" class="card-post__link">Більше</a>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="swiper-slide">
-                                    <article class="card-post">
-                                        <div class="card-post__thumb"
-                                             style="background-image: url(assets/img/tabs/cat-tab.jpg);"></div>
-                                        <div class="card-post__body">
-                                            <h3 class="card-post__title">Як позбутися алергії на кішок?</h3>
-                                            <a href="#" class="card-post__link">Більше</a>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="swiper-slide">
-                                    <article class="card-post">
-                                        <div class="card-post__thumb"
-                                             style="background-image: url(assets/img/tabs/peoples.jpg);"></div>
-                                        <div class="card-post__body">
-                                            <h3 class="card-post__title">Як здоровий спосіб життя допомагає при
-                                                алергії?</h3>
-                                            <a href="#" class="card-post__link">Більше</a>
-                                        </div>
-                                    </article>
+                        <div class="wrap-slider-posts">
+                            <div class="swiper slider-posts" id="sliderPosts1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/human-facial.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Як відрізнити алергію від
+                                                    псевдоалергії?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/cinamon.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на агар-агар: як проявляється
+                                                    та як
+                                                    лікувати</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/pills.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на харчові добавки: симптоми,
+                                                    лікування
+                                                    та профілактика</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/human-facial.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Як відрізнити алергію від
+                                                    псевдоалергії?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/cinamon.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на агар-агар: як проявляється
+                                                    та як
+                                                    лікувати</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/pills.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на харчові добавки: симптоми,
+                                                    лікування
+                                                    та профілактика</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="swiper-nav swiper-nav_right">
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
                     </div>
                     <div id="tab4" class="tab-pane">
-                        <div class="swiper slider-posts" id="sliderPosts2">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <article class="card-post">
-                                        <div class="card-post__thumb"
-                                             style="background-image: url(assets/img/tabs/mother.jpg);"></div>
-                                        <div class="card-post__body">
-                                            <h3 class="card-post__title">Які можна приймати ліки від алергії
-                                                годуючій
-                                                мамі?</h3>
-                                            <a href="#" class="card-post__link">Більше</a>
-                                        </div>
-                                    </article>
+                        <div class="wrap-slider-posts">
+                            <div class="swiper slider-posts" id="sliderPosts2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/mother.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Які можна приймати ліки від алергії
+                                                    годуючій
+                                                    мамі?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/cat-tab.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Як позбутися алергії на кішок?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/peoples.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Як здоровий спосіб життя допомагає при
+                                                    алергії?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/human-facial.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Як відрізнити алергію від
+                                                    псевдоалергії?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/cinamon.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на агар-агар: як проявляється
+                                                    та як
+                                                    лікувати</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/pills.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на харчові добавки: симптоми,
+                                                    лікування
+                                                    та профілактика</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <article class="card-post">
-                                        <div class="card-post__thumb"
-                                             style="background-image: url(assets/img/tabs/cat-tab.jpg);"></div>
-                                        <div class="card-post__body">
-                                            <h3 class="card-post__title">Як позбутися алергії на кішок?</h3>
-                                            <a href="#" class="card-post__link">Більше</a>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="swiper-slide">
-                                    <article class="card-post">
-                                        <div class="card-post__thumb"
-                                             style="background-image: url(assets/img/tabs/peoples.jpg);"></div>
-                                        <div class="card-post__body">
-                                            <h3 class="card-post__title">Як здоровий спосіб життя допомагає при
-                                                алергії?</h3>
-                                            <a href="#" class="card-post__link">Більше</a>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="swiper-slide">
-                                    <article class="card-post">
-                                        <div class="card-post__thumb"
-                                             style="background-image: url(assets/img/tabs/mother.jpg);"></div>
-                                        <div class="card-post__body">
-                                            <h3 class="card-post__title">Які можна приймати ліки від алергії
-                                                годуючій
-                                                мамі?</h3>
-                                            <a href="#" class="card-post__link">Більше</a>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="swiper-slide">
-                                    <article class="card-post">
-                                        <div class="card-post__thumb"
-                                             style="background-image: url(assets/img/tabs/cat-tab.jpg);"></div>
-                                        <div class="card-post__body">
-                                            <h3 class="card-post__title">Як позбутися алергії на кішок?</h3>
-                                            <a href="#" class="card-post__link">Більше</a>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div class="swiper-slide">
-                                    <article class="card-post">
-                                        <div class="card-post__thumb"
-                                             style="background-image: url(assets/img/tabs/peoples.jpg);"></div>
-                                        <div class="card-post__body">
-                                            <h3 class="card-post__title">Як здоровий спосіб життя допомагає при
-                                                алергії?</h3>
-                                            <a href="#" class="card-post__link">Більше</a>
-                                        </div>
-                                    </article>
-                                </div>
-
                             </div>
-                            <div class="swiper-nav swiper-nav_right">
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="tabs">
+                <div class="tabs__nav">
+                    <a href="#tab5" class="tabs__nav-link active">Лікування алергії</a>
+                    <a href="#tab6" class="tabs__nav-link">Профілактика алергії</a>
+                </div>
+                <div class="tabs__content-wrapper">
+                    <div id="tab5" class="tab-pane active">
+                        <div class="wrap-slider-posts">
+                            <div class="swiper slider-posts" id="sliderPosts3">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/mother.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Які можна приймати ліки від алергії
+                                                    годуючій
+                                                    мамі?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/cat-tab.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Як позбутися алергії на кішок?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/peoples.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Як здоровий спосіб життя допомагає при
+                                                    алергії?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/human-facial.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Як відрізнити алергію від
+                                                    псевдоалергії?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/cinamon.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на агар-агар: як проявляється
+                                                    та як
+                                                    лікувати</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/pills.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на харчові добавки: симптоми,
+                                                    лікування
+                                                    та профілактика</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <div id="tab6" class="tab-pane">
+                        <div class="wrap-slider-posts">
+                            <div class="swiper slider-posts" id="sliderPosts4">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/human-facial.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Як відрізнити алергію від
+                                                    псевдоалергії?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/cinamon.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на агар-агар: як проявляється
+                                                    та як
+                                                    лікувати</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/pills.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на харчові добавки: симптоми,
+                                                    лікування
+                                                    та профілактика</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/human-facial.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Як відрізнити алергію від
+                                                    псевдоалергії?</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/cinamon.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на агар-агар: як проявляється
+                                                    та як
+                                                    лікувати</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="card card-post">
+                                            <div class="card-post__thumb"
+                                                 style="background-image: url(assets/img/tabs/pills.jpg);"></div>
+                                            <div class="card-post__body">
+                                                <h3 class="card-post__title">Алергія на харчові добавки: симптоми,
+                                                    лікування
+                                                    та профілактика</h3>
+                                                <a href="#" class="card-post__link">Більше</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1015,22 +1183,12 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="part_left">
-                            <img src="assets/img/slider/orange-slices.png" alt="">
-                        </div>
-                        <div class="part_right">
-                            <div class="heading_lg">Варто знати</div>
-                            <h3 class="slider-info__title">Алергія на мандарини: симптоми та рекомендації щодо
-                                лікування</h3>
-                            <button class="btn btn_main">Дізнатись більше</button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="part_left">
                             <img src="assets/img/slider/boy-posing-with-flowers.jpg" alt="">
                         </div>
                         <div class="part_right">
-                            <div class="heading_lg">Алергія у дітей</div>
-                            <h3 class="slider-info__title">Алергія на дитячу суміш: як її визначити і що робити?</h3>
+                            <div class="heading heading_lg">Алергія у дітей</div>
+                            <h3 class="slider-info__title">Алергія на дитячу суміш: як її визначити і що
+                                робити?</h3>
                             <button class="btn btn_main">Дізнатись більше</button>
                         </div>
                     </div>
@@ -1040,7 +1198,19 @@
                         </div>
                         <div class="part_right">
                             <div class="heading_lg">Алергія у дітей</div>
-                            <h3 class="slider-info__title">Алергія на виноград у дітей: як визначити та що робити?</h3>
+                            <h3 class="slider-info__title">Алергія на виноград у дітей: як визначити та що
+                                робити?</h3>
+                            <button class="btn btn_main">Дізнатись більше</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="part_left">
+                            <img src="assets/img/slider/orange-slices.png" alt="">
+                        </div>
+                        <div class="part_right">
+                            <div class="heading heading_lg">Варто знати</div>
+                            <h3 class="slider-info__title">Алергія на мандарини: симптоми та рекомендації щодо
+                                лікування</h3>
                             <button class="btn btn_main">Дізнатись більше</button>
                         </div>
                     </div>
@@ -1069,22 +1239,30 @@
                         </div>
                         <div class="panel-collapse">
                             <div class="panel-collapse__body dynamic-content">
-                                <p> Синдромом харчової алергії називають свербіж, подразнення і легкий відсік слизової
-                                    рота і губ як прояв алергічної реакції негайного типу на свіжі фрукти та овочі. З
-                                    визначення ясно, що сам по собі він для життя не є небезпечним. Однак з нього може
+                                <p> Синдромом харчової алергії називають свербіж, подразнення і легкий відсік
+                                    слизової
+                                    рота і губ як прояв алергічної реакції негайного типу на свіжі фрукти та овочі.
+                                    З
+                                    визначення ясно, що сам по собі він для життя не є небезпечним. Однак з нього
+                                    може
                                     початися загальна алергічна реакція негайного типу.</p>
 
-                                <p> Для синдрому харчової алергії характерно те, що його причиною бувають тільки свіжі,
+                                <p> Для синдрому харчової алергії характерно те, що його причиною бувають тільки
+                                    свіжі,
                                     не піддані термічній обробці фрукти і овочі, так як синдром викликається
-                                    термолабільними алергенами. Наприклад, хворий без шкоди для себе їсть суп з селерою,
+                                    термолабільними алергенами. Наприклад, хворий без шкоди для себе їсть суп з
+                                    селерою,
                                     але не виносить селери в свіжому вигляді. Крім того, цей синдром виявляє тісний
                                     зв'язок зі специфічними пилковими алергенами. Встановлено, що алергени деяких
-                                    фруктів і овочів і поширених видів пилку викликають перехресні реакції. При цьому
+                                    фруктів і овочів і поширених видів пилку викликають перехресні реакції. При
+                                    цьому
                                     визначення специфічних IgE in vitro і скарифікаційні шкірні проби з наявними у
                                     продажу алергенами овочів і фруктів дають негативні результати. Якщо ж
-                                    скарифікаційну пробу виконати голкою, якою попередньо вкололи стиглий овоч чи фрукт,
+                                    скарифікаційну пробу виконати голкою, якою попередньо вкололи стиглий овоч чи
+                                    фрукт,
                                     розвинеться негайна позитивна реакція. Таку скарифікаційну пробу називають
-                                    «подвійний укол». Описано поліпшення у хворого з синдромом харчової алергії після
+                                    «подвійний укол». Описано поліпшення у хворого з синдромом харчової алергії
+                                    після
                                     десенсибілізації з приводу супутнього полінозу.</p>
                             </div>
                         </div>
@@ -1092,17 +1270,23 @@
                     <div class="panel">
                         <div class="panel__heading">
                             <div class="open-panel"></div>
-                            <h3 class="panel__title title_middle">Чи можна попередити харчові алергічні реакції?</h3>
+                            <h3 class="panel__title title_middle">Чи можна попередити харчові алергічні
+                                реакції?</h3>
                         </div>
                         <div class="panel-collapse">
                             <div class="panel-collapse__body dynamic-content">
-                                <p>Неясно, чи можна попередити такі реакції в осіб з обтяженим сімейним анамнезом (при
-                                    наявності атопії в обох батьків, важкого атопічного дерматиту та харчової алергії у
-                                    братів і сестер), але доведено, що, дотримуючись певних обмежень в харчуванні, можна
+                                <p>Неясно, чи можна попередити такі реакції в осіб з обтяженим сімейним анамнезом
+                                    (при
+                                    наявності атопії в обох батьків, важкого атопічного дерматиту та харчової
+                                    алергії у
+                                    братів і сестер), але доведено, що, дотримуючись певних обмежень в харчуванні,
+                                    можна
                                     уповільнити розвиток алергічних захворювань і зменшити їх тяжкість.</p>
 
-                                <p>А) вважають, що вагітним в останньому триместрі не слід вживати в їжу арахіс, фундук,
-                                    креветки і рибу, а годуючим матерям - коров'яче молоко, арахіс, фундук, креветки і
+                                <p>А) вважають, що вагітним в останньому триместрі не слід вживати в їжу арахіс,
+                                    фундук,
+                                    креветки і рибу, а годуючим матерям - коров'яче молоко, арахіс, фундук, креветки
+                                    і
                                     рибу.</p>
 
                                 <p>Б) бажано грудне вигодовування протягом першого року життя.</p>
@@ -1114,7 +1298,8 @@
 
                                 <p>Д) коров'яче молоко і яйця не дають до 1 року.</p>
 
-                                <p>Е) такі продукти, як арахіс, фундук, ракоподібні і рибу слід вводити в раціон після 2
+                                <p>Е) такі продукти, як арахіс, фундук, ракоподібні і рибу слід вводити в раціон
+                                    після 2
                                     років, а краще пізніше</p>
                             </div>
                         </div>
@@ -1122,15 +1307,18 @@
                     <div class="panel">
                         <div class="panel__heading">
                             <div class="open-panel"></div>
-                            <h3 class="panel__title title_middle">Чи треба при алергії до арахісу виключати з раціону
+                            <h3 class="panel__title title_middle">Чи треба при алергії до арахісу виключати з
+                                раціону
                                 всі бобові?</h3>
                         </div>
                         <div class="panel-collapse">
                             <div class="panel-collapse__body dynamic-content">
                                 <p> Ні. Алергія до інших бобовим у осіб, що мали алергічні реакції на арахіс, навіть
                                     важкі,
-                                    зустрічаються рідко. Тільки у 5% хворих одночасно спостерігається клінічно виражена
-                                    алергія різної тяжкості ще до 1 - 2 видам бобів. Однак особи з алергією до арахісу
+                                    зустрічаються рідко. Тільки у 5% хворих одночасно спостерігається клінічно
+                                    виражена
+                                    алергія різної тяжкості ще до 1 - 2 видам бобів. Однак особи з алергією до
+                                    арахісу
                                     дуже часто дають позитивні шкірні проби або радіоаллергосорбентний тест з іншими
                                     бобовими, навіть якщо в якості продукту харчування вони переносяться добре.</p>
                             </div>
@@ -1139,20 +1327,24 @@
                     <div class="panel">
                         <div class="panel__heading">
                             <div class="open-panel"></div>
-                            <h3 class="panel__title title_middle">Наскільки поширені харчова алергія і непереносимість
+                            <h3 class="panel__title title_middle">Наскільки поширені харчова алергія і
+                                непереносимість
                                 їжі?</h3>
                         </div>
                         <div class="panel-collapse">
                             <div class="panel-collapse__body dynamic-content">
-                                <p>А) алергія до тих чи інших видів їжі спостерігається у 5-8% дітей, непереносимість
+                                <p>А) алергія до тих чи інших видів їжі спостерігається у 5-8% дітей,
+                                    непереносимість
                                     молока - приблизно у 2,5% немовлят.</p>
 
-                                <p>Б) 1-2% дорослих страждають харчовою алергією, підтвердженої провокаційними харчовими
+                                <p>Б) 1-2% дорослих страждають харчовою алергією, підтвердженої провокаційними
+                                    харчовими
                                     пробами. Легка форма харчової алергії, так званий харчової алергічний синдром,
                                     можливо, поширена ще більше, але в частині випадків залишається
                                     незареєстрованою.</p>
 
-                                <p>В) при телефонному опитуванні алергія до земляного горіха (арахісу) і горіхів інших
+                                <p>В) при телефонному опитуванні алергія до земляного горіха (арахісу) і горіхів
+                                    інших
                                     видів виявлена в 1% сімей.</p>
 
                                 <p>Г) 25% опитаних сімей змушені були внести зміни в харчування через непідтверджену
@@ -1166,31 +1358,42 @@
                     <div class="panel">
                         <div class="panel__heading">
                             <div class="open-panel"></div>
-                            <h3 class="panel__title title_middle">Які засоби частіше викликають алергічну реакцію?</h3>
+                            <h3 class="panel__title title_middle">Які засоби частіше викликають алергічну
+                                реакцію?</h3>
                         </div>
                         <div class="panel-collapse">
                             <div class="panel-collapse__body dynamic-content">
                                 <p> Туш на водній основі, що містить емульгатори, часто викликає роздратування шкіри
-                                    повік. Однак іноді спостерігається непереносимість самої по собі неемульгованої в
-                                    воді туші. У таких випадках рекомендують користуватися пресованої тушшю або олівцем
+                                    повік. Однак іноді спостерігається непереносимість самої по собі неемульгованої
+                                    в
+                                    воді туші. У таких випадках рекомендують користуватися пресованої тушшю або
+                                    олівцем
                                     для підведення очей.</p>
 
                                 <p>Косметичні засоби для очей і шкіри навколо них містять антибактеріальні
-                                    речовини-консерванти, що попереджають їх обсіменіння бактеріями. Найчастіше з цією
-                                    метою додають ефіри парагідробензойної кислоти. При попаданні на кон'юнктиву вони
-                                    можуть викликати роздратування, але нанесення містячих їх засобів на повіки зазвичай
+                                    речовини-консерванти, що попереджають їх обсіменіння бактеріями. Найчастіше з
+                                    цією
+                                    метою додають ефіри парагідробензойної кислоти. При попаданні на кон'юнктиву
+                                    вони
+                                    можуть викликати роздратування, але нанесення містячих їх засобів на повіки
+                                    зазвичай
                                     переноситься добре. Консерванти квартемум-15 і імідазоліднілмочевіна виділяють
                                     формальдегід. Ці консерванти можуть викликати алергічну реакцію самі по собі або
-                                    роздратування внаслідок утворення формальдегіду. Крім того, в якості консервантів
-                                    використовують сорбітат калію, діізопропаноламін в третинний дібутілгідрохінон.</p>
+                                    роздратування внаслідок утворення формальдегіду. Крім того, в якості
+                                    консервантів
+                                    використовують сорбітат калію, діізопропаноламін в третинний
+                                    дібутілгідрохінон.</p>
 
                                 <p>Деякі лаки для нігтів містять смолу толуолсульфонамідформальдегід, яка після
                                     висихання може викликати алергічну реакцію. При потирання очей вона заноситься з
-                                    пальців на повіки. «Дублюючий» ектопічний дерматит спостерігається при попаданні на
-                                    повіки косметичних засобів для волосся. Гіпоалергенні лаки для нігтів поліефірної
+                                    пальців на повіки. «Дублюючий» ектопічний дерматит спостерігається при попаданні
+                                    на
+                                    повіки косметичних засобів для волосся. Гіпоалергенні лаки для нігтів
+                                    поліефірної
                                     смоли не містять.</p>
 
-                                <p>Джерелами алергічних реакцій з боку кон'юнктиви і шкіри повік бувають також олівці
+                                <p>Джерелами алергічних реакцій з боку кон'юнктиви і шкіри повік бувають також
+                                    олівці
                                     для підведення очей, тіні для очей і штучні вії. Олівці для вій і щипчики можуть
                                     містити нікель, який теж викликає алергічну реакцію.</p>
                             </div>
@@ -1204,527 +1407,527 @@
     -----------------------------------------------------------------------------------------------
     <br><br><br><br>
     --------------------------------------------------------------------------------------------
-    <section class="section-flowering">
-        <h2 class="heading heading_md color_green">КАЛЕНДАР ЦВІТІННЯ РОСЛИНИ</h2>
-        <div class="calendar-wrapper">
-            <div class="swiper plant-calendar">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide month-block">
-                        <h3 class="month-block__title">Березень</h3>
-                        <div class="month-block__list">
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"
-                                     alt="Береза">
-                                <a href="#"><span class="month-block__item-name">Береза</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"
-                                     alt="Тополя">
-                                <a href="#"><span class="month-block__item-name">Тополя</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"
-                                     alt="Верба">
-                                <a href="#"><span class="month-block__item-name">Верба</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"
-                                     alt="В’яз">
-                                <a href="#"><span class="month-block__item-name">В’яз</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"
-                                     alt="Бузок">
-                                <a href="#"><span class="month-block__item-name">Бузок</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <a href="#" class="more-plants">
-                                    <span class="load_more"></span>
-                                    Дивитись більше
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide month-block">
-                        <h3 class="month-block__title">Квітень</h3>
-                        <div class="month-block__list">
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"
-                                     alt="Береза">
-                                <a href="#"><span class="month-block__item-name">Береза</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"
-                                     alt="Тополя">
-                                <a href="#"><span class="month-block__item-name">Тополя</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"
-                                     alt="Верба">
-                                <a href="#"><span class="month-block__item-name">Верба</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"
-                                     alt="В’яз">
-                                <a href="#"><span class="month-block__item-name">В’яз</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"
-                                     alt="Бузок">
-                                <a href="#"><span class="month-block__item-name">Бузок</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <a href="#" class="more-plants">
-                                    <span class="load_more"></span>
-                                    Дивитись більше
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide month-block">
-                        <h3 class="month-block__title">Травень</h3>
-                        <div class="month-block__list">
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"
-                                     alt="Береза">
-                                <a href="#"><span class="month-block__item-name">Береза</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"
-                                     alt="Тополя">
-                                <a href="#"><span class="month-block__item-name">Тополя</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"
-                                     alt="Верба">
-                                <a href="#"><span class="month-block__item-name">Верба</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"
-                                     alt="В’яз">
-                                <a href="#"><span class="month-block__item-name">В’яз</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"
-                                     alt="Бузок">
-                                <a href="#"><span class="month-block__item-name">Бузок</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <a href="#" class="more-plants">
-                                    <span class="load_more"></span>
-                                    Дивитись більше
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide month-block">
-                        <h3 class="month-block__title">Червень</h3>
-                        <div class="month-block__list">
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"
-                                     alt="Береза">
-                                <a href="#"><span class="month-block__item-name">Береза</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"
-                                     alt="Тополя">
-                                <a href="#"><span class="month-block__item-name">Тополя</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"
-                                     alt="Верба">
-                                <a href="#"><span class="month-block__item-name">Верба</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"
-                                     alt="В’яз">
-                                <a href="#"><span class="month-block__item-name">В’яз</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"
-                                     alt="Бузок">
-                                <a href="#"><span class="month-block__item-name">Бузок</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <a href="#" class="more-plants">
-                                    <span class="load_more"></span>
-                                    Дивитись більше
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+<!--    <section class="section-flowering">-->
+<!--        <h2 class="heading heading_md color_green">КАЛЕНДАР ЦВІТІННЯ РОСЛИНИ</h2>-->
+<!--        <div class="calendar-wrapper">-->
+<!--            <div class="swiper plant-calendar">-->
+<!--                <div class="swiper-wrapper">-->
+<!--                    <div class="swiper-slide month-block">-->
+<!--                        <h3 class="month-block__title">Березень</h3>-->
+<!--                        <div class="month-block__list">-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"-->
+<!--                                     alt="Береза">-->
+<!--                                <a href="#"><span class="month-block__item-name">Береза</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"-->
+<!--                                     alt="Тополя">-->
+<!--                                <a href="#"><span class="month-block__item-name">Тополя</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"-->
+<!--                                     alt="Верба">-->
+<!--                                <a href="#"><span class="month-block__item-name">Верба</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"-->
+<!--                                     alt="В’яз">-->
+<!--                                <a href="#"><span class="month-block__item-name">В’яз</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"-->
+<!--                                     alt="Бузок">-->
+<!--                                <a href="#"><span class="month-block__item-name">Бузок</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <a href="#" class="more-plants">-->
+<!--                                    <span class="load_more"></span>-->
+<!--                                    Дивитись більше-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide month-block">-->
+<!--                        <h3 class="month-block__title">Квітень</h3>-->
+<!--                        <div class="month-block__list">-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"-->
+<!--                                     alt="Береза">-->
+<!--                                <a href="#"><span class="month-block__item-name">Береза</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"-->
+<!--                                     alt="Тополя">-->
+<!--                                <a href="#"><span class="month-block__item-name">Тополя</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"-->
+<!--                                     alt="Верба">-->
+<!--                                <a href="#"><span class="month-block__item-name">Верба</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"-->
+<!--                                     alt="В’яз">-->
+<!--                                <a href="#"><span class="month-block__item-name">В’яз</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"-->
+<!--                                     alt="Бузок">-->
+<!--                                <a href="#"><span class="month-block__item-name">Бузок</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <a href="#" class="more-plants">-->
+<!--                                    <span class="load_more"></span>-->
+<!--                                    Дивитись більше-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide month-block">-->
+<!--                        <h3 class="month-block__title">Травень</h3>-->
+<!--                        <div class="month-block__list">-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"-->
+<!--                                     alt="Береза">-->
+<!--                                <a href="#"><span class="month-block__item-name">Береза</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"-->
+<!--                                     alt="Тополя">-->
+<!--                                <a href="#"><span class="month-block__item-name">Тополя</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"-->
+<!--                                     alt="Верба">-->
+<!--                                <a href="#"><span class="month-block__item-name">Верба</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"-->
+<!--                                     alt="В’яз">-->
+<!--                                <a href="#"><span class="month-block__item-name">В’яз</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"-->
+<!--                                     alt="Бузок">-->
+<!--                                <a href="#"><span class="month-block__item-name">Бузок</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <a href="#" class="more-plants">-->
+<!--                                    <span class="load_more"></span>-->
+<!--                                    Дивитись більше-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide month-block">-->
+<!--                        <h3 class="month-block__title">Червень</h3>-->
+<!--                        <div class="month-block__list">-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"-->
+<!--                                     alt="Береза">-->
+<!--                                <a href="#"><span class="month-block__item-name">Береза</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"-->
+<!--                                     alt="Тополя">-->
+<!--                                <a href="#"><span class="month-block__item-name">Тополя</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"-->
+<!--                                     alt="Верба">-->
+<!--                                <a href="#"><span class="month-block__item-name">Верба</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"-->
+<!--                                     alt="В’яз">-->
+<!--                                <a href="#"><span class="month-block__item-name">В’яз</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"-->
+<!--                                     alt="Бузок">-->
+<!--                                <a href="#"><span class="month-block__item-name">Бузок</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <a href="#" class="more-plants">-->
+<!--                                    <span class="load_more"></span>-->
+<!--                                    Дивитись більше-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <div class="swiper-slide month-block">
-                        <h3 class="month-block__title">ЛИПЕНЬ</h3>
-                        <div class="month-block__list">
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"
-                                     alt="Береза">
-                                <a href="#"><span class="month-block__item-name">Береза</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"
-                                     alt="Тополя">
-                                <a href="#"><span class="month-block__item-name">Тополя</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"
-                                     alt="Верба">
-                                <a href="#"><span class="month-block__item-name">Верба</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"
-                                     alt="В’яз">
-                                <a href="#"><span class="month-block__item-name">В’яз</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"
-                                     alt="Бузок">
-                                <a href="#"><span class="month-block__item-name">Бузок</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <a href="#" class="more-plants">
-                                    <span class="load_more"></span>
-                                    Дивитись більше
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide month-block">
-                        <h3 class="month-block__title">Серпень</h3>
-                        <div class="month-block__list">
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"
-                                     alt="Береза">
-                                <a href="#"><span class="month-block__item-name">Береза</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"
-                                     alt="Тополя">
-                                <a href="#"><span class="month-block__item-name">Тополя</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"
-                                     alt="Верба">
-                                <a href="#"><span class="month-block__item-name">Верба</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"
-                                     alt="В’яз">
-                                <a href="#"><span class="month-block__item-name">В’яз</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"
-                                     alt="Бузок">
-                                <a href="#"><span class="month-block__item-name">Бузок</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <a href="#" class="more-plants">
-                                    <span class="load_more"></span>
-                                    Дивитись більше
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide month-block">
-                        <h3 class="month-block__title">Вересень</h3>
-                        <div class="month-block__list">
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"
-                                     alt="Береза">
-                                <a href="#"><span class="month-block__item-name">Береза</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"
-                                     alt="Тополя">
-                                <a href="#"><span class="month-block__item-name">Тополя</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"
-                                     alt="Верба">
-                                <a href="#"><span class="month-block__item-name">Верба</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"
-                                     alt="В’яз">
-                                <a href="#"><span class="month-block__item-name">В’яз</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"
-                                     alt="Бузок">
-                                <a href="#"><span class="month-block__item-name">Бузок</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <a href="#" class="more-plants">
-                                    <span class="load_more"></span>
-                                    Дивитись більше
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide month-block">
-                        <h3 class="month-block__title">Жовтень</h3>
-                        <div class="month-block__list">
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"
-                                     alt="Береза">
-                                <a href="#"><span class="month-block__item-name">Береза</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"
-                                     alt="Тополя">
-                                <a href="#"><span class="month-block__item-name">Тополя</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"
-                                     alt="Верба">
-                                <a href="#"><span class="month-block__item-name">Верба</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"
-                                     alt="В’яз">
-                                <a href="#"><span class="month-block__item-name">В’яз</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"
-                                     alt="Бузок">
-                                <a href="#"><span class="month-block__item-name">Бузок</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <a href="#" class="more-plants">
-                                    <span class="load_more"></span>
-                                    Дивитись більше
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="swiper-slide month-block">-->
+<!--                        <h3 class="month-block__title">ЛИПЕНЬ</h3>-->
+<!--                        <div class="month-block__list">-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"-->
+<!--                                     alt="Береза">-->
+<!--                                <a href="#"><span class="month-block__item-name">Береза</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"-->
+<!--                                     alt="Тополя">-->
+<!--                                <a href="#"><span class="month-block__item-name">Тополя</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"-->
+<!--                                     alt="Верба">-->
+<!--                                <a href="#"><span class="month-block__item-name">Верба</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"-->
+<!--                                     alt="В’яз">-->
+<!--                                <a href="#"><span class="month-block__item-name">В’яз</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"-->
+<!--                                     alt="Бузок">-->
+<!--                                <a href="#"><span class="month-block__item-name">Бузок</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <a href="#" class="more-plants">-->
+<!--                                    <span class="load_more"></span>-->
+<!--                                    Дивитись більше-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide month-block">-->
+<!--                        <h3 class="month-block__title">Серпень</h3>-->
+<!--                        <div class="month-block__list">-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"-->
+<!--                                     alt="Береза">-->
+<!--                                <a href="#"><span class="month-block__item-name">Береза</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"-->
+<!--                                     alt="Тополя">-->
+<!--                                <a href="#"><span class="month-block__item-name">Тополя</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"-->
+<!--                                     alt="Верба">-->
+<!--                                <a href="#"><span class="month-block__item-name">Верба</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"-->
+<!--                                     alt="В’яз">-->
+<!--                                <a href="#"><span class="month-block__item-name">В’яз</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"-->
+<!--                                     alt="Бузок">-->
+<!--                                <a href="#"><span class="month-block__item-name">Бузок</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <a href="#" class="more-plants">-->
+<!--                                    <span class="load_more"></span>-->
+<!--                                    Дивитись більше-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide month-block">-->
+<!--                        <h3 class="month-block__title">Вересень</h3>-->
+<!--                        <div class="month-block__list">-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"-->
+<!--                                     alt="Береза">-->
+<!--                                <a href="#"><span class="month-block__item-name">Береза</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"-->
+<!--                                     alt="Тополя">-->
+<!--                                <a href="#"><span class="month-block__item-name">Тополя</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"-->
+<!--                                     alt="Верба">-->
+<!--                                <a href="#"><span class="month-block__item-name">Верба</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"-->
+<!--                                     alt="В’яз">-->
+<!--                                <a href="#"><span class="month-block__item-name">В’яз</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"-->
+<!--                                     alt="Бузок">-->
+<!--                                <a href="#"><span class="month-block__item-name">Бузок</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <a href="#" class="more-plants">-->
+<!--                                    <span class="load_more"></span>-->
+<!--                                    Дивитись більше-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide month-block">-->
+<!--                        <h3 class="month-block__title">Жовтень</h3>-->
+<!--                        <div class="month-block__list">-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"-->
+<!--                                     alt="Береза">-->
+<!--                                <a href="#"><span class="month-block__item-name">Береза</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"-->
+<!--                                     alt="Тополя">-->
+<!--                                <a href="#"><span class="month-block__item-name">Тополя</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"-->
+<!--                                     alt="Верба">-->
+<!--                                <a href="#"><span class="month-block__item-name">Верба</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"-->
+<!--                                     alt="В’яз">-->
+<!--                                <a href="#"><span class="month-block__item-name">В’яз</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"-->
+<!--                                     alt="Бузок">-->
+<!--                                <a href="#"><span class="month-block__item-name">Бузок</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <a href="#" class="more-plants">-->
+<!--                                    <span class="load_more"></span>-->
+<!--                                    Дивитись більше-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-                    <div class="swiper-slide month-block">
-                        <h3 class="month-block__title">Листопад</h3>
-                        <div class="month-block__list">
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"
-                                     alt="Береза">
-                                <a href="#"><span class="month-block__item-name">Береза</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"
-                                     alt="Тополя">
-                                <a href="#"><span class="month-block__item-name">Тополя</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"
-                                     alt="Верба">
-                                <a href="#"><span class="month-block__item-name">Верба</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"
-                                     alt="В’яз">
-                                <a href="#"><span class="month-block__item-name">В’яз</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"
-                                     alt="Бузок">
-                                <a href="#"><span class="month-block__item-name">Бузок</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <a href="#" class="more-plants">
-                                    <span class="load_more"></span>
-                                    Дивитись більше
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide month-block">
-                        <h3 class="month-block__title">Грудень</h3>
-                        <div class="month-block__list">
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"
-                                     alt="Береза">
-                                <a href="#"><span class="month-block__item-name">Береза</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"
-                                     alt="Тополя">
-                                <a href="#"><span class="month-block__item-name">Тополя</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"
-                                     alt="Верба">
-                                <a href="#"><span class="month-block__item-name">Верба</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"
-                                     alt="В’яз">
-                                <a href="#"><span class="month-block__item-name">В’яз</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"
-                                     alt="Бузок">
-                                <a href="#"><span class="month-block__item-name">Бузок</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <a href="#" class="more-plants">
-                                    <span class="load_more"></span>
-                                    Дивитись більше
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide month-block">
-                        <h3 class="month-block__title">Січень</h3>
-                        <div class="month-block__list">
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"
-                                     alt="Береза">
-                                <a href="#"><span class="month-block__item-name">Береза</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"
-                                     alt="Тополя">
-                                <a href="#"><span class="month-block__item-name">Тополя</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"
-                                     alt="Верба">
-                                <a href="#"><span class="month-block__item-name">Верба</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"
-                                     alt="В’яз">
-                                <a href="#"><span class="month-block__item-name">В’яз</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"
-                                     alt="Бузок">
-                                <a href="#"><span class="month-block__item-name">Бузок</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <a href="#" class="more-plants">
-                                    <span class="load_more"></span>
-                                    Дивитись більше
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide month-block">
-                        <h3 class="month-block__title">Лютий</h3>
-                        <div class="month-block__list">
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"
-                                     alt="Береза">
-                                <a href="#"><span class="month-block__item-name">Береза</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"
-                                     alt="Тополя">
-                                <a href="#"><span class="month-block__item-name">Тополя</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"
-                                     alt="Верба">
-                                <a href="#"><span class="month-block__item-name">Верба</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"
-                                     alt="В’яз">
-                                <a href="#"><span class="month-block__item-name">В’яз</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"
-                                     alt="Бузок">
-                                <a href="#"><span class="month-block__item-name">Бузок</span></a>
-                            </div>
-                            <div class="month-block__item">
-                                <a href="#" class="more-plants">
-                                    <span class="load_more"></span>
-                                    Дивитись більше
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="season-scrollbar">
-                    <div class="scrollbar-track">
-                        <div class="season">
-                            <div class="season-label season-spring">Весна</div>
-                            <div class="season-label season-summer">Літо</div>
-                            <div class="season-label season-autumn">Осінь</div>
-                            <div class="season-label season-winter">Зима</div>
-                        </div>
+<!--                    <div class="swiper-slide month-block">-->
+<!--                        <h3 class="month-block__title">Листопад</h3>-->
+<!--                        <div class="month-block__list">-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"-->
+<!--                                     alt="Береза">-->
+<!--                                <a href="#"><span class="month-block__item-name">Береза</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"-->
+<!--                                     alt="Тополя">-->
+<!--                                <a href="#"><span class="month-block__item-name">Тополя</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"-->
+<!--                                     alt="Верба">-->
+<!--                                <a href="#"><span class="month-block__item-name">Верба</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"-->
+<!--                                     alt="В’яз">-->
+<!--                                <a href="#"><span class="month-block__item-name">В’яз</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"-->
+<!--                                     alt="Бузок">-->
+<!--                                <a href="#"><span class="month-block__item-name">Бузок</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <a href="#" class="more-plants">-->
+<!--                                    <span class="load_more"></span>-->
+<!--                                    Дивитись більше-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide month-block">-->
+<!--                        <h3 class="month-block__title">Грудень</h3>-->
+<!--                        <div class="month-block__list">-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"-->
+<!--                                     alt="Береза">-->
+<!--                                <a href="#"><span class="month-block__item-name">Береза</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"-->
+<!--                                     alt="Тополя">-->
+<!--                                <a href="#"><span class="month-block__item-name">Тополя</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"-->
+<!--                                     alt="Верба">-->
+<!--                                <a href="#"><span class="month-block__item-name">Верба</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"-->
+<!--                                     alt="В’яз">-->
+<!--                                <a href="#"><span class="month-block__item-name">В’яз</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"-->
+<!--                                     alt="Бузок">-->
+<!--                                <a href="#"><span class="month-block__item-name">Бузок</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <a href="#" class="more-plants">-->
+<!--                                    <span class="load_more"></span>-->
+<!--                                    Дивитись більше-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide month-block">-->
+<!--                        <h3 class="month-block__title">Січень</h3>-->
+<!--                        <div class="month-block__list">-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"-->
+<!--                                     alt="Береза">-->
+<!--                                <a href="#"><span class="month-block__item-name">Береза</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"-->
+<!--                                     alt="Тополя">-->
+<!--                                <a href="#"><span class="month-block__item-name">Тополя</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"-->
+<!--                                     alt="Верба">-->
+<!--                                <a href="#"><span class="month-block__item-name">Верба</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"-->
+<!--                                     alt="В’яз">-->
+<!--                                <a href="#"><span class="month-block__item-name">В’яз</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"-->
+<!--                                     alt="Бузок">-->
+<!--                                <a href="#"><span class="month-block__item-name">Бузок</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <a href="#" class="more-plants">-->
+<!--                                    <span class="load_more"></span>-->
+<!--                                    Дивитись більше-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="swiper-slide month-block">-->
+<!--                        <h3 class="month-block__title">Лютий</h3>-->
+<!--                        <div class="month-block__list">-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-1.png" class="month-block__item-image"-->
+<!--                                     alt="Береза">-->
+<!--                                <a href="#"><span class="month-block__item-name">Береза</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-2.png" class="month-block__item-image"-->
+<!--                                     alt="Тополя">-->
+<!--                                <a href="#"><span class="month-block__item-name">Тополя</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-3.png" class="month-block__item-image"-->
+<!--                                     alt="Верба">-->
+<!--                                <a href="#"><span class="month-block__item-name">Верба</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-4.png" class="month-block__item-image"-->
+<!--                                     alt="В’яз">-->
+<!--                                <a href="#"><span class="month-block__item-name">В’яз</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <img src="assets/img/calendar-home/1-5.png" class="month-block__item-image"-->
+<!--                                     alt="Бузок">-->
+<!--                                <a href="#"><span class="month-block__item-name">Бузок</span></a>-->
+<!--                            </div>-->
+<!--                            <div class="month-block__item">-->
+<!--                                <a href="#" class="more-plants">-->
+<!--                                    <span class="load_more"></span>-->
+<!--                                    Дивитись більше-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="season-scrollbar">-->
+<!--                    <div class="scrollbar-track">-->
+<!--                        <div class="season">-->
+<!--                            <div class="season-label season-spring">Весна</div>-->
+<!--                            <div class="season-label season-summer">Літо</div>-->
+<!--                            <div class="season-label season-autumn">Осінь</div>-->
+<!--                            <div class="season-label season-winter">Зима</div>-->
+<!--                        </div>-->
 
-                        <div class="month-ticks">
-                            <span></span><span></span><span></span><span></span><span></span><span></span>
-                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Pagination container (for the dots) -->
-                <div class="swiper-pagination"></div>
+<!--                        <div class="month-ticks">-->
+<!--                            <span></span><span></span><span></span><span></span><span></span><span></span>-->
+<!--                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; Pagination container (for the dots) &ndash;&gt;-->
+<!--                <div class="swiper-pagination"></div>-->
 
-                <!-- Scrollbar container -->
-                <div class="swiper-scrollbar"></div>
-            </div>
-            <div class="wrap-btn">
-                <a href="#" class="btn btn_main">Перейти до календаря</a>
-            </div>
-        </div>
-    </section>
+<!--                &lt;!&ndash; Scrollbar container &ndash;&gt;-->
+<!--                <div class="swiper-scrollbar"></div>-->
+<!--            </div>-->
+<!--            <div class="wrap-btn">-->
+<!--                <a href="#" class="btn btn_main">Перейти до календаря</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
-    <style>
-        .month-block.swiper-slide {
-            width: 350px;
-        }
-    </style>
-    <script>
-        $(document).ready(function () {
-            let calendarSlider;
-            const calendarSelector = $('.plant-calendar').get(0);
+<!--    <style>-->
+<!--        .month-block.swiper-slide {-->
+<!--            width: 350px;-->
+<!--        }-->
+<!--    </style>-->
+<!--    <script>-->
+<!--        $(document).ready(function () {-->
+<!--            let calendarSlider;-->
+<!--            const calendarSelector = $('.plant-calendar').get(0);-->
 
-            function handleResponsive() {
+<!--            function handleResponsive() {-->
 
-                // DESTROY SLIDER INSTANCES
-                if ($(window).outerWidth() > 768) {
-                    if (!calendarSlider && calendarSelector) {
-                        calendarSlider = new Swiper(".plant-calendar", {
-                            freeMode: true,
-                            slidesPerView: 'auto',
-                            slidesPerGroup: 1,
+<!--                // DESTROY SLIDER INSTANCES-->
+<!--                if ($(window).outerWidth() > 768) {-->
+<!--                    if (!calendarSlider && calendarSelector) {-->
+<!--                        calendarSlider = new Swiper(".plant-calendar", {-->
+<!--                            freeMode: true,-->
+<!--                            slidesPerView: 'auto',-->
+<!--                            slidesPerGroup: 1,-->
 
-                            mousewheel: {
-                                sensitivity: 1,
-                                forceToAxis: true,
-                            },
+<!--                            mousewheel: {-->
+<!--                                sensitivity: 1,-->
+<!--                                forceToAxis: true,-->
+<!--                            },-->
 
-                            scrollbar: {
-                                el: ".plant-calendar .swiper-scrollbar",
-                                draggable: true,
-                                hide: false,
-                                snapOnRelease: true,
-                            },
-                            pagination: {
-                                el: '.plant-calendar .swiper-pagination',
-                                clickable: true,
-                            },
-                        });
-                    }
-                } else {
-                    destroySwiper(calendarSlider);
-                    calendarSlider = null;
-                }
-            }
+<!--                            scrollbar: {-->
+<!--                                el: ".plant-calendar .swiper-scrollbar",-->
+<!--                                draggable: true,-->
+<!--                                hide: false,-->
+<!--                                snapOnRelease: true,-->
+<!--                            },-->
+<!--                            pagination: {-->
+<!--                                el: '.plant-calendar .swiper-pagination',-->
+<!--                                clickable: true,-->
+<!--                            },-->
+<!--                        });-->
+<!--                    }-->
+<!--                } else {-->
+<!--                    destroySwiper(calendarSlider);-->
+<!--                    calendarSlider = null;-->
+<!--                }-->
+<!--            }-->
 
-            let resizeId;
+<!--            let resizeId;-->
 
-            handleResponsive();
+<!--            handleResponsive();-->
 
-            window.addEventListener('resize', function () {
-                clearTimeout(resizeId);
-                resizeId = setTimeout(handleResponsive, 500);
-            });
+<!--            window.addEventListener('resize', function () {-->
+<!--                clearTimeout(resizeId);-->
+<!--                resizeId = setTimeout(handleResponsive, 500);-->
+<!--            });-->
 
-        });
-    </script>
+<!--        });-->
+<!--    </script>-->
     -----------------------------------------------------------------------------------------------
     <br><br><br><br>
     --------------------------------------------------------------------------------------------
@@ -1841,7 +2044,7 @@
                     <div class="footer__nav-item">
                         <ul class="footer__menu">
                             <li>
-                                <a class="footer__title" href="about-allergy.html">Все про алергію</a>
+                                <a class="footer__title" href="#">Все про алергію</a>
                                 <ul class="footer__sub-menu">
                                     <li><a href="#">Види алергії</a></li>
                                     <li><a href="page-symptoms.html">Прояви алергії</a></li>
@@ -1855,7 +2058,7 @@
                     <div class="footer__nav-item">
                         <ul class="footer__menu">
                             <li>
-                                <a class="footer__title" href="page-useful.html">Корисно для алергіка</a>
+                                <a class="footer__title" href="#">Корисно для алергіка</a>
                                 <ul class="footer__sub-menu">
                                     <li><a href="page-allergens-plants.html">Рослини - алергени</a></li>
                                     <li><a href="page-allergens-food.html">Продукти - алергени</a></li>

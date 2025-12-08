@@ -1,28 +1,69 @@
 @use "../utils/mixins";
 @use "../utils/variables";
 
-.header__search{
-  display: none;
+.header__search {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -30px;
+  height: auto;
+  background-color: #FFFFFF;
+  padding: 100px 64px;
+  box-shadow: 0 2px 7.6px 0 rgba(0, 0, 0, .25);
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: .35s ease;
+  &.active{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  input {
+    width: 100%;
+  }
+  .input-group {
+    display: flex;
+  }
 }
+
 .btn_search,
-.search_open{
+.search_open {
   border: none;
-  background-color: transparent;
   width: 32px;
   height: 32px;
   padding: 2px;
   cursor: pointer;
 }
 
-.screen-reader-text{
-  display: inline-block;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  overflow-wrap: normal;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+.search_open {
+  background-color: transparent;
+  transition: .35s;
+  &:hover{
+    color: variables.$green-100;
+  }
 }
+.search-close{
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+  top:0;
+  z-index: 1;
+
+  color: variables.$green-100;
+  font-size: 30px;
+}
+.btn_search {
+  height: 60px;
+  margin-left: 25px;
+  width: 60px;
+  flex-shrink: 0;
+  transition: .35s;
+  &:hover{
+    background-color: variables.$green;
+  }
+}
+

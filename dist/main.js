@@ -300,6 +300,23 @@ $(document).ready(function () {
         minimumResultsForSearch: -1,
     });
 
+//    SEARCH BAR
+    const searchBar = $('.header__search');
+
+    $('#openSearch').click(function (e) {
+        e.preventDefault();
+        searchBar.addClass('active');
+    });
+
+    $('#closeSearch').click(function (e) {
+        e.preventDefault();
+        searchBar.removeClass('active');
+        $('.search-form .form-control').val('');
+        $('.search-form').removeClass('active');
+    });
+    $('.search-form').on('submit', function() {
+        console.log('Form submitted:', $(this).serialize());
+    });
 // FLOWERING CALENDAR
 
 
