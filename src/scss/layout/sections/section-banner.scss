@@ -42,12 +42,34 @@
     padding-top: 50px;
   }
 }
-@include mixins.respond-to(variables.$md) {
 
+@include mixins.respond-to(variables.$md) {
+  .section-banner {
+    padding-top: 0;
+
+    .container {
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .btn {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .part {
+      width: 100%;
+    }
+  }
 }
+
 @include mixins.respond-to(variables.$sm) {
 
 }
+
 @include mixins.respond-to(variables.$xxs) {
 
 }

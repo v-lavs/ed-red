@@ -31,7 +31,7 @@ $(document).ready(function () {
     function smoothScrollToAnchor(selector) {
         $(selector).on('click', function (event) {
             let anchor = $.attr(this, 'href');
-            let offsetSize = $("header").innerHeight();
+            let offsetSize = $('header').innerHeight();
 
             if (anchor.match(/^#/) && anchor !== '#') {
                 event.preventDefault()
@@ -45,7 +45,7 @@ $(document).ready(function () {
         })
         let myHash = location.hash;
         location.hash = '';
-        let offsetSize = $("header").innerHeight();
+        let offsetSize = $('header').innerHeight();
         if (myHash[1] != undefined) {
             $('html, body').animate({scrollTop: $(myHash).offset().top - offsetSize}, 1500);
         }
@@ -79,57 +79,86 @@ $(document).ready(function () {
     }
 
     //MODAL
-    $('.open-modal').on('click', function (e) {
-        e.preventDefault();
-        $('.backdrop, .popup').fadeIn(500);
-    });
 
-    $('.close-popup, .backdrop').on('click', function () {
-        $('.backdrop, .popup').fadeOut(500);
-    });
+//SLIDER
+    let sliderCounter;
+    let sliderProduct;
+    const counterSelector = $('.swiper.counter').get(0);
+    const productSelector = $('.slider-products').get(0);
 
-//    SLIDER
-    const sliderInfo = new Swiper('.slider-info', {
-        loop: true,
-        spaceBetween: 24,
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        navigation: {
-            nextEl: '.swiper-nav .swiper-button-next',
-            prevEl: '.swiper-nav .swiper-button-prev',
-        },
-    });
-    const sliderBlog = new Swiper('.blog-slider', {
-        spaceBetween: 20,
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        navigation: {
-            nextEl: '.wrap-blog-slider .swiper-button-next',
-            prevEl: '.wrap-blog-slider .swiper-button-prev',
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 3,
+    function handleResponsive() {
+
+// DESTROY SLIDER INSTANCES RESPONSIVE
+
+        if ($(window).outerWidth() <= 767) {
+            if (!sliderCounter && counterSelector) {
+                sliderCounter = new Swiper('.swiper.counter', {
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                });
             }
+        } else {
+            destroySwiper(sliderCounter);
+            sliderCounter = null;
         }
+
+        if ($(window).outerWidth() <= 767) {
+            if (!sliderProduct && productSelector) {
+                sliderProduct = new Swiper('.slider-products', {
+                    spaceBetween: 25,
+                    slidesPerView: 1,
+                    breakpoints: {
+                        580: {
+                            slidesPerView: 2,
+                        }
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                });
+            }
+        } else {
+            destroySwiper(sliderProduct);
+            sliderProduct = null;
+        }
+    }
+
+    let resizeId;
+
+    handleResponsive();
+
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeId);
+        resizeId = setTimeout(handleResponsive, 500);
     });
 
-    let swiperRegistry = {}; // {id: swiperInstance}
-
-    function activateSwiper(id, element) {
-        swiperRegistry[id] = new Swiper(element, {
-            spaceBetween: 20,
+//CORE-SLIDER
+    if ($('.slider-info').get(0)) {
+        const sliderInfo = new Swiper('.slider-info', {
+            loop: true,
+            spaceBetween: 24,
             pagination: {
                 el: '.swiper-pagination',
             },
             navigation: {
                 nextEl: '.swiper-nav .swiper-button-next',
                 prevEl: '.swiper-nav .swiper-button-prev',
+            },
+        });
+    }
+
+    if ($('.blog-slider').get(0)) {
+        const sliderBlog = new Swiper('.blog-slider', {
+            spaceBetween: 20,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.wrap-blog-slider .swiper-button-next',
+                prevEl: '.wrap-blog-slider .swiper-button-prev',
             },
             breakpoints: {
                 768: {
@@ -141,35 +170,48 @@ $(document).ready(function () {
             }
         });
     }
+//SLIDER-IN-TABS
+    let tabsSlider;
 
-    function deactivateSwiper(id) {
-        if (swiperRegistry[id]) {
-            swiperRegistry[id].destroy(true, true);
-            delete swiperRegistry[id];
+    function slidersInit() {
+        if ($('.slider-posts').length > 0) {
+
+            if (!tabsSlider) {
+                tabsSlider = new Swiper('.slider-posts', {
+                    spaceBetween: 20,
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
+                    navigation: {
+                        nextEl: '.swiper-nav .swiper-button-next',
+                        prevEl: '.swiper-nav .swiper-button-prev',
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                        }
+                    }
+                });
+            }
+        } else {
+            if (tabsSlider) {
+                if ($.isArray(tabsSlider)) {
+                    tabsSlider.forEach(function (slider) {
+                        slider.destroy(true, true)
+                    });
+                } else {
+                    tabsSlider.destroy(true, true);
+                }
+                tabsSlider = null;
+            }
         }
     }
 
-    function checkSwipers() {
-        $(".swiper").each(function () {
-            const id = $(this).attr('id');
-            if (!id) return;
+    slidersInit();
 
-            // const shouldBeActive = window.innerWidth <= 991;
-
-            // if (shouldBeActive && !swiperRegistry[id]) {
-            if (!swiperRegistry[id]) {
-                activateSwiper(id, `#${id}`);
-            } else {
-                deactivateSwiper(id);
-            }
-
-            // if (!shouldBeActive && swiperRegistry[id]) {
-            //     deactivateSwiper(id);
-            // }
-        });
-    }
-
-    checkSwipers();
 
     let resizeTimer;
     $(window).on("resize", function () {
@@ -181,9 +223,9 @@ $(document).ready(function () {
 
     $(".tabs").each(function () {
         const tabs = $(this);
-        const links = tabs.find(".tabs__nav-link");
-        const wrapper = tabs.find(".tabs__content-wrapper");
-        const panes = tabs.find(".tab-pane");
+        const links = tabs.find('.tabs__nav-link');
+        const wrapper = tabs.find('.tabs__content-wrapper');
+        const panes = tabs.find('.tab-pane');
 
         function animateHeight(newPanel) {
             const start = wrapper.height();
@@ -193,32 +235,41 @@ $(document).ready(function () {
 
             wrapper.height(start);
             setTimeout(() => wrapper.height(target), 10);
-            setTimeout(() => wrapper.css("height", "auto"), 310);
+            setTimeout(() => wrapper.css('height', 'auto'), 310);
         }
 
-        links.on("click", function (e) {
+        links.on('click', function (e) {
             e.preventDefault();
 
-            if ($(this).hasClass("active")) return;
+            if ($(this).hasClass('active')) return;
 
-            const id = $(this).attr("href");
+            const id = $(this).attr('href');
             const pane = tabs.find(id);
-            const current = panes.filter(".active");
+            const current = panes.filter('.active');
 
-            links.removeClass("active");
-            $(this).addClass("active");
+            links.removeClass('active');
+            $(this).addClass('active');
 
             animateHeight(pane);
 
-            current.removeClass("active").hide();
-            pane.addClass("active").show();
+            current.removeClass('active').hide();
+            pane.addClass('active').show();
 
-            checkSwipers();
+            // checkSwipers();
+            if (tabsSlider) {
+                if ($.isArray(tabsSlider)) {
+                    tabsSlider.forEach(function (slider) {
+                        slider.update();
+                    });
+                } else {
+                    tabsSlider.update();
+                }
+            }
         });
 
-        const first = panes.filter(".active");
-        wrapper.css("height", first.outerHeight());
-        setTimeout(() => wrapper.css("height", "auto"), 300);
+        const first = panes.filter('.active');
+        wrapper.css('height', first.outerHeight());
+        setTimeout(() => wrapper.css('height', 'auto'), 300);
     });
 
     //ACCORDION
@@ -255,87 +306,6 @@ $(document).ready(function () {
     });
 
 // FLOWERING CALENDAR
-//     let calendarSlider;
-//     const calendarSelector = $('.plant-calendar').get(0);
-//
-//     function handleResponsive() {
-//
-//         // DESTROY SLIDER INSTANCES
-//         if ($(window).outerWidth() > 768) {
-//             if (!calendarSlider && calendarSelector) {
-//                 calendarSlider = new Swiper(".plant-calendar", {
-//                     freeMode: true,
-//                     slidesPerView: 'auto',
-//                     observer: true,
-//                     observeParents: true,
-//                     scrollbar: {
-//                         el: ".swiper-scrollbar",
-//                         draggable: true,
-//                         hide: false,
-//                         snapOnRelease: true,
-//                     },
-//                 });
-//             }
-//         } else {
-//             destroySwiper(calendarSlider);
-//             calendarSlider = null;
-//         }
-//     }
-//
-//     let resizeId;
-//
-//     handleResponsive();
-//
-//     window.addEventListener('resize', function () {
-//         clearTimeout(resizeId);
-//         resizeId = setTimeout(handleResponsive, 500);
-//     });
-    // const calendarWrapper = document.querySelector('.calendar-wrapper');
-    // const wrapper = document.querySelector('.swiper-scrollbar');
-    // (function syncDragWithSpan() {
-    //     const month = document.querySelector('.month-block');
-    //     const drag = document.querySelector('.swiper-scrollbar-drag');
-    //     const track = drag ? drag.parentElement : null;
-    //     const sliderEl = document.querySelector('.plant-calendar').swiper || window.calendarSlider || null; // try common refs
-    //
-    //     if (!month || !drag || !track) {
-    //         console.warn('syncDragWithSpan: missing elements', {month, drag, track});
-    //         return;
-    //     }
-    //
-    //     function update() {
-    //         const span = month.offsetWidth;
-    //         // set drag width visually — fallback; keep small padding for design if needed
-    //         drag.style.width = span + 'px';
-    //         // ensure track has expected layout
-    //         track.style.overflow = 'visible';
-    //         // update left to match active slide if swiper present
-    //         const trackMax = (track.offsetWidth - drag.offsetWidth) || 1;
-    //         if (sliderEl && sliderEl.activeIndex != null) {
-    //             const idx = sliderEl.activeIndex;
-    //             const left = Math.max(0, Math.min(trackMax, Math.round((idx / (sliderEl.slides.length - 1 || 1)) * trackMax)));
-    //             drag.style.transform = 'translate3d(' + left + 'px, 0, 0)';
-    //         }
-    //     }
-    //
-    //     window.addEventListener('load', update);
-    //     window.addEventListener('resize', () => setTimeout(update, 60));
-    //     // run now
-    //     update();
-    //
-    //     // ensure drag moves slides when user drags native drag (Swiper scroll)
-    //     // listen to Swiper scroll event if exists
-    //     if (sliderEl && sliderEl.on) {
-    //         sliderEl.on('scroll', () => {
-    //             const left = drag.offsetLeft;
-    //             const prog = left / (track.offsetWidth - drag.offsetWidth);
-    //             const index = Math.round(prog * (sliderEl.slides.length - 1));
-    //             if (sliderEl.activeIndex !== index) {
-    //                 sliderEl.slideTo(index, 0);
-    //             }
-    //         });
-    //     }
-    // })();
 
 
 });

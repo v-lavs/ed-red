@@ -142,6 +142,11 @@
   }
 }
 
+@include mixins.respond-to(variables.$lg) {
+  .menu {
+    font-size: 18px;
+  }
+}
 @include mixins.respond-to(variables.$md) {
 
 }

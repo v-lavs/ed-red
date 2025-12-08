@@ -62,12 +62,16 @@
 }
 
 @include mixins.respond-to(variables.$lg) {
-
+  .heading_xxl{
+  font-size: 60px;
+}
 
 }
 
 @include mixins.respond-to(variables.$md) {
-
+  .heading_xxl {
+    font-size: 72px;
+  }
 }
 
 @include mixins.respond-to(variables.$sm) {
