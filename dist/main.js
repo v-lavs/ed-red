@@ -82,9 +82,7 @@ $(document).ready(function () {
 
 //SLIDER
     let sliderCounter;
-    let sliderProduct;
     const counterSelector = $('.swiper.counter').get(0);
-    const productSelector = $('.slider-products').get(0);
 
     function handleResponsive() {
 
@@ -103,28 +101,8 @@ $(document).ready(function () {
             destroySwiper(sliderCounter);
             sliderCounter = null;
         }
-
-        if ($(window).outerWidth() <= 767) {
-            if (!sliderProduct && productSelector) {
-                sliderProduct = new Swiper('.slider-products', {
-                    spaceBetween: 25,
-                    slidesPerView: 1,
-                    breakpoints: {
-                        580: {
-                            slidesPerView: 2,
-                        }
-                    },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                });
-            }
-        } else {
-            destroySwiper(sliderProduct);
-            sliderProduct = null;
-        }
     }
+
 
     let resizeId;
 
@@ -136,6 +114,28 @@ $(document).ready(function () {
     });
 
 //CORE-SLIDER
+    if($('.products').get(0)){
+        const  sliderProduct = new Swiper('.slider-products', {
+            spaceBetween: 24,
+            slidesPerView: 1,
+            breakpoints: {
+                580: {
+                    slidesPerView: 2,
+                },
+                991: {
+                    slidesPerView: 3,
+                }
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.wrap-slider-posts  .swiper-button-next',
+                prevEl: '.wrap-slider-posts  .swiper-button-prev',
+            },
+        });
+    }
     if ($('.slider-info').get(0)) {
         const sliderInfo = new Swiper('.slider-info', {
             loop: true,
@@ -144,21 +144,21 @@ $(document).ready(function () {
                 el: '.swiper-pagination',
             },
             navigation: {
-                nextEl: '.swiper-nav .swiper-button-next',
-                prevEl: '.swiper-nav .swiper-button-prev',
+                nextEl: '.wrap-slider-posts  .swiper-button-next',
+                prevEl: '.wrap-slider-posts  .swiper-button-prev',
             },
         });
     }
 
     if ($('.blog-slider').get(0)) {
         const sliderBlog = new Swiper('.blog-slider', {
-            spaceBetween: 20,
+            spaceBetween: 24,
             pagination: {
                 el: '.swiper-pagination',
             },
             navigation: {
-                nextEl: '.wrap-blog-slider .swiper-button-next',
-                prevEl: '.wrap-blog-slider .swiper-button-prev',
+                nextEl: '.wrap-slider-posts .swiper-button-next',
+                prevEl: '.wrap-slider-posts .swiper-button-prev',
             },
             breakpoints: {
                 768: {
@@ -183,8 +183,8 @@ $(document).ready(function () {
                         el: '.swiper-pagination',
                     },
                     navigation: {
-                        nextEl: '.swiper-nav .swiper-button-next',
-                        prevEl: '.swiper-nav .swiper-button-prev',
+                        nextEl: '.wrap-slider-posts  .swiper-button-next',
+                        prevEl: '.wrap-slider-posts  .swiper-button-prev',
                     },
                     breakpoints: {
                         768: {
@@ -212,12 +212,6 @@ $(document).ready(function () {
 
     slidersInit();
 
-
-    let resizeTimer;
-    $(window).on("resize", function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(checkSwipers, 200);
-    });
 
     // TABS
 
@@ -255,7 +249,8 @@ $(document).ready(function () {
             current.removeClass('active').hide();
             pane.addClass('active').show();
 
-            // checkSwipers();
+            slidersInit();
+
             if (tabsSlider) {
                 if ($.isArray(tabsSlider)) {
                     tabsSlider.forEach(function (slider) {

@@ -14,7 +14,8 @@
 }
 
 .slider-posts {
-  padding: 15px 10px 75px;
+  max-width: 1200px;
+  padding: 15px 10px 15px;
 
   .swiper-slide {
     width: auto;
@@ -22,6 +23,3 @@
   }
 }
 
-.blog-slider {
-  padding-bottom: 15px;
-}

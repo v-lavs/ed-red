@@ -53,9 +53,10 @@ body {
 .main-banner {
   position: relative;
   max-width: 1440px;
-  margin: 50px auto;
+  margin: 0 auto;
   width: 100%;
   min-height: 592px;
+  padding-top: 38%;
 
   img {
     position: absolute;

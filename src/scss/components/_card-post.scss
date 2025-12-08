@@ -14,7 +14,7 @@
 }
 .card-post {
   &__thumb {
-    padding-top: 82.19%;
+    padding-top: 76%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -81,7 +81,7 @@
 
 @include mixins.respond-to(variables.$xl) {
   .card-post__title {
-    font-size: 20px;
-    margin-bottom: 40px;
+    //font-size: 20px;
+    //margin-bottom: 40px;
   }
 }

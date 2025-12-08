@@ -1,4 +1,7 @@
 @use "../utils/mixins";
 @use "../utils/variables";
 
+.page-blog {
+  background-color: variables.$light-gray-100;
+}
 
