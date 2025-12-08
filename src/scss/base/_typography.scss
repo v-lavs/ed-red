@@ -7,7 +7,8 @@
   text-transform: uppercase;
 
   &_xxl {
-    font-size: 86px;
+    //font-size: 86px;
+    font-size: 64px;
   }
 
   &_lg {
@@ -36,9 +37,10 @@
 
 @include mixins.respond-to(variables.$xl) {
   .heading {
-    &_xxl {
-      font-size: 76px;
-    }
+    //&_xxl {
+    //  //font-size: 76px;
+    //  font-size: 64px;
+    //}
 
     &_lg {
       font-size: 48px;

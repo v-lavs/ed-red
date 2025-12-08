@@ -2,8 +2,7 @@
 @use "../../utils/variables";
 
 .section-banner {
-  padding-top: 140px;
-  padding-bottom: 90px;
+  padding: 110px 110px;
   background-color: variables.$mint;
 
   .heading_xxl {
@@ -34,6 +33,7 @@
 
   .part_right {
     width: 46%;
+    padding: 0 7%;
   }
 }
 

@@ -1065,7 +1065,7 @@ body {
 }
 
 .heading_xxl {
-  font-size: 86px;
+  font-size: 64px;
 }
 
 .heading_lg {
@@ -2444,8 +2444,7 @@ form input {
 }
 
 .section-banner {
-  padding-top: 140px;
-  padding-bottom: 90px;
+  padding: 110px 110px;
   background-color: #E4F1E8;
 }
 
@@ -2477,6 +2476,7 @@ form input {
 
 .section-banner .part_right {
   width: 46%;
+  padding: 0 7%;
 }
 
 .section-products {
@@ -3313,10 +3313,6 @@ form input {
     font-size: 34px;
   }
 
-  .heading_xxl {
-    font-size: 76px;
-  }
-
   .heading_lg {
     font-size: 48px;
   }
@@ -3443,7 +3439,7 @@ form input {
   }
 
   .menu {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .breadcrumb__item {
