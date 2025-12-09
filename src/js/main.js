@@ -119,10 +119,10 @@ $(document).ready(function () {
             spaceBetween: 24,
             slidesPerView: 1,
             breakpoints: {
-                580: {
+                768: {
                     slidesPerView: 2,
                 },
-                991: {
+                992: {
                     slidesPerView: 3,
                 }
             },
@@ -134,7 +134,21 @@ $(document).ready(function () {
                 nextEl: '.wrap-slider-posts  .swiper-button-next',
                 prevEl: '.wrap-slider-posts  .swiper-button-prev',
             },
+            watchOverflow: true,
         });
+        sliderProduct.on('init resize', () => {
+            toggleNav(sliderProduct);
+        });
+
+        function toggleNav(sliderProduct) {
+            const next = document.querySelector('.swiper-button-next');
+            const prev = document.querySelector('.swiper-button-prev');
+
+            const show = !sliderProduct.isLocked; // isLocked = true якщо слайдів недостатньо
+
+            next.style.display = show ? '' : 'none';
+            prev.style.display = show ? '' : 'none';
+        }
     }
     if ($('.slider-info').get(0)) {
         const sliderInfo = new Swiper('.slider-info', {
@@ -144,8 +158,8 @@ $(document).ready(function () {
                 el: '.swiper-pagination',
             },
             navigation: {
-                nextEl: '.wrap-slider-posts  .swiper-button-next',
-                prevEl: '.wrap-slider-posts  .swiper-button-prev',
+                nextEl: '.swiper-nav  .swiper-button-next',
+                prevEl: '.swiper-nav  .swiper-button-prev',
             },
         });
     }
@@ -164,7 +178,7 @@ $(document).ready(function () {
                 768: {
                     slidesPerView: 2,
                 },
-                1024: {
+                992: {
                     slidesPerView: 3,
                 }
             }
@@ -190,7 +204,7 @@ $(document).ready(function () {
                         768: {
                             slidesPerView: 2,
                         },
-                        1024: {
+                        992: {
                             slidesPerView: 3,
                         }
                     }

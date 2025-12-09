@@ -1446,8 +1446,8 @@ body {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.8);
   border: none;
-  width: 131px;
-  height: 131px;
+  width: 10%;
+  padding-top: 9.92%;
   border-radius: 50%;
   cursor: pointer;
   left: 50%;
@@ -1457,17 +1457,19 @@ body {
 }
 
 .btn_play:before {
-  position: absolute;
   content: "";
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 19.5px 0 19.5px 30px;
-  border-color: transparent transparent transparent #000000;
-  margin-left: 5px;
+  position: absolute;
+  width: 25%;
+  height: 27%;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2030%2034%27%3E%3Cpath%20d%3D%27M29.2665%2016.897L0%2033.7941L0%200L29.2665%2016.897Z%27%20fill%3D%27currentColor%27/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  color: inherit;
+  margin-left: 4%;
   z-index: 1;
 }
 
@@ -2480,7 +2482,7 @@ form input {
 }
 
 .section-banner {
-  padding: 110px 110px;
+  padding: 110px 0 110px;
   background-color: #E4F1E8;
 }
 
@@ -2619,6 +2621,7 @@ form input {
 
 .slider-posts {
   max-width: 1200px;
+  width: 90%;
   padding: 15px 10px 15px;
 }
 
@@ -3686,8 +3689,8 @@ form input {
   }
 
   .container {
-    max-width: 1200px;
-    padding: 0 32px;
+    max-width: 1360px;
+    background-color: rosybrown;
   }
 
   .header .container {
@@ -3758,6 +3761,46 @@ form input {
   }
 }
 
+@media only screen and (max-width: 1280px) {
+  .menu {
+    font-size: 17px;
+  }
+
+  .menu__item {
+    padding-right: 20px;
+    margin-left: 20px;
+  }
+
+  .breadcrumb__item {
+    font-size: 17px;
+    margin-right: 12px;
+    padding-right: 20px;
+  }
+
+  .container {
+    padding: 0 32px;
+    background-color: greenyellow;
+  }
+
+  .footer {
+    font-size: 16px;
+  }
+
+  .footer__contacts,
+  .footer__title,
+  .footer__sub-menu {
+    font-size: 16px;
+  }
+
+  .footer__menu-general {
+    font-size: 17px;
+  }
+
+  .footer__logo-farm {
+    max-width: 171px;
+  }
+}
+
 @media only screen and (max-width: 1199px) {
   .month-block {
     width: 50vw;
@@ -3769,25 +3812,19 @@ form input {
   }
 }
 
-@media only screen and (max-width: 1180px) {
-  .menu {
-    font-size: 17px;
-  }
-
-  .breadcrumb__item {
-    font-size: 18px;
-    margin-right: 12px;
-    padding-right: 20px;
-  }
-
+@media only screen and (max-width:1024px) {
   .container {
-    max-width: 980px;
+    background-color: lightcoral;
   }
 }
 
 @media only screen and (max-width: 991px) {
   .heading_xxl {
     font-size: 72px;
+  }
+
+  .container {
+    max-width: 768px;
   }
 
   .section-banner {

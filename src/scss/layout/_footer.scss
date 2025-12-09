@@ -137,6 +137,7 @@
   padding-bottom: 50px;
   border-bottom: 1px solid variables.$green-100;
 }
+
 @include mixins.respond-to(variables.$xl) {
   .footer__contacts,
   .footer__title,
@@ -145,18 +146,34 @@
   }
 }
 
-//@include mixins.respond-to(variables.$sm) {
-//
-//}
+@include mixins.respond-to(variables.$screen-md) {
+  .footer {
+    font-size: 16px;
+  }
+  .footer__contacts,
+  .footer__title,
+  .footer__sub-menu {
+    font-size: 16px;
+  }
+  .footer__menu-general {
+    font-size: 17px;
+  }
+  .footer__logo-farm {
+    max-width: 171px;
+  }
+}
+
 //@include mixins.respond-to(variables.$xs) {
 
 //}
 @include mixins.respond-to(variables.$md) {
 
 }
+
 @include mixins.respond-to(variables.$sm) {
 
 }
+
 @include mixins.respond-to(variables.$xs) {
 
 }
