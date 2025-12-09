@@ -1945,135 +1945,12 @@ form input {
 }
 
 .calendar-wrapper {
-  padding-bottom: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
-  overflow: hidden;
-}
-
-.plant-calendar {
-  overflow: visible;
-  padding-bottom: 50px;
+  position: relative;
   margin-bottom: 50px;
-}
-
-.season-scrollbar {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 4px;
-  z-index: 1;
-}
-
-.season {
-  position: absolute;
-  display: flex;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  right: 0;
-  font-weight: 700;
-  font-size: 32px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #6E8396;
-}
-
-.season-label {
-  width: 25%;
-  text-align: center;
-}
-
-.scrollbar-track {
-  position: relative;
-  height: 60px;
-  border-radius: 0;
-  z-index: 1;
-}
-
-.scrollbar-track:before {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 100vw;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  bottom: 0;
-  background-color: #EFF2F5;
-  z-index: 0;
-}
-
-.month-ticks {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 31px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.month-ticks span {
-  width: 1px;
-  height: 19px;
-  background-color: #6E8396;
-}
-
-.month-ticks span:nth-child(3n+1) {
-  height: 31px;
-}
-
-.scrollbar-thumb-wrapper {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.swiper-scrollbar-drag {
-  position: relative;
-  width: 8.33% !important;
-  height: 60px;
-  border: 1px solid;
-  background: transparent;
-  cursor: grab;
-  overflow: visible;
-  z-index: 5;
-}
-
-.swiper-scrollbar-drag:after {
-  position: absolute;
-  content: "";
-  display: block;
-  bottom: 8px;
-  left: 0;
-  transform: translateX(-50%);
-  width: 1px;
-  height: 100vh;
-  background-color: #80C7FF;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.swiper-scrollbar-drag:before {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 150px;
-  height: 50px;
-  background-image: url("../assets/img/scroll-thumb.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  pointer-events: none;
-  z-index: 10;
 }
 
 .month-block {
   position: relative;
-  width: 352px;
 }
 
 .month-block:first-child:before,
@@ -2085,6 +1962,10 @@ form input {
   width: 1px;
   height: 100%;
   z-index: 1;
+}
+
+.month-block:first-child {
+  margin-left: 50px;
 }
 
 .month-block:first-child:before {
@@ -2126,6 +2007,7 @@ form input {
 .month-block .more-plants {
   display: flex;
   align-items: center;
+  white-space: initial;
 }
 
 .month-block .more-plants,
@@ -2156,31 +2038,6 @@ form input {
   background-color: #E9EEF2;
   box-shadow: none;
   margin-right: 15px;
-}
-
-.plant-calendar .swiper-scrollbar {
-  height: 60px !important;
-  width: 100%;
-  pointer-events: none;
-}
-
-.plant-calendar .swiper-scrollbar-drag {
-  pointer-events: all;
-}
-
-.plant-calendar .swiper-pagination-bullet {
-  width: 8.33% !important;
-  cursor: pointer;
-  pointer-events: all;
-  border: none;
-  background-color: transparent;
-}
-
-.plant-calendar .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 0;
-  height: 60px;
-  position: absolute;
-  z-index: 2;
 }
 
 .product-forms__card {
@@ -2805,6 +2662,10 @@ form input {
   overflow: hidden;
 }
 
+.section-flowering .calendar-wrapper {
+  position: relative;
+}
+
 .section-flowering .btn_main {
   font-weight: 400;
 }
@@ -3167,141 +3028,16 @@ form input {
 
 .month-wrap {
   background-color: #fff;
-  margin-top: 50px;
-  display: block;
   white-space: nowrap;
   position: relative;
 }
 
-.month-wrap .fancybox-container {
-  position: absolute;
-}
-
-.month-wrap .item-loading {
-  display: none;
-  background-color: #fff;
-}
-
-.month-wrap .fancybox-is-open .fancybox-bg {
-  opacity: 0.6;
-}
-
 .month-block {
-  padding: 45px;
-  width: 600px;
+  width: 25vw;
   display: inline-block;
   vertical-align: top;
   position: relative;
-}
-
-.month-block:before {
-  content: "";
-  height: 100vh;
-  width: 1px;
-  background-color: rgba(110, 131, 150, 0.3);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.month-block__items {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 40px;
-  justify-content: space-between;
-}
-
-.month-block__item {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  padding-right: 15px;
-}
-
-.month-block__item--more {
-  display: flex;
-  width: 50%;
-  flex-wrap: wrap;
-  margin-bottom: 15px;
-  padding-left: 20px;
-}
-
-.month-block__item > img {
-  height: 75px;
-  width: 75px;
-  border-radius: 50%;
-}
-
-.month-block__item .name-plants {
-  color: #878787;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 17px;
-  padding-left: 20px;
-  display: inline-block;
-  white-space: pre-wrap;
-}
-
-.month-block .month-block__title h5 {
-  font-size: 23px;
-  text-align: left;
-}
-
-.more-plants {
-  display: flex;
-  align-items: center;
-}
-
-.more-plants > h6 {
-  margin-left: 15px;
-  font-weight: 700;
-  transition: color 0.3s linear;
-}
-
-.more-plants > h6:hover {
-  color: #00a23d;
-}
-
-.more-plants__popup {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 0;
-  border-left: 6px solid #01579b;
-  margin: 0 !important;
-  width: 50%;
-  height: auto;
-  box-shadow: 0 0 20px 0 rgba(50, 69, 64, 0.5) inset;
-}
-
-.more-plants__popup .month-block:before {
-  content: "";
-  display: none;
-}
-
-.more-plants__popup .fancybox-close-small {
-  top: 35px;
-  right: 90px;
-  position: relative;
-}
-
-.more-plants__popup .fancybox-close-small:before {
-  content: "";
-  display: none;
-}
-
-.more-plants__popup .fancybox-close-small:after {
-  color: #00a23d;
-}
-
-.more-plants__popup .month-block__title {
-  border-bottom: 1px solid #e9eef2;
-  padding-bottom: 15px;
-}
-
-.fancybox-is-open .fancybox-bg {
-  opacity: 0.5;
+  padding-bottom: 45px;
 }
 
 .mCS-my-theme.mCSB_scrollTools .mCSB_dragger {
@@ -3351,7 +3087,7 @@ form input {
 }
 
 .mCS-my-theme.mCSB_scrollTools .mCSB_draggerRail {
-  background-color: #e9eef2;
+  background-color: #EFF2F5;
   height: 65px;
   display: flex;
   align-items: center;
@@ -3370,6 +3106,7 @@ form input {
   position: absolute;
   bottom: 0;
   left: 0;
+  background-color: #EFF2F5;
 }
 
 .mCSB_horizontal.mCSB_inside > .mCSB_container {
@@ -3378,7 +3115,6 @@ form input {
 
 .scroll-block {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   height: 65px;
   width: 100%;
@@ -3422,12 +3158,14 @@ form input {
 .scroll-items > h4 {
   width: 33%;
   height: 65px;
-  line-height: 65px;
   position: relative;
   display: block;
   color: #6e8396;
   font-weight: 700;
   text-align: center;
+  font-size: 32px;
+  line-height: 2;
+  text-transform: uppercase;
 }
 
 .scroll-items > h4:before {
@@ -3801,17 +3539,6 @@ form input {
   }
 }
 
-@media only screen and (max-width: 1199px) {
-  .month-block {
-    width: 50vw;
-  }
-
-  .more-plants__popup .fancybox-close-small {
-    right: 40px;
-    position: absolute;
-  }
-}
-
 @media only screen and (max-width:1024px) {
   .container {
     background-color: lightcoral;
@@ -3854,46 +3581,8 @@ form input {
     padding-top: 20px;
   }
 
-  .month-wrap .fancybox-container {
-    position: absolute;
-  }
-
-  .month-wrap .item-loading {
-    display: flex !important;
-    margin: 0;
-  }
-
-  .month-block:before {
-    display: none;
-  }
-
   .month-block {
     width: 100%;
-    padding: 20px 30px 0 20px;
-    border-left: 0;
-  }
-
-  .month-block:last-child {
-    padding-bottom: 0;
-  }
-
-  .month-block .month-block__title {
-    font-size: 20px;
-  }
-
-  .more-plants__popup {
-    width: 80%;
-    position: relative;
-    height: 50vh;
-  }
-
-  .more-plants__popup .month-block {
-    display: block !important;
-  }
-
-  .more-plants__popup .fancybox-close-small {
-    top: 15px;
-    right: 24px;
   }
 
   .scroll-block {
@@ -3917,42 +3606,16 @@ form input {
 
   .month-block {
     width: 100%;
-    padding: 20px 30px 0 20px;
-    border-left: 0;
-  }
-
-  .month-block:last-child {
-    padding-bottom: 0;
   }
 
   .month-block__items {
     margin-top: 20px;
   }
 
-  .month-block__item--more {
-    width: 100%;
-    margin-top: 20px;
-    padding-left: 20px;
-  }
-
   .month-block__item {
     width: 100%;
     padding: 0;
     justify-content: flex-start;
-  }
-
-  .month-block .month-block__title {
-    font-size: 17px;
-  }
-
-  .more-plants__popup {
-    overflow-y: scroll !important;
-    position: absolute;
-    top: 50%;
-    max-height: 70vh;
-    width: 90vw;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
 
@@ -3966,12 +3629,6 @@ form input {
   .container {
     width: 100%;
     padding: 0 10px;
-  }
-}
-
-@media only screen and (min-width: 1200px) and (max-width: 1310px) {
-  .more-plants__popup .fancybox-close-small {
-    float: right;
   }
 }
 /*# sourceMappingURL=main.css.map */
