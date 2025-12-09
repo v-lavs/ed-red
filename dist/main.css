@@ -2658,7 +2658,7 @@ form input {
 
 .section-flowering {
   padding-top: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   overflow: hidden;
 }
 
@@ -3378,6 +3378,43 @@ form input {
   margin-bottom: 25px;
 }
 
+.section-attractions {
+  padding-bottom: 100px;
+}
+
+.attraction {
+  display: flex;
+  margin: 0 -12px;
+}
+
+.attraction .part {
+  width: 50%;
+  padding: 0 12px;
+}
+
+.attraction__item {
+  margin-bottom: 50px;
+}
+
+.attraction__item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.35s;
+}
+
+.attraction__item a {
+  display: block;
+  overflow: hidden;
+}
+
+.attraction__item a:hover > img {
+  transform: scale(1.05);
+}
+
+.attraction__item:last-child {
+  margin-bottom: 0;
+}
+
 @media only screen and (max-width: 1439px) {
   body {
     font-size: 20px;
@@ -3428,7 +3465,6 @@ form input {
 
   .container {
     max-width: 1360px;
-    background-color: rosybrown;
   }
 
   .header .container {
@@ -3517,7 +3553,6 @@ form input {
 
   .container {
     padding: 0 32px;
-    background-color: greenyellow;
   }
 
   .footer {
@@ -3536,12 +3571,6 @@ form input {
 
   .footer__logo-farm {
     max-width: 171px;
-  }
-}
-
-@media only screen and (max-width:1024px) {
-  .container {
-    background-color: lightcoral;
   }
 }
 

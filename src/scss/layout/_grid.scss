@@ -9,17 +9,17 @@
 
   @include mixins.respond-to(variables.$xl){
     max-width: 1360px;
-    background-color: rosybrown;
+    //background-color: rosybrown;
   }
   @include mixins.respond-to(variables.$screen-md){
     //max-width: 1280px;
     padding: 0 32px;
-    background-color: greenyellow;
+    //background-color: greenyellow;
   }
   @include mixins.respond-to(variables.$lg){
     //max-width: 980px;
     //padding: 0 32px;
-     background-color: lightcoral;
+    // background-color: lightcoral;
   }
   @include mixins.respond-to(variables.$md){
     max-width: 768px;

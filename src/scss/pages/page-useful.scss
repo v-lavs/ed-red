@@ -21,6 +21,45 @@
   }
 }
 
+.section-attractions {
+  padding-bottom: 100px;
+}
+
+.attraction {
+  display: flex;
+  margin: 0 -12px;
+
+  .part {
+    width: 50%;
+    padding: 0 12px;
+  }
+
+  &__item {
+    margin-bottom: 50px;
+
+    img {
+      width: 100%;
+      height: auto;
+      transition: transform .35s;
+    }
+
+    a {
+      display: block;
+      overflow: hidden;
+      &:hover{
+      >  img{
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
 @include mixins.respond-to(variables.$xl) {
   .page-useful .section__slogan {
     font-size: 50px;
