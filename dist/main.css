@@ -1103,6 +1103,7 @@ body {
 
 .btn img {
   width: 100%;
+  max-width: 100%;
   display: inline-block;
 }
 
@@ -1539,6 +1540,12 @@ body {
   max-width: 260px;
   width: 100%;
   font-weight: 400;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.product .btn img {
+  max-width: 145px;
 }
 
 .product .btn:first-child {
