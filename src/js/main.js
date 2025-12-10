@@ -119,10 +119,10 @@ $(document).ready(function () {
             spaceBetween: 24,
             slidesPerView: 1,
             breakpoints: {
-                768: {
+                650: {
                     slidesPerView: 2,
                 },
-                992: {
+                1025: {
                     slidesPerView: 3,
                 }
             },
@@ -175,10 +175,10 @@ $(document).ready(function () {
                 prevEl: '.wrap-slider-posts .swiper-button-prev',
             },
             breakpoints: {
-                768: {
+                650: {
                     slidesPerView: 2,
                 },
-                992: {
+                1025: {
                     slidesPerView: 3,
                 }
             }
@@ -201,10 +201,10 @@ $(document).ready(function () {
                         prevEl: '.wrap-slider-posts  .swiper-button-prev',
                     },
                     breakpoints: {
-                        768: {
+                        650: {
                             slidesPerView: 2,
                         },
-                        992: {
+                        1025: {
                             slidesPerView: 3,
                         }
                     }

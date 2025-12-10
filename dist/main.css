@@ -1599,7 +1599,6 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  max-width: 421px;
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 2px 7.6px 0 rgba(0, 0, 0, 0.25);
@@ -3418,13 +3417,6 @@ form input {
   margin-bottom: 0;
 }
 
-@media only screen and (min-width: 320px) {
-  .container {
-    width: 100%;
-    padding: 0 10px;
-  }
-}
-
 @media only screen and (max-width: 1439px) {
   body {
     font-size: 20px;
@@ -3456,6 +3448,10 @@ form input {
     line-height: 1.43;
   }
 
+  .card-product__title {
+    font-size: clamp(26px, 26px + 4 * (100vw - 1025px) / 414, 30px);
+  }
+
   .tabs__nav-link {
     font-size: 36px;
   }
@@ -3471,10 +3467,6 @@ form input {
   form,
   .checkbox-wrap {
     font-size: 18px;
-  }
-
-  .container {
-    max-width: 1360px;
   }
 
   .header .container {
@@ -3545,7 +3537,7 @@ form input {
   }
 }
 
-@media only screen and (max-width: 1279px) {
+@media only screen and (max-width: 1280px) {
   .menu {
     font-size: 17px;
   }
@@ -3559,10 +3551,6 @@ form input {
     font-size: 17px;
     margin-right: 12px;
     padding-right: 20px;
-  }
-
-  .container {
-    padding: 0 32px;
   }
 
   .footer {
@@ -3584,13 +3572,15 @@ form input {
   }
 }
 
+@media only screen and (max-width:1024px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
 @media only screen and (max-width: 991px) {
   .heading_xxl {
     font-size: 72px;
-  }
-
-  .container {
-    max-width: 768px;
   }
 
   .section-banner {
@@ -3631,7 +3621,7 @@ form input {
 
 @media only screen and (max-width: 767px) {
   .container {
-    max-width: 580px;
+    padding: 0 24px;
   }
 
   .section-products .swiper-wrapper {
@@ -3658,9 +3648,15 @@ form input {
   }
 }
 
-@media only screen and (max-width: 580px) {
+@media screen and (max-width: 750px) {
+  .card-product__title {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
   .container {
-    max-width: 420px;
+    padding: 0 10px;
   }
 }
 /*# sourceMappingURL=main.css.map */

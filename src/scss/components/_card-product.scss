@@ -89,9 +89,15 @@
 
 @include mixins.respond-to(variables.$xl) {
   .card-product {
-
     &__title {
-      //font-size: 34px;
+      font-size: clamp(26px,calc(26px + 4 * ((100vw - 1025px) / 414)), 30px);
+    }
+  }
+}
+@media screen and (max-width: 750px){
+  .card-product {
+    &__title {
+      font-size: 28px;
     }
   }
 }
