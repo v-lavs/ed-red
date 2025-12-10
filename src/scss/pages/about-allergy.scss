@@ -86,3 +86,13 @@
     }
   }
 }
+@include mixins.respond-to(variables.$sm) {
+  .section-promo,
+  .section-img-bg .section__title,
+  .section-img-bg {
+    text-align: center;
+  }
+  .section-promo {
+
+  }
+}

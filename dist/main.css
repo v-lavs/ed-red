@@ -2323,6 +2323,14 @@ form input {
   font-size: 22px;
 }
 
+.footer__contacts a {
+  display: inline-block;
+}
+
+.footer__contacts a:hover {
+  text-decoration: underline;
+}
+
 .footer_bottom {
   font-size: 16px;
   line-height: 2;
@@ -2441,6 +2449,10 @@ form input {
 .category__icon img {
   width: 100%;
   height: auto;
+}
+
+.allergen-toggle-btn {
+  display: none;
 }
 
 .allergen-list {
@@ -3633,6 +3645,14 @@ form input {
     margin-left: auto;
   }
 
+  .footer__contacts {
+    width: 60%;
+  }
+
+  .footer__logo-farm {
+    max-width: 136px;
+  }
+
   .section-banner .container {
     flex-wrap: wrap;
     position: relative;
@@ -3742,6 +3762,22 @@ form input {
     padding: 0 24px;
   }
 
+  .footer__nav {
+    flex-wrap: wrap;
+  }
+
+  .footer__menu-general li {
+    text-align: left;
+  }
+
+  .footer__nav-item {
+    width: 33.33%;
+  }
+
+  .footer__nav-item:last-child {
+    width: 100%;
+  }
+
   .section-products .swiper-wrapper {
     justify-content: flex-start;
   }
@@ -3749,6 +3785,53 @@ form input {
   .section-products .product {
     max-width: 100%;
     width: 100%;
+  }
+
+  .allergen-list {
+    justify-content: flex-start;
+  }
+
+  .allergen-toggle-btn {
+    display: block;
+    margin: 0 auto 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+  }
+
+  .allergen-toggle-btn span {
+    display: block;
+  }
+
+  .allergen-toggle-btn .load_more {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-size: 35px 35px;
+    margin-bottom: 14px;
+  }
+
+  .allergen-item {
+    width: 33.33%;
+  }
+
+  .allergen-item__image {
+    min-width: 60px;
+    width: 60%;
+    height: auto;
+  }
+
+  .allergen-list[data-collapsed=true] .allergen-item:nth-child(n+7) {
+    display: none;
+  }
+
+  .category.open .load_more {
+    transform: rotate(45deg);
   }
 
   .month-block {
@@ -3763,6 +3846,12 @@ form input {
     width: 100%;
     padding: 0;
     justify-content: flex-start;
+  }
+
+  .section-promo,
+  .section-img-bg .section__title,
+  .section-img-bg {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=main.css.map */

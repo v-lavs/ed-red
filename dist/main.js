@@ -331,6 +331,65 @@ $(document).ready(function () {
     $('.search-form').on('submit', function() {
         console.log('Form submitted:', $(this).serialize());
     });
+
+// CATEGORY HIDE CONTENT
+    function initAllergenToggle() {
+        if ($(window).width() > 767) return; // працюємо лише на мобільних
+
+        $('.category').each(function () {
+            const $category = $(this);
+            const $list = $category.find('.allergen-list');
+            const $btn = $category.find('.allergen-toggle-btn');
+
+            if (!$list.length || !$btn.length) return;
+
+            const itemsCount = $list.children('.allergen-item').length;
+
+            if (itemsCount <= 6) {
+                $btn.hide();
+            } else {
+                $btn.show();
+            }
+
+            $list.children('.allergen-item').each(function (i) {
+                if (i >= 6) $(this).hide();
+            });
+
+            $list.attr('data-collapsed', 'true');
+            $category.removeClass('open');
+
+
+            $btn.off('click').on('click', function () {
+                const collapsed = $list.attr('data-collapsed') === "true";
+
+                const $text = $btn.find('.btn-text');
+
+                if (collapsed) {
+                    $list.attr('data-collapsed', 'false');
+                    $list.children('.allergen-item').slideDown(200);
+                    $category.addClass('open');
+                    $text.text('Закрити');
+                } else {
+                    $list.attr('data-collapsed', 'true');
+                    $list.children('.allergen-item').slice(6).slideUp(200);
+                    $category.removeClass('open');
+                    $text.text('Дивитись більше');
+                }
+            });
+
+        });
+    }
+
+    initAllergenToggle();
+
+    $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function () {
+        initAllergenToggle();
+    });
+
+    $(window).on('resize', function () {
+        initAllergenToggle();
+    });
+
 // FLOWERING CALENDAR
 
 

@@ -1,25 +1,29 @@
 @use "../../utils/mixins";
 @use "../../utils/variables";
 
-.section-calendar{
+.section-calendar {
   background-color: variables.$light-gray-100;
   padding: 67px 0 0;
   overflow: hidden;
-  .section__title{
+
+  .section__title {
     margin-bottom: 10px;
     text-align: left;
   }
-  .sub-title{
+
+  .sub-title {
     line-height: 1.67;
   }
 }
-.category{
-  &__heading{
+
+.category {
+  &__heading {
     position: relative;
     display: flex;
     align-items: flex-end;
     padding-left: 110px;
-    &:after{
+
+    &:after {
       content: '';
       position: absolute;
       left: 50%;
@@ -30,31 +34,40 @@
       transform: translateX(-50%);
     }
   }
-  &__title{
+
+  &__title {
     font-weight: 700;
     font-size: 30px;
     line-height: 1;
     margin-right: 76px;
     margin-bottom: 23px;
   }
-  &__icon{
+
+  &__icon {
     width: 82px;
     height: 82px;
     display: flex;
     align-items: flex-end;
-    img{
+
+    img {
       width: 100%;
       height: auto;
     }
   }
 }
-.allergen-list{
+
+.allergen-toggle-btn {
+  display: none;
+}
+
+.allergen-list {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 40px 0 25px;
 }
-.allergen-item{
+
+.allergen-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -65,7 +78,7 @@
   text-align: center;
   color: #000;
 
-  &__image{
+  &__image {
     width: 116px;
     height: 116px;
     border-radius: 50%;
@@ -73,3 +86,47 @@
   }
 }
 
+@include mixins.respond-to(variables.$sm) {
+  .allergen-list {
+    justify-content: flex-start;
+  }
+  .allergen-toggle-btn {
+    display: block;
+    margin: 0 auto 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+
+    span {
+      display: block;
+    }
+
+    .load_more {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      background-size: 35px 35px;
+      margin-bottom: 14px;
+    }
+  }
+  .allergen-item {
+    width: 33.33%;
+
+    &__image {
+      min-width: 60px;
+      width: 60%;
+      height: auto;
+    }
+  }
+  .allergen-list[data-collapsed="true"] .allergen-item:nth-child(n+7) {
+    display: none;
+  }
+  .category.open .load_more {
+    transform: rotate(45deg);
+  }
+}
