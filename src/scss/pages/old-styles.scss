@@ -15,11 +15,13 @@
 
 .month-block {
   //width: calc(1200px / 2);
-  width: calc(100vw / 4);
+  width: calc(1440px / 4);
   display: inline-block;
   vertical-align: top;
   position: relative;
   padding-bottom: 45px;
+  height: auto;
+  flex-grow: 1;
 }
 
 
@@ -132,7 +134,8 @@
 }
 
 .mCSB_horizontal.mCSB_inside>.mCSB_container {
-  margin-bottom: 65px
+  margin-bottom: 65px;
+  display: flex;
 }
 
 .scroll-block {

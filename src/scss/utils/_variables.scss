@@ -17,12 +17,12 @@ $main-font: "Montserrat", sans-serif;
 
 // Screen Variables
 
-$xxs: '(max-width: 420px)';
+$xxs: '(min-width: 320px)';
 $xs: '(max-width: 580px)';
 $sm: '(max-width: 767px)';
 $md: '(max-width: 991px)';
-$lg: '(max-width:1024px)';
-$screen-md: '(max-width: 1280px)';
+$lg: '(max-width:1023px)';
+$screen-md: '(max-width: 1279px)';
 $xl: '(max-width: 1439px)';
 
 
