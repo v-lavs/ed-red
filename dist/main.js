@@ -10,7 +10,8 @@ function destroySwiper(sliderInstance) {
         console.log('destroy')
     }
 }
-function initAllergenToggle() {
+
+function initAllergenCategory() {
     const isMobile = $(window).width() <= 767;
 
     $('.category').each(function () {
@@ -64,6 +65,16 @@ function initAllergenToggle() {
         });
     });
 }
+
+function initVisibleTabAllergens() {
+    const $activeTab = $('.tab-pane.active:visible');
+    if (!$activeTab.length) return;
+
+    $activeTab.find('.category').each(function () {
+        initAllergenCategory($(this));
+    });
+}
+
 
 $(document).ready(function () {
     //MOBILE MENU
@@ -166,8 +177,8 @@ $(document).ready(function () {
     });
 
 //CORE-SLIDER
-    if($('.products').get(0)){
-        const  sliderProduct = new Swiper('.slider-products', {
+    if ($('.products').get(0)) {
+        const sliderProduct = new Swiper('.slider-products', {
             spaceBetween: 24,
             slidesPerView: 1,
             breakpoints: {
@@ -326,6 +337,7 @@ $(document).ready(function () {
                     tabsSlider.update();
                 }
             }
+            setTimeout(() => initVisibleTabAllergens(), 20);
         });
 
         const first = panes.filter('.active');
@@ -380,16 +392,12 @@ $(document).ready(function () {
         $('.search-form .form-control').val('');
         $('.search-form').removeClass('active');
     });
-    $('.search-form').on('submit', function() {
+    $('.search-form').on('submit', function () {
         console.log('Form submitted:', $(this).serialize());
     });
 
 // CATEGORY HIDE CONTENT
-    initAllergenToggle();
-
-    $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function () {
-        initAllergenToggle();
-    });
+    initVisibleTabAllergens();
 
 // COUNT-UP
     const numbers = document.querySelectorAll('.counter__number');
@@ -437,6 +445,6 @@ $(document).ready(function () {
 
 
 $(window).on('resize', function () {
-    initAllergenToggle();
+    initVisibleTabAllergens();
 });
 //# sourceMappingURL=main.js.map

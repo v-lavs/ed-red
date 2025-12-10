@@ -2417,6 +2417,10 @@ form input {
   line-height: 1.67;
 }
 
+.category {
+  text-align: center;
+}
+
 .category__heading {
   position: relative;
   display: flex;
