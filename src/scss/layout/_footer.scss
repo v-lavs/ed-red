@@ -112,8 +112,10 @@
   &__contacts {
     max-width: 755px;
     font-size: 22px;
+
     a {
       display: inline-block;
+
       &:hover {
         text-decoration: underline;
       }
@@ -142,6 +144,10 @@
 .block-subscribe {
   padding-bottom: 50px;
   border-bottom: 1px solid variables.$green-100;
+
+  .heading_md {
+    font-weight: 400;
+  }
 }
 
 @include mixins.respond-to(variables.$xl) {
@@ -174,9 +180,9 @@
   .footer__contacts {
     width: 60%;
   }
-  .footer__logo-farm{
-  max-width: 136px;
-}
+  .footer__logo-farm {
+    max-width: 136px;
+  }
 }
 
 @include mixins.respond-to(variables.$sm) {

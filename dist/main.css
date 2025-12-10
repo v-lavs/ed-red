@@ -2353,6 +2353,10 @@ form input {
   border-bottom: 1px solid #7EA68C;
 }
 
+.block-subscribe .heading_md {
+  font-weight: 400;
+}
+
 .section-banner {
   padding: 110px 0 110px;
   background-color: #E4F1E8;
@@ -2452,12 +2456,22 @@ form input {
 }
 
 .allergen-toggle-btn {
-  display: none;
+  display: none !important;
+  margin: 0 auto 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
 }
 
 .allergen-list {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
   padding: 40px 0 25px;
 }
@@ -2466,7 +2480,7 @@ form input {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 216px;
+  width: 20%;
   padding: 0 15px;
   margin-bottom: 30px;
   font-weight: 500;
@@ -2736,6 +2750,7 @@ form input {
   text-align: center;
 }
 
+.wrap-slider-products,
 .wrap-slider-posts {
   width: 100%;
   position: relative;
@@ -3787,29 +3802,16 @@ form input {
     width: 100%;
   }
 
-  .allergen-list {
-    justify-content: flex-start;
-  }
-
   .allergen-toggle-btn {
-    display: block;
-    margin: 0 auto 30px;
-    padding-bottom: 30px;
-    text-align: center;
-    color: #000;
-    font-size: 20px;
-    font-weight: 500;
-    justify-content: center;
-    border: none;
-    background-color: transparent;
+    display: flex !important;
   }
 
-  .allergen-toggle-btn span {
+  .allergen-toggle-btn .btn-text {
     display: block;
   }
 
   .allergen-toggle-btn .load_more {
-    display: inline-block;
+    display: block;
     width: 60px;
     height: 60px;
     background-size: 35px 35px;
@@ -3824,10 +3826,6 @@ form input {
     min-width: 60px;
     width: 60%;
     height: auto;
-  }
-
-  .allergen-list[data-collapsed=true] .allergen-item:nth-child(n+7) {
-    display: none;
   }
 
   .category.open .load_more {
@@ -3852,6 +3850,12 @@ form input {
   .section-img-bg .section__title,
   .section-img-bg {
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .container {
+    padding: 0 16px;
   }
 }
 /*# sourceMappingURL=main.css.map */

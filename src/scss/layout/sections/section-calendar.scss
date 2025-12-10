@@ -57,12 +57,22 @@
 }
 
 .allergen-toggle-btn {
-  display: none;
+  display: none!important;
+  margin: 0 auto 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
 }
 
 .allergen-list {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
   padding: 40px 0 25px;
 }
@@ -71,7 +81,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 216px;
+  width: 20%;
   padding: 0 15px;
   margin-bottom: 30px;
   font-weight: 500;
@@ -87,27 +97,16 @@
 }
 
 @include mixins.respond-to(variables.$sm) {
-  .allergen-list {
-    justify-content: flex-start;
-  }
-  .allergen-toggle-btn {
-    display: block;
-    margin: 0 auto 30px;
-    padding-bottom: 30px;
-    text-align: center;
-    color: #000;
-    font-size: 20px;
-    font-weight: 500;
-    justify-content: center;
-    border: none;
-    background-color: transparent;
 
-    span {
+  .allergen-toggle-btn {
+    display: flex!important;
+
+    .btn-text{
       display: block;
     }
 
     .load_more {
-      display: inline-block;
+      display: block;
       width: 60px;
       height: 60px;
       background-size: 35px 35px;
@@ -123,9 +122,7 @@
       height: auto;
     }
   }
-  .allergen-list[data-collapsed="true"] .allergen-item:nth-child(n+7) {
-    display: none;
-  }
+
   .category.open .load_more {
     transform: rotate(45deg);
   }

@@ -131,8 +131,8 @@ $(document).ready(function () {
                 clickable: true,
             },
             navigation: {
-                nextEl: '.wrap-slider-posts  .swiper-button-next',
-                prevEl: '.wrap-slider-posts  .swiper-button-prev',
+                nextEl: '.wrap-slider-products  .swiper-button-next',
+                prevEl: '.wrap-slider-products  .swiper-button-prev',
             },
             watchOverflow: true,
         });
@@ -144,7 +144,7 @@ $(document).ready(function () {
             const next = document.querySelector('.swiper-button-next');
             const prev = document.querySelector('.swiper-button-prev');
 
-            const show = !sliderProduct.isLocked; // isLocked = true якщо слайдів недостатньо
+            const show = !sliderProduct.isLocked;
 
             next.style.display = show ? '' : 'none';
             prev.style.display = show ? '' : 'none';
@@ -334,7 +334,7 @@ $(document).ready(function () {
 
 // CATEGORY HIDE CONTENT
     function initAllergenToggle() {
-        if ($(window).width() > 767) return;
+        const isMobile = $(window).width() <= 767;
 
         $('.category').each(function () {
             const $category = $(this);
@@ -343,40 +343,48 @@ $(document).ready(function () {
 
             if (!$list.length || !$btn.length) return;
 
-            const itemsCount = $list.children('.allergen-item').length;
+            const $items = $list.children('.allergen-item');
+            const itemsCount = $items.length;
 
+            // === DESKTOP MODE ===
+            if (!isMobile) {
+                $items.show();
+                $btn.show();
+                $list.removeAttr('data-collapsed');
+                $category.removeClass('open');
+                return;
+            }
+
+            // === MOBILE MODE ===
             if (itemsCount <= 6) {
                 $btn.hide();
             } else {
                 $btn.show();
             }
 
-            $list.children('.allergen-item').each(function (i) {
+            $items.each(function (i) {
                 if (i >= 6) $(this).hide();
             });
 
             $list.attr('data-collapsed', 'true');
             $category.removeClass('open');
 
-
             $btn.off('click').on('click', function () {
                 const collapsed = $list.attr('data-collapsed') === "true";
-
                 const $text = $btn.find('.btn-text');
 
                 if (collapsed) {
                     $list.attr('data-collapsed', 'false');
-                    $list.children('.allergen-item').slideDown(600);
+                    $items.slideDown(200);
                     $category.addClass('open');
                     $text.text('Закрити');
                 } else {
                     $list.attr('data-collapsed', 'true');
-                    $list.children('.allergen-item').slice(6).slideUp(600);
+                    $items.slice(6).slideUp(200);
                     $category.removeClass('open');
                     $text.text('Дивитись більше');
                 }
             });
-
         });
     }
 
@@ -389,6 +397,44 @@ $(document).ready(function () {
     $(window).on('resize', function () {
         initAllergenToggle();
     });
+// COUNT-UP
+    const numbers = document.querySelectorAll('.counter__number');
+
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+    };
+
+    const animateNumber = (el, duration = 2000) => {
+        const target = +el.getAttribute('data-target');
+        const prefix = el.getAttribute('data-prefix') || '';
+        const suffix = el.getAttribute('data-suffix') || '';
+        let start = 0;
+        const startTime = performance.now();
+
+        const step = (currentTime) => {
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            const value = Math.floor(progress * target);
+            el.textContent = prefix + value + suffix;
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            }
+        };
+
+        requestAnimationFrame(step);
+    };
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateNumber(entry.target, 2000); // анімація 2 секунди
+                obs.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    numbers.forEach(num => observer.observe(num));
 
 // FLOWERING CALENDAR
 
