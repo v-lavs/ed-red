@@ -334,7 +334,7 @@ $(document).ready(function () {
 
 // CATEGORY HIDE CONTENT
     function initAllergenToggle() {
-        if ($(window).width() > 767) return; // працюємо лише на мобільних
+        if ($(window).width() > 767) return;
 
         $('.category').each(function () {
             const $category = $(this);
@@ -366,12 +366,12 @@ $(document).ready(function () {
 
                 if (collapsed) {
                     $list.attr('data-collapsed', 'false');
-                    $list.children('.allergen-item').slideDown(200);
+                    $list.children('.allergen-item').slideDown(600);
                     $category.addClass('open');
                     $text.text('Закрити');
                 } else {
                     $list.attr('data-collapsed', 'true');
-                    $list.children('.allergen-item').slice(6).slideUp(200);
+                    $list.children('.allergen-item').slice(6).slideUp(600);
                     $category.removeClass('open');
                     $text.text('Дивитись більше');
                 }
