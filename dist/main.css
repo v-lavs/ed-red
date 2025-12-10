@@ -3033,11 +3033,13 @@ form input {
 }
 
 .month-block {
-  width: 25vw;
+  width: 360px;
   display: inline-block;
   vertical-align: top;
   position: relative;
   padding-bottom: 45px;
+  height: auto;
+  flex-grow: 1;
 }
 
 .mCS-my-theme.mCSB_scrollTools .mCSB_dragger {
@@ -3111,6 +3113,7 @@ form input {
 
 .mCSB_horizontal.mCSB_inside > .mCSB_container {
   margin-bottom: 65px;
+  display: flex;
 }
 
 .scroll-block {
@@ -3415,6 +3418,13 @@ form input {
   margin-bottom: 0;
 }
 
+@media only screen and (min-width: 320px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
 @media only screen and (max-width: 1439px) {
   body {
     font-size: 20px;
@@ -3535,7 +3545,7 @@ form input {
   }
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1279px) {
   .menu {
     font-size: 17px;
   }
@@ -3651,13 +3661,6 @@ form input {
 @media only screen and (max-width: 580px) {
   .container {
     max-width: 420px;
-  }
-}
-
-@media only screen and (max-width: 420px) {
-  .container {
-    width: 100%;
-    padding: 0 10px;
   }
 }
 /*# sourceMappingURL=main.css.map */
