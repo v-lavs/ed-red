@@ -2456,7 +2456,7 @@ form input {
 }
 
 .allergen-toggle-btn {
-  display: none !important;
+  display: none;
   margin: 0 auto 30px;
   padding-bottom: 30px;
   text-align: center;
@@ -2468,6 +2468,17 @@ form input {
   justify-content: center;
   border: none;
   background-color: transparent;
+}
+
+.allergen-toggle-btn .btn-text {
+  display: block;
+}
+
+.allergen-toggle-btn .load_more {
+  width: 60px;
+  height: 60px;
+  background-size: 35px 35px;
+  margin-bottom: 14px;
 }
 
 .allergen-list {
@@ -3762,6 +3773,12 @@ form input {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .allergen-item {
+    width: 25%;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .heading_xxl {
     font-size: clamp(34px, 34px + 30 * (100vw - 320px) / 447, 64px);
@@ -3803,19 +3820,7 @@ form input {
   }
 
   .allergen-toggle-btn {
-    display: flex !important;
-  }
-
-  .allergen-toggle-btn .btn-text {
-    display: block;
-  }
-
-  .allergen-toggle-btn .load_more {
-    display: block;
-    width: 60px;
-    height: 60px;
-    background-size: 35px 35px;
-    margin-bottom: 14px;
+    display: flex;
   }
 
   .allergen-item {

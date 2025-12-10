@@ -10,6 +10,60 @@ function destroySwiper(sliderInstance) {
         console.log('destroy')
     }
 }
+function initAllergenToggle() {
+    const isMobile = $(window).width() <= 767;
+
+    $('.category').each(function () {
+        const $category = $(this);
+        const $list = $category.find('.allergen-list');
+        const $btn = $category.find('.allergen-toggle-btn');
+
+        if (!$list.length || !$btn.length) return;
+
+        const $items = $list.children('.allergen-item');
+        const itemsCount = $items.length;
+
+        // === DESKTOP MODE ===
+        if (!isMobile) {
+            $items.show();
+            $btn.hide();
+            $list.removeAttr('data-collapsed');
+            $category.removeClass('open');
+            return;
+        }
+
+        // === MOBILE MODE ===
+        if (itemsCount <= 6) {
+            $btn.hide();
+        } else {
+            $btn.show();
+        }
+
+        $items.each(function (i) {
+            if (i >= 6) $(this).hide();
+        });
+
+        $list.attr('data-collapsed', 'true');
+        $category.removeClass('open');
+
+        $btn.off('click').on('click', function () {
+            const collapsed = $list.attr('data-collapsed') === "true";
+            const $text = $btn.find('.btn-text');
+
+            if (collapsed) {
+                $list.attr('data-collapsed', 'false');
+                $items.slideDown(200);
+                $category.addClass('open');
+                $text.text('Закрити');
+            } else {
+                $list.attr('data-collapsed', 'true');
+                $items.slice(6).slideUp(200);
+                $category.removeClass('open');
+                $text.text('Дивитись більше');
+            }
+        });
+    });
+}
 
 $(document).ready(function () {
     //MOBILE MENU
@@ -77,8 +131,6 @@ $(document).ready(function () {
             promotionVideo.controls = false
         });
     }
-
-    //MODAL
 
 //SLIDER
     let sliderCounter;
@@ -333,70 +385,12 @@ $(document).ready(function () {
     });
 
 // CATEGORY HIDE CONTENT
-    function initAllergenToggle() {
-        const isMobile = $(window).width() <= 767;
-
-        $('.category').each(function () {
-            const $category = $(this);
-            const $list = $category.find('.allergen-list');
-            const $btn = $category.find('.allergen-toggle-btn');
-
-            if (!$list.length || !$btn.length) return;
-
-            const $items = $list.children('.allergen-item');
-            const itemsCount = $items.length;
-
-            // === DESKTOP MODE ===
-            if (!isMobile) {
-                $items.show();
-                $btn.show();
-                $list.removeAttr('data-collapsed');
-                $category.removeClass('open');
-                return;
-            }
-
-            // === MOBILE MODE ===
-            if (itemsCount <= 6) {
-                $btn.hide();
-            } else {
-                $btn.show();
-            }
-
-            $items.each(function (i) {
-                if (i >= 6) $(this).hide();
-            });
-
-            $list.attr('data-collapsed', 'true');
-            $category.removeClass('open');
-
-            $btn.off('click').on('click', function () {
-                const collapsed = $list.attr('data-collapsed') === "true";
-                const $text = $btn.find('.btn-text');
-
-                if (collapsed) {
-                    $list.attr('data-collapsed', 'false');
-                    $items.slideDown(200);
-                    $category.addClass('open');
-                    $text.text('Закрити');
-                } else {
-                    $list.attr('data-collapsed', 'true');
-                    $items.slice(6).slideUp(200);
-                    $category.removeClass('open');
-                    $text.text('Дивитись більше');
-                }
-            });
-        });
-    }
-
     initAllergenToggle();
 
     $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function () {
         initAllergenToggle();
     });
 
-    $(window).on('resize', function () {
-        initAllergenToggle();
-    });
 // COUNT-UP
     const numbers = document.querySelectorAll('.counter__number');
 
@@ -441,3 +435,7 @@ $(document).ready(function () {
 
 });
 
+
+$(window).on('resize', function () {
+    initAllergenToggle();
+});

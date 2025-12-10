@@ -57,7 +57,7 @@
 }
 
 .allergen-toggle-btn {
-  display: none!important;
+  display: none;
   margin: 0 auto 30px;
   padding-bottom: 30px;
   text-align: center;
@@ -69,6 +69,17 @@
   justify-content: center;
   border: none;
   background-color: transparent;
+
+  .btn-text{
+    display: block;
+  }
+
+  .load_more {
+    width: 60px;
+    height: 60px;
+    background-size: 35px 35px;
+    margin-bottom: 14px;
+  }
 }
 
 .allergen-list {
@@ -95,23 +106,15 @@
     margin-bottom: 14px;
   }
 }
-
+@media screen and (max-width: 800px){
+  .allergen-item {
+    width: 25%;
+  }
+}
 @include mixins.respond-to(variables.$sm) {
 
   .allergen-toggle-btn {
-    display: flex!important;
-
-    .btn-text{
-      display: block;
-    }
-
-    .load_more {
-      display: block;
-      width: 60px;
-      height: 60px;
-      background-size: 35px 35px;
-      margin-bottom: 14px;
-    }
+    display: flex;
   }
   .allergen-item {
     width: 33.33%;
