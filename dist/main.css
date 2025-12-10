@@ -3648,12 +3648,6 @@ form input {
   }
 }
 
-@media screen and (max-width: 750px) {
-  .card-product__title {
-    font-size: 28px;
-  }
-}
-
 @media only screen and (max-width: 420px) {
   .container {
     padding: 0 10px;
