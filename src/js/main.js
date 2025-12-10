@@ -15,13 +15,13 @@ $(document).ready(function () {
     //MOBILE MENU
     const nav = $('.header__nav');
 
-    $('.btn-burger').click(function (e) {
+    $('.btn_burger').click(function (e) {
         e.preventDefault();
         nav.addClass('open');
         jQuery('.backdrop').fadeIn();
     });
 
-    $('.btn-close, .backdrop').click(function (e) {
+    $('.btn_close, .backdrop').click(function (e) {
         e.preventDefault();
         nav.removeClass('open');
         jQuery('.backdrop').fadeOut();

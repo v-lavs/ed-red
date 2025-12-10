@@ -29,10 +29,6 @@
     }
   }
 
-
-  @include mixins.respond-to(variables.$md) {
-
-  }
 }
 
 .btn_burger {
@@ -40,10 +36,10 @@
   background-color: transparent;
   display: none;
   height: 27px;
-
+  margin-left: 24px;
   .line {
     display: block;
-    width: 37px;
+    width: 30px;
     height: 4px;
     margin-bottom: 5px;
     background-color: variables.$green;
@@ -75,10 +71,33 @@
   z-index: 500;
 }
 
-@include mixins.respond-to(variables.$xl) {
+
+@include mixins.respond-to(variables.$md) {
   .header {
-    .container {
-      max-width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .container{
+      align-items: center;
     }
+    &__nav {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -30px;
+      transform: translateY(-100%);
+      transition: transform .35s;
+      background-color: #FFFFFF;
+
+      &.open {
+        transform: translateY(0);
+      }
+    }
+  }
+  .btn_burger,
+  .btn_close{
+    display: block;
+  }
+  .search_open{
+    margin-left: auto;
   }
 }

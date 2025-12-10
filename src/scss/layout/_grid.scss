@@ -32,7 +32,7 @@
     //max-width: 420px;
   }
   @include mixins.respond-to(variables.$xxs){
-    padding: 0 10px;
+
   }
 }
 

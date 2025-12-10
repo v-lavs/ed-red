@@ -47,3 +47,11 @@
     z-index: 1;
   }
 }
+
+@include mixins.respond-to(variables.$sm) {
+  .btn_play {
+    width: 69px;
+    height: 69px;
+    padding-top: 0;
+  }
+}

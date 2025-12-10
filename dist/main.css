@@ -2175,11 +2175,12 @@ form input {
   background-color: transparent;
   display: none;
   height: 27px;
+  margin-left: 24px;
 }
 
 .btn_burger .line {
   display: block;
-  width: 37px;
+  width: 30px;
   height: 4px;
   margin-bottom: 5px;
   background-color: #007934;
@@ -2499,6 +2500,7 @@ form input {
 
 .slider-info .swiper-slide {
   display: flex;
+  height: auto;
 }
 
 .slider-info .heading_lg {
@@ -2539,7 +2541,7 @@ form input {
   top: 0;
   left: -60px;
   width: 100%;
-  height: 100%;
+  height: calc(100% + 2px);
   background: #FFFFFF;
   transform: skewX(-10deg);
   transform-origin: right;
@@ -3476,10 +3478,6 @@ form input {
     font-size: 18px;
   }
 
-  .header .container {
-    max-width: 100%;
-  }
-
   .footer__contacts,
   .footer__title,
   .footer__sub-menu {
@@ -3567,11 +3565,11 @@ form input {
   .footer__contacts,
   .footer__title,
   .footer__sub-menu {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .footer__menu-general {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .footer__logo-farm {
@@ -3580,18 +3578,59 @@ form input {
 }
 
 @media only screen and (max-width:1024px) {
+  .main {
+    padding-top: 100px;
+  }
+
   .container {
     padding: 0 32px;
   }
 }
 
 @media only screen and (max-width: 991px) {
-  .heading_xxl {
-    font-size: 72px;
+  .main {
+    padding-top: 96px;
   }
 
-  .section-banner {
-    padding-top: 0;
+  .heading_md {
+    font-size: 21px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .header .container {
+    align-items: center;
+  }
+
+  .header__nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -30px;
+    transform: translateY(-100%);
+    transition: transform 0.35s;
+    background-color: #FFFFFF;
+  }
+
+  .header__nav.open {
+    transform: translateY(0);
+  }
+
+  .btn_burger,
+  .btn_close {
+    display: block;
+  }
+
+  .search_open {
+    margin-left: auto;
   }
 
   .section-banner .container {
@@ -3602,13 +3641,62 @@ form input {
   .section-banner .btn {
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: -50px;
     left: 0;
     right: 0;
   }
 
   .section-banner .part {
     width: 100%;
+  }
+
+  .section-banner .part_right {
+    padding-bottom: 50px;
+  }
+
+  .section-banner .part_right img {
+    max-width: 437px;
+    margin: 0 auto;
+  }
+
+  .section-info .container {
+    padding-left: 0;
+  }
+
+  .slider-info .swiper-nav {
+    bottom: 0;
+  }
+
+  .slider-info .part_right {
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 476px;
+  }
+
+  .slider-info .btn_main {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+  }
+
+  .section-question .d-flex {
+    flex-wrap: wrap;
+  }
+
+  .section-question .section__heading {
+    width: 100%;
+    max-width: 644px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .section-question .section__content {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .section-question .section__title {
+    text-align: center;
   }
 
   .month-wrap {
@@ -3624,9 +3712,32 @@ form input {
   .scroll-block {
     display: none;
   }
+
+  .section-promo .d-flex {
+    flex-wrap: wrap;
+  }
+
+  .section-promo .part {
+    width: 100%;
+  }
+
+  .section-promo .part_left {
+    margin-bottom: 50px;
+    padding-right: 0;
+  }
 }
 
 @media only screen and (max-width: 767px) {
+  .heading_xxl {
+    font-size: clamp(34px, 34px + 30 * (100vw - 320px) / 447, 64px);
+  }
+
+  .btn_play {
+    width: 69px;
+    height: 69px;
+    padding-top: 0;
+  }
+
   .container {
     padding: 0 24px;
   }
@@ -3652,12 +3763,6 @@ form input {
     width: 100%;
     padding: 0;
     justify-content: flex-start;
-  }
-}
-
-@media only screen and (max-width: 420px) {
-  .container {
-    padding: 0 10px;
   }
 }
 /*# sourceMappingURL=main.css.map */

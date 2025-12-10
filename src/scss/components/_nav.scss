@@ -89,12 +89,14 @@
       padding-bottom: 25px;
       border-bottom: 1px solid #E9EEF2;
       color: #6E8396;
+
       &:last-child {
         padding-bottom: 0;
         margin-bottom: 0;
         border: none;
       }
-      &:hover{
+
+      &:hover {
         color: variables.$main-color;
       }
     }
@@ -145,12 +147,17 @@
 @include mixins.respond-to(variables.$screen-md) {
   .menu {
     font-size: 17px;
-    &__item{
+
+    &__item {
       padding-right: 20px;
       margin-left: 20px;
     }
   }
 }
-@include mixins.respond-to(variables.$md) {
 
+@include mixins.respond-to(variables.$md) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

@@ -26,13 +26,15 @@
     max-width: 830px;
     width: 100%;
   }
-.section__title{
-  font-size: 48px;
-  text-transform: none;
-  line-height: 1;
-  margin-bottom: 25px;
-  text-align: left;
-}
+
+  .section__title {
+    font-size: 48px;
+    text-transform: none;
+    line-height: 1;
+    margin-bottom: 25px;
+    text-align: left;
+  }
+
   .section__text {
     margin-bottom: 28px;
   }
@@ -41,9 +43,11 @@
 .section-promo {
   background-color: variables.$light-gray-200;
   padding: 50px 0;
-  .heading{
+
+  .heading {
     margin-bottom: 25px;
   }
+
   .part {
     width: 50%;
 
@@ -60,8 +64,25 @@
 @include mixins.respond-to(variables.$xl) {
   .section-img-bg {
     font-size: 20px;
+
     .section__title {
       font-size: 44px;
+    }
+  }
+}
+
+@include mixins.respond-to(variables.$md) {
+  .section-promo {
+    .d-flex{
+      flex-wrap: wrap;
+    }
+    .part {
+      width: 100%;
+
+      &_left{
+        margin-bottom: 50px;
+        padding-right: 0;
+      }
     }
   }
 }

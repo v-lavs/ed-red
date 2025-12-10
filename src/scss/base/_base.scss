@@ -203,7 +203,7 @@ body {
     font-size: 20px;
   }
   .dynamic-content {
-   h1, h2 {
+    h1, h2 {
       font-size: 48px;
     }
 
@@ -214,9 +214,15 @@ body {
 }
 
 @include mixins.respond-to(variables.$lg) {
-
+  .main {
+    padding-top: 100px;
+  }
 }
-
+@include mixins.respond-to(variables.$md) {
+  .main {
+    padding-top: 96px;
+  }
+}
 @include mixins.respond-to(variables.$sm) {
 
 }

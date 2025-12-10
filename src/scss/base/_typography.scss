@@ -58,20 +58,22 @@
 }
 
 @include mixins.respond-to(variables.$lg) {
-  .heading_xxl{
+  .heading_xxl {
 
-}
+  }
 
 }
 
 @include mixins.respond-to(variables.$md) {
-  .heading_xxl {
-    font-size: 72px;
+  .heading_md {
+    font-size: 21px;
   }
 }
 
 @include mixins.respond-to(variables.$sm) {
-
+  .heading_xxl {
+    font-size: clamp(34px, calc(34px + (64 - 34) * ((100vw - 320px) / (767 - 320))), 64px);
+  }
 }
 
 @include mixins.respond-to(variables.$xs) {

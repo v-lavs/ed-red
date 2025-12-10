@@ -45,8 +45,6 @@
 
 @include mixins.respond-to(variables.$md) {
   .section-banner {
-    padding-top: 0;
-
     .container {
       flex-wrap: wrap;
       position: relative;
@@ -55,13 +53,21 @@
     .btn {
       width: 100%;
       position: absolute;
-      bottom: 0;
+      bottom: -50px;
       left: 0;
       right: 0;
     }
 
     .part {
       width: 100%;
+    }
+
+    .part_right {
+      padding-bottom: 50px;
+      img{
+        max-width: 437px;
+        margin: 0 auto;
+      }
     }
   }
 }
