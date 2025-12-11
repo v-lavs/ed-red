@@ -17,6 +17,7 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .main {
@@ -212,11 +213,13 @@ body {
     padding-top: 100px;
   }
 }
+
 @include mixins.respond-to(variables.$md) {
   .main {
     padding-top: 96px;
   }
 }
+
 @include mixins.respond-to(variables.$sm) {
   body {
     font-size: clamp(16px, calc(16px + 4 * ((100vw - 320px) / 447)), 20px);
@@ -224,6 +227,17 @@ body {
 }
 
 @include mixins.respond-to(variables.$xs) {
-
+  .section__title {
+    margin-bottom: 30px;
+  }
+  .dynamic-content {
+    img.alignfull {
+      margin: 25px 0;
+    }
+    h1, h2,
+    h3, h4, h5, h6{
+      margin: 30px 0;
+    }
+  }
 }
 

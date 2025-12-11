@@ -75,6 +75,12 @@ function initVisibleTabAllergens() {
     });
 }
 
+function lockScroll() {
+    document.body.style.overflow = 'hidden';
+}
+function unlockScroll() {
+    document.body.style.overflow = '';
+}
 
 $(document).ready(function () {
     //MOBILE MENU
@@ -434,7 +440,7 @@ $(document).ready(function () {
     const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                animateNumber(entry.target, 2000); // анімація 2 секунди
+                animateNumber(entry.target, 2000);
                 obs.unobserve(entry.target);
             }
         });
@@ -443,8 +449,65 @@ $(document).ready(function () {
     numbers.forEach(num => observer.observe(num));
 
 // FLOWERING CALENDAR
+    const wrapScroll = $('.month-wrap'),
+        currentDate = new Date();
+    if (wrapScroll.length) {
+        if (window.outerWidth > 991) {
+            wrapScroll.mCustomScrollbar({
+                axis: "x",
+                theme: "my-theme"
+            });
+            console.log('month ' + currentDate.getMonth());
+            const ms = $('.month-block');
+            const cM = currentDate.getMonth();
+            const cI = ms.index($('#month-' + cM));
+            const offset = 100 / 12 * (cI + 1) + '%';
+            setTimeout(() => {
+                wrapScroll.mCustomScrollbar("scrollTo", offset);
+            }, 1000);
+        } else {
+            wrapScroll.mCustomScrollbar('destroy');
+        }
+    }
+
+//MODAL DIALOG
+    const dialog = document.getElementById('modal-calendar');
+    const content = document.getElementById('dialog-content');
+    const  closeBtn = document.getElementById('closeDialog');
+
+    document.addEventListener('click', (event) => {
+        const btn = event.target.closest('.more-plants');
+        if (!btn) return;
+
+        const block = btn.closest('.month-block');
+        if (!block) return;
+
+        const id = block.id;
+        openDialogForMonth(id);
+    });
+
+    function openDialogForMonth(monthId) {
+        dialog.showModal();
+        lockScroll();
+    }
 
 
+    closeBtn.addEventListener('click', () => {
+        dialog.close();
+        unlockScroll();
+    });
+
+
+
+    dialog.addEventListener('click', (e) => {
+        const rect = dialog.getBoundingClientRect();
+        const inside =
+            e.clientX >= rect.left && e.clientX <= rect.right &&
+            e.clientY >= rect.top && e.clientY <= rect.bottom;
+
+        if (!inside) dialog.close();
+        unlockScroll();
+    });
 });
 
 

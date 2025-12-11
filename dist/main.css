@@ -881,6 +881,7 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .main {
@@ -1320,6 +1321,87 @@ body {
 .swiper-button-prev:after {
   font-size: 30px;
   font-weight: 600;
+}
+
+#modal-calendar {
+  padding: 0;
+  border: none;
+  border-radius: 16px;
+  background: white;
+  max-width: 480px;
+  width: 90vw;
+  animation: slideDown 0.35s ease;
+}
+
+#modal-calendar .month-block {
+  width: 420px;
+}
+
+#modal-calendar .month-block:before,
+#modal-calendar .month-block:after {
+  display: none;
+}
+
+#modal-calendar .month-block:first-child {
+  margin-left: 0;
+}
+
+#modal-calendar[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#modal-calendar::backdrop {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease;
+}
+
+.dialog-content {
+  padding: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn::before,
+.close-btn::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #000;
+  left: 2px;
+  top: 11px;
+}
+
+.close-btn::before {
+  transform: rotate(45deg);
+}
+
+.close-btn::after {
+  transform: rotate(-45deg);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .header__search {
@@ -2017,6 +2099,9 @@ form input {
   display: flex;
   align-items: center;
   white-space: initial;
+  border: none;
+  background-color: transparent;
+  padding: 0;
 }
 
 .month-block .more-plants,
@@ -2713,6 +2798,10 @@ form input {
   overflow: hidden;
 }
 
+.section-flowering .container {
+  padding: 0;
+}
+
 .section-flowering .calendar-wrapper {
   position: relative;
 }
@@ -3089,7 +3178,8 @@ form input {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  padding-bottom: 45px;
+  padding-bottom: 10px;
+  margin-bottom: 35px;
   height: auto;
   flex-grow: 1;
 }
@@ -3214,7 +3304,8 @@ form input {
   width: 33%;
   height: 65px;
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
   color: #6e8396;
   font-weight: 700;
   text-align: center;
@@ -3660,6 +3751,10 @@ form input {
     font-size: 15px;
   }
 
+  .page-calendar .calendar-wrapper {
+    margin-bottom: 0;
+  }
+
   .mCSB_container,
   .month-wrap {
     display: flex;
@@ -3675,6 +3770,10 @@ form input {
 
   .month-block:first-child {
     margin-left: 0;
+  }
+
+  .month-block__title {
+    padding-left: 0;
   }
 
   .header {
@@ -3828,12 +3927,25 @@ form input {
 
   .month-wrap {
     white-space: normal;
+    padding: 0 24px;
     position: static;
     display: flex;
   }
 
+  .month-block:before {
+    display: none;
+  }
+
   .scroll-block {
     display: none;
+  }
+
+  .page-calendar .calendar-wrapper {
+    margin-bottom: 0;
+  }
+
+  .page-calendar .tabs__nav-link {
+    font-size: 26px;
   }
 
   .section-promo .d-flex {
@@ -3877,7 +3989,11 @@ form input {
   }
 
   .heading_xxl {
-    font-size: clamp(34px, 34px + 30 * (100vw - 320px) / 447, 64px);
+    font-size: clamp(24px, 24px + 40 * (100vw - 320px) / 447, 64px);
+  }
+
+  .heading_lg {
+    font-size: clamp(26px, 26px + 18 * (100vw - 320px) / 447, 44px);
   }
 
   .counter .swiper-button-prev,
@@ -3910,6 +4026,10 @@ form input {
   .footer__nav-item:nth-child(n) {
     width: 50%;
     margin-bottom: 25px;
+  }
+
+  .section-banner .heading_xxl {
+    font-size: clamp(34px, 34px + 30 * (100vw - 320px) / 447, 64px);
   }
 
   .section-products .swiper-wrapper {
@@ -3972,6 +4092,31 @@ form input {
 }
 
 @media only screen and (max-width: 580px) {
+  .section__title {
+    margin-bottom: 30px;
+  }
+
+  .dynamic-content img.alignfull {
+    margin: 25px 0;
+  }
+
+  .dynamic-content h1,
+  .dynamic-content h2,
+  .dynamic-content h3,
+  .dynamic-content h4,
+  .dynamic-content h5,
+  .dynamic-content h6 {
+    margin: 30px 0;
+  }
+
+  .heading_xxl {
+    font-size: 34px;
+  }
+
+  .heading_md {
+    font-size: clamp(24px, 24px + 10 * (100vw - 320px) / 260, 34px);
+  }
+
   .btn {
     display: inline-flex;
     justify-content: center;
@@ -3984,6 +4129,10 @@ form input {
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
+  }
+
+  #modal-calendar .month-block {
+    width: 290px;
   }
 
   .form-subscribe .btn_submit {
@@ -4048,6 +4197,27 @@ form input {
   .slider-info__title {
     margin-bottom: 25px;
   }
+
+  .section-question {
+    padding-top: 10px;
+  }
+
+  .section-flowering {
+    padding-bottom: 50px;
+  }
+
+  .page-calendar .tabs__nav {
+    margin-bottom: 25px;
+  }
+
+  .page-calendar .tabs__nav-link {
+    font-size: clamp(16px, 16px + 10 * (100vw - 320px) / 260, 26px);
+    padding-bottom: 10px;
+  }
+
+  .month-block__item:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 530px) {
@@ -4066,10 +4236,6 @@ form input {
 }
 
 @media only screen and (max-width: 420px) {
-  .heading_xxl {
-    font-size: 34px;
-  }
-
   .section-banner__text {
     font-size: 18px;
   }

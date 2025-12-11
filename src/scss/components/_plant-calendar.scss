@@ -6,7 +6,6 @@
   margin-bottom: 50px;
 }
 
-
 .month-block {
   position: relative;
 
@@ -65,6 +64,9 @@
     display: flex;
     align-items: center;
     white-space: initial;
+    border: none;
+    background-color: transparent;
+    padding: 0;
   }
 
   .more-plants,
@@ -100,6 +102,9 @@
 }
 
 @include mixins.respond-to(variables.$md) {
+ .page-calendar .calendar-wrapper{
+    margin-bottom: 0;
+  }
   .mCSB_container,
   .month-wrap{
     display: flex;
@@ -112,6 +117,9 @@
     padding-left: 16px;
     &:first-child {
       margin-left: 0;
+    }
+    &__title{
+      padding-left: 0;
     }
   }
 }

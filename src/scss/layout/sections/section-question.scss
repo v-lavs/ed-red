@@ -47,3 +47,12 @@
     }
   }
 }
+
+@include mixins.respond-to(variables.$xs) {
+  .section-question {
+    padding-top: 10px;
+  }
+  .section-flowering {
+    padding-bottom: 50px;
+  }
+}

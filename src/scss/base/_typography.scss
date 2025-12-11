@@ -37,9 +37,6 @@
 
 @include mixins.respond-to(variables.$xl) {
   .heading {
-    //&_lg {
-    //  font-size: 48px;
-    //}
 
     &_md {
       font-size: 34px;
@@ -66,24 +63,25 @@
 }
 
 @include mixins.respond-to(variables.$md) {
-  //.heading_md {
-  //  font-size: 21px;
-  //}
+
 }
 
 @include mixins.respond-to(variables.$sm) {
   .heading_xxl {
-    font-size: clamp(34px, calc(34px + (64 - 34) * ((100vw - 320px) / (767 - 320))), 64px);
+    font-size: clamp(24px, calc(24px + 40 * ((100vw - 320px) / (767 - 320))), 64px);
+  }
+  .heading_lg {
+    font-size: clamp(26px, calc(26px + 18 * ((100vw - 320px) / 447)), 44px);
   }
 }
 
+
 @include mixins.respond-to(variables.$xs) {
-
-}
-
-@include mixins.respond-to(variables.$xxs) {
   .heading_xxl {
     font-size: 34px;
+  }
+  .heading_md {
+    font-size: clamp(24px, calc(24px + 10 * ((100vw - 320px) / 260)), 34px);
   }
 }
 
