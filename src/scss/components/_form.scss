@@ -99,3 +99,29 @@ form {
     font-size: 18px;
   }
 }
+
+@include mixins.respond-to(variables.$md) {
+  .form-subscribe {
+    .form__group {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .btn_submit {
+      margin-left: 0;
+      margin-top: 25px;
+    }
+  }
+  .checkbox-wrap {
+    font-size: 15px;
+  }
+}
+
+@include mixins.respond-to(variables.$xs) {
+  .form-subscribe {
+
+    .btn_submit {
+      width: 100%;
+    }
+  }
+}

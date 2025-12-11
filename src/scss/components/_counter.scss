@@ -25,4 +25,17 @@
     font-weight: 600;
     font-size: 20px;
   }
+  .swiper-button-prev,
+  .swiper-button-next{
+    display: none;
+  }
+}
+
+@include mixins.respond-to(variables.$sm) {
+  .counter{
+    .swiper-button-prev,
+    .swiper-button-next{
+      display:block;
+    }
+  }
 }

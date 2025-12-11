@@ -3,8 +3,10 @@
 
 .breadcrumb {
   padding: 50px 0;
+
   ul {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -13,9 +15,10 @@
     padding-right: 37px;
     font-weight: 200;
     font-size: 20px;
-    line-height: 1;
+    line-height: 1.2;
     letter-spacing: 0;
     color: variables.$grey;
+    white-space: nowrap;
 
     a {
       display: inline-block;
@@ -27,13 +30,16 @@
       display: block;
       right: 0;
     }
+
     &:last-child {
       padding-right: 0;
+
       &:before {
         display: none;
       }
     }
-    &:last-child:after{
+
+    &:last-child:after {
       position: absolute;
       display: block;
       content: '';
@@ -49,9 +55,21 @@
 }
 
 @include mixins.respond-to(variables.$screen-md) {
-  .breadcrumb__item  {
+  .breadcrumb__item {
     font-size: 17px;
     margin-right: 12px;
     padding-right: 20px;
+  }
+}
+
+@include mixins.respond-to(variables.$sm) {
+  .breadcrumb {
+    padding-top: 25px;
+  }
+}
+
+@include mixins.respond-to(variables.$xs) {
+  .breadcrumb__item {
+    font-size: 12px;
   }
 }

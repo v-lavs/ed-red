@@ -60,15 +60,15 @@
 
 .load_more {
   display: inline-block;
-  width: 99px;
-  height: 99px;
+  width: 67px;
+  height: 67px;
   background-color: variables.$white;
   border-radius: 50%;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .25);
   background-image: url(../assets/img/plus-green.svg);
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 67px 67px;
+  background-size: 45px 45px;
   transition: transform .35s;
 
   &:hover,

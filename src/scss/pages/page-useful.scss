@@ -13,7 +13,7 @@
 
   .section__slogan {
     font-weight: 700;
-    font-size: 54px;
+    font-size: clamp(44px, calc(44px + 10 * ((100vw - 992px) / 448)), 54px);
     line-height: 1.1;
     text-transform: uppercase;
     color: variables.$main-color;
@@ -46,8 +46,9 @@
     a {
       display: block;
       overflow: hidden;
-      &:hover{
-      >  img{
+
+      &:hover {
+        > img {
           transform: scale(1.05);
         }
       }
@@ -61,7 +62,29 @@
 
 
 @include mixins.respond-to(variables.$xl) {
-  .page-useful .section__slogan {
-    font-size: 50px;
+  .page-useful {
+    .section-intro img {
+      width: 50vw;
+    }
+  }
+}
+
+@include mixins.respond-to(variables.$md) {
+  .page-useful {
+    .section-intro {
+      .section__content {
+        padding-bottom: 0;
+        padding-right: 0;
+        .section__text {
+          margin-bottom: 50px;
+        }
+
+        img {
+          position: static;
+          height: 456px;
+          width: 100%;
+        }
+      }
+    }
   }
 }

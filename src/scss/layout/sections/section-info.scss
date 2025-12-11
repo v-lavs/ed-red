@@ -98,10 +98,26 @@
       bottom: 0;
     }
 
+    .part_left,
     .part_right {
-      padding-left: 20px;
-      padding-right: 20px;
+      width: 50%;
       min-height: 476px;
+    }
+  }
+}
+
+@include mixins.respond-to(variables.$sm) {
+  .section-info .part_right {
+    padding-left: 27px;
+  }
+  .slider-info {
+    .heading_lg {
+      font-size: 42px;
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      margin-bottom: 40px;
     }
 
     .btn_main {
