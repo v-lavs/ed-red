@@ -41,10 +41,9 @@
 
 @include mixins.respond-to(variables.$sm) {
   .tabs__nav-link {
-    font-size: clamp(20px, calc(20px + 18 * ((100vw - 320px) / 447)), 28px);
+    font-size: clamp(14px, calc(14px + 14 * ((100vw - 320px) / 447)), 28px);
   }
   .category__title {
     font-size: 26px;
   }
-
 }

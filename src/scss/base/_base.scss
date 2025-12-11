@@ -218,7 +218,9 @@ body {
   }
 }
 @include mixins.respond-to(variables.$sm) {
-
+  body {
+    font-size: clamp(16px, calc(16px + 4 * ((100vw - 320px) / 447)), 20px);
+  }
 }
 
 @include mixins.respond-to(variables.$xs) {

@@ -214,18 +214,29 @@
     font-size: 12px;
   }
 }
+
 @include mixins.respond-to(variables.$sm) {
   .footer__nav-item:nth-child(n) {
     width: 50%;
     margin-bottom: 25px;
   }
-
 }
-@media screen and  (max-width: 530px){
-  .footer__nav-item:nth-child(n){
+
+@include mixins.respond-to(variables.$xs) {
+  .footer__nav {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .footer__contacts,
+  .footer__nav-item:nth-child(n) {
     width: 100%;
   }
   .footer__menu-general {
     padding-top: 0;
+  }
+  .footer__logo-farm {
+    margin-left: auto;
   }
 }

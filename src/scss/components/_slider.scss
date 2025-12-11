@@ -2,37 +2,50 @@
 @use "../utils/variables";
 
 //swiper pagination-bullets
-
-
-.swiper-container-horizontal>.swiper-pagination-bullets {
+.swiper-pagination{
+  display: none;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets {
   bottom: 0;
   z-index: 10;
 }
-.swiper-pagination-bullets .swiper-pagination-bullet{
+
+.swiper-pagination-bullets .swiper-pagination-bullet {
   position: relative;
   width: 18px;
   height: 18px;
   //border: 2px solid #3fa535;
   //background-color: #ffffff;
   opacity: 1;
-  margin: 0 10px!important;
+  margin: 0 10px !important;
   transform-style: preserve-3d;
-  &.swiper-pagination-bullet-active{
+
+  &.swiper-pagination-bullet-active {
     opacity: 1;
     background-color: variables.$green-100;
   }
 }
+
 .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 0;
 }
 
-.swiper-button-next svg,.swiper-button-prev svg{
+.swiper-button-next svg, .swiper-button-prev svg {
   display: none;
 }
-.swiper-button-next:after, .swiper-button-prev:after{
+
+.swiper-button-next:after, .swiper-button-prev:after {
   color: #5B8869;
 }
+
 .swiper-button-next:after, .swiper-button-prev:after {
   font-size: 30px;
   font-weight: 600;
+}
+
+@include mixins.respond-to(variables.$xs) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
 }

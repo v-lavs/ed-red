@@ -12,7 +12,7 @@
   }
 
   .tabs__nav {
-    padding: 0;
+    padding: 10px 0 0;
     margin-bottom: 50px;
     border-bottom: 2px solid #6A6A6A
   }
@@ -44,6 +44,11 @@
         background-color: variables.$green;
       }
     }
+  }
+}
+.section-calendar-tabs{
+  .heading{
+    text-align: center;
   }
 }
 

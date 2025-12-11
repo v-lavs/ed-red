@@ -4,7 +4,8 @@
 .section-products {
   padding-top: 100px;
   padding-bottom: 83px;
-  .swiper-wrapper{
+
+  .swiper-wrapper {
     justify-content: space-between;
   }
 
@@ -19,12 +20,19 @@
 
   }
   @include mixins.respond-to(variables.$sm) {
-    .swiper-wrapper{
+    .swiper-wrapper {
       justify-content: flex-start;
     }
     .product {
       max-width: 100%;
       width: 100%;
+    }
+  }
+  @include mixins.respond-to(variables.$xs) {
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
     }
   }
   @include mixins.respond-to(variables.$xxs) {

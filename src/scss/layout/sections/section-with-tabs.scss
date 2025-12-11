@@ -24,3 +24,18 @@
   }
 }
 
+@include mixins.respond-to(variables.$xxs) {
+  .slider-posts {
+    width: 100%;
+  }
+  .card-post__thumb {
+    min-height: 223px;
+  }
+  .card-post__body {
+    padding: 22px 20px 20px;
+  }
+  .card {
+    border-radius: 8px;
+    box-shadow: 0 2px 4.91px 0 rgba(0, 0, 0, 0.25);
+  }
+}

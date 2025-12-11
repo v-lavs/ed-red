@@ -3,20 +3,6 @@
 
 .page {
   background-color: #FFFFFF;
-
-  @include mixins.respond-to(variables.$lg) {
-
-  }
-  @include mixins.respond-to(variables.$sm) {
-
-  }
-  @include mixins.respond-to(variables.$xs) {
-
-  }
-  @include mixins.respond-to(variables.$xxs) {
-
-  }
-
 }
 
 
@@ -86,5 +72,4 @@
   .article__nav li {
     font-size: 24px;
   }
-
 }

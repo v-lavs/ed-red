@@ -82,7 +82,9 @@
 }
 
 @include mixins.respond-to(variables.$xxs) {
-
+  .heading_xxl {
+    font-size: 34px;
+  }
 }
 
 

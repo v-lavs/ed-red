@@ -9,7 +9,7 @@
 
 .month-block {
   position: relative;
-  //width: 352px;
+
   &:first-child:before,
   &:after {
     position: absolute;
@@ -99,3 +99,19 @@
   }
 }
 
+@include mixins.respond-to(variables.$md) {
+  .mCSB_container,
+  .month-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0;
+  }
+  .month-block {
+    width: 50%;
+    margin-bottom: 25px;
+    padding-left: 16px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

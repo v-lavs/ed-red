@@ -9,7 +9,7 @@
   .month-wrap {
     white-space:normal;
     position: static;
-    padding-top: 20px
+    display: flex;
   }
 }
 
@@ -24,22 +24,9 @@
   flex-grow: 1;
 }
 
-
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 420px) {
   .month-block {
     width:100%;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .month-block {
-    width:100%;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .month-block__items {
-    margin-top:20px
   }
 }
 

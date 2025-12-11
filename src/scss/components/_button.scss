@@ -76,3 +76,14 @@
     transform: scale(1.05);
   }
 }
+
+@include mixins.respond-to(variables.$xs) {
+  .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    height: 40px;
+    padding: 7px 14px;
+  }
+}

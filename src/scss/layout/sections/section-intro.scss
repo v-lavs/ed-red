@@ -48,13 +48,21 @@
     }
   }
 }
-
+@include mixins.respond-to(variables.$lg) {
+  .section-intro {
+    .section__text {
+      font-size: 26px;
+      margin-bottom: 50px;
+    }
+  }
+}
 @include mixins.respond-to(variables.$md) {
   .section-intro {
     .section__content {
       padding-bottom: 0;
       padding-right: 0;
       .section__text {
+        font-size: 24px;
         margin-bottom: 50px;
       }
       img{
