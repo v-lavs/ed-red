@@ -123,3 +123,9 @@
     }
   }
 }
+
+@include mixins.respond-to(variables.$xxs) {
+  .calendar-wrapper{
+    margin-bottom: 25px;
+  }
+}

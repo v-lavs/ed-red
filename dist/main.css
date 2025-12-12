@@ -3167,6 +3167,10 @@ form input {
   text-decoration: none;
 }
 
+.page-article .section-flowering {
+  padding: 50px 0;
+}
+
 .month-wrap {
   background-color: #fff;
   white-space: nowrap;
@@ -3732,6 +3736,15 @@ form input {
     padding-top: 96px;
   }
 
+  .dynamic-content h1,
+  .dynamic-content h2 {
+    font-size: 44px;
+  }
+
+  .dynamic-content h3 {
+    font-size: 30px;
+  }
+
   .menu {
     flex-direction: column;
     align-items: flex-start;
@@ -3925,6 +3938,22 @@ form input {
     width: 100%;
   }
 
+  .article__nav ol {
+    -moz-column-count: 1;
+    column-count: 1;
+    padding-top: 30px;
+    padding-bottom: 35px;
+  }
+
+  .article__nav ol li {
+    margin-bottom: 25px;
+  }
+
+  .article__nav li,
+  .article__nav h3 {
+    font-size: 20px;
+  }
+
   .month-wrap {
     white-space: normal;
     padding: 0 24px;
@@ -4109,6 +4138,15 @@ form input {
     margin: 30px 0;
   }
 
+  .dynamic-content h1,
+  .dynamic-content h2 {
+    font-size: 35px;
+  }
+
+  .dynamic-content h3 {
+    font-size: 24px;
+  }
+
   .heading_xxl {
     font-size: 34px;
   }
@@ -4206,6 +4244,34 @@ form input {
     padding-bottom: 50px;
   }
 
+  .article__nav li,
+  .article__nav h3 {
+    font-size: 18px;
+  }
+
+  .article__nav li {
+    padding-left: 45px;
+    margin-bottom: 12px;
+  }
+
+  .article__nav li:before {
+    width: 30px;
+    height: 30px;
+    top: -3px;
+  }
+
+  .article__nav ol {
+    padding-bottom: 20px;
+  }
+
+  .article .big-marker-ul li:before {
+    top: 5px;
+  }
+
+  .article__title {
+    margin-bottom: 30px;
+  }
+
   .page-calendar .tabs__nav {
     margin-bottom: 25px;
   }
@@ -4236,6 +4302,19 @@ form input {
 }
 
 @media only screen and (max-width: 420px) {
+  .dynamic-content h1,
+  .dynamic-content h2 {
+    font-size: 26px;
+  }
+
+  .dynamic-content h3 {
+    font-size: 20px;
+  }
+
+  .calendar-wrapper {
+    margin-bottom: 25px;
+  }
+
   .section-banner__text {
     font-size: 18px;
   }
@@ -4259,6 +4338,21 @@ form input {
 
   .section-info .container {
     padding-left: 16px;
+  }
+
+  .page.page-article .section-products,
+  .page.page-article .section-blog-slider,
+  .page.page-article .section-flowering {
+    padding-top: 0;
+  }
+
+  .page.page-article .section-blog-slider {
+    padding-bottom: 50px;
+  }
+
+  .article__nav li,
+  .article__nav h3 {
+    font-size: 16px;
   }
 
   .month-block {

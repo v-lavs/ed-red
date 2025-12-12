@@ -7,7 +7,8 @@
       color: variables.$green-100;
       text-transform: uppercase;
     }
-    ol{
+
+    ol {
       padding-top: 50px;
       padding-bottom: 55px;
       column-count: 2;
@@ -15,7 +16,8 @@
       border-bottom: 1px solid #6A6A6A;
       counter-reset: list;
     }
-    li{
+
+    li {
       position: relative;
       font-weight: 700;
       font-size: 28px;
@@ -24,12 +26,13 @@
       color: variables.$green-100;
       margin-bottom: 50px;
       padding: 5px 0 5px 60px;
+
       &:before {
         position: absolute;
-        top:0;
+        top: 0;
         left: 0;
         counter-increment: list;
-        content: counter(list)' ';
+        content: counter(list) ' ';
         width: 40px;
         height: 40px;
         border: 1px solid variables.$green-100;
@@ -39,14 +42,97 @@
         align-items: center;
         line-height: 1;
       }
-      a{
+
+      a {
         position: relative;
         display: inline-block;
         text-decoration: underline;
-        &:hover:after{
+
+        &:hover:after {
           text-decoration: none;
         }
       }
+    }
+  }
+}
+
+.page-article {
+  .section-flowering {
+    padding: 50px 0;
+  }
+}
+
+@include mixins.respond-to(variables.$md) {
+  .article__nav ol {
+    column-count: 1;
+    padding-top: 30px;
+    padding-bottom: 35px;
+
+    li {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@include mixins.respond-to(variables.$md) {
+  .article {
+    &__nav li,
+    &__nav h3 {
+      font-size: 20px;
+    }
+  }
+}
+
+@include mixins.respond-to(variables.$xs) {
+  .article {
+    &__nav li,
+    &__nav h3 {
+      font-size: 18px;
+    }
+
+    &__nav li {
+      padding-left: 45px;
+      margin-bottom: 12px;
+
+      &:before {
+        width: 30px;
+        height: 30px;
+        top: -3px;
+      }
+    }
+
+    &__nav {
+      ol {
+        padding-bottom: 20px;
+      }
+    }
+
+    .big-marker-ul li:before {
+      top: 5px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@include mixins.respond-to(variables.$xxs) {
+  .page.page-article {
+    .section-products,
+    .section-blog-slider,
+    .section-flowering {
+      padding-top: 0;
+    }
+
+    .section-blog-slider {
+      padding-bottom: 50px;
+    }
+  }
+  .article {
+    &__nav li,
+    &__nav h3 {
+      font-size: 16px;
     }
   }
 }
