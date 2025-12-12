@@ -48,6 +48,10 @@
   }
 }
 
+.section-video {
+  padding-top: 0;
+}
+
 @include mixins.respond-to(variables.$sm) {
   .btn_play {
     width: 69px;

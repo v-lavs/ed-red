@@ -116,12 +116,28 @@ form {
     font-size: 15px;
   }
 }
-
 @include mixins.respond-to(variables.$xs) {
-  .form-subscribe {
-
+  .form-subscribe{
     .btn_submit {
       width: 100%;
+      margin-top: 15px;
     }
+  }
+}
+@include mixins.respond-to(variables.$xxs) {
+
+  .form-subscribe {
+    input {
+      padding-top: 10px;
+      padding-bottom: 9px;
+    }
+
+    .form__group{
+      padding-bottom: 25px;
+    }
+  }
+  .checkbox-wrap {
+    padding-left: 46px;
+    font-size: 11px;
   }
 }

@@ -3,10 +3,12 @@
 
 .section-with-tabs {
   background-color: variables.$light-gray-100;
-  padding-top: 100px;
-.section__title{
-  text-align: left;
-}
+  //padding-top: 100px;
+  padding-bottom: 0;
+  .section__title {
+    text-align: left;
+  }
+
   .tabs {
     padding-top: 0;
     padding-bottom: 100px;
@@ -21,6 +23,21 @@
   .swiper-slide {
     width: auto;
     height: auto;
+  }
+}
+
+@include mixins.respond-to(variables.$xs) {
+  .tabs__nav {
+    padding-bottom: 30px;
+  }
+  .tabs__nav-link {
+    line-height: 1;
+  }
+  .tabs__nav-link:first-child {
+    text-align: left;
+  }
+  .tabs__nav-link:last-child {
+    text-align: right;
   }
 }
 

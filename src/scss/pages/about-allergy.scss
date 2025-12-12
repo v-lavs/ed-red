@@ -43,7 +43,7 @@
 .section-promo {
   background-color: variables.$light-gray-200;
   padding: 50px 0;
-
+  margin-bottom: 100px;
   .heading {
     margin-bottom: 25px;
   }
@@ -73,19 +73,21 @@
 
 @include mixins.respond-to(variables.$md) {
   .section-promo {
-    .d-flex{
+    .d-flex {
       flex-wrap: wrap;
     }
+
     .part {
       width: 100%;
 
-      &_left{
+      &_left {
         margin-bottom: 50px;
         padding-right: 0;
       }
     }
   }
 }
+
 @include mixins.respond-to(variables.$sm) {
   .section-promo,
   .section-img-bg .section__title,

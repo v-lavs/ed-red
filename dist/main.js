@@ -78,6 +78,7 @@ function initVisibleTabAllergens() {
 function lockScroll() {
     document.body.style.overflow = 'hidden';
 }
+
 function unlockScroll() {
     document.body.style.overflow = '';
 }
@@ -473,7 +474,7 @@ $(document).ready(function () {
 //MODAL DIALOG
     const dialog = document.getElementById('modal-calendar');
     const content = document.getElementById('dialog-content');
-    const  closeBtn = document.getElementById('closeDialog');
+    const closeBtn = document.getElementById('closeDialog');
 
     document.addEventListener('click', (event) => {
         const btn = event.target.closest('.more-plants');
@@ -491,23 +492,21 @@ $(document).ready(function () {
         lockScroll();
     }
 
+    if (dialog && closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            dialog.close();
+            unlockScroll();
+        });
+        dialog.addEventListener('click', (e) => {
+            const rect = dialog.getBoundingClientRect();
+            const inside =
+                e.clientX >= rect.left && e.clientX <= rect.right &&
+                e.clientY >= rect.top && e.clientY <= rect.bottom;
 
-    closeBtn.addEventListener('click', () => {
-        dialog.close();
-        unlockScroll();
-    });
-
-
-
-    dialog.addEventListener('click', (e) => {
-        const rect = dialog.getBoundingClientRect();
-        const inside =
-            e.clientX >= rect.left && e.clientX <= rect.right &&
-            e.clientY >= rect.top && e.clientY <= rect.bottom;
-
-        if (!inside) dialog.close();
-        unlockScroll();
-    });
+            if (!inside) dialog.close();
+            unlockScroll();
+        });
+    }
 });
 
 

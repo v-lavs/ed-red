@@ -5,7 +5,7 @@
   background-color: variables.$light-gray-100;
 
   .section-question {
-    background-color: #fff;
+    padding-top: 100px;
   }
 }
 
@@ -28,7 +28,7 @@
     position: relative;
     overflow: hidden;
 
-    &:hover{
+    &:hover {
       .allergens__thumb {
         transform: scale(1.15);
       }

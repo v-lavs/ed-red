@@ -893,6 +893,10 @@ body {
   color: #7EA68C;
 }
 
+section {
+  padding: 50px 0 100px;
+}
+
 .section__title {
   margin-bottom: 50px;
   text-transform: uppercase;
@@ -1335,6 +1339,7 @@ body {
 
 #modal-calendar .month-block {
   width: 420px;
+  margin-bottom: 0;
 }
 
 #modal-calendar .month-block:before,
@@ -1477,6 +1482,7 @@ body {
 
 .section-counter {
   padding: 37px 0 21px;
+  margin-bottom: 50px;
   background-color: #F2F8F4;
 }
 
@@ -1555,6 +1561,10 @@ body {
   color: inherit;
   margin-left: 4%;
   z-index: 1;
+}
+
+.section-video {
+  padding-top: 0;
 }
 
 .card-product {
@@ -2448,7 +2458,6 @@ form input {
 }
 
 .section-banner {
-  padding: 110px 0 110px;
   background-color: #E4F1E8;
 }
 
@@ -2483,19 +2492,17 @@ form input {
   padding: 0 7%;
 }
 
-.section-products {
-  padding-top: 100px;
-  padding-bottom: 83px;
-}
-
 .section-products .swiper-wrapper {
   justify-content: space-between;
 }
 
 .section-calendar {
   background-color: #FAFAFA;
-  padding: 67px 0 0;
   overflow: hidden;
+}
+
+.section-calendar .tabs {
+  padding-bottom: 0;
 }
 
 .section-calendar .section__title {
@@ -2599,7 +2606,7 @@ form input {
 
 .section-with-tabs {
   background-color: #FAFAFA;
-  padding-top: 100px;
+  padding-bottom: 0;
 }
 
 .section-with-tabs .section__title {
@@ -2623,7 +2630,7 @@ form input {
 }
 
 .section-info {
-  padding: 100px 0 100px;
+  padding-top: 100px;
 }
 
 .slider-info .swiper-slide {
@@ -2708,8 +2715,8 @@ form input {
 }
 
 .section-question {
-  padding-bottom: 100px;
-  padding-top: 100px;
+  background-color: #fff;
+  padding-top: 0;
 }
 
 .section-question .section__title {
@@ -2731,7 +2738,7 @@ form input {
 }
 
 .section-intro {
-  padding-bottom: 100px;
+  padding-top: 0;
   font-size: 32px;
   line-height: 1.625;
   color: #000000;
@@ -2772,7 +2779,8 @@ form input {
 }
 
 .section-blog {
-  padding-bottom: 50px;
+  padding-top: 0;
+  padding-bottom: 68px;
 }
 
 .section-blog .filter {
@@ -2793,8 +2801,6 @@ form input {
 }
 
 .section-flowering {
-  padding-top: 100px;
-  padding-bottom: 100px;
   overflow: hidden;
 }
 
@@ -2816,7 +2822,6 @@ form input {
 
 .section-map {
   background-color: #FAFAFA;
-  padding: 50px 0;
 }
 
 .section-map .heading {
@@ -2847,13 +2852,16 @@ form input {
   background-color: #FFFFFF;
 }
 
-.page-useful .section {
+.about-allergy .section-counter {
+  margin-bottom: 0;
+}
+
+.about-allergy .section-with-tabs {
   padding-top: 100px;
 }
 
-.page-useful .section .heading {
+.page-useful .section-img-bg {
   margin-bottom: 50px;
-  text-align: center;
 }
 
 .wrap-slider-products,
@@ -2867,20 +2875,8 @@ form input {
   margin: 0 auto;
 }
 
-.section-blog-slider {
-  padding-top: 100px;
-}
-
 .page.page-article {
   background-color: #fff;
-}
-
-.page.page-article .section-products {
-  padding: 50px 0;
-}
-
-.page.page-article .section-blog-slider {
-  padding-top: 50px;
 }
 
 .article {
@@ -2909,9 +2905,12 @@ form input {
   background-color: #FAFAFA;
 }
 
-.product-page .section-video {
-  padding-bottom: 0;
+.page-blog .section-question {
   padding-top: 100px;
+}
+
+.single-product {
+  padding-bottom: 100px;
 }
 
 .layout-with-sidebar {
@@ -2925,6 +2924,7 @@ form input {
 .single-product {
   width: 71%;
   padding-left: 34px;
+  flex-grow: 1;
 }
 
 .single-product-intro {
@@ -3054,7 +3054,7 @@ form input {
   align-items: center;
 }
 
-.block-order strong {
+.block-order__text {
   margin-right: auto;
 }
 
@@ -3168,7 +3168,7 @@ form input {
 }
 
 .page-article .section-flowering {
-  padding: 50px 0;
+  padding-bottom: 50px;
 }
 
 .month-wrap {
@@ -3361,6 +3361,10 @@ form input {
   padding-top: 0;
 }
 
+.page-calendar .tabs {
+  padding-bottom: 0;
+}
+
 .page-calendar .tabs__nav {
   padding: 10px 0 0;
   margin-bottom: 50px;
@@ -3439,6 +3443,7 @@ form input {
 .section-promo {
   background-color: #F9F9F9;
   padding: 50px 0;
+  margin-bottom: 100px;
 }
 
 .section-promo .heading {
@@ -3462,7 +3467,7 @@ form input {
 }
 
 .page-allergens .section-question {
-  background-color: #fff;
+  padding-top: 100px;
 }
 
 .allergens {
@@ -3533,7 +3538,7 @@ form input {
 }
 
 .section-attractions {
-  padding-bottom: 100px;
+  padding-top: 0;
 }
 
 .attraction {
@@ -3613,10 +3618,6 @@ form input {
   .footer__title,
   .footer__sub-menu {
     font-size: 20px;
-  }
-
-  .section-banner {
-    padding-top: 50px;
   }
 
   .section-banner__text {
@@ -3714,6 +3715,42 @@ form input {
   .footer__logo-farm {
     max-width: 171px;
   }
+
+  .product-forms__thumb {
+    width: 135px;
+    height: 135px;
+  }
+
+  .sidebar {
+    min-width: 296px;
+  }
+
+  .single-product__thumb {
+    width: 49%;
+    height: 370px;
+  }
+
+  .block-order .btn {
+    min-width: 230px;
+    padding: 10px 40px;
+  }
+
+  .product-info .price__heading {
+    font-size: 20px;
+  }
+
+  .product-info .part_right .btn {
+    min-width: 250px;
+    height: 53px;
+  }
+
+  .single-product {
+    padding-left: 20px;
+  }
+
+  .single-product__video .btn {
+    margin-left: 10px;
+  }
 }
 
 @media only screen and (max-width:1024px) {
@@ -3728,6 +3765,31 @@ form input {
   .section-intro .section__text {
     font-size: 26px;
     margin-bottom: 50px;
+  }
+
+  .sidebar {
+    width: 200px;
+    min-width: 0;
+  }
+
+  .product-forms__card a {
+    display: block;
+  }
+
+  .product-forms__content {
+    padding-left: 0;
+  }
+
+  .product-forms__thumb {
+    margin-bottom: 15px;
+  }
+
+  .section-use .heading {
+    font-size: 20px;
+  }
+
+  .section-use .section__title {
+    font-size: 30px;
   }
 }
 
@@ -3938,6 +4000,15 @@ form input {
     width: 100%;
   }
 
+  .sidebar {
+    display: none;
+  }
+
+  .single-product {
+    width: 100%;
+    padding-left: 0;
+  }
+
   .article__nav ol {
     -moz-column-count: 1;
     column-count: 1;
@@ -4107,6 +4178,21 @@ form input {
     padding-right: 14px;
   }
 
+  .block-order__text {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .block-order {
+    flex-wrap: wrap;
+    max-width: 507px;
+    width: 100%;
+  }
+
+  .block-order .btn:first-of-type {
+    margin-left: 0;
+  }
+
   .month-block__item {
     width: 100%;
     padding: 0;
@@ -4117,6 +4203,41 @@ form input {
   .section-img-bg .section__title,
   .section-img-bg {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .section-use {
+    border-radius: 16px;
+  }
+
+  .single-product-intro {
+    flex-wrap: wrap;
+  }
+
+  .single-product__thumb {
+    max-width: 320px;
+    height: 320px;
+    width: 100%;
+    margin: 0 auto 50px;
+    padding: 0;
+  }
+
+  .single-product__title {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .product-info {
+    flex-wrap: wrap;
+  }
+
+  .product-info .price__heading {
+    font-size: 28px;
+  }
+
+  .product-info .part_left {
+    width: 100%;
   }
 }
 
@@ -4147,6 +4268,14 @@ form input {
     font-size: 24px;
   }
 
+  .dynamic-content ul li:before {
+    font-size: 20px;
+  }
+
+  section {
+    padding-bottom: 50px;
+  }
+
   .heading_xxl {
     font-size: 34px;
   }
@@ -4173,16 +4302,90 @@ form input {
     width: 290px;
   }
 
+  .accordion .panel__title {
+    padding-right: 34px;
+  }
+
+  .accordion .open-panel:before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .accordion .panel__heading {
+    padding: 15px 45px 15px 0;
+  }
+
+  .accordion .open-panel {
+    top: 14px;
+  }
+
   .form-subscribe .btn_submit {
     width: 100%;
+    margin-top: 15px;
   }
 
   .breadcrumb__item {
     font-size: 12px;
   }
 
-  .footer__nav {
+  .footer_top {
+    padding-bottom: 25px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer__menu {
+    padding-right: 0;
+  }
+
+  .footer__menu-general {
+    width: 100%;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+  }
+
+  .footer__menu-general li {
+    margin-bottom: 15px;
+  }
+
+  .footer__menu-general li a {
+    padding: 0;
+    font-weight: 500;
+  }
+
+  .footer__menu-general li:last-of-type {
+    display: none;
+  }
+
+  .footer__logo-farm {
+    margin: 25px auto 12px;
+  }
+
+  .footer .copyright {
+    text-align: center;
+  }
+
+  .footer__contacts {
+    font-size: 16px;
+  }
+
+  .footer__contacts,
+  .footer__nav-item:nth-child(n) {
+    width: 100%;
     margin-bottom: 0;
+  }
+
+  .footer__title {
+    font-size: 16px;
+  }
+
+  .footer__sub-menu {
+    display: none;
   }
 
   .section-banner__text {
@@ -4193,6 +4396,39 @@ form input {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .category__heading {
+    padding-left: 0;
+  }
+
+  .category__icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .category__title {
+    font-size: 22px;
+  }
+
+  .allergen-list {
+    padding-bottom: 0;
+  }
+
+  .tabs__nav {
+    padding-bottom: 30px;
+  }
+
+  .tabs__nav-link {
+    line-height: 1;
+  }
+
+  .tabs__nav-link:first-child {
+    text-align: left;
+  }
+
+  .tabs__nav-link:last-child {
+    text-align: right;
   }
 
   .section-info .container {
@@ -4236,12 +4472,48 @@ form input {
     margin-bottom: 25px;
   }
 
-  .section-question {
-    padding-top: 10px;
+  .section-use .section__title {
+    font-size: 24px;
   }
 
-  .section-flowering {
-    padding-bottom: 50px;
+  .section-use .heading {
+    font-size: 18px;
+  }
+
+  .section-use .part {
+    width: 100%;
+    padding: 0;
+  }
+
+  .product-info .price__heading {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .product-info .price__wrapper {
+    font-size: 20px;
+  }
+
+  .product-info .part_right .btn {
+    height: auto;
+    padding: 11px;
+  }
+
+  .block-order {
+    max-width: 300px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .block-order .btn {
+    min-width: 0;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-left: 0;
+  }
+
+  .block-order .btn img {
+    max-width: 170px;
   }
 
   .article__nav li,
@@ -4286,22 +4558,11 @@ form input {
   }
 }
 
-@media screen and (max-width: 530px) {
-  .footer__contacts,
-  .footer__nav-item:nth-child(n) {
-    width: 100%;
-  }
-
-  .footer__menu-general {
-    padding-top: 0;
-  }
-
-  .footer__logo-farm {
-    margin-left: auto;
-  }
-}
-
 @media only screen and (max-width: 420px) {
+  section {
+    padding-bottom: 50px;
+  }
+
   .dynamic-content h1,
   .dynamic-content h2 {
     font-size: 26px;
@@ -4311,7 +4572,45 @@ form input {
     font-size: 20px;
   }
 
+  .accordion .panel__title {
+    font-size: 18px;
+  }
+
+  .form-subscribe input {
+    padding-top: 10px;
+    padding-bottom: 9px;
+  }
+
+  .form-subscribe .form__group {
+    padding-bottom: 25px;
+  }
+
+  .checkbox-wrap {
+    padding-left: 46px;
+    font-size: 11px;
+  }
+
   .calendar-wrapper {
+    margin-bottom: 25px;
+  }
+
+  .footer {
+    padding-top: 25px;
+  }
+
+  .footer__nav {
+    margin-bottom: 0;
+  }
+
+  .footer__contacts {
+    padding-top: 25px;
+  }
+
+  .block-subscribe {
+    padding-bottom: 25px;
+  }
+
+  .block-subscribe .heading_md {
     margin-bottom: 25px;
   }
 
@@ -4340,10 +4639,34 @@ form input {
     padding-left: 16px;
   }
 
-  .page.page-article .section-products,
-  .page.page-article .section-blog-slider,
-  .page.page-article .section-flowering {
-    padding-top: 0;
+  .block-order {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .block-order .btn {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .product-info .part_right {
+    width: 100%;
+  }
+
+  .single-product {
+    padding-bottom: 50px;
+  }
+
+  .product-info .part_right .btn {
+    min-width: 0;
+  }
+
+  .product-info .price__wrapper {
+    font-size: 19px;
+  }
+
+  .price__heading {
+    margin-bottom: 5px;
   }
 
   .page.page-article .section-blog-slider {

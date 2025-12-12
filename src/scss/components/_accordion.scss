@@ -70,3 +70,26 @@
     font-size: 20px;
   }
 }
+
+@include mixins.respond-to(variables.$xs) {
+  .accordion .panel__title{
+    padding-right: 34px;
+    //font-size: 18px;
+  }
+  .accordion .open-panel:before {
+    width: 20px;
+    height: 20px;
+  }
+  .accordion .panel__heading {
+    padding: 15px 45px 15px 0;
+  }
+  .accordion .open-panel {
+    top: 14px;
+  }
+}
+
+@include mixins.respond-to(variables.$xxs) {
+  .accordion .panel__title {
+    font-size: 18px;
+  }
+}

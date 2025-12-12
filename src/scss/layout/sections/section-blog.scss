@@ -1,17 +1,20 @@
 @use "../../utils/mixins";
 @use "../../utils/variables";
 
-.section-blog{
-  padding-bottom: 50px;
-  .filter{
+.section-blog {
+  padding-top: 0;
+  padding-bottom: 68px;
+
+  .filter {
     padding-bottom: 50px;
   }
-  .wrap-btn{
+
+  .wrap-btn {
     text-align: center;
   }
 }
 
-.blog-list{
+.blog-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);

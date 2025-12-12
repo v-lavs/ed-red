@@ -223,20 +223,83 @@
 }
 
 @include mixins.respond-to(variables.$xs) {
-  .footer__nav {
-    margin-bottom: 0;
+  .footer {
+    &_top {
+      padding-bottom: 25px;
+    }
+
+    text-align: center;
+
+    &__menu {
+      padding-right: 0;
+    }
+
+    &__menu-general {
+      width: 100%;
+      padding-top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: 500;
+
+      li {
+        margin-bottom: 15px;
+
+        a {
+          padding: 0;
+          font-weight: 500;
+        }
+      }
+
+      li:last-of-type {
+        display: none;
+      }
+    }
+
+    &__logo-farm {
+      margin: 25px auto 12px;
+    }
+
+    .copyright {
+      text-align: center;
+    }
+
+    &__contacts {
+      font-size: 16px;
+    }
+
+    &__contacts,
+    &__nav-item:nth-child(n) {
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__sub-menu {
+      display: none;
+    }
   }
 }
 
-@media screen and (max-width: 530px) {
-  .footer__contacts,
-  .footer__nav-item:nth-child(n) {
-    width: 100%;
+@include mixins.respond-to(variables.$xxs) {
+  .footer {
+    padding-top: 25px;
+
+    &__nav {
+      margin-bottom: 0;
+    }
   }
-  .footer__menu-general {
-    padding-top: 0;
+  .footer__contacts {
+    padding-top: 25px;
   }
-  .footer__logo-farm {
-    margin-left: auto;
+  .block-subscribe {
+    padding-bottom: 25px;
+
+    .heading_md {
+      margin-bottom: 25px;
+    }
   }
 }
