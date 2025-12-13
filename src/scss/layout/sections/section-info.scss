@@ -1,11 +1,6 @@
 @use "../../utils/mixins";
 @use "../../utils/variables";
 
-.section-info {
-  //padding: 100px 0 100px;
-  padding-top: 100px;
-}
-
 .slider-info {
   .swiper-slide {
     display: flex;
@@ -125,14 +120,12 @@
     .btn_main {
       padding-left: 14px;
       padding-right: 14px;
-      //width: 100%;
     }
   }
 }
 
 @include mixins.respond-to(variables.$xs) {
   .section-info {
-    //padding-top: 50px;
     .container {
       padding-left: 24px;
     }

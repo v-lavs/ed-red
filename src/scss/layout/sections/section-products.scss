@@ -2,21 +2,11 @@
 @use "../../utils/variables";
 
 .section-products {
-
+  margin-bottom: 50px;
   .swiper-wrapper {
     justify-content: space-between;
   }
 
-  @include mixins.respond-to(variables.$lg) {
-
-  }
-
-  @include mixins.respond-to(variables.$lg) {
-
-  }
-  @include mixins.respond-to(variables.$md) {
-
-  }
   @include mixins.respond-to(variables.$sm) {
     .swiper-wrapper {
       justify-content: flex-start;

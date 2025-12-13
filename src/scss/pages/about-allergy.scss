@@ -1,10 +1,6 @@
 @use "../utils/mixins";
 @use "../utils/variables";
 
-.about-allergy {
-
-}
-
 .section-img-bg {
   background-repeat: no-repeat;
   background-size: cover;
@@ -42,7 +38,6 @@
 
 .section-promo {
   background-color: variables.$light-gray-200;
-  padding: 50px 0;
   margin-bottom: 100px;
   .heading {
     margin-bottom: 25px;
@@ -93,8 +88,5 @@
   .section-img-bg .section__title,
   .section-img-bg {
     text-align: center;
-  }
-  .section-promo {
-
   }
 }

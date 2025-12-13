@@ -2,9 +2,8 @@
 @use "../../utils/variables";
 
 .section-with-tabs {
-  background-color: variables.$light-gray-100;
-  //padding-top: 100px;
   padding-bottom: 0;
+  margin: 0;
   .section__title {
     text-align: left;
   }

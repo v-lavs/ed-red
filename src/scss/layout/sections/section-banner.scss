@@ -2,9 +2,9 @@
 @use "../../utils/variables";
 
 .section-banner {
-  //padding: 50px 0 100px;
   background-color: variables.$mint;
-
+  padding-bottom: 100px;
+  margin: 0;
   .heading_xxl {
     font-weight: 900;
     line-height: 1.18;
@@ -39,7 +39,7 @@
 
 @include mixins.respond-to(variables.$xl) {
   .section-banner {
-    //padding-top: 50px;
+    padding-bottom: 100px;
   }
   .section-banner__text {
     font-size: 24px;

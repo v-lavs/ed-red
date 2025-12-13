@@ -3,22 +3,12 @@
 
 .page {
   background-color: #FFFFFF;
-}
-
-.about-allergy {
-  .section-counter {
-    margin-bottom: 0;
-  }
-
-  .section-with-tabs {
-    padding-top: 100px;
-  }
-}
-
-.page-useful {
-
-  .section-img-bg {
-    margin-bottom: 50px;
+  .section-with-tabs{
+    padding: 50px 0;
+    margin: 50px 0;
+    .tabs:last-child{
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -33,59 +23,14 @@
   margin: 0 auto;
 }
 
-.section-blog-slider {
-  //padding-top: 100px;
-}
-
 .page.page-article {
   background-color: #fff;
-
-  .section-products {
-    //padding: 50px 0;
-  }
-
-  .section-blog-slider {
-    //padding-top: 50px;
-  }
 }
 
-.article {
-  padding-bottom: 50px;
-  line-height: 1.1;
 
-  &__title {
-    margin-bottom: 50px;
-    font-weight: 400;
-    text-align: center;
-  }
-
-  &__thumb {
-    width: 50%;
-    margin-bottom: 50px;
-    margin-right: 25px;
-    float: left;
-  }
-
-  &__block-intro {
-    margin-bottom: 50px;
-  }
-}
-
-@include mixins.respond-to(variables.$xl) {
-  .article__nav li {
-    font-size: 24px;
-  }
-}
 @include mixins.respond-to(variables.$xs) {
 
 }
 @include mixins.respond-to(variables.$xxs) {
-  //.section-info,
-  //.page.page-article {
-  //  .section-products,
-  //  .section-blog-slider,
-  //  .section-flowering {
-  //    padding-top: 0;
-  //  }
-  //}
+
 }

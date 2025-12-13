@@ -6,6 +6,35 @@
 
   .section-question {
     padding-top: 100px;
+    margin-top: 50px;
+  }
+}
+
+.article {
+  margin-bottom: 50px;
+  line-height: 1.1;
+
+  &__title {
+    margin-bottom: 50px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  &__thumb {
+    width: 50%;
+    margin-bottom: 50px;
+    margin-right: 25px;
+    float: left;
+  }
+
+  &__block-intro {
+    margin-bottom: 50px;
+  }
+}
+
+@include mixins.respond-to(variables.$xl) {
+  .article__nav li {
+    font-size: 24px;
   }
 }
 

@@ -74,7 +74,6 @@
 @include mixins.respond-to(variables.$xs) {
   .accordion .panel__title{
     padding-right: 34px;
-    //font-size: 18px;
   }
   .accordion .open-panel:before {
     width: 20px;

@@ -889,12 +889,17 @@ body {
   padding-top: 114px;
 }
 
+.bg-grey {
+  background-color: #FAFAFA;
+}
+
 .color_green {
   color: #7EA68C;
 }
 
 section {
-  padding: 50px 0 100px;
+  padding: 50px 0;
+  margin: 50px 0;
 }
 
 .section__title {
@@ -2047,7 +2052,6 @@ form input {
 
 .calendar-wrapper {
   position: relative;
-  margin-bottom: 50px;
 }
 
 .month-block {
@@ -2459,6 +2463,8 @@ form input {
 
 .section-banner {
   background-color: #E4F1E8;
+  padding-bottom: 100px;
+  margin: 0;
 }
 
 .section-banner .heading_xxl {
@@ -2490,6 +2496,10 @@ form input {
 .section-banner .part_right {
   width: 46%;
   padding: 0 7%;
+}
+
+.section-products {
+  margin-bottom: 50px;
 }
 
 .section-products .swiper-wrapper {
@@ -2605,8 +2615,8 @@ form input {
 }
 
 .section-with-tabs {
-  background-color: #FAFAFA;
   padding-bottom: 0;
+  margin: 0;
 }
 
 .section-with-tabs .section__title {
@@ -2627,10 +2637,6 @@ form input {
 .slider-posts .swiper-slide {
   width: auto;
   height: auto;
-}
-
-.section-info {
-  padding-top: 100px;
 }
 
 .slider-info .swiper-slide {
@@ -2739,6 +2745,7 @@ form input {
 
 .section-intro {
   padding-top: 0;
+  margin-top: 0;
   font-size: 32px;
   line-height: 1.625;
   color: #000000;
@@ -2779,8 +2786,8 @@ form input {
 }
 
 .section-blog {
-  padding-top: 0;
-  padding-bottom: 68px;
+  padding: 0;
+  margin: 0;
 }
 
 .section-blog .filter {
@@ -2798,6 +2805,10 @@ form input {
   grid-column-gap: 24px;
   grid-row-gap: 50px;
   padding-bottom: 50px;
+}
+
+.blog-list > * {
+  min-width: 0;
 }
 
 .section-flowering {
@@ -2818,6 +2829,7 @@ form input {
 
 .section-flowering .wrap-btn {
   text-align: center;
+  padding-top: 50px;
 }
 
 .section-map {
@@ -2852,16 +2864,13 @@ form input {
   background-color: #FFFFFF;
 }
 
-.about-allergy .section-counter {
-  margin-bottom: 0;
+.page .section-with-tabs {
+  padding: 50px 0;
+  margin: 50px 0;
 }
 
-.about-allergy .section-with-tabs {
-  padding-top: 100px;
-}
-
-.page-useful .section-img-bg {
-  margin-bottom: 50px;
+.page .section-with-tabs .tabs:last-child {
+  padding-bottom: 0;
 }
 
 .wrap-slider-products,
@@ -2879,8 +2888,17 @@ form input {
   background-color: #fff;
 }
 
+.page-blog {
+  background-color: #FAFAFA;
+}
+
+.page-blog .section-question {
+  padding-top: 100px;
+  margin-top: 50px;
+}
+
 .article {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   line-height: 1.1;
 }
 
@@ -2899,14 +2917,6 @@ form input {
 
 .article__block-intro {
   margin-bottom: 50px;
-}
-
-.page-blog {
-  background-color: #FAFAFA;
-}
-
-.page-blog .section-question {
-  padding-top: 100px;
 }
 
 .single-product {
@@ -3168,7 +3178,7 @@ form input {
 }
 
 .page-article .section-flowering {
-  padding-bottom: 50px;
+  padding: 0;
 }
 
 .month-wrap {
@@ -3359,6 +3369,7 @@ form input {
 
 .page-calendar .section-flowering {
   padding-top: 0;
+  margin-top: 0;
 }
 
 .page-calendar .tabs {
@@ -3442,7 +3453,6 @@ form input {
 
 .section-promo {
   background-color: #F9F9F9;
-  padding: 50px 0;
   margin-bottom: 100px;
 }
 
@@ -3516,7 +3526,7 @@ form input {
 }
 
 .allergens .load_more {
-  margin-bottom: 68px;
+  margin-bottom: 18px;
 }
 
 .page-useful .section-intro .section__content {
@@ -3620,6 +3630,10 @@ form input {
     font-size: 20px;
   }
 
+  .section-banner {
+    padding-bottom: 100px;
+  }
+
   .section-banner__text {
     font-size: 24px;
   }
@@ -3714,6 +3728,11 @@ form input {
 
   .footer__logo-farm {
     max-width: 171px;
+  }
+
+  .card-post__title {
+    font-size: 18px;
+    margin-bottom: 20px;
   }
 
   .product-forms__thumb {
@@ -4000,6 +4019,15 @@ form input {
     width: 100%;
   }
 
+  .card-post__title {
+    font-size: 16px;
+  }
+
+  .card-post__body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .sidebar {
     display: none;
   }
@@ -4176,6 +4204,12 @@ form input {
   .slider-info .btn_main {
     padding-left: 14px;
     padding-right: 14px;
+  }
+
+  .blog-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 25px;
   }
 
   .block-order__text {
@@ -4472,6 +4506,27 @@ form input {
     margin-bottom: 25px;
   }
 
+  .blog-list {
+    display: block;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .post-item {
+    margin-bottom: 25px;
+  }
+
+  .filter {
+    flex-wrap: wrap;
+  }
+
+  .filter__item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+    max-width: 100%;
+  }
+
   .section-use .section__title {
     font-size: 24px;
   }
@@ -4667,10 +4722,6 @@ form input {
 
   .price__heading {
     margin-bottom: 5px;
-  }
-
-  .page.page-article .section-blog-slider {
-    padding-bottom: 50px;
   }
 
   .article__nav li,

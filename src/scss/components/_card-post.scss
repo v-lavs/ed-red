@@ -79,8 +79,5 @@
 }
 
 @include mixins.respond-to(variables.$xl) {
-  .card-post__title {
-    //font-size: 20px;
-    //margin-bottom: 40px;
-  }
+
 }

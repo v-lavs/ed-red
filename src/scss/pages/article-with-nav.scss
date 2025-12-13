@@ -58,7 +58,7 @@
 
 .page-article {
   .section-flowering {
-    padding-bottom: 50px;
+    padding: 0;
   }
 }
 
@@ -118,17 +118,6 @@
 }
 
 @include mixins.respond-to(variables.$xxs) {
-  .page.page-article {
-    //.section-products,
-    //.section-blog-slider,
-    //.section-flowering {
-    //  padding-top: 0;
-    //}
-
-    .section-blog-slider {
-      padding-bottom: 50px;
-    }
-  }
   .article {
     &__nav li,
     &__nav h3 {
