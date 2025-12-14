@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /**
  * Swiper 9.4.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -909,7 +911,7 @@ section {
 }
 
 .section__content p {
-  margin-bottom: 2em;
+  margin-bottom: 1.75em;
 }
 
 .section__content p:last-child {
@@ -1293,27 +1295,24 @@ section {
   display: none;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 0;
-  z-index: 10;
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
 }
 
-.swiper-pagination-bullets .swiper-pagination-bullet {
-  position: relative;
-  width: 18px;
-  height: 18px;
+.swiper-pagination-bullet {
+  width: 24px;
+  height: 2px;
+  background-color: #d9d9d9;
+  border-radius: 2px;
   opacity: 1;
-  margin: 0 10px !important;
-  transform-style: preserve-3d;
+  transition: background-color 0.3s ease;
 }
 
-.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  opacity: 1;
-  background-color: #7EA68C;
-}
-
-.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 0;
+.swiper-pagination-bullet-active {
+  background-color: #3f7f63;
+  /* активний дот */
 }
 
 .swiper-button-next svg,
@@ -2319,7 +2318,7 @@ form input {
 }
 
 .footer .heading_md {
-  font-size: clamp(21px, 21px + 15 * (100vw - 768px) / 772, 36px);
+  font-size: clamp(20px, 20px + 16 * (100vw - 768px) / 772, 36px);
   text-align: center;
   color: #7EA68C;
   margin-bottom: 50px;
@@ -2507,21 +2506,21 @@ form input {
   justify-content: space-between;
 }
 
-.section-calendar {
+.section-calendar-in-tabs {
   background-color: #FAFAFA;
   overflow: hidden;
 }
 
-.section-calendar .tabs {
+.section-calendar-in-tabs .tabs {
   padding-bottom: 0;
 }
 
-.section-calendar .section__title {
+.section-calendar-in-tabs .section__title {
   margin-bottom: 10px;
   text-align: left;
 }
 
-.section-calendar .sub-title {
+.section-calendar-in-tabs .sub-title {
   line-height: 1.67;
 }
 
@@ -3478,11 +3477,13 @@ form input {
 }
 
 .page-allergens .section-question {
-  padding-top: 100px;
+  padding: 100px 0;
+  margin-bottom: 0;
 }
 
 .allergens {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .allergens__list {
@@ -3731,6 +3732,10 @@ form input {
     max-width: 171px;
   }
 
+  .section-intro {
+    font-size: 24px;
+  }
+
   .card-post__title {
     font-size: 18px;
     margin-bottom: 20px;
@@ -3771,6 +3776,10 @@ form input {
   .single-product__video .btn {
     margin-left: 10px;
   }
+
+  .allergens__name {
+    font-size: 14px;
+  }
 }
 
 @media only screen and (max-width:1024px) {
@@ -3780,11 +3789,6 @@ form input {
 
   .container {
     padding: 0 32px;
-  }
-
-  .section-intro .section__text {
-    font-size: 26px;
-    margin-bottom: 50px;
   }
 
   .sidebar {
@@ -3825,6 +3829,10 @@ form input {
 
   .dynamic-content h3 {
     font-size: 30px;
+  }
+
+  .heading_lg {
+    font-size: 40px;
   }
 
   .menu {
@@ -4010,8 +4018,8 @@ form input {
   }
 
   .section-intro .section__content .section__text {
-    font-size: 24px;
     margin-bottom: 50px;
+    padding-right: 0;
   }
 
   .section-intro .section__content img {
@@ -4090,6 +4098,14 @@ form input {
     padding-right: 0;
   }
 
+  .section-img-bg .section__title {
+    font-size: 40px;
+  }
+
+  .page-useful .section-intro .section__slogan {
+    font-size: 38px;
+  }
+
   .page-useful .section-intro .section__content {
     padding-bottom: 0;
     padding-right: 0;
@@ -4114,7 +4130,7 @@ form input {
 
 @media only screen and (max-width: 767px) {
   body {
-    font-size: clamp(16px, 16px + 4 * (100vw - 320px) / 447, 20px);
+    font-size: clamp(16px, 16px + 4 * (100vw - 580px) / 187, 20px);
   }
 
   .heading_xxl {
@@ -4122,7 +4138,13 @@ form input {
   }
 
   .heading_lg {
-    font-size: clamp(26px, 26px + 18 * (100vw - 320px) / 447, 44px);
+    font-size: clamp(26px, 26px + 14 * (100vw - 320px) / 447, 40px);
+  }
+
+  .load_more {
+    width: 50px;
+    height: 50px;
+    background-size: 34px 34px;
   }
 
   .counter {
@@ -4168,8 +4190,33 @@ form input {
     font-size: 26px;
   }
 
+  .form-subscribe {
+    font-size: 16px;
+  }
+
+  form input {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
   .breadcrumb {
     padding-top: 25px;
+  }
+
+  .select2-container--default .select2-selection--single {
+    font-size: 16px;
+    height: 48px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    width: 12px;
+  }
+
+  .select2-results__option--selectable {
+    font-size: 16px;
+    line-height: 1.27;
   }
 
   .container {
@@ -4263,6 +4310,15 @@ form input {
   .section-img-bg {
     text-align: center;
   }
+
+  .section-promo .section__title,
+  .section-img-bg .section__title {
+    font-size: 34px;
+  }
+
+  .allergens__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 @media screen and (max-width: 710px) {
@@ -4302,7 +4358,7 @@ form input {
 
 @media only screen and (max-width: 580px) {
   .section__title {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   .dynamic-content img.alignfull {
@@ -4332,7 +4388,8 @@ form input {
   }
 
   section {
-    padding-bottom: 50px;
+    padding: 25px 0;
+    margin: 25px 0;
   }
 
   .heading_xxl {
@@ -4352,6 +4409,10 @@ form input {
     padding: 7px 14px;
   }
 
+  .btn {
+    font-size: 14px;
+  }
+
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
@@ -4361,8 +4422,12 @@ form input {
     width: 290px;
   }
 
+  .post-item:last-child {
+    margin-bottom: 0;
+  }
+
   .accordion .panel__title {
-    padding-right: 34px;
+    font-size: 18px;
   }
 
   .accordion .open-panel:before {
@@ -4371,11 +4436,15 @@ form input {
   }
 
   .accordion .panel__heading {
-    padding: 15px 45px 15px 0;
+    padding: 15px 40px 15px 0;
   }
 
   .accordion .open-panel {
     top: 14px;
+  }
+
+  .form-subscribe {
+    font-size: 14px;
   }
 
   .form-subscribe .btn_submit {
@@ -4383,12 +4452,25 @@ form input {
     margin-top: 15px;
   }
 
+  .checkbox-wrap {
+    text-align: left;
+  }
+
   .breadcrumb__item {
     font-size: 12px;
   }
 
+  .section-blog .filter {
+    padding-bottom: 25px;
+  }
+
+  .footer {
+    padding: 25px 0;
+  }
+
   .footer_top {
     padding-bottom: 25px;
+    padding-top: 25px;
   }
 
   .footer {
@@ -4405,7 +4487,6 @@ form input {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-weight: 500;
   }
 
   .footer__menu-general li {
@@ -4414,7 +4495,7 @@ form input {
 
   .footer__menu-general li a {
     padding: 0;
-    font-weight: 500;
+    font-weight: 700;
   }
 
   .footer__menu-general li:last-of-type {
@@ -4445,6 +4526,22 @@ form input {
 
   .footer__sub-menu {
     display: none;
+  }
+
+  .footer .heading_md {
+    margin-bottom: 25px;
+  }
+
+  .footer__contacts {
+    padding-top: 25px;
+  }
+
+  .block-subscribe {
+    padding-bottom: 25px;
+  }
+
+  .form-subscribe .form__group {
+    padding-bottom: 25px;
   }
 
   .section-banner__text {
@@ -4531,10 +4628,19 @@ form input {
     margin-bottom: 25px;
   }
 
+  .section-intro {
+    font-size: 18px;
+  }
+
+  .section-intro .section__content img {
+    height: 280px;
+  }
+
   .blog-list {
     display: block;
     max-width: 380px;
     margin: 0 auto;
+    padding-bottom: 25px;
   }
 
   .post-item {
@@ -4543,6 +4649,7 @@ form input {
 
   .filter {
     flex-wrap: wrap;
+    padding-bottom: 25px;
   }
 
   .filter__item {
@@ -4550,6 +4657,16 @@ form input {
     margin-right: 0;
     margin-bottom: 15px;
     max-width: 100%;
+  }
+
+  .filter__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .page-blog .section-question {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 0;
   }
 
   .section-use .section__title {
@@ -4636,13 +4753,24 @@ form input {
   .month-block__item:last-child {
     margin-bottom: 0;
   }
+
+  .section-promo,
+  .section-img-bg {
+    font-size: 18px;
+  }
+
+  .allergens__list {
+    grid-column-gap: 12px;
+    grid-row-gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .allergens__name {
+    font-size: 12px;
+  }
 }
 
 @media only screen and (max-width: 420px) {
-  section {
-    padding-bottom: 50px;
-  }
-
   .dynamic-content h1,
   .dynamic-content h2 {
     font-size: 26px;
@@ -4650,10 +4778,6 @@ form input {
 
   .dynamic-content h3 {
     font-size: 20px;
-  }
-
-  .accordion .panel__title {
-    font-size: 18px;
   }
 
   .form-subscribe input {
@@ -4674,24 +4798,8 @@ form input {
     margin-bottom: 25px;
   }
 
-  .footer {
-    padding-top: 25px;
-  }
-
   .footer__nav {
     margin-bottom: 0;
-  }
-
-  .footer__contacts {
-    padding-top: 25px;
-  }
-
-  .block-subscribe {
-    padding-bottom: 25px;
-  }
-
-  .block-subscribe .heading_md {
-    margin-bottom: 25px;
   }
 
   .section-banner__text {
@@ -4717,6 +4825,10 @@ form input {
 
   .section-info .container {
     padding-left: 16px;
+  }
+
+  .section-intro {
+    font-size: 16px;
   }
 
   .block-order {
@@ -4756,6 +4868,10 @@ form input {
 
   .month-block {
     width: 100%;
+  }
+
+  .allergens__list {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

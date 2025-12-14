@@ -51,12 +51,15 @@
   }
 }
 
+@include mixins.respond-to(variables.$screen-md) {
+  .section-intro {
+    font-size: 24px;
+  }
+}
+
 @include mixins.respond-to(variables.$lg) {
   .section-intro {
-    .section__text {
-      font-size: 26px;
-      margin-bottom: 50px;
-    }
+
   }
 }
 
@@ -67,8 +70,8 @@
       padding-right: 0;
 
       .section__text {
-        font-size: 24px;
         margin-bottom: 50px;
+        padding-right: 0;
       }
 
       img {
@@ -77,5 +80,22 @@
         width: 100%;
       }
     }
+  }
+}
+
+
+@include mixins.respond-to(variables.$xs) {
+  .section-intro {
+    font-size: 18px;
+
+    .section__content img {
+      height: 280px;
+    }
+  }
+}
+
+@include mixins.respond-to(variables.$xxs) {
+  .section-intro {
+    font-size: 16px;
   }
 }

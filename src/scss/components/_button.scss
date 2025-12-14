@@ -39,6 +39,7 @@
     border-radius: 5px;
     padding: 14px 69px 15px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
     &:hover,
     &:focus {
 
@@ -77,6 +78,14 @@
   }
 }
 
+@include mixins.respond-to(variables.$sm) {
+  .load_more {
+    width: 50px;
+    height: 50px;
+    background-size: 34px 34px;
+  }
+}
+
 @include mixins.respond-to(variables.$xs) {
   .btn {
     display: inline-flex;
@@ -85,5 +94,11 @@
     font-size: 16px;
     height: 40px;
     padding: 7px 14px;
+  }
+}
+
+@include mixins.respond-to(variables.$xs) {
+  .btn {
+    font-size: 14px;
   }
 }

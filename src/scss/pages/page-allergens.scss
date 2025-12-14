@@ -5,13 +5,15 @@
   background-color: variables.$light-gray-100;
 
   .section-question {
-    padding-top: 100px;
+    padding: 100px 0;
+    margin-bottom: 0;
   }
 }
 
 // allergens
 .allergens {
   text-align: center;
+  margin-bottom: 50px;
 
   &__list {
     display: grid;
@@ -65,5 +67,33 @@
 @include mixins.respond-to(variables.$xl) {
   .allergens__name {
     font-size: 18px;
+  }
+}
+
+@include mixins.respond-to(variables.$screen-md) {
+  .allergens__name {
+    font-size: 14px;
+  }
+}
+
+@include mixins.respond-to(variables.$sm) {
+  .allergens__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@include mixins.respond-to(variables.$xs) {
+  .allergens__list {
+    grid-column-gap: 12px;
+    grid-row-gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .allergens__name {
+    font-size: 12px;
+  }
+}
+@include mixins.respond-to(variables.$xxs) {
+  .allergens__list {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

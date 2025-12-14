@@ -207,7 +207,6 @@ function initResponsiveCounterSlider() {
         if (isMobile()) {
             if (!slider && $('.swiper.counter').length) {
                 slider = new Swiper('.swiper.counter', {
-                    pagination: { el: '.swiper-pagination', clickable: true },
                     navigation: {
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev',

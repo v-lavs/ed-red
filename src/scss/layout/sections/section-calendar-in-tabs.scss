@@ -1,7 +1,7 @@
 @use "../../utils/mixins";
 @use "../../utils/variables";
 
-.section-calendar {
+.section-calendar-in-tabs {
   background-color: variables.$light-gray-100;
   overflow: hidden;
 
@@ -116,7 +116,6 @@
 }
 
 @include mixins.respond-to(variables.$sm) {
-
   .allergen-toggle-btn {
     display: inline-block;
   }

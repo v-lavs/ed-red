@@ -37,7 +37,7 @@
   color: #666666;
 }
 
-.select2-container--default .select2-selection--single .select2-selection__arrow{
+.select2-container--default .select2-selection--single .select2-selection__arrow {
   right: 18px;
   top: 50%;
   transform: translateY(-50%);
@@ -45,9 +45,10 @@
 
 .select2-container .select2-selection__arrow b {
   border-color: #666666 transparent transparent transparent !important;
-  border-width:10px 6px 0 6px!important;
+  border-width: 10px 6px 0 6px !important;
   transition: transform 0.2s;
 }
+
 .select2-container--open .select2-selection__arrow b {
   transform: rotate(180deg);
 }
@@ -59,4 +60,27 @@
 .select2-results__option--selectable {
   font-size: 22px;
   line-height: 28px;
+}
+
+
+@include mixins.respond-to(variables.$sm) {
+  .select2-container--default .select2-selection--single {
+    font-size: 16px;
+    height: 48px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    width: 12px;
+  }
+  .select2-results__option--selectable {
+    font-size: 16px;
+    line-height: 1.27;
+  }
+}
+
+@include mixins.respond-to(variables.$xs) {
+  .section-blog .filter {
+    padding-bottom: 25px;
+  }
 }

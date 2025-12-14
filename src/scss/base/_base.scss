@@ -39,7 +39,7 @@ section{
   }
 
   &__content p {
-    margin-bottom: 2em;
+    margin-bottom: 1.75em;
 
     &:last-child {
       margin-bottom: 0;
@@ -232,13 +232,13 @@ section{
 
 @include mixins.respond-to(variables.$sm) {
   body {
-    font-size: clamp(16px, calc(16px + 4 * ((100vw - 320px) / 447)), 20px);
+    font-size: clamp(16px, calc(16px + 4 * ((100vw - 580px) / 187)), 20px);
   }
 }
 
 @include mixins.respond-to(variables.$xs) {
   .section__title {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
   .dynamic-content {
     img.alignfull {
@@ -264,13 +264,11 @@ section{
     }
   }
   section{
-    padding-bottom: 50px;
+      padding: 25px 0;
+      margin: 25px 0;
   }
 }
 @include mixins.respond-to(variables.$xxs) {
-  section{
-    padding-bottom: 50px;
-  }
   .dynamic-content {
     h1, h2 {
       font-size: 26px;

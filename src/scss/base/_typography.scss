@@ -11,7 +11,6 @@
   }
 
   &_lg {
-    //font-size: 52px;
     font-size: clamp(44px, calc(44px + 8 * ((100vw - 992px) / 448)), 52px);
     color: variables.$green-100;
   }
@@ -55,12 +54,18 @@
   }
 }
 
+@include mixins.respond-to(variables.$md) {
+  .heading_lg {
+    font-size: 40px;
+  }
+}
+
 @include mixins.respond-to(variables.$sm) {
   .heading_xxl {
     font-size: clamp(24px, calc(24px + 40 * ((100vw - 320px) / (767 - 320))), 64px);
   }
   .heading_lg {
-    font-size: clamp(26px, calc(26px + 18 * ((100vw - 320px) / 447)), 44px);
+    font-size: clamp(26px, calc(26px + 14 * ((100vw - 320px) / 447)), 40px);
   }
 }
 

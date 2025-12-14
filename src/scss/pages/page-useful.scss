@@ -73,6 +73,9 @@
 @include mixins.respond-to(variables.$md) {
   .page-useful {
     .section-intro {
+      .section__slogan {
+        font-size: 38px;
+      }
       .section__content {
         padding-bottom: 0;
         padding-right: 0;

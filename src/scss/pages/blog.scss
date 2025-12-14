@@ -38,3 +38,10 @@
   }
 }
 
+@include mixins.respond-to(variables.$xs) {
+  .page-blog .section-question {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 0;
+  }
+}

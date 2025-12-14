@@ -5,29 +5,24 @@
 .swiper-pagination{
   display: none;
 }
-.swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 0;
-  z-index: 10;
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
 }
 
-.swiper-pagination-bullets .swiper-pagination-bullet {
-  position: relative;
-  width: 18px;
-  height: 18px;
+.swiper-pagination-bullet {
+  width: 24px;
+  height: 2px;
+  background-color: #d9d9d9;
+  border-radius: 2px;
   opacity: 1;
-  margin: 0 10px !important;
-  transform-style: preserve-3d;
-
-  &.swiper-pagination-bullet-active {
-    opacity: 1;
-    background-color: variables.$green-100;
-  }
+  transition: background-color 0.3s ease;
 }
 
-.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 0;
+.swiper-pagination-bullet-active {
+  background-color: #3f7f63; /* активний дот */
 }
-
 .swiper-button-next svg, .swiper-button-prev svg {
   display: none;
 }

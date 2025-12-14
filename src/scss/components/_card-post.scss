@@ -1,6 +1,7 @@
 @use "../utils/mixins";
 @use "../utils/variables";
-.card{
+
+.card {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -11,6 +12,7 @@
   min-height: 100%;
   overflow: hidden;
 }
+
 .card-post {
   &__thumb {
     padding-top: 76%;
@@ -73,11 +75,15 @@
     }
 
     &:hover:before {
-       width: 100%;
+      width: 100%;
     }
   }
 }
 
-@include mixins.respond-to(variables.$xl) {
-
+@include mixins.respond-to(variables.$xs) {
+  .post-item {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

@@ -57,17 +57,22 @@
     display: block;
     max-width: 380px;
     margin: 0 auto;
+    padding-bottom: 25px;
   }
   .post-item {
     margin-bottom: 25px;
   }
   .filter{
     flex-wrap: wrap;
+    padding-bottom: 25px;
     &__item{
       width: 100%;
       margin-right: 0;
       margin-bottom: 15px;
       max-width: 100%;
+      &:last-child{
+        margin-bottom: 0;
+      }
     }
   }
 }
