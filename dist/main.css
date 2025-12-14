@@ -2116,6 +2116,7 @@ form input {
   border: none;
   background-color: transparent;
   padding: 0;
+  cursor: pointer;
 }
 
 .month-block .more-plants,
@@ -4124,9 +4125,33 @@ form input {
     font-size: clamp(26px, 26px + 18 * (100vw - 320px) / 447, 44px);
   }
 
+  .counter {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .counter .swiper-slide {
+    border: 1px solid;
+  }
+
   .counter .swiper-button-prev,
   .counter .swiper-button-next {
     display: block;
+    height: 32px;
+    border: 1px solid;
+  }
+
+  .counter .swiper-button-next:after {
+    margin-left: 10px;
+  }
+
+  .counter__number {
+    font-size: clamp(50px, 50px + 46 * (100vw - 320px) / 260, 96px);
+  }
+
+  .counter__text {
+    font-size: clamp(16px, 16px + 4 * (100vw - 320px) / 260, 20px);
   }
 
   .btn_play {

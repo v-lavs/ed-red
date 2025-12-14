@@ -34,9 +34,28 @@
 
 @include mixins.respond-to(variables.$sm) {
   .counter{
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+
+    .swiper-slide{
+      border: 1px solid;
+    }
+
     .swiper-button-prev,
     .swiper-button-next{
       display:block;
+      height: 32px;
+      border: 1px solid;
+    }
+    .swiper-button-next:after{
+      margin-left: 10px;
+    }
+    &__number{
+      font-size: clamp(50px, calc(50px + 46 * ((100vw - 320px) / 260)), 96px);
+    }
+    &__text{
+      font-size: clamp(16px, calc(16px + 4 * ((100vw - 320px) / 260)), 20px);
     }
   }
 }
