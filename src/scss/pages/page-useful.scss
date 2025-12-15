@@ -95,8 +95,31 @@
   }
 }
 
+@include mixins.respond-to(variables.$sm) {
+  .page-useful {
+    .section-intro {
+      .section__slogan {
+        font-size: 34px;
+      }
+    }
+  }
+}
+
 @include mixins.respond-to(variables.$xs) {
-  .page-useful .section-intro .section__text {
-    margin-bottom: 25px;
+  .page-useful .section-intro {
+    .section__text {
+      margin-bottom: 25px;
+    }
+    .section__slogan {
+      font-size: 30px;
+    }
+  }
+}
+
+@include mixins.respond-to(variables.$xxs) {
+  .page-useful .section-intro {
+    .section__slogan {
+      font-size: 26px;
+    }
   }
 }

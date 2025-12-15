@@ -4476,6 +4476,10 @@ form input {
   .allergens__list {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .page-useful .section-intro .section__slogan {
+    font-size: 34px;
+  }
 }
 
 @media screen and (max-width: 710px) {
@@ -5061,6 +5065,10 @@ form input {
   .page-useful .section-intro .section__text {
     margin-bottom: 25px;
   }
+
+  .page-useful .section-intro .section__slogan {
+    font-size: 30px;
+  }
 }
 
 @media only screen and (max-width: 420px) {
@@ -5150,6 +5158,11 @@ form input {
     font-size: 16px;
   }
 
+  .section-promo .section__title,
+  .section-img-bg .section__title {
+    font-size: 28px;
+  }
+
   .block-order {
     width: 100%;
     max-width: 100%;
@@ -5188,6 +5201,10 @@ form input {
 
   .allergens__list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-useful .section-intro .section__slogan {
+    font-size: 26px;
   }
 }
 

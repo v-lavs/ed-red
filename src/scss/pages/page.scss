@@ -35,5 +35,7 @@
   }
 }
 @include mixins.respond-to(variables.$xxs) {
-
+  .section-promo .section__title, .section-img-bg .section__title {
+    font-size: 28px;
+  }
 }
