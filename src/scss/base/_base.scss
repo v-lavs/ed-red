@@ -20,16 +20,25 @@ body {
   flex: 1 1 auto;
   padding-top: 114px;
 }
-.bg-grey  {
+
+.bg-grey {
   background-color: variables.$light-gray-100;
 }
+
 .color_green {
   color: variables.$green-100;
 }
-section{
+
+sup {
+  font-size: inherit;
+  vertical-align: text-bottom;
+}
+
+section {
   padding: 50px 0;
   margin: 50px 0;
 }
+
 .section {
 
   &__title {
@@ -249,12 +258,15 @@ section{
     h3, h4, h5, h6 {
       margin: 25px 0;
     }
+
     h1, h2 {
       font-size: 35px;
     }
+
     h3 {
       font-size: 24px;
     }
+
     ul {
       li {
         &:before {
@@ -263,11 +275,12 @@ section{
       }
     }
   }
-  section{
-      padding: 25px 0;
-      margin: 25px 0;
+  section {
+    padding: 25px 0;
+    margin: 25px 0;
   }
 }
+
 @include mixins.respond-to(variables.$xxs) {
   .dynamic-content {
     h1, h2 {

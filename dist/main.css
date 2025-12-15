@@ -897,6 +897,11 @@ body {
   color: #7EA68C;
 }
 
+sup {
+  font-size: inherit;
+  vertical-align: text-bottom;
+}
+
 section {
   padding: 50px 0;
   margin: 50px 0;
