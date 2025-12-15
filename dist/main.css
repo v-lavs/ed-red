@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /**
  * Swiper 9.4.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -2288,9 +2290,32 @@ form input {
 
 .btn_close {
   position: absolute;
-  display: none;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 25px;
+  right: 25px;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn_close:before,
+.btn_close:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #000;
+  left: 2px;
+  top: 11px;
+}
+
+.btn_close:before {
+  transform: rotate(45deg);
+}
+
+.btn_close:after {
+  transform: rotate(-45deg);
 }
 
 .backdrop {
@@ -3829,9 +3854,119 @@ form input {
     font-size: 40px;
   }
 
+  /* ========== 1 РІВЕНЬ ========== */
+
   .menu {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    height: 100%;
+    max-height: 100vh;
+    overflow: scroll;
+  }
+
+  .menu__item {
+    position: relative;
+  }
+
+  .menu__item:after {
+    display: none;
+  }
+
+  .menu__sub-menu li {
+    border: none;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+  }
+
+  .menu__sub-title {
+    border: none;
+    margin-bottom: 5px;
+    padding-bottom: 0;
+    padding-left: 20px;
+  }
+
+  .menu__item > .menu__sub-menu {
+    position: static;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 1;
+    pointer-events: all;
+    transform: none;
+    transition: max-height 0.35s ease;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .nav-col.is-open > .menu__sub-menu,
+  .menu__item.is-open > .menu__sub-menu {
+    max-height: 3000px;
+    margin-top: 15px;
+  }
+
+  /* ВИМКНУТИ DESKTOP HOVER */
+
+  .menu__item:hover > .menu__sub-menu {
+    opacity: 1;
+    transform: none;
+    pointer-events: all;
+  }
+
+  /* ========== 2 РІВЕНЬ (nav-row / nav-col) ========== */
+
+  .nav-row {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav-col {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    border: none;
+    margin-bottom: 15px;
+  }
+
+  /* ========== 3 РІВЕНЬ (.sub-menu) ========== */
+
+  .nav-col > .sub-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    margin-top: 0;
+    padding-left: 15px;
+  }
+
+  .nav-col.is-open > .sub-menu {
+    max-height: 2000px;
+    margin-top: 10px;
+  }
+
+  /* ========== TOGGLER ========== */
+
+  .menu__toggler {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 27px;
+    height: 27px;
+    background-image: url(../assets/img/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    transition: transform 0.3s;
+    z-index: 1;
+  }
+
+  .menu__item.is-open > .menu__toggler {
+    transform: rotate(90deg);
+  }
+
+  .nav-col.is-open > .menu__toggler {
+    transform: rotate(90deg);
   }
 
   .form-subscribe .form__group {
@@ -3890,6 +4025,10 @@ form input {
     transform: translateY(-100%);
     transition: transform 0.35s;
     background-color: #FFFFFF;
+    padding: 100px 25px;
+    max-height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .header__nav.open {

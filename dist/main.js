@@ -10,6 +10,7 @@ const BREAKPOINTS = {
 };
 
 const isMobile = () => window.innerWidth <= BREAKPOINTS.mobile;
+const isTablet = () => window.innerWidth <= BREAKPOINTS.tablete;
 
 // ================== HELPERS ==================
 
@@ -117,7 +118,19 @@ function initMobileMenu() {
         $nav.removeClass('open');
         $backdrop.fadeOut();
     });
+
+    $('.menu').on('click', '.menu__toggler', function(e) {
+        e.preventDefault();
+
+        const $parent = $(this).parent();
+
+        $parent.toggleClass('is-open');
+    });
+
+
 }
+
+
 
 // ================== HEADER SEARCH (RESTORED) ==================
 

@@ -37,6 +37,7 @@
   display: none;
   height: 27px;
   margin-left: 24px;
+
   .line {
     display: block;
     width: 30px;
@@ -52,10 +53,32 @@
 
 .btn_close {
   position: absolute;
-  display: none;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 25px;
+  right: 25px;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
 
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #000;
+    left: 2px;
+    top: 11px;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
 }
 
 
@@ -76,9 +99,11 @@
   .header {
     padding-top: 20px;
     padding-bottom: 20px;
-    .container{
+
+    .container {
       align-items: center;
     }
+
     &__nav {
       position: absolute;
       left: 0;
@@ -87,17 +112,21 @@
       transform: translateY(-100%);
       transition: transform .35s;
       background-color: #FFFFFF;
+      padding: 100px 25px;
 
+      max-height: 100vh;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
       &.open {
         transform: translateY(0);
       }
     }
   }
   .btn_burger,
-  .btn_close{
+  .btn_close {
     display: block;
   }
-  .search_open{
+  .search_open {
     margin-left: auto;
   }
 }
