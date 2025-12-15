@@ -2850,7 +2850,8 @@ form input {
 .section-map .distribution-map {
   position: relative;
   overflow: hidden;
-  min-height: 686px;
+  min-height: 340px;
+  padding-top: 52.25%;
   margin-bottom: 50px;
 }
 
@@ -2859,6 +2860,10 @@ form input {
   position: absolute;
   inset: 0;
   z-index: 1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .section-map .text_xl {
@@ -4408,6 +4413,14 @@ form input {
     grid-row-gap: 25px;
   }
 
+  .section-map .text_xl {
+    font-size: 26px;
+  }
+
+  .section-map .text_xl {
+    font-size: 24px;
+  }
+
   .block-order__text {
     width: 100%;
     margin-bottom: 15px;
@@ -4854,6 +4867,18 @@ form input {
     padding-top: 0;
   }
 
+  .section-map {
+    padding-bottom: 50px;
+  }
+
+  .section-map .text_xl {
+    font-size: 20px;
+  }
+
+  .section-map .distribution-map {
+    margin-bottom: 25px;
+  }
+
   .page .section-with-tabs {
     padding: 25px 0;
     margin: 25px 0;
@@ -5117,6 +5142,12 @@ form input {
 @media only screen and (max-width: 360px) {
   .section-banner__text {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .container {
+    padding: 0 16px;
   }
 }
 /*# sourceMappingURL=main.css.map */

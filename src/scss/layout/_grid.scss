@@ -14,4 +14,7 @@
   @include mixins.respond-to(variables.$sm){
     padding: 0 24px;
   }
+  @media screen and (max-width: 340px){
+    padding: 0 16px;
+  }
 }
