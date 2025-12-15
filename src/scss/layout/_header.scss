@@ -29,6 +29,9 @@
     }
   }
 
+  &__nav .btn_close {
+    display: none;
+  }
 }
 
 .btn_burger {
@@ -114,16 +117,20 @@
       background-color: #FFFFFF;
       padding: 100px 25px;
 
-      max-height: 100vh;
+      height: calc(100vh  +  30px);
+      height: calc(100svh  +  30px);
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
+
       &.open {
         transform: translateY(0);
       }
+      .btn_close {
+        display: block;
+      }
     }
   }
-  .btn_burger,
-  .btn_close {
+  .btn_burger{
     display: block;
   }
   .search_open {

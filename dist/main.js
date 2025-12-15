@@ -111,12 +111,14 @@ function initMobileMenu() {
         e.preventDefault();
         $nav.addClass('open');
         $backdrop.fadeIn();
+        lockScroll();
     });
 
     $('.btn_close, .backdrop').on('click', e => {
         e.preventDefault();
         $nav.removeClass('open');
         $backdrop.fadeOut();
+        unlockScroll();
     });
 
     $('.menu').on('click', '.menu__toggler', function(e) {

@@ -157,11 +157,8 @@
 
 @include mixins.respond-to(variables.$md) {
 
-  /* ========== 1 РІВЕНЬ ========== */
-
   .menu {
-    flex-direction: column;
-    align-items: stretch;
+    display: block;
     height: 100%;
     max-height: 100vh;
     overflow: scroll;
@@ -169,21 +166,27 @@
 
   .menu__item {
     position: relative;
-    &:after{
+
+    &:after {
       display: none;
     }
   }
-  .menu__sub-menu li{
+  .menu__link {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .menu__sub-menu li {
     border: none;
     margin-bottom: 10px;
     padding-bottom: 5px;
     padding-left: 20px;
   }
-  .menu__sub-title{
+  .menu__sub-title {
     border: none;
     margin-bottom: 5px;
     padding-bottom: 0;
     padding-left: 20px;
+    text-align: left;
   }
   .menu__item > .menu__sub-menu {
     position: static;
@@ -202,14 +205,11 @@
     margin-top: 15px;
   }
 
-  /* ВИМКНУТИ DESKTOP HOVER */
   .menu__item:hover > .menu__sub-menu {
     opacity: 1;
     transform: none;
     pointer-events: all;
   }
-
-  /* ========== 2 РІВЕНЬ (nav-row / nav-col) ========== */
 
   .nav-row {
     flex-direction: column;
@@ -219,12 +219,10 @@
   .nav-col {
     position: relative;
     width: 100%;
-    padding: 0;
+    padding: 0 30px 0 0;
     border: none;
     margin-bottom: 15px;
   }
-
-  /* ========== 3 РІВЕНЬ (.sub-menu) ========== */
 
   .nav-col > .sub-menu {
     max-height: 0;
@@ -239,13 +237,11 @@
     margin-top: 10px;
   }
 
-  /* ========== TOGGLER ========== */
-
   .menu__toggler {
     display: block;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 10px;
     width: 27px;
     height: 27px;
     background-image: url(../assets/img/arrow-down.svg);
@@ -257,7 +253,9 @@
     transition: transform .3s;
     z-index: 1;
   }
-
+  .nav-col .menu__toggler {
+    top: -5px;
+  }
   .menu__item.is-open > .menu__toggler {
     transform: rotate(90deg);
   }
@@ -266,4 +264,9 @@
     transform: rotate(90deg);
   }
 }
-
+@include mixins.respond-to(variables.$xs) {
+  .header__nav{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
