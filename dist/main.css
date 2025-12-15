@@ -1455,19 +1455,6 @@ section {
   color: #7EA68C;
 }
 
-.search-close {
-  width: 60px;
-  height: 60px;
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
-  color: #7EA68C;
-  font-size: 30px;
-}
-
 .btn_search {
   height: 60px;
   margin-left: 25px;
@@ -4280,6 +4267,15 @@ form input {
     background-size: 34px 34px;
   }
 
+  .btn_search {
+    height: 44px;
+    width: 44px;
+  }
+
+  .search-form {
+    font-size: 16px;
+  }
+
   .counter {
     width: 100%;
     max-width: 540px;
@@ -4552,6 +4548,23 @@ form input {
 
   #modal-calendar .month-block {
     width: 290px;
+  }
+
+  .header__search {
+    padding: 60px 25px 25px;
+  }
+
+  .search-form {
+    font-size: 14px;
+  }
+
+  .search-form input {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .btn_search {
+    margin-left: 12px;
   }
 
   .section-counter {
@@ -5017,6 +5030,10 @@ form input {
   .checkbox-wrap {
     padding-left: 46px;
     font-size: 11px;
+  }
+
+  form input {
+    padding-left: 15px;
   }
 
   .calendar-wrapper {
