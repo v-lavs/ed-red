@@ -1458,6 +1458,11 @@ section {
   color: #7EA68C;
 }
 
+.search_open svg {
+  width: 100%;
+  height: auto;
+}
+
 .btn_search {
   height: 60px;
   margin-left: 25px;
@@ -1468,6 +1473,11 @@ section {
 
 .btn_search:hover {
   background-color: #007934;
+}
+
+.btn_search svg {
+  width: 100%;
+  height: auto;
 }
 
 .section-counter {
@@ -4595,6 +4605,11 @@ form input {
     margin-left: 12px;
   }
 
+  .search_open {
+    width: 17px;
+    height: 17px;
+  }
+
   .section-counter {
     margin-bottom: 25px;
   }
@@ -5058,6 +5073,10 @@ form input {
     font-size: 20px;
   }
 
+  .main {
+    padding-top: 72px;
+  }
+
   .form-subscribe input {
     padding-top: 10px;
     padding-bottom: 9px;
@@ -5078,6 +5097,24 @@ form input {
 
   .calendar-wrapper {
     margin-bottom: 25px;
+  }
+
+  .header__logo {
+    max-width: 50px;
+  }
+
+  .btn_burger {
+    margin-left: 10px;
+  }
+
+  .btn_burger .line {
+    width: 17px;
+    height: 2px;
+    margin-bottom: 3px;
+  }
+
+  .search_open {
+    margin-left: auto;
   }
 
   .footer__nav {

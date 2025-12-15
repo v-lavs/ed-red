@@ -10,7 +10,6 @@ const BREAKPOINTS = {
 };
 
 const isMobile = () => window.innerWidth <= BREAKPOINTS.mobile;
-const isTablet = () => window.innerWidth <= BREAKPOINTS.tablete;
 
 // ================== HELPERS ==================
 
