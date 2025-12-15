@@ -311,7 +311,7 @@
 }
 
 @media screen and (max-width: 710px) {
-  .section-use{
+  .section-use {
     border-radius: 16px;
   }
   .single-product-intro {
@@ -342,31 +342,41 @@
 }
 
 @include mixins.respond-to(variables.$xs) {
-  .section-use .section__title {
-    font-size: 24px;
+  .section-use {
+    margin-top: 0;
+
+    .section__title {
+      font-size: 24px;
+    }
+
+    .heading {
+      font-size: 18px;
+    }
+
+    .part {
+      width: 100%;
+      padding: 0;
+    }
   }
-  .section-use .heading {
-    font-size: 18px;
-  }
-  .section-use .part {
-    width: 100%;
-    padding: 0;
-  }
-  .product-info .price__heading {
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
-  .product-info .price__wrapper {
-    font-size: 20px;
-  }
-  .product-info .part_right .btn {
-    height: auto;
-    padding: 11px;
+  .product-info {
+    .price__heading {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .price__wrapper {
+      font-size: 18px;
+    }
+
+    .part_right .btn {
+      height: auto;
+      padding: 11px;
+    }
   }
   .block-order {
     max-width: 300px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 25px;
+
     .btn {
       min-width: 0;
       width: 100%;
@@ -378,31 +388,40 @@
       }
     }
   }
+  .single-product {
+    padding-bottom: 0;
+
+    &__thumb {
+      margin-bottom: 25px;
+    }
+  }
+  .single-product-intro {
+    margin-bottom: 25px;
+  }
 }
 
 @include mixins.respond-to(variables.$xxs) {
-  .block-order{
+  .block-order {
     width: 100%;
     max-width: 100%;
-    .btn{
+
+    .btn {
       padding-left: 10px;
       padding-right: 10px;
     }
   }
-  .product-info .part_right {
-    width: 100%;
-  }
-  .single-product {
-    padding-bottom: 50px;
-  }
-  .product-info .part_right .btn{
-    min-width: 0;
-  }
-  .product-info .price__wrapper{
-    font-size: 19px;
-  }
-  .price__heading{
-    margin-bottom: 5px;
+  .product-info {
+    padding-left: 20px;
+    padding-right: 20px;
+    .part_right {
+      width: 100%;
+      .btn {
+        min-width: 0;
+      }
+    }
+    .price__heading {
+      font-size: 16px;
+    }
   }
 }
 

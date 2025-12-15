@@ -88,9 +88,16 @@
   .section-intro {
     font-size: 18px;
 
-    .section__content img {
-      height: 280px;
+    .section__content {
+      padding-top: 0;
+
+      img {
+        height: 280px;
+      }
     }
+  }
+  .section-intro .section__content .section__text {
+    margin-bottom: 25px;
   }
 }
 

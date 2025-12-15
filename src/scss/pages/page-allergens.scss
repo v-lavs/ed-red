@@ -87,11 +87,20 @@
     grid-column-gap: 12px;
     grid-row-gap: 25px;
     grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 25px;
   }
-  .allergens__name {
-    font-size: 12px;
+  .allergens {
+    margin-bottom: 25px;
+
+    &__name {
+      font-size: 12px;
+    }
+  }
+  .page-allergens .section-question {
+    padding: 50px 0;
   }
 }
+
 @include mixins.respond-to(variables.$xxs) {
   .allergens__list {
     grid-template-columns: repeat(2, 1fr);

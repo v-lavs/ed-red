@@ -69,7 +69,10 @@
 }
 
 @include mixins.respond-to(variables.$xs) {
-  .breadcrumb__item {
-    font-size: 12px;
+  .breadcrumb {
+    padding-bottom: 25px;
+    &__item {
+      font-size: 12px;
+    }
   }
 }

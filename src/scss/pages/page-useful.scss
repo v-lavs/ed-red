@@ -76,13 +76,14 @@
       .section__slogan {
         font-size: 38px;
       }
+
+      .section__text {
+        margin-bottom: 50px;
+      }
+
       .section__content {
         padding-bottom: 0;
         padding-right: 0;
-
-        .section__text {
-          margin-bottom: 50px;
-        }
 
         img {
           position: static;
@@ -91,5 +92,11 @@
         }
       }
     }
+  }
+}
+
+@include mixins.respond-to(variables.$xs) {
+  .page-useful .section-intro .section__text {
+    margin-bottom: 25px;
   }
 }

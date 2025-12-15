@@ -4,6 +4,7 @@
 .section-with-tabs {
   padding-bottom: 0;
   margin: 0;
+
   .section__title {
     text-align: left;
   }
@@ -27,7 +28,7 @@
 
 @include mixins.respond-to(variables.$xs) {
   .tabs__nav {
-    padding-bottom: 30px;
+    padding-bottom: 10px;
   }
   .tabs__nav-link {
     line-height: 1;
@@ -37,6 +38,12 @@
   }
   .tabs__nav-link:last-child {
     text-align: right;
+  }
+  .section-with-tabs .tabs {
+    padding-bottom: 50px;
+  }
+  .slider-posts {
+    padding-bottom: 25px;
   }
 }
 

@@ -29,7 +29,10 @@
 
 
 @include mixins.respond-to(variables.$xs) {
-
+  .page .section-with-tabs {
+    padding: 25px 0;
+    margin: 25px 0;
+  }
 }
 @include mixins.respond-to(variables.$xxs) {
 

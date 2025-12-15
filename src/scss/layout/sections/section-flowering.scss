@@ -22,6 +22,8 @@
   }
 }
 
-@include mixins.respond-to(variables.$xl) {
-
+@include mixins.respond-to(variables.$xs) {
+  .section-flowering .wrap-btn {
+    padding-top: 0;
+  }
 }
