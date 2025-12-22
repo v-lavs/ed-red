@@ -1771,6 +1771,30 @@ form input {
   font-weight: 400;
 }
 
+#popup_cookie {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: #FFFFFF;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+#popup_cookie .container {
+  display: flex;
+  align-items: center;
+}
+
+#popup_cookie .btn_main {
+  flex-shrink: 0;
+  height: -moz-min-content;
+  height: min-content;
+  margin-left: 25px;
+  font-size: 16px;
+}
+
 .section-banner {
   background-color: #E4F1E8;
   padding-bottom: 100px;
@@ -3640,6 +3664,15 @@ form input {
     width: 50%;
   }
 
+  #popup_cookie .container {
+    display: block;
+    text-align: center;
+  }
+
+  #popup_cookie .btn_main {
+    margin-top: 25px;
+  }
+
   .section-banner .heading_xxl {
     font-size: clamp(34px, 34px + 30 * (100vw - 320px) / 447, 64px);
   }
@@ -4014,6 +4047,10 @@ form input {
 
   .footer__license {
     padding-top: 25px;
+  }
+
+  #popup_cookie .btn_main {
+    height: 40px;
   }
 
   .section-banner__text {

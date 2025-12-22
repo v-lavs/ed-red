@@ -198,6 +198,29 @@
   }
 }
 
+#popup_cookie {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: #FFFFFF;
+  padding: 20px 0;
+  font-size: 14px;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .btn_main {
+    flex-shrink: 0;
+    height: min-content;
+    margin-left: 25px;
+    font-size: 16px;
+  }
+}
+
 @include mixins.respond-to(variables.$xl) {
   .footer__contacts,
   .footer__title,
@@ -272,6 +295,16 @@
   }
   .footer__col {
     width: 50%;
+  }
+  #popup_cookie {
+    .container {
+      display: block;
+      text-align: center;
+    }
+
+    .btn_main {
+      margin-top: 25px;
+    }
   }
 }
 
@@ -349,9 +382,14 @@
   .form-subscribe .form__group {
     padding-bottom: 25px;
   }
-  .footer__license{
-  padding-top: 25px;
-}
+  .footer__license {
+    padding-top: 25px;
+  }
+  #popup_cookie {
+    .btn_main {
+      height: 40px;
+    }
+  }
 }
 
 @include mixins.respond-to(variables.$xxs) {
