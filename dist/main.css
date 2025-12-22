@@ -709,6 +709,7 @@ section {
   width: 60px;
   flex-shrink: 0;
   transition: 0.35s;
+  padding: 15px;
 }
 
 .btn_search:hover {
@@ -1780,6 +1781,9 @@ form input {
   background-color: #FFFFFF;
   padding: 20px 0;
   font-size: 14px;
+  min-height: 15vh;
+  display: flex;
+  align-items: center;
 }
 
 #popup_cookie .container {
@@ -3671,6 +3675,7 @@ form input {
 
   #popup_cookie .btn_main {
     margin-top: 25px;
+    margin-left: 0;
   }
 
   .section-banner .heading_xxl {
@@ -3895,11 +3900,12 @@ form input {
 
   .btn_search {
     margin-left: 12px;
+    padding: 10px;
   }
 
   .search_open {
-    width: 17px;
-    height: 17px;
+    width: 25px;
+    height: 25px;
   }
 
   .section-counter {
@@ -4047,6 +4053,10 @@ form input {
 
   .footer__license {
     padding-top: 25px;
+  }
+
+  #popup_cookie {
+    font-size: 12px;
   }
 
   #popup_cookie .btn_main {

@@ -57,7 +57,7 @@
   width: 60px;
   flex-shrink: 0;
   transition: .35s;
-
+  padding: 15px;
   &:hover {
     background-color: variables.$green;
   }
@@ -91,9 +91,10 @@
   }
   .btn_search {
     margin-left: 12px;
+    padding: 10px;
   }
   .search_open{
-    width: 17px;
-    height: 17px;
+    width: 25px;
+    height: 25px;
   }
 }
