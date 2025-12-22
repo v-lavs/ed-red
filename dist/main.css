@@ -1717,19 +1717,25 @@ form input {
 
 .footer-col-wrap {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .footer__col {
   text-align: left;
   width: 25%;
   padding: 0 16px;
-  font-size: 22px;
+  margin-bottom: 25px;
 }
 
 .footer__col-header {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+}
+
+.footer__col-content {
+  font-size: 18px;
+  line-height: 1.75;
 }
 
 .disclaimer {
@@ -3346,6 +3352,11 @@ form input {
     font-size: 12px;
   }
 
+  .footer__col {
+    text-align: left;
+    width: 33.33%;
+  }
+
   .section-banner .container {
     flex-wrap: wrap;
     position: relative;
@@ -3623,6 +3634,10 @@ form input {
   .footer__nav-item:nth-child(n) {
     width: 50%;
     margin-bottom: 25px;
+  }
+
+  .footer__col {
+    width: 50%;
   }
 
   .section-banner .heading_xxl {
@@ -3997,6 +4012,10 @@ form input {
     padding-bottom: 25px;
   }
 
+  .footer__license {
+    padding-top: 25px;
+  }
+
   .section-banner__text {
     font-size: 20px;
   }
@@ -4355,6 +4374,14 @@ form input {
 
   .footer__nav {
     margin-bottom: 0;
+  }
+
+  .footer__col-header {
+    font-size: 14px;
+  }
+
+  .footer__col-content {
+    font-size: 13px;
   }
 
   .section-banner__text {

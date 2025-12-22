@@ -144,19 +144,25 @@
 
 .footer-col-wrap {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .footer__col {
   text-align: left;
   width: 25%;
   padding: 0 16px;
-  font-size: 22px;
+  margin-bottom: 25px;
 }
 
 .footer__col-header {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+}
+
+.footer__col-content {
+  font-size: 18px;
+  line-height: 1.75;
 }
 
 .disclaimer {
@@ -253,12 +259,19 @@
   .footer_bottom {
     font-size: 12px;
   }
+  .footer__col {
+    text-align: left;
+    width: 33.33%;
+  }
 }
 
 @include mixins.respond-to(variables.$sm) {
   .footer__nav-item:nth-child(n) {
     width: 50%;
     margin-bottom: 25px;
+  }
+  .footer__col {
+    width: 50%;
   }
 }
 
@@ -336,15 +349,22 @@
   .form-subscribe .form__group {
     padding-bottom: 25px;
   }
+  .footer__license{
+  padding-top: 25px;
+}
 }
 
 @include mixins.respond-to(variables.$xxs) {
   .footer {
-
-
     &__nav {
       margin-bottom: 0;
     }
   }
+  .footer__col-header {
+    font-size: 14px;
+  }
 
+  .footer__col-content {
+    font-size: 13px;
+  }
 }
