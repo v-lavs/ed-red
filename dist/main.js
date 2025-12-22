@@ -292,40 +292,125 @@ function initStaticSliders() {
 
 // ================== SLIDER IN TABS ==================
 
-let tabsSlider = null;
+// let tabsSlider = null;
+//
+// function initTabsSlider() {
+//     const exists = $('.slider-posts').length > 0;
+//
+//     if (exists) {
+//         if (!tabsSlider) {
+//             tabsSlider = new Swiper('.slider-posts', {
+//                 spaceBetween: 20,
+//                 pagination: { el: '.swiper-pagination' },
+//                 navigation: {
+//                     nextEl: '.wrap-slider-posts .swiper-button-next',
+//                     prevEl: '.wrap-slider-posts .swiper-button-prev',
+//                 },
+//                 breakpoints: {
+//                     650: { slidesPerView: 2 },
+//                     1025: { slidesPerView: 3 },
+//                 },
+//             });
+//         }
+//     } else {
+//         if (Array.isArray(tabsSlider)) {
+//             tabsSlider.forEach(slider => destroySwiper(slider));
+//         } else {
+//             destroySwiper(tabsSlider);
+//         }
+//         tabsSlider = null;
+//     }
+// }
+function initTabsSlider($pane) {
+    if (!$pane || !$pane.length) return;
 
-function initTabsSlider() {
-    const exists = $('.slider-posts').length > 0;
+    const sliderEl = $pane.find('.slider-posts')[0];
+    if (!sliderEl) return;
 
-    if (exists) {
-        if (!tabsSlider) {
-            tabsSlider = new Swiper('.slider-posts', {
-                spaceBetween: 20,
-                pagination: { el: '.swiper-pagination' },
-                navigation: {
-                    nextEl: '.wrap-slider-posts .swiper-button-next',
-                    prevEl: '.wrap-slider-posts .swiper-button-prev',
-                },
-                breakpoints: {
-                    650: { slidesPerView: 2 },
-                    1025: { slidesPerView: 3 },
-                },
-            });
-        }
-    } else {
-        if (Array.isArray(tabsSlider)) {
-            tabsSlider.forEach(slider => destroySwiper(slider));
-        } else {
-            destroySwiper(tabsSlider);
-        }
-        tabsSlider = null;
+    if (sliderEl.swiper) {
+        sliderEl.swiper.update();
+        return;
     }
+
+    new Swiper(sliderEl, {
+        spaceBetween: 20,
+        pagination: {
+            el: sliderEl.querySelector('.swiper-pagination'),
+        },
+        navigation: {
+            nextEl: $pane.find('.swiper-button-next')[0],
+            prevEl: $pane.find('.swiper-button-prev')[0],
+        },
+        breakpoints: {
+            650: { slidesPerView: 2 },
+            1025: { slidesPerView: 3 },
+        },
+        observer: true,
+        observeParents: true,
+    });
 }
 
 // ================== TABS ==================
 
+// function initTabs() {
+//     $('.tabs').each(function () {
+//         const $tabs = $(this);
+//         const $links = $tabs.find('.tabs__nav-link');
+//         const $wrapper = $tabs.find('.tabs__content-wrapper');
+//         const $panes = $tabs.find('.tab-pane');
+//
+//         function animateHeight($pane) {
+//             const start = $wrapper.height();
+//             $pane.show();
+//             const target = $pane.outerHeight();
+//             $pane.hide();
+//
+//             $wrapper.height(start);
+//             requestAnimationFrame(() => {
+//                 $wrapper.height(target);
+//                 setTimeout(() => $wrapper.css('height', 'auto'), 300);
+//             });
+//         }
+//
+//         $links.on('click', function (e) {
+//             e.preventDefault();
+//             const $link = $(this);
+//             if ($link.hasClass('active')) return;
+//
+//             const id = $link.attr('href');
+//             const $pane = $tabs.find(id);
+//
+//             $links.removeClass('active');
+//             $link.addClass('active');
+//
+//             animateHeight($pane);
+//             $panes.removeClass('active').hide();
+//             $pane.addClass('active').show();
+//
+//             initTabsSlider();
+//
+//             if (tabsSlider) {
+//                 if (Array.isArray(tabsSlider)) {
+//                     tabsSlider.forEach(slider => slider.update());
+//                 } else {
+//                     tabsSlider.update();
+//                 }
+//             }
+//
+//             setTimeout(initVisibleTabAllergens, 20);
+//         });
+//
+//         const $first = $panes.filter('.active');
+//         $wrapper.height($first.outerHeight());
+//         setTimeout(() => $wrapper.css('height', 'auto'), 300);
+//     });
+// }
 function initTabs() {
-    $('.tabs').each(function () {
+    const $allTabs = $('.tabs');
+
+    if (!$allTabs.length) return;
+
+    $allTabs.each(function () {
         const $tabs = $(this);
         const $links = $tabs.find('.tabs__nav-link');
         const $wrapper = $tabs.find('.tabs__content-wrapper');
@@ -346,6 +431,7 @@ function initTabs() {
 
         $links.on('click', function (e) {
             e.preventDefault();
+
             const $link = $(this);
             if ($link.hasClass('active')) return;
 
@@ -359,22 +445,17 @@ function initTabs() {
             $panes.removeClass('active').hide();
             $pane.addClass('active').show();
 
-            initTabsSlider();
-
-            if (tabsSlider) {
-                if (Array.isArray(tabsSlider)) {
-                    tabsSlider.forEach(slider => slider.update());
-                } else {
-                    tabsSlider.update();
-                }
-            }
+            initTabsSlider($pane);
 
             setTimeout(initVisibleTabAllergens, 20);
         });
 
         const $first = $panes.filter('.active');
-        $wrapper.height($first.outerHeight());
-        setTimeout(() => $wrapper.css('height', 'auto'), 300);
+        if ($first.length) {
+            $wrapper.height($first.outerHeight());
+            setTimeout(() => $wrapper.css('height', 'auto'), 300);
+            initTabsSlider($first);
+        }
     });
 }
 
@@ -476,13 +557,12 @@ function initModal() {
     $('.more-plants').on('click', function (e) {
         e.preventDefault();
         const block = $(this).closest('.month-block');
-        const id = block.attr('id'); // ✅ use jQuery attr
+        const id = block.attr('id');
         openDialogForMonth(id);
     });
 
     function openDialogForMonth(monthId) {
-        // You can use monthId here if needed
-        dialog.showModal();
+         dialog.showModal();
         lockScroll();
     }
 
